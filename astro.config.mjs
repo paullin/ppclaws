@@ -1,9 +1,9 @@
-// @ts-check
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
+import pagefind from "astro-pagefind";
 
 import cloudflare from "@astrojs/cloudflare";
 
@@ -25,6 +25,7 @@ export default defineConfig({
           lastmod: new Date(),
       }),
       svelte(),
+      pagefind(),
   ],
 
   vite: {

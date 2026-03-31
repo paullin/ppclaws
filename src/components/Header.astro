@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 import navigationData from "@data/navigationData";
 import logo from "@assets/logo.svg";
 import LanguagePicker from "./LanguagePicker.astro";
+import Search from "astro-pagefind/components/Search";
 
 // Translations
 const lang = getLangFromUrl(Astro.url);
@@ -86,6 +87,13 @@ const translatePath = useTranslatedPath(lang);
             }
         </ul>
         <div class="nav-actions">
+            <div class="w-full lg:w-80">
+                <Search
+                    id="site-search"
+                    className="pagefind-ui"
+                    uiOptions={{ showImages: false }}
+                />
+            </div>
             <LanguagePicker />
             <a
                 href="https://github.com/Scorpio3310/astro-i18n-starter"
