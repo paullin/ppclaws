@@ -25,6 +25,12 @@ export const getStaticPaths = (async ({ paginate }) => {
             pagination: "blog-pagination",
             page: undefined as string | undefined,
         },
+        {
+            code: "zh" as const,
+            prefix: "zh/",
+            pagination: "zh",
+            page: "bo-ke-fen-ye",
+        },
     ];
 
     // Use Astro's paginate() then post-process params to keep your i18n URL shape

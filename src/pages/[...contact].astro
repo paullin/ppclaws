@@ -15,13 +15,13 @@ const contactPath = Astro.params.contact || "";
 // Validate allowed paths - show 404 for invalid routes
 // Using Astro.rewrite() instead of redirect() to preserve the original URL in browser
 // This provides better UX by showing 404 content at /contact123 instead of redirecting to /404
-const validPaths = ["contact"];
+const validPaths = ["contact", "zh/lian-xi"];
 if (!validPaths.includes(contactPath)) {
     return Astro.rewrite("/404");
 }
 
 // Determine language from path structure
-const lang = "en";
+const lang = contactPath.startsWith("zh/") ? "zh" : "en";
 
 // Translations
 const t = useTranslations(lang);

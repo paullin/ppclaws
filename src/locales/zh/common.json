@@ -1,0 +1,37 @@
+{
+    "menu": {
+        "list": {
+            "home": "首页",
+            "about": "关于",
+            "pages": "页面",
+            "dynamicRouting": "动态路由",
+            "subpage-1": "子页面 1",
+            "subpage-2": "子页面 2",
+            "blog": "博客",
+            "pagination": "分页",
+            "contact": "联系"
+        },
+        "languagesText": {
+            "selectLanguage": "选择语言"
+        },
+        "languages": {
+            "en": "English",
+            "zh": "简体中文"
+        }
+    },
+    "footer": {
+        "description": "Astro i18n 启动模板",
+        "name": "Nik Klemenc",
+        "copy": "版权所有",
+        "made": "基于 {{what}} 构建",
+        "index": "目录"
+    },
+    "pageNotFound": {
+        "head": {
+            "title": "🔍 404",
+            "description": "页面不存在或已被移动"
+        },
+        "title": "🔍 404 - 页面不存在",
+        "link": "返回首页"
+    }
+}

@@ -4,7 +4,8 @@
         "name": "Nik Klemenc",
         "image": "./user.png",
         "position": {
-            "en": "UX/UI Designer & Front-End Developer"
+            "en": "UX/UI Designer & Front-End Developer",
+            "zh": "UX/UI 设计师与前端开发工程师"
         }
     }
 ]
