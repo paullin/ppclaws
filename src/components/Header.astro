@@ -9,11 +9,13 @@ import { Image } from "astro:assets";
 import navigationData from "@data/navigationData";
 import logo from "@assets/logo.svg";
 import LanguagePicker from "./LanguagePicker.astro";
+import Search from "astro-pagefind/components/Search";
 
 // Translations
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const searchLabel = lang === "zh" ? "搜索" : "Search";
 ---
 
 <header class="nav-header" role="banner">
@@ -86,6 +88,29 @@ const translatePath = useTranslatedPath(lang);
             }
         </ul>
         <div class="nav-actions">
+            <button
+                type="button"
+                class="search-trigger"
+                data-search-open
+                aria-label={searchLabel}
+                title={searchLabel}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+            </button>
             <LanguagePicker />
             <a
                 href="https://github.com/Scorpio3310/astro-i18n-starter"
@@ -112,3 +137,57 @@ const translatePath = useTranslatedPath(lang);
         </div>
     </nav>
 </header>
+<div class="search-modal" data-search-modal hidden>
+    <button
+        type="button"
+        class="search-backdrop"
+        data-search-close
+        aria-label={lang === "zh" ? "关闭搜索" : "Close search"}
+    ></button>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label={searchLabel}>
+        <Search
+            id="site-search-modal"
+            className="pagefind-ui pagefind-ui-custom"
+            uiOptions={{ showImages: false }}
+        />
+    </div>
+</div>
+<script>
+    const setupSearchModal = () => {
+        const modal = document.querySelector("[data-search-modal]");
+        if (!modal || modal.getAttribute("data-bound") === "true") return;
+
+        const openBtn = document.querySelector("[data-search-open]");
+        const closeBtns = modal.querySelectorAll("[data-search-close]");
+
+        const openModal = () => {
+            modal.removeAttribute("hidden");
+            document.body.style.overflow = "hidden";
+            requestAnimationFrame(() => modal.classList.add("is-open"));
+            window.setTimeout(() => {
+                const input = modal.querySelector(".pagefind-ui__search-input");
+                if (input instanceof HTMLInputElement) input.focus();
+            }, 120);
+        };
+
+        const closeModal = () => {
+            modal.classList.remove("is-open");
+            document.body.style.overflow = "";
+            window.setTimeout(() => modal.setAttribute("hidden", ""), 180);
+        };
+
+        openBtn?.addEventListener("click", openModal);
+        closeBtns.forEach((btn) => btn.addEventListener("click", closeModal));
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !modal.hasAttribute("hidden")) closeModal();
+        });
+        modal.setAttribute("data-bound", "true");
+    };
+
+    document.addEventListener("astro:page-load", setupSearchModal);
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupSearchModal);
+    } else {
+        setupSearchModal();
+    }
+</script>

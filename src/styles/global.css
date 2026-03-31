@@ -127,10 +127,79 @@ header {
         @apply flex flex-col lg:flex-row items-center mt-4 lg:mt-0 gap-4 lg:gap-6;
     }
 
+    .search-trigger {
+    @apply inline-flex items-center justify-center w-11 h-11 rounded-full cursor-pointer transition;
+    }
+
+    .search-trigger:hover {
+    @apply opacity-60;
+    }
+
     /* Custom hover za dropdown */
     .nav-item:hover .nav-dropdown {
         @apply block;
     }
+}
+
+.search-modal {
+    @apply fixed inset-0 z-[1000] opacity-0 pointer-events-none transition-opacity duration-200;
+}
+
+.search-modal.is-open {
+    @apply opacity-100 pointer-events-auto;
+}
+
+.search-backdrop {
+    @apply absolute inset-0 bg-black/50 backdrop-blur-sm cursor-pointer border-0 p-0;
+}
+
+.search-panel {
+    @apply relative mx-auto mt-20 w-[92vw] max-w-3xl rounded-2xl bg-white border border-black/10 shadow-2xl p-4 lg:p-6 max-h-[75vh] overflow-y-auto;
+}
+
+.search-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-panel::-webkit-scrollbar-thumb {
+    @apply bg-black/15 rounded;
+}
+
+.pagefind-ui-custom .pagefind-ui__form::before {
+    display: none;
+}
+
+.pagefind-ui-custom .pagefind-ui__search-clear {
+    display: none;
+}
+
+.pagefind-ui-custom .pagefind-ui__search-input {
+    @apply w-full h-12 rounded-xl border border-black/20 px-4 text-base;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pagefind-ui-custom .pagefind-ui__search-input:focus {
+    @apply outline-none border-blue-500 ring-2 ring-blue-100;
+}
+
+.pagefind-ui-custom .pagefind-ui__drawer {
+    @apply mt-4 border-t border-black/10 pt-4;
+}
+
+.pagefind-ui-custom .pagefind-ui__results {
+    @apply mt-3;
+    border-top: 1px solid rgb(0 0 0 / 0.08);
+}
+
+.pagefind-ui-custom .pagefind-ui__result {
+    @apply px-0 py-4 transition;
+    border: 0 !important;
+    border-bottom: 1px solid rgb(0 0 0 / 0.08) !important;
+}
+
+.pagefind-ui-custom .pagefind-ui__result:hover {
+    @apply bg-transparent;
 }
 
 footer {
