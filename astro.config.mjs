@@ -18,7 +18,7 @@ export default defineConfig({
           customPages: [
               process.env.PRODUCTION_DOMAIN || "http://localhost:4321", // home page - priority 1.0
               (process.env.PRODUCTION_DOMAIN || "http://localhost:4321") +
-                  "/sl/", // Slovenian home - priority 1.0
+                  "/zh/", // Chinese home - priority 1.0
           ],
           changefreq: "monthly",
           priority: 0.7,

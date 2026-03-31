@@ -8,9 +8,6 @@ import Counter from "@components/Counter.svelte";
 // Get current language from URL
 export function getStaticPaths() {
     return [
-        // English route: /dynamic-routing/subpage-1
-        // [...subpage1] = "subpage-1" captures the specific subpage
-        // This creates the final URL: /dynamic-routing/subpage-1
         {
             params: {
                 dyn_routing: "/dynamic-routing",
@@ -18,15 +15,12 @@ export function getStaticPaths() {
             },
             props: { lang: "en" },
         },
-        // Slovenian route: /sl/dinamicno-usmerjanje/podstran-1
-        // [...subpage1] = "podstran-1" captures the localized subpage name
-        // This creates the final URL: /sl/dinamicno-usmerjanje/podstran-1
         {
             params: {
-                dyn_routing: "/sl/dinamicno-usmerjanje",
-                subpage1: "podstran-1",
+                dyn_routing: "/zh/dong-tai-lu-you",
+                subpage1: "zi-ye-1",
             },
-            props: { lang: "sl" },
+            props: { lang: "zh" },
         },
     ];
 }
@@ -65,16 +59,6 @@ export function getStaticPaths() {
                 subpage1: "subpage-1",
             },
             props: { lang: "en" },
-        },
-        // Slovenian route: /sl/dinamicno-usmerjanje/podstran-1
-        // [...subpage1] = "podstran-1" captures the localized subpage name
-        // This creates the final URL: /sl/dinamicno-usmerjanje/podstran-1
-        {
-            params: {
-                dyn_routing: "/sl/dinamicno-usmerjanje",
-                subpage1: "podstran-1",
-            },
-            props: { lang: "sl" },
         },
     ];
 }`}</code></pre>

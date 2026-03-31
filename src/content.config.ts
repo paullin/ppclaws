@@ -28,10 +28,7 @@ const authors = defineCollection({
         z.object({
             name: z.string(),
             image: image(),
-            position: z.object({
-                en: z.string(),
-                sl: z.string(),
-            }),
+            position: z.record(z.string()),
         }),
 });
 

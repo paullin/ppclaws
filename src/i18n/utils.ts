@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 //---------------------------------- EXPORTS ----------------------------------//
 /**
  * Extracts language code from URL path
- * Example: "/sl/about" -> "sl", "/about" -> "en" (defaultLang)
+ * Example: "/about" -> "en" (defaultLang)
  */
 export function getLangFromUrl(url: URL) {
     const [, lang] = url.pathname.split("/");
@@ -187,7 +187,7 @@ async function findContentGroup(collectionId: string): Promise<string | null> {
  * Checks if route is a blog route in any language
  */
 function isBlogRoute(route: string): boolean {
-    return route === "blog" || route === "spletni-dnevnik";
+    return getOriginalRouteName(route) === "blog";
 }
 
 /**
@@ -246,7 +246,7 @@ function getOriginalRouteName(routeName: string): string {
 
 /**
  * Translates route name to target language
- * Example: "blog" + "sl" -> "spletni-dnevnik"
+ * Example: "blog" + "en" -> "blog"
  */
 function translateRouteName(routeName: string, targetLang: string): string {
     const originalRoute = getOriginalRouteName(routeName);

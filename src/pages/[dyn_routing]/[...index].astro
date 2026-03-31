@@ -6,20 +6,13 @@ import Base from "@layouts/Base.astro";
 // Get current language from URL
 export function getStaticPaths() {
     return [
-        // English route: /dynamic-routing
-        // Since this file is in [dyn_routing] folder, the [dyn_routing] param becomes "dynamic-routing"
-        // [...index] = undefined means no additional URL segments after /dynamic-routing
         {
             params: { dyn_routing: "dynamic-routing", index: undefined },
             props: { lang: "en" },
         },
-        // Slovenian route: /sl/dinamicno-usmerjanje
-        // [dyn_routing] = "sl" acts as language prefix in URL
-        // [...index] = "dinamicno-usmerjanje" captures the localized page name after /sl/
-        // This creates the final URL: /sl/dinamicno-usmerjanje
         {
-            params: { dyn_routing: `sl`, index: "dinamicno-usmerjanje" },
-            props: { lang: "sl" },
+            params: { dyn_routing: "zh", index: "dong-tai-lu-you" },
+            props: { lang: "zh" },
         },
     ];
 }
