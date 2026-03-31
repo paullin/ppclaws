@@ -16,13 +16,16 @@ export const getStaticPaths = (async () => {
     // Define language configurations
     const langConfigs = {
         en: { prefix: "en/", blogPath: "/blog" },
-        sl: { prefix: "sl/", blogPath: "/sl/spletni-dnevnik" },
-    };
+    } as const;
 
     // Create paths for each post in each language
-    const createPath = (post, lang, blogPath) => {
-        const author = authorsRaw.find((a) => a.id === post.data.author.id);
-        const localizedAuthor = author && {
+    const createPath = (
+        post: (typeof posts)[number],
+        lang: keyof typeof langConfigs,
+        blogPath: string
+    ) => {
+        const author = authorsRaw.find((a) => a.id === post.data.author.id)!;
+        const localizedAuthor = {
             ...author,
             data: {
                 ...author.data,
@@ -40,7 +43,11 @@ export const getStaticPaths = (async () => {
     };
 
     // Generate and return all paths
-    return Object.entries(langConfigs).flatMap(([lang, { prefix, blogPath }]) =>
+    return (
+        Object.entries(langConfigs) as Array<
+            [keyof typeof langConfigs, (typeof langConfigs)[keyof typeof langConfigs]]
+        >
+    ).flatMap(([lang, { prefix, blogPath }]) =>
         posts
             .filter((post) => post.id.startsWith(prefix))
             .map((post) => createPath(post, lang, blogPath))
@@ -58,7 +65,6 @@ const { Content } = await render(post);
     title={post?.data?.title}
     meta={{
         description: post?.data?.description,
-        keywords: post?.data?.keywords,
         image: post?.data?.image?.src,
     }}
 >
@@ -71,7 +77,7 @@ const { Content } = await render(post);
             <!--Main Article Image-->
             <Image
                 src={post?.data?.image}
-                alt={post?.data?.imageAlt}
+                alt={post.data.imageAlt ?? post.data.title}
                 class="mb-10"
                 loading="eager"
                 quality={"high"}
@@ -88,8 +94,8 @@ const { Content } = await render(post);
             <div id="article-meta" class="author-time" role="contentinfo">
                 <div class="author" role="group">
                     <Image
-                        src={author?.data?.image}
-                        alt={`${author?.data?.name}`}
+                        src={author.data.image}
+                        alt={author.data.name}
                         height={36}
                         width={36}
                         loading="eager"
@@ -98,12 +104,9 @@ const { Content } = await render(post);
                         role="img"
                     />
                     <div>
-                        <h3>{author?.data?.name}</h3>
-                        <p
-                            class="position"
-                            aria-label={`${author?.data?.position}`}
-                        >
-                            {author?.data?.position}
+                        <h3>{author.data.name}</h3>
+                        <p class="position" aria-label={`${author.data.position}`}>
+                            {author.data.position}
                         </p>
                     </div>
                 </div>

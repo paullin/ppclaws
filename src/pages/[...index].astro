@@ -10,10 +10,6 @@ export function getStaticPaths() {
             params: { index: "/" },
             props: { lang: "en" },
         },
-        {
-            params: { index: `sl/` },
-            props: { lang: "sl" },
-        },
     ];
 }
 
@@ -22,6 +18,15 @@ const { lang } = Astro.props;
 
 // Translations
 const t = useTranslations(lang);
+type FeatureItem = {
+    p: string;
+};
+type FeatureSection = {
+    title: string;
+    list: FeatureItem[];
+    github?: string;
+};
+const features = t("main:features") as FeatureSection[];
 ---
 
 <Base
@@ -41,13 +46,13 @@ const t = useTranslations(lang);
         </p>
 
         {
-            t("main:features").map((section, key) => (
+            features.map((section: FeatureSection, key: number) => (
                 <>
                     <hr aria-hidden="true" />
                     <section aria-labelledby={`features-title-${key}`}>
                         <h2 id={`features-title-${key}`}>{section.title}</h2>
                         <ul aria-label={section.title}>
-                            {section.list.map((item) => (
+                            {section.list.map((item: FeatureItem) => (
                                 <li set:html={item.p} />
                             ))}
                         </ul>

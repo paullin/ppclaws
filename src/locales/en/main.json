@@ -18,7 +18,7 @@
                     "p": "On the <span>subpages</span> you’ll find examples and an explanation of the underlying logic, making it easy to understand and adapt."
                 },
                 {
-                    "p": "Supports <span>URL localization</span> (e.g., pages → sl/strani), which is crucial for SEO. The default language is English, while other languages are available through subpaths (e.g., /sl/...)."
+                    "p": "Supports clean, SEO-friendly <span>URL structure</span> (for example, <span>/pages</span>), with consistent routing rules across the entire site."
                 },
                 {
                     "p": "Enables linking content across languages – for example, <span>blog posts</span> can be linked via the <span>linkedContent</span> parameter, ensuring a consistent user experience."
@@ -38,7 +38,7 @@
                     "p": "Includes the latest versions of <span>Astro (v5.17)</span> and <span>Tailwind (v4)</span>, ensuring stability and long-term support."
                 },
                 {
-                    "p": "Allows <span>language switching</span> without losing context — the user stays on the same page or blog post when changing languages."
+                    "p": "Provides reusable routing and content patterns that can be extended for additional languages when needed."
                 },
                 {
                     "p": "Contains the most common examples you need when building <span>multilingual websites</span> (navigation, blog, localized URLs, translations)."

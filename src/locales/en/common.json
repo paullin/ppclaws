@@ -15,8 +15,7 @@
             "selectLanguage": "Select Language"
         },
         "languages": {
-            "en": "English",
-            "sl": "Slovenian"
+            "en": "English"
         }
     },
     "footer": {

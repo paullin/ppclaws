@@ -10,20 +10,18 @@ import Info from "@/components/Info.astro";
 // With prerender: false (SSR mode), we access params directly from Astro.params instead of getStaticPaths()
 // The [...contact] rest parameter captures the entire path after the base URL:
 // English route: /contact → contact = "contact"
-// Slovenian route: /sl/kontakt → contact = "sl/contact"
 const contactPath = Astro.params.contact || "";
 
 // Validate allowed paths - show 404 for invalid routes
 // Using Astro.rewrite() instead of redirect() to preserve the original URL in browser
 // This provides better UX by showing 404 content at /contact123 instead of redirecting to /404
-const validPaths = ["contact", "sl/contact"];
+const validPaths = ["contact"];
 if (!validPaths.includes(contactPath)) {
     return Astro.rewrite("/404");
 }
 
 // Determine language from path structure
-// Slovenian URLs start with "sl/" prefix, English URLs have no language prefix
-const lang = contactPath.startsWith("sl/") ? "sl" : "en";
+const lang = "en";
 
 // Translations
 const t = useTranslations(lang);

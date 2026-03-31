@@ -25,12 +25,6 @@ export const getStaticPaths = (async ({ paginate }) => {
             pagination: "blog-pagination",
             page: undefined as string | undefined,
         },
-        {
-            code: "sl" as const,
-            prefix: "sl/",
-            pagination: "sl",
-            page: "spletni-dnevnik-paginacija",
-        },
     ];
 
     // Use Astro's paginate() then post-process params to keep your i18n URL shape
@@ -53,14 +47,12 @@ export const getStaticPaths = (async ({ paginate }) => {
 
         const pages = paginate(filtered, {
             pageSize: PAGE_SIZE,
-            // Fixed segment before the catch-all ("blog-pagination" or "sl")
+            // Fixed segment before the catch-all ("blog-pagination")
             params: { pagination },
             // Extra props for every page
             props: { lang: code, authors },
         });
 
-        // For Slovenian, first page: /sl/spletni-dnevnik-paginacija
-        // Next pages: /sl/spletni-dnevnik-paginacija/2, ...
         // For English, first page: /blog-pagination; next: /blog-pagination/2
         return pages.map((p) => {
             const current = (p.props as any)?.page?.currentPage ?? 1;
@@ -119,6 +111,9 @@ const translatePath = useTranslatedPath(lang);
                         const author = authors.find(
                             (a) => a.id === post.data.author.id
                         );
+                        if (!author) {
+                            return null;
+                        }
                         const postUrl = `${translatePath("/blog")}/${post.id.split("/")[1]}`;
                         const postId = `post-${index}`;
 
@@ -158,11 +153,11 @@ const translatePath = useTranslatedPath(lang);
                                         <div
                                             class="author"
                                             role="group"
-                                            aria-label={author?.data?.name}
+                                            aria-label={author.data.name}
                                         >
                                             <Image
-                                                src={author?.data?.image}
-                                                alt={author?.data?.name}
+                                                src={author.data.image}
+                                                alt={author.data.name}
                                                 height={36}
                                                 width={36}
                                                 loading="lazy"
@@ -171,12 +166,12 @@ const translatePath = useTranslatedPath(lang);
                                                 role="img"
                                             />
                                             <div>
-                                                <h3>{author?.data?.name}</h3>
+                                                <h3>{author.data.name}</h3>
                                                 <p
                                                     class="position"
-                                                    aria-label={`${author?.data?.position}`}
+                                                    aria-label={`${author.data.position}`}
                                                 >
-                                                    {author?.data?.position}
+                                                    {author.data.position}
                                                 </p>
                                             </div>
                                         </div>

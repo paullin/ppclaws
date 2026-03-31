@@ -9,19 +9,9 @@ import Base from "@layouts/Base.astro";
 // Get current language from URL
 export function getStaticPaths() {
     return [
-        // English route: /blog
-        // [...blog] = "/blog" captures the entire path segment
-        // Creates URL: /blog
         {
             params: { blog: "/blog" },
             props: { lang: "en" },
-        },
-        // Slovenian route: /sl/spletni-dnevnik
-        // [...blog] = "/sl/spletni-dnevnik" captures both language prefix and localized path
-        // Creates URL: /sl/spletni-dnevnik ("spletni-dnevnik" = "blog" in Slovenian)
-        {
-            params: { blog: "/sl/spletni-dnevnik" },
-            props: { lang: "sl" },
         },
     ];
 }
@@ -30,8 +20,7 @@ export function getStaticPaths() {
 // If this file was in [blog] folder and renamed to [...index.astro]
 // it would work like [blog]/[...index.astro] with these route configurations:
 //
-// English:   { params: { blog: "blog", index: undefined }, props: { lang: "en" } } → /blog
-// Slovenian: { params: { blog: "sl", index: "strani" }, props: { lang: "sl" } } → /sl/spletni-dnevnik
+// English: { params: { blog: "blog", index: undefined }, props: { lang: "en" } } → /blog
 
 // Props
 const { lang } = Astro.props;
@@ -83,6 +72,9 @@ const authors = authorsRaw.map((a) => ({
                     const author = authors.find(
                         (a) => a.id === post.data.author.id
                     );
+                    if (!author) {
+                        return null;
+                    }
                     return (
                         <article class="card-blog">
                             <a
@@ -105,7 +97,7 @@ const authors = authorsRaw.map((a) => ({
                                     <div class="author">
                                         <Image
                                             src={author.data.image}
-                                            alt={author?.data?.name}
+                                            alt={author.data.name}
                                             height={36}
                                             width={36}
                                             loading="lazy"
@@ -113,10 +105,8 @@ const authors = authorsRaw.map((a) => ({
                                             class="rounded-full"
                                         />
                                         <div>
-                                            <h3>{author?.data?.name}</h3>
-                                            <p class="position">
-                                                {author?.data?.position}
-                                            </p>
+                                            <h3>{author.data.name}</h3>
+                                            <p class="position">{author.data.position}</p>
                                         </div>
                                     </div>
 
