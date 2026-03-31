@@ -11,6 +11,10 @@ import { languages } from "@i18n/ui";
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const hasLanguageSwitch = Object.keys(languages).length > 1;
+const languageFlags: Record<string, string> = {
+    en: "🇺🇸",
+    zh: "🇨🇳",
+};
 
 // Pre-generate URLs for all languages
 const languageUrls = await Promise.all(
@@ -33,31 +37,98 @@ const languageUrls = await Promise.all(
 </ul> --><!-- Dropdown selector -->
 {
     hasLanguageSwitch && (
-        <>
-            <label for="language" class="sr-only"
-                >{t("menu.languagesText.selectLanguage")}
-            </label>
-            <select
-                name="language"
-                id="language"
+        <div class="language-picker" data-language-picker>
+            <button
+                type="button"
+                class="language-toggle"
+                data-language-toggle
                 aria-label={t("menu.languagesText.selectLanguage")}
-                aria-haspopup="listbox"
+                aria-haspopup="menu"
                 aria-expanded="false"
-                class="w-32 px-2 py-2 border border-black/10 rounded cursor-pointer"
-                onchange="window.location.href = this.value"
             >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </button>
+            <ul class="language-menu" data-language-menu hidden role="menu">
                 {
                     languageUrls.map(({ lang, label, targetUrl }) => (
-                        <option
-                            value={targetUrl}
-                            selected={lang === currentLang}
-                            aria-selected={lang === currentLang}
-                        >
-                            {label}
-                        </option>
+                        <li role="none">
+                            <a
+                                href={targetUrl}
+                                role="menuitem"
+                                class="language-option"
+                                aria-current={lang === currentLang ? "page" : undefined}
+                            >
+                                <span class="language-flag" aria-hidden="true">
+                                    {languageFlags[lang] || "🌐"}
+                                </span>
+                                <span>{label}</span>
+                            </a>
+                        </li>
                     ))
                 }
-            </select>
-        </>
+            </ul>
+        </div>
     )
 }
+<script>
+    const setupLanguagePicker = () => {
+        const picker = document.querySelector("[data-language-picker]");
+        if (!picker || picker.getAttribute("data-bound") === "true") return;
+
+        const toggle = picker.querySelector("[data-language-toggle]");
+        const menu = picker.querySelector("[data-language-menu]");
+        if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
+
+        const closeMenu = () => {
+            menu.setAttribute("hidden", "");
+            toggle.setAttribute("aria-expanded", "false");
+        };
+
+        const openMenu = () => {
+            menu.removeAttribute("hidden");
+            toggle.setAttribute("aria-expanded", "true");
+        };
+
+        toggle.addEventListener("click", () => {
+            if (menu.hasAttribute("hidden")) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!picker.contains(event.target as Node)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+        });
+
+        picker.setAttribute("data-bound", "true");
+    };
+
+    document.addEventListener("astro:page-load", setupLanguagePicker);
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupLanguagePicker);
+    } else {
+        setupLanguagePicker();
+    }
+</script>

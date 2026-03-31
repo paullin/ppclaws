@@ -44,6 +44,7 @@
         "typescript": "^5.9.3"
     },
     "devDependencies": {
+        "astro-themes": "^0.2.7",
         "wrangler": "^4.78.0"
     }
 }
