@@ -57,6 +57,26 @@ export const getStaticPaths = (async () => {
 
 // Props
 const { post, author } = Astro.props;
+const giscus = {
+    repo: import.meta.env.PUBLIC_GISCUS_REPO,
+    repoId: import.meta.env.PUBLIC_GISCUS_REPO_ID,
+    category: import.meta.env.PUBLIC_GISCUS_CATEGORY,
+    categoryId: import.meta.env.PUBLIC_GISCUS_CATEGORY_ID,
+    mapping: import.meta.env.PUBLIC_GISCUS_MAPPING || "pathname",
+    strict: import.meta.env.PUBLIC_GISCUS_STRICT || "0",
+    reactionsEnabled: import.meta.env.PUBLIC_GISCUS_REACTIONS_ENABLED || "1",
+    emitMetadata: import.meta.env.PUBLIC_GISCUS_EMIT_METADATA || "0",
+    inputPosition: import.meta.env.PUBLIC_GISCUS_INPUT_POSITION || "top",
+    theme: import.meta.env.PUBLIC_GISCUS_THEME || "preferred_color_scheme",
+    lang: import.meta.env.PUBLIC_GISCUS_LANG || "zh-CN",
+    loading: import.meta.env.PUBLIC_GISCUS_LOADING || "lazy",
+    crossorigin: import.meta.env.PUBLIC_GISCUS_CROSSORIGIN || "anonymous",
+};
+const hasGiscusConfig =
+    giscus.repo &&
+    giscus.repoId &&
+    giscus.category &&
+    giscus.categoryId;
 
 // Render the MD content of the blog post
 const { Content } = await render(post);
@@ -124,6 +144,44 @@ const { Content } = await render(post);
             <section id="md-content" role="main">
                 <Content />
             </section>
+            {
+                hasGiscusConfig && (
+                    <section aria-label="Comments" class="mt-14">
+                        <div
+                            class="giscus"
+                            data-repo={giscus.repo}
+                            data-repo-id={giscus.repoId}
+                            data-category={giscus.category}
+                            data-category-id={giscus.categoryId}
+                            data-mapping={giscus.mapping}
+                            data-strict={giscus.strict}
+                            data-reactions-enabled={giscus.reactionsEnabled}
+                            data-emit-metadata={giscus.emitMetadata}
+                            data-input-position={giscus.inputPosition}
+                            data-theme={giscus.theme}
+                            data-lang={giscus.lang}
+                            data-loading={giscus.loading}
+                        ></div>
+                        <script
+                            src="https://giscus.app/client.js"
+                            data-repo={giscus.repo}
+                            data-repo-id={giscus.repoId}
+                            data-category={giscus.category}
+                            data-category-id={giscus.categoryId}
+                            data-mapping={giscus.mapping}
+                            data-strict={giscus.strict}
+                            data-reactions-enabled={giscus.reactionsEnabled}
+                            data-emit-metadata={giscus.emitMetadata}
+                            data-input-position={giscus.inputPosition}
+                            data-theme={giscus.theme}
+                            data-lang={giscus.lang}
+                            data-loading={giscus.loading}
+                            crossorigin={giscus.crossorigin}
+                            async
+                        ></script>
+                    </section>
+                )
+            }
         </article>
     </section>
 </Base>
