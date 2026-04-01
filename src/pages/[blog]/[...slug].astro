@@ -56,7 +56,14 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 // Props
-const { post, author } = Astro.props;
+const { post, author, lang } = Astro.props;
+const giscusLangFromEnv = (import.meta.env.PUBLIC_GISCUS_LANG || "").trim();
+const resolvedGiscusLang =
+    giscusLangFromEnv && giscusLangFromEnv !== "auto"
+        ? giscusLangFromEnv
+        : lang === "zh"
+          ? "zh-CN"
+          : "en";
 const giscus = {
     repo: import.meta.env.PUBLIC_GISCUS_REPO,
     repoId: import.meta.env.PUBLIC_GISCUS_REPO_ID,
@@ -68,7 +75,7 @@ const giscus = {
     emitMetadata: import.meta.env.PUBLIC_GISCUS_EMIT_METADATA || "0",
     inputPosition: import.meta.env.PUBLIC_GISCUS_INPUT_POSITION || "top",
     theme: import.meta.env.PUBLIC_GISCUS_THEME || "preferred_color_scheme",
-    lang: import.meta.env.PUBLIC_GISCUS_LANG || "zh-CN",
+    lang: resolvedGiscusLang,
     loading: import.meta.env.PUBLIC_GISCUS_LOADING || "lazy",
     crossorigin: import.meta.env.PUBLIC_GISCUS_CROSSORIGIN || "anonymous",
 };
