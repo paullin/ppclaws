@@ -155,7 +155,7 @@ const { Content } = await render(post);
                 hasGiscusConfig && (
                     <section aria-label="Comments" class="mt-14">
                         <div
-                            class="giscus"
+                            data-giscus-root
                             data-repo={giscus.repo}
                             data-repo-id={giscus.repoId}
                             data-category={giscus.category}
@@ -168,24 +168,54 @@ const { Content } = await render(post);
                             data-theme={giscus.theme}
                             data-lang={giscus.lang}
                             data-loading={giscus.loading}
-                        ></div>
-                        <script
-                            src="https://giscus.app/client.js"
-                            data-repo={giscus.repo}
-                            data-repo-id={giscus.repoId}
-                            data-category={giscus.category}
-                            data-category-id={giscus.categoryId}
-                            data-mapping={giscus.mapping}
-                            data-strict={giscus.strict}
-                            data-reactions-enabled={giscus.reactionsEnabled}
-                            data-emit-metadata={giscus.emitMetadata}
-                            data-input-position={giscus.inputPosition}
-                            data-theme={giscus.theme}
-                            data-lang={giscus.lang}
-                            data-loading={giscus.loading}
-                            crossorigin={giscus.crossorigin}
-                            async
-                        ></script>
+                            data-crossorigin={giscus.crossorigin}
+                        >
+                            <div class="giscus"></div>
+                        </div>
+                        <script is:inline data-astro-rerun>
+                            const initGiscus = () => {
+                                const root = document.querySelector("[data-giscus-root]");
+                                if (!(root instanceof HTMLElement)) return;
+                                const host = root.querySelector(".giscus");
+                                if (!(host instanceof HTMLElement)) return;
+                                host.innerHTML = "";
+                                const script = document.createElement("script");
+                                script.src = "https://giscus.app/client.js";
+                                script.async = true;
+                                script.crossOrigin =
+                                    root.dataset.crossorigin || "anonymous";
+                                const attrs = [
+                                    "repo",
+                                    "repoId",
+                                    "category",
+                                    "categoryId",
+                                    "mapping",
+                                    "strict",
+                                    "reactionsEnabled",
+                                    "emitMetadata",
+                                    "inputPosition",
+                                    "theme",
+                                    "lang",
+                                    "loading",
+                                ];
+                                for (const key of attrs) {
+                                    const value = root.dataset[key];
+                                    if (value) {
+                                        const attrName = key.replace(
+                                            /[A-Z]/g,
+                                            (m) => `-${m.toLowerCase()}`
+                                        );
+                                        script.setAttribute(
+                                            `data-${attrName}`,
+                                            value
+                                        );
+                                    }
+                                }
+                                host.appendChild(script);
+                            };
+                            initGiscus();
+                            document.addEventListener("astro:page-load", initGiscus);
+                        </script>
                     </section>
                 )
             }
