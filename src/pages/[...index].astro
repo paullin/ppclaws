@@ -2,21 +2,25 @@
 //Imports
 import { useTranslations } from "@i18n/utils";
 import Base from "@layouts/Base.astro";
-import { getEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import HeroCarousel from "@components/HeroCarousel.svelte";
 import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
+import TrainingSection from "@components/TrainingSection.astro";
+import FAQ from "@components/FAQ.svelte";
+import Newsletter from "@components/Newsletter.astro";
+import SubmissionForm from "@components/SubmissionForm.svelte";
 
 // Get current language from URL
 export function getStaticPaths() {
     return [
         {
-            params: { index: "/" },
+            params: { index: undefined },
             props: { lang: "en" },
         },
         {
-            params: { index: "zh/" },
+            params: { index: "zh" },
             props: { lang: "zh" },
         },
     ];
@@ -30,13 +34,15 @@ const t = useTranslations(lang);
 
 // Determine which json to load based on language
 const entryId = lang === "zh" ? "zh" : "en";
-const homeEntry = await getEntry("homepage", entryId);
+const homepageEntries = await getCollection("homepage");
+const homeEntry = homepageEntries.find((entry) => entry.id === entryId);
 const data = homeEntry?.data;
 
 const heroItems = data?.hero || [];
 const pageTitle = data?.title || t("main:head.title");
 const pageDescription = data?.description || t("main:head.description");
 const homepageSections = data?.sections || [];
+const footerData = data?.footer;
 ---
 
 <Base
@@ -45,6 +51,7 @@ const homepageSections = data?.sections || [];
         description: pageDescription,
         keywords: t("main:head.keywords"),
     }}
+    footerData={footerData}
 >
     <div class="max-w-7xl mx-auto px-4 py-8 space-y-24">
         {heroItems.length > 0 && (
@@ -53,9 +60,9 @@ const homepageSections = data?.sections || [];
             </div>
         )}
 
-        {homepageSections.map((section, index) => (
+        {homepageSections.slice(0, 4).map((section) => (
             <section 
-                id={index === 0 ? "featured-skills" : index === 1 ? "pm-skills" : index === 2 ? "ux-skills" : "marketing-skills"} 
+                id={section.id} 
                 class="max-w-none scroll-mt-20"
             >
                 <SectionHeader 
@@ -79,5 +86,79 @@ const homepageSections = data?.sections || [];
                 </SectionGrid>
             </section>
         ))}
+
+        {data?.newsletter && (
+            <Newsletter 
+                title={data.newsletter.title}
+                description={data.newsletter.description}
+                emailPlaceholder={data.newsletter.emailPlaceholder}
+                buttonText={data.newsletter.buttonText}
+            />
+        )}
+
+        {homepageSections.slice(4).map((section) => (
+            <section 
+                id={section.id || "featured-cases"}
+                class="max-w-none scroll-mt-20"
+            >
+                <SectionHeader 
+                    title={section.title} 
+                    subtitle={section.subtitle} 
+                    moreLink={section.moreLink}
+                    moreText={section.moreText}
+                />
+                <SectionGrid columns={section.columns as 1 | 2 | 4}>
+                    {section.items.map((item) => (
+                        <SkillCard 
+                            title={item.title} 
+                            description={item.description}
+                            tags={item.tags}
+                            cover={item.cover}
+                            badge={item.badge}
+                            link={item.link}
+                            icon={item.icon}
+                        />
+                    ))}
+                </SectionGrid>
+            </section>
+        ))}
+
+        {data?.training && (
+            <TrainingSection 
+                sectionTitle={data.training.sectionTitle}
+                sectionSubtitle={data.training.sectionSubtitle}
+                title={data.training.title}
+                subtitle={data.training.subtitle}
+                description={data.training.description}
+                image={data.training.image}
+                features={data.training.features}
+                buttonText={data.training.buttonText}
+                buttonLink={data.training.buttonLink}
+                secondaryButtonText={data.training.secondaryButtonText}
+                secondaryButtonLink={data.training.secondaryButtonLink}
+            />
+        )}
+
+        {data?.faq && (
+            <FAQ 
+                client:load 
+                title={data.faq.title} 
+                subtitle={data.faq.subtitle} 
+                items={data.faq.items} 
+                moreText={data.faq.moreText}
+                moreLink={data.faq.moreLink}
+            />
+        )}
+
+        {data?.submission && (
+            <SubmissionForm 
+                client:load
+                title={data.submission.title}
+                description={data.submission.description}
+                labels={data.submission.labels}
+                placeholders={data.submission.placeholders}
+                types={data.submission.types}
+            />
+        )}
     </div>
 </Base>

@@ -32,11 +32,29 @@
         }
     },
     "footer": {
-        "description": "PPClaws 网站",
-        "name": "Nik Klemenc",
-        "copy": "版权所有",
-        "made": "基于 {{what}} 构建",
-        "index": "目录"
+        "slogan": "一人就是一支团队。",
+        "skills_hub": "Skills 目录",
+        "follow_us": "关注我们",
+        "related_resources": "关联资源",
+        "copyright": "© 2026 PPClaws. 保留所有权利。",
+        "skills_links": {
+            "pm": "产品经理 Skills",
+            "ux": "设计师 Skills",
+            "marketing": "市场营销 Skills",
+            "req_analysis": "需求分析案例",
+            "proto_design": "原型设计案例",
+            "ab_testing": "AB 测试案例",
+            "seo_mining": "SEO 关键词案例"
+        },
+        "related_links": {
+            "openclaw": "OpenClaw",
+            "clawhub": "ClawHub",
+            "aliyun": "阿里云部署指南",
+            "tencent": "腾讯云部署指南",
+            "feishu": "飞书开放平台",
+            "about": "关于我们",
+            "privacy": "隐私政策"
+        }
     },
     "pageNotFound": {
         "head": {

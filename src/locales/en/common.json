@@ -32,11 +32,29 @@
         }
     },
     "footer": {
-        "description": "PPClaws Site",
-        "name": "Nik Klemenc",
-        "copy": "Copyright",
-        "made": "Made with {{what}}",
-        "index": "Table of Contents"
+        "slogan": "One person, one team.",
+        "skills_hub": "Skills Hub",
+        "follow_us": "Follow us",
+        "related_resources": "Related Resources",
+        "copyright": "© 2026 PPClaws. All rights reserved.",
+        "skills_links": {
+            "pm": "Skills for PM",
+            "ux": "Skills for Designer",
+            "marketing": "Skills for Marketing",
+            "req_analysis": "Requirement Analysis",
+            "proto_design": "Prototyping",
+            "ab_testing": "A/B Testing",
+            "seo_mining": "SEO Keywords"
+        },
+        "related_links": {
+            "openclaw": "OpenClaw",
+            "clawhub": "ClawHub",
+            "aliyun": "Alibaba Cloud Guide",
+            "tencent": "Tencent Cloud Guide",
+            "feishu": "Lark Open Platform",
+            "about": "About us",
+            "privacy": "Privacy"
+        }
     },
     "pageNotFound": {
         "head": {

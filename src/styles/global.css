@@ -3,8 +3,11 @@
 @theme {
     /* 核心品牌色 */
     --color-main: #111111;
-    --color-primary: #6c24d8;
-    --color-primary-hover: #5a1db4;
+    --color-primary: #8b5cf6; /* Update to match prototype astro-accent */
+    --color-primary-hover: #7c3aed; /* Updated hover state */
+    --color-astro-border: var(--color-astro-border);
+    --color-astro-card: var(--color-astro-card);
+
     
     /* 响应式断点 */
     --breakpoint-sm: 640px;
@@ -29,6 +32,10 @@
     --ui-border-muted: 243 244 246;
     --ui-overlay: 0 0 0;
     
+    /* Prototype color variables - Light mode */
+    --color-astro-card: #ffffff;
+    --color-astro-border: #e5e7eb;
+    
     /* 阴影变量 */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -45,6 +52,10 @@
     --ui-border: 148 163 184;
     --ui-border-muted: 30 41 59;
     --ui-overlay: 2 6 23;
+    
+    /* Variables mapped to prototype 'astro-card' and 'astro-border' classes */
+    --color-astro-card: #1e2330; 
+    --color-astro-border: #2e364f;
 }
 
 body {
@@ -76,25 +87,11 @@ h3 {
 
 section {
     @apply w-full mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
-
-    ul {
-        @apply list-disc space-y-1;
-        li {
-            @apply ml-6 mt-1;
-        }
-    }
 }
 
 hr {
     @apply my-10 border;
     border-color: rgb(var(--ui-border) / 0.15);
-}
-
-p,
-li {
-    span {
-        @apply bg-primary/10 px-1 py-1 font-medium rounded-md;
-    }
 }
 
 header {
@@ -170,26 +167,8 @@ header {
     @apply bg-transparent;
 }
 
-footer {
-    @apply border-t w-full pt-12 max-w-7xl mx-auto text-center;
-    border-color: rgb(var(--ui-border) / 0.2);
+/* Footer styles removed - moved to components/Footer.astro */
 
-    .container {
-        @apply mb-12 space-y-12;
-    }
-
-    .credit {
-        @apply text-sm opacity-70 text-center border-t py-4;
-        border-color: rgb(var(--ui-border) / 0.2);
-    }
-
-    ul {
-        @apply flex flex-col sm:flex-row justify-center list-none gap-2 md:gap-10;
-        li {
-            @apply ml-0 hover:opacity-50;
-        }
-    }
-}
 
 .card {
     p {

@@ -52,6 +52,7 @@ const homepage = defineCollection({
             ),
             sections: z.array(
                 z.object({
+                    id: z.string().optional(),
                     title: z.string(),
                     subtitle: z.string().optional(),
                     moreLink: z.string().optional(),
@@ -70,6 +71,78 @@ const homepage = defineCollection({
                     ),
                 })
             ),
+            training: z.object({
+                sectionTitle: z.string(),
+                sectionSubtitle: z.string().optional(),
+                title: z.string(),
+                subtitle: z.string().optional(),
+                description: z.string(),
+                image: z.string(),
+                features: z.array(z.string()),
+                buttonText: z.string(),
+                buttonLink: z.string(),
+                secondaryButtonText: z.string().optional(),
+                secondaryButtonLink: z.string().optional(),
+            }).optional(),
+            faq: z.object({
+                title: z.string().optional(),
+                subtitle: z.string().optional(),
+                items: z.array(
+                    z.object({
+                        question: z.string(),
+                        answer: z.string(),
+                    })
+                ),
+                moreText: z.string().optional(),
+                moreLink: z.string().optional(),
+            }).optional(),
+            newsletter: z.object({
+                title: z.string(),
+                description: z.string(),
+                emailPlaceholder: z.string(),
+                buttonText: z.string(),
+            }).optional(),
+            submission: z.object({
+                title: z.string(),
+                description: z.string(),
+                labels: z.object({
+                    name: z.string(),
+                    type: z.string(),
+                    url: z.string(),
+                    description: z.string(),
+                    contact: z.string(),
+                    submit: z.string(),
+                }),
+                placeholders: z.object({
+                    name: z.string(),
+                    type: z.string(),
+                    url: z.string(),
+                    description: z.string(),
+                    contact: z.string(),
+                }),
+                types: z.array(z.object({
+                    value: z.string(),
+                    label: z.string(),
+                })),
+            }).optional(),
+            footer: z.object({
+                slogan: z.string(),
+                columns: z.array(z.object({
+                    title: z.string(),
+                    links: z.array(z.object({
+                        text: z.string(),
+                        link: z.string(),
+                        external: z.boolean().optional(),
+                    })),
+                })),
+                socials: z.array(z.object({
+                    platform: z.string(),
+                    link: z.string(),
+                    icon: z.string().optional(),
+                    image: z.string().optional(),
+                })),
+                copyright: z.string(),
+            }).optional(),
         }),
 });
 
