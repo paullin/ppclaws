@@ -52,6 +52,7 @@ const homepage = defineCollection({
             ),
             sections: z.array(
                 z.object({
+                    id: z.string().optional(),
                     title: z.string(),
                     subtitle: z.string().optional(),
                     moreLink: z.string().optional(),
@@ -123,6 +124,24 @@ const homepage = defineCollection({
                     value: z.string(),
                     label: z.string(),
                 })),
+            }).optional(),
+            footer: z.object({
+                slogan: z.string(),
+                columns: z.array(z.object({
+                    title: z.string(),
+                    links: z.array(z.object({
+                        text: z.string(),
+                        link: z.string(),
+                        external: z.boolean().optional(),
+                    })),
+                })),
+                socials: z.array(z.object({
+                    platform: z.string(),
+                    link: z.string(),
+                    icon: z.string().optional(),
+                    image: z.string().optional(),
+                })),
+                copyright: z.string(),
             }).optional(),
         }),
 });

@@ -19,6 +19,7 @@
     ],
     "sections": [
         {
+            "id": "featured-skills",
             "title": "Featured Skills",
             "subtitle": "Essential core skill packs to boost productivity",
             "moreLink": "#",
@@ -52,6 +53,7 @@
             ]
         },
         {
+            "id": "pm-skills",
             "title": "Skills for Product Manager",
             "subtitle": "Empowering PMs with competitor analysis and requirements management",
             "moreLink": "#",
@@ -85,6 +87,7 @@
             ]
         },
         {
+            "id": "ux-skills",
             "title": "Skills for UI/UX Designer",
             "subtitle": "Providing design inspiration collection and automated slicing",
             "moreLink": "#",
@@ -118,6 +121,7 @@
             ]
         },
         {
+            "id": "marketing-skills",
             "title": "Skills for Marketing",
             "subtitle": "Social media content generation and SEO keyword analysis engine",
             "moreLink": "#",
@@ -151,6 +155,7 @@
             ]
         },
         {
+            "id": "featured-cases",
             "title": "Featured Cases",
             "subtitle": "See what problems people are solving with OpenClaw",
             "moreLink": "#",
@@ -250,5 +255,40 @@
             { "value": "case", "label": "Case" },
             { "value": "article", "label": "Article" }
         ]
+    },
+    "footer": {
+        "slogan": "Powerful automation tools for modern developers",
+        "columns": [
+            {
+                "title": "Skills Hub",
+                "links": [
+                    { "text": "PM Skills", "link": "#pm-skills" },
+                    { "text": "UX Skills", "link": "#ux-skills" },
+                    { "text": "Marketing Skills", "link": "#marketing-skills" },
+                    { "text": "Req Analysis", "link": "#" },
+                    { "text": "Proto Design", "link": "#" },
+                    { "text": "A/B Testing", "link": "#" },
+                    { "text": "SEO Mining", "link": "#" }
+                ]
+            },
+            {
+                "title": "Related Resources",
+                "links": [
+                    { "text": "OpenClaw Site", "link": "https://openclaw.com", "external": true },
+                    { "text": "ClawHub Community", "link": "https://clawhub.com", "external": true },
+                    { "text": "Aliyun", "link": "#" },
+                    { "text": "Tencent Cloud", "link": "#" },
+                    { "text": "Feishu", "link": "#" }
+                ]
+            }
+        ],
+        "socials": [
+            { "platform": "X (Twitter)", "link": "#", "icon": "twitter" },
+            { "platform": "YouTube", "link": "#", "image": "/social/youtube.png" },
+            { "platform": "WeChat", "link": "#", "image": "/social/微信.png" },
+            { "platform": "Jike", "link": "#", "image": "/social/即刻.png" },
+            { "platform": "Xiaohongshu", "link": "#", "image": "/social/小红书.png" }
+        ],
+        "copyright": "© 2026 PPClaws. All rights reserved."
     }
 }

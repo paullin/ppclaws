@@ -31,10 +31,12 @@ interface Props {
         /** Robots meta directive (defaults to "index, follow") */
         robots?: string;
     };
+    /** Optional footer data for custom configuration */
+    footerData?: any;
 }
 
 //Props
-const { meta, title } = Astro.props as Props;
+const { meta, title, footerData } = Astro.props as Props;
 ---
 <html lang={lang}>
     <head>
@@ -118,6 +120,6 @@ const { meta, title } = Astro.props as Props;
         <main id="main-content" role="main">
             <slot />
         </main>
-        <Footer />
+        <Footer data={footerData} />
     </body>
 </html>

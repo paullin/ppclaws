@@ -19,6 +19,7 @@
     ],
     "sections": [
         {
+            "id": "featured-skills",
             "title": "精选 Skills",
             "subtitle": "提升生产力的必备核心技能包",
             "moreLink": "#",
@@ -52,6 +53,7 @@
             ]
         },
         {
+            "id": "pm-skills",
             "title": "产品经理",
             "subtitle": "助力产品经理完成竞品分析与需求管理",
             "moreLink": "#",
@@ -85,6 +87,7 @@
             ]
         },
         {
+            "id": "ux-skills",
             "title": "UI/UX 设计师",
             "subtitle": "提供设计灵感收集与自动化切图能力",
             "moreLink": "#",
@@ -118,6 +121,7 @@
             ]
         },
         {
+            "id": "marketing-skills",
             "title": "市场营销",
             "subtitle": "社媒内容生成与 SEO 关键词分析引擎",
             "moreLink": "#",
@@ -151,6 +155,7 @@
             ]
         },
         {
+            "id": "featured-cases",
             "title": "精选案例",
             "subtitle": "看看大家都在用 OpenClaw 解决什么问题",
             "moreLink": "#",
@@ -250,5 +255,40 @@
             { "value": "case", "label": "应用案例" },
             { "value": "article", "label": "经验文章" }
         ]
+    },
+    "footer": {
+        "slogan": "为现代开发者打造的强大自动化工具",
+        "columns": [
+            {
+                "title": "Skills 枢纽",
+                "links": [
+                    { "text": "PM 技能", "link": "#pm-skills" },
+                    { "text": "UX 技能", "link": "#ux-skills" },
+                    { "text": "营销技能", "link": "#marketing-skills" },
+                    { "text": "需求分析", "link": "#" },
+                    { "text": "原型设计", "link": "#" },
+                    { "text": "A/B 测试", "link": "#" },
+                    { "text": "SEO 挖掘", "link": "#" }
+                ]
+            },
+            {
+                "title": "相关资源",
+                "links": [
+                    { "text": "OpenClaw 官网", "link": "https://openclaw.com", "external": true },
+                    { "text": "ClawHub 社区", "link": "https://clawhub.com", "external": true },
+                    { "text": "阿里云", "link": "#" },
+                    { "text": "腾讯云", "link": "#" },
+                    { "text": "飞书", "link": "#" }
+                ]
+            }
+        ],
+        "socials": [
+            { "platform": "X (Twitter)", "link": "#", "icon": "twitter" },
+            { "platform": "YouTube", "link": "#", "image": "/social/youtube.png" },
+            { "platform": "微信", "link": "#", "image": "/social/微信.png" },
+            { "platform": "即刻", "link": "#", "image": "/social/即刻.png" },
+            { "platform": "小红书", "link": "#", "image": "/social/小红书.png" }
+        ],
+        "copyright": "© 2026 PPClaws. 保留所有权利。"
     }
 }

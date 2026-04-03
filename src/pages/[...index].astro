@@ -2,7 +2,7 @@
 //Imports
 import { useTranslations } from "@i18n/utils";
 import Base from "@layouts/Base.astro";
-import { getEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import HeroCarousel from "@components/HeroCarousel.svelte";
 import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
@@ -34,13 +34,15 @@ const t = useTranslations(lang);
 
 // Determine which json to load based on language
 const entryId = lang === "zh" ? "zh" : "en";
-const homeEntry = await getEntry("homepage", entryId);
+const homepageEntries = await getCollection("homepage");
+const homeEntry = homepageEntries.find((entry) => entry.id === entryId);
 const data = homeEntry?.data;
 
 const heroItems = data?.hero || [];
 const pageTitle = data?.title || t("main:head.title");
 const pageDescription = data?.description || t("main:head.description");
 const homepageSections = data?.sections || [];
+const footerData = data?.footer;
 ---
 
 <Base
@@ -49,6 +51,7 @@ const homepageSections = data?.sections || [];
         description: pageDescription,
         keywords: t("main:head.keywords"),
     }}
+    footerData={footerData}
 >
     <div class="max-w-7xl mx-auto px-4 py-8 space-y-24">
         {heroItems.length > 0 && (
@@ -57,9 +60,9 @@ const homepageSections = data?.sections || [];
             </div>
         )}
 
-        {homepageSections.slice(0, 4).map((section, index) => (
+        {homepageSections.slice(0, 4).map((section) => (
             <section 
-                id={index === 0 ? "featured-skills" : index === 1 ? "pm-skills" : index === 2 ? "ux-skills" : "marketing-skills"} 
+                id={section.id} 
                 class="max-w-none scroll-mt-20"
             >
                 <SectionHeader 
@@ -95,7 +98,7 @@ const homepageSections = data?.sections || [];
 
         {homepageSections.slice(4).map((section) => (
             <section 
-                id="featured-cases"
+                id={section.id || "featured-cases"}
                 class="max-w-none scroll-mt-20"
             >
                 <SectionHeader 
