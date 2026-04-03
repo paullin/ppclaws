@@ -220,5 +220,35 @@
         ],
         "moreText": "View more frequently asked questions",
         "moreLink": "#"
+    },
+    "newsletter": {
+        "title": "Subscribe to Our Newsletter",
+        "description": "Get the latest useful Skill updates, best practices, and exclusive tutorials.",
+        "emailPlaceholder": "Your email address",
+        "buttonText": "Subscribe Now"
+    },
+    "submission": {
+        "title": "Submit to us",
+        "description": "Share your high-quality Skills, cases, or articles with the community. Once approved, they will be listed.",
+        "labels": {
+            "name": "Resource Name",
+            "type": "Resource Type",
+            "url": "Resource Link",
+            "description": "Short Description",
+            "contact": "Contact (Optional)",
+            "submit": "Submit for Review"
+        },
+        "placeholders": {
+            "name": "e.g.: Bulk SEO Checker",
+            "type": "Select resource type",
+            "url": "https://...",
+            "description": "Please briefly describe the features of your resource and the core pain points it solves...",
+            "contact": "Email / Twitter / WeChat"
+        },
+        "types": [
+            { "value": "skill", "label": "Skill" },
+            { "value": "case", "label": "Case" },
+            { "value": "article", "label": "Article" }
+        ]
     }
 }

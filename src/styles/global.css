@@ -32,6 +32,10 @@
     --ui-border-muted: 243 244 246;
     --ui-overlay: 0 0 0;
     
+    /* Prototype color variables - Light mode */
+    --color-astro-card: #ffffff;
+    --color-astro-border: #e5e7eb;
+    
     /* 阴影变量 */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -50,8 +54,8 @@
     --ui-overlay: 2 6 23;
     
     /* Variables mapped to prototype 'astro-card' and 'astro-border' classes */
-    --color-astro-card: #1f2937; 
-    --color-astro-border: #374151;
+    --color-astro-card: #1e2330; 
+    --color-astro-border: #2e364f;
 }
 
 body {

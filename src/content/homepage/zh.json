@@ -220,5 +220,35 @@
         ],
         "moreText": "查看更多常见问题解答",
         "moreLink": "#"
+    },
+    "newsletter": {
+        "title": "订阅我们的最新资讯",
+        "description": "获取最新生产力 Skills，实战经验，免费订阅。",
+        "emailPlaceholder": "您的邮箱地址",
+        "buttonText": "立即订阅"
+    },
+    "submission": {
+        "title": "提交收录",
+        "description": "将您的优质技能、案例或文章分享给社区，一经审核即可上架展示。",
+        "labels": {
+            "name": "资源名称",
+            "type": "资源类型",
+            "url": "资源链接",
+            "description": "简要描述",
+            "contact": "联系方式 (选填)",
+            "submit": "提交审核"
+        },
+        "placeholders": {
+            "name": "例如：SEO 批量查询器",
+            "type": "请选择资源类型",
+            "url": "https://...",
+            "description": "请简要描述您的资源特点与解决的核心痛点...",
+            "contact": "邮箱 / Twitter / 微信"
+        },
+        "types": [
+            { "value": "skill", "label": "技能插件" },
+            { "value": "case", "label": "应用案例" },
+            { "value": "article", "label": "经验文章" }
+        ]
     }
 }

@@ -9,6 +9,8 @@ import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
 import TrainingSection from "@components/TrainingSection.astro";
 import FAQ from "@components/FAQ.svelte";
+import Newsletter from "@components/Newsletter.astro";
+import SubmissionForm from "@components/SubmissionForm.svelte";
 
 // Get current language from URL
 export function getStaticPaths() {
@@ -55,9 +57,45 @@ const homepageSections = data?.sections || [];
             </div>
         )}
 
-        {homepageSections.map((section, index) => (
+        {homepageSections.slice(0, 4).map((section, index) => (
             <section 
                 id={index === 0 ? "featured-skills" : index === 1 ? "pm-skills" : index === 2 ? "ux-skills" : "marketing-skills"} 
+                class="max-w-none scroll-mt-20"
+            >
+                <SectionHeader 
+                    title={section.title} 
+                    subtitle={section.subtitle} 
+                    moreLink={section.moreLink}
+                    moreText={section.moreText}
+                />
+                <SectionGrid columns={section.columns as 1 | 2 | 4}>
+                    {section.items.map((item) => (
+                        <SkillCard 
+                            title={item.title} 
+                            description={item.description}
+                            tags={item.tags}
+                            cover={item.cover}
+                            badge={item.badge}
+                            link={item.link}
+                            icon={item.icon}
+                        />
+                    ))}
+                </SectionGrid>
+            </section>
+        ))}
+
+        {data?.newsletter && (
+            <Newsletter 
+                title={data.newsletter.title}
+                description={data.newsletter.description}
+                emailPlaceholder={data.newsletter.emailPlaceholder}
+                buttonText={data.newsletter.buttonText}
+            />
+        )}
+
+        {homepageSections.slice(4).map((section) => (
+            <section 
+                id="featured-cases"
                 class="max-w-none scroll-mt-20"
             >
                 <SectionHeader 
@@ -106,6 +144,17 @@ const homepageSections = data?.sections || [];
                 items={data.faq.items} 
                 moreText={data.faq.moreText}
                 moreLink={data.faq.moreLink}
+            />
+        )}
+
+        {data?.submission && (
+            <SubmissionForm 
+                client:load
+                title={data.submission.title}
+                description={data.submission.description}
+                labels={data.submission.labels}
+                placeholders={data.submission.placeholders}
+                types={data.submission.types}
             />
         )}
     </div>

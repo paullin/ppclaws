@@ -95,6 +95,35 @@ const homepage = defineCollection({
                 moreText: z.string().optional(),
                 moreLink: z.string().optional(),
             }).optional(),
+            newsletter: z.object({
+                title: z.string(),
+                description: z.string(),
+                emailPlaceholder: z.string(),
+                buttonText: z.string(),
+            }).optional(),
+            submission: z.object({
+                title: z.string(),
+                description: z.string(),
+                labels: z.object({
+                    name: z.string(),
+                    type: z.string(),
+                    url: z.string(),
+                    description: z.string(),
+                    contact: z.string(),
+                    submit: z.string(),
+                }),
+                placeholders: z.object({
+                    name: z.string(),
+                    type: z.string(),
+                    url: z.string(),
+                    description: z.string(),
+                    contact: z.string(),
+                }),
+                types: z.array(z.object({
+                    value: z.string(),
+                    label: z.string(),
+                })),
+            }).optional(),
         }),
 });
 
