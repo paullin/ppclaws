@@ -70,6 +70,19 @@ const homepage = defineCollection({
                     ),
                 })
             ),
+            training: z.object({
+                sectionTitle: z.string(),
+                sectionSubtitle: z.string().optional(),
+                title: z.string(),
+                subtitle: z.string().optional(),
+                description: z.string(),
+                image: z.string(),
+                features: z.array(z.string()),
+                buttonText: z.string(),
+                buttonLink: z.string(),
+                secondaryButtonText: z.string().optional(),
+                secondaryButtonLink: z.string().optional(),
+            }).optional(),
         }),
 });
 

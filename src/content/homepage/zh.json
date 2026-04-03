@@ -183,5 +183,22 @@
                 }
             ]
         }
-    ]
+    ],
+    "training": {
+        "sectionTitle": "培训",
+        "sectionSubtitle": "系统化掌握 OpenClaw，从入门到商业化落地",
+        "title": "OpenClaw 全栈大师班",
+        "subtitle": "限时特惠",
+        "description": "专为想要深入理解和应用 OpenClaw 的开发者与企业设计。课程包含：",
+        "image": "https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass",
+        "features": [
+            "全平台环境搭建与系统安装指南",
+            "进阶参数配置与大模型无缝对接",
+            "飞书、钉钉、Discord 等全频道接入实战"
+        ],
+        "buttonText": "立刻报名",
+        "buttonLink": "/zh/training",
+        "secondaryButtonText": "查看大纲",
+        "secondaryButtonLink": "/zh/training#syllabus"
+    }
 }

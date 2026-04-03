@@ -3,8 +3,11 @@
 @theme {
     /* 核心品牌色 */
     --color-main: #111111;
-    --color-primary: #6c24d8;
-    --color-primary-hover: #5a1db4;
+    --color-primary: #8b5cf6; /* Update to match prototype astro-accent */
+    --color-primary-hover: #7c3aed; /* Updated hover state */
+    --color-astro-border: var(--color-astro-border);
+    --color-astro-card: var(--color-astro-card);
+
     
     /* 响应式断点 */
     --breakpoint-sm: 640px;
@@ -45,6 +48,10 @@
     --ui-border: 148 163 184;
     --ui-border-muted: 30 41 59;
     --ui-overlay: 2 6 23;
+    
+    /* Variables mapped to prototype 'astro-card' and 'astro-border' classes */
+    --color-astro-card: #1f2937; 
+    --color-astro-border: #374151;
 }
 
 body {
@@ -76,25 +83,11 @@ h3 {
 
 section {
     @apply w-full mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
-
-    ul {
-        @apply list-disc space-y-1;
-        li {
-            @apply ml-6 mt-1;
-        }
-    }
 }
 
 hr {
     @apply my-10 border;
     border-color: rgb(var(--ui-border) / 0.15);
-}
-
-p,
-li {
-    span {
-        @apply bg-primary/10 px-1 py-1 font-medium rounded-md;
-    }
 }
 
 header {

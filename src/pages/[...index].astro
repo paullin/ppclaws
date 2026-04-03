@@ -7,6 +7,7 @@ import HeroCarousel from "@components/HeroCarousel.svelte";
 import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
+import TrainingSection from "@components/TrainingSection.astro";
 
 // Get current language from URL
 export function getStaticPaths() {
@@ -79,5 +80,21 @@ const homepageSections = data?.sections || [];
                 </SectionGrid>
             </section>
         ))}
+
+        {data?.training && (
+            <TrainingSection 
+                sectionTitle={data.training.sectionTitle}
+                sectionSubtitle={data.training.sectionSubtitle}
+                title={data.training.title}
+                subtitle={data.training.subtitle}
+                description={data.training.description}
+                image={data.training.image}
+                features={data.training.features}
+                buttonText={data.training.buttonText}
+                buttonLink={data.training.buttonLink}
+                secondaryButtonText={data.training.secondaryButtonText}
+                secondaryButtonLink={data.training.secondaryButtonLink}
+            />
+        )}
     </div>
 </Base>

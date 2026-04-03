@@ -183,5 +183,22 @@
                 }
             ]
         }
-    ]
+    ],
+    "training": {
+        "sectionTitle": "Training",
+        "sectionSubtitle": "Master OpenClaw systematically, from basics to commercialization",
+        "title": "OpenClaw Full-Stack Masterclass",
+        "subtitle": "LIMITED OFFER",
+        "description": "Designed for developers and enterprises wanting to deeply understand and apply OpenClaw. Course includes:",
+        "image": "https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass",
+        "features": [
+            "Cross-platform environment setup and installation guide",
+            "Advanced parameter configuration and seamless LLM integration",
+            "Lark, DingTalk, Discord full-channel integration practice"
+        ],
+        "buttonText": "Enroll Now",
+        "buttonLink": "/training",
+        "secondaryButtonText": "View Syllabus",
+        "secondaryButtonLink": "/training#syllabus"
+    }
 }
