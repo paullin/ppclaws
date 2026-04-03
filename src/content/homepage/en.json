@@ -1,0 +1,154 @@
+{
+    "title": "PPClaws",
+    "description": "Powerful automation tools for modern developers",
+    "hero": [
+        {
+            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1",
+            "title": "Master OpenClaw Core Configurations",
+            "description": "From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.",
+            "badge": "Featured",
+            "link": "/blog/master-openclaw"
+        },
+        {
+            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2",
+            "title": "How to Build Custom Skills for UI/UX Designers",
+            "description": "Unleash your creativity and improve design workflow efficiency with customized Skills.",
+            "badge": "Tutorial",
+            "link": "/blog/custom-skills"
+        }
+    ],
+    "sections": [
+        {
+            "title": "Featured Skills",
+            "subtitle": "Essential core skill packs to boost productivity",
+            "moreLink": "#",
+            "moreText": "View More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "Data Scraping Tool 1",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1"
+                },
+                {
+                    "title": "Data Scraping Tool 2",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2"
+                },
+                {
+                    "title": "Data Scraping Tool 3",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3"
+                },
+                {
+                    "title": "Data Scraping Tool 4",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4"
+                }
+            ]
+        },
+        {
+            "title": "Skills for Product Manager",
+            "subtitle": "Empowering PMs with competitor analysis and requirements management",
+            "moreLink": "#",
+            "moreText": "Browse More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "PRD Automation Assistant 1",
+                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5"
+                },
+                {
+                    "title": "PRD Automation Assistant 2",
+                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6"
+                },
+                {
+                    "title": "PRD Automation Assistant 3",
+                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7"
+                },
+                {
+                    "title": "PRD Automation Assistant 4",
+                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8"
+                }
+            ]
+        },
+        {
+            "title": "Skills for UI/UX Designer",
+            "subtitle": "Providing design inspiration collection and automated slicing",
+            "moreLink": "#",
+            "moreText": "Browse More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "Palette Extractor 1",
+                    "description": "Extract color and typography specs from any webpage with one click.",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9"
+                },
+                {
+                    "title": "Palette Extractor 2",
+                    "description": "Extract color and typography specs from any webpage with one click.",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10"
+                },
+                {
+                    "title": "Palette Extractor 3",
+                    "description": "Extract color and typography specs from any webpage with one click.",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11"
+                },
+                {
+                    "title": "Palette Extractor 4",
+                    "description": "Extract color and typography specs from any webpage with one click.",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12"
+                }
+            ]
+        },
+        {
+            "title": "Skills for Marketing",
+            "subtitle": "Social media content generation and SEO keyword analysis engine",
+            "moreLink": "#",
+            "moreText": "Browse More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "Twitter Copy Generator 1",
+                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
+                    "tags": ["Marketing"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13"
+                },
+                {
+                    "title": "Twitter Copy Generator 2",
+                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
+                    "tags": ["Marketing"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14"
+                },
+                {
+                    "title": "Twitter Copy Generator 3",
+                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
+                    "tags": ["Marketing"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15"
+                },
+                {
+                    "title": "Twitter Copy Generator 4",
+                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
+                    "tags": ["Marketing"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
+                }
+            ]
+        }
+    ]
+}

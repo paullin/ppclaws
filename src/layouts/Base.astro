@@ -5,7 +5,6 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
-import Themes from "astro-themes";
 
 
 // Get current language from URL
@@ -40,22 +39,46 @@ const { meta, title } = Astro.props as Props;
 <html lang={lang}>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#FFFFFF" />
-        <Themes defaultTheme="light" />
+        <meta charset="UTF-8" />
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        
+        <!-- Dark Mode Persistence Script -->
+        <script is:inline>
+            const theme = (() => {
+                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                    return localStorage.getItem('theme');
+                }
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            })();
+          
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            window.localStorage.setItem('theme', theme);
+        </script>
+
+        <meta name="theme-color" content="#FFFFFF" id="theme-color-meta" />
         
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Astro i18n Starter" />
+        <meta name="apple-mobile-web-app-title" content="PPClaws" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
 
         <!-- Basic -->
-        <title>{title} // Astro i18n Starter</title>
+        <title>{title} // PPClaws</title>
         <meta name="description" content={meta.description} />
         {meta.keywords && <meta name="keywords" content={meta.keywords} />}
         <link rel="canonical" href={meta.canonical || Astro.url.href} />

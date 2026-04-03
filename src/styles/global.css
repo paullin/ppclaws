@@ -1,36 +1,61 @@
 @import "tailwindcss";
 
 @theme {
+    /* 核心品牌色 */
     --color-main: #111111;
     --color-primary: #6c24d8;
+    --color-primary-hover: #5a1db4;
+    
+    /* 响应式断点 */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* 字体系统 */
+    --font-sans: "Inter", "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-mono: "Fira Code", "Cascadia Code", "Source Code Pro", monospace;
 }
 
 :root {
+    /* 全局语义化变量 - 浅色模式 */
     --ui-bg: 255 255 255;
-    --ui-text: 17 17 17;
+    --ui-text: 0 0 0;
+    --ui-text-muted: 71 85 105;
     --ui-surface: 255 255 255;
-    --ui-surface-soft: 248 250 252;
-    --ui-border: 15 23 42;
-    --ui-overlay: 15 23 42;
+    --ui-surface-soft: 249 250 251;
+    --ui-border: 229 231 235;
+    --ui-border-muted: 243 244 246;
+    --ui-overlay: 0 0 0;
+    
+    /* 阴影变量 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-html[data-theme="dark"] {
+.dark {
+    /* 全局语义化变量 - 深色模式 */
     --ui-bg: 10 14 22;
     --ui-text: 235 240 255;
+    --ui-text-muted: 148 163 184;
     --ui-surface: 17 23 34;
     --ui-surface-soft: 26 33 48;
     --ui-border: 148 163 184;
+    --ui-border-muted: 30 41 59;
     --ui-overlay: 2 6 23;
 }
 
 body {
-    @apply font-sans px-4 min-h-dvh flex flex-col;
+    @apply font-sans min-h-dvh flex flex-col antialiased transition-colors duration-300;
     color: rgb(var(--ui-text));
     background-color: rgb(var(--ui-bg));
+    text-rendering: optimizeLegibility;
 }
 
 main {
-    @apply max-w-7xl mx-auto flex-1;
+    @apply max-w-7xl mx-auto flex-1 w-full;
 }
 
 h1,
@@ -38,11 +63,11 @@ article h1,
 aside h1,
 nav h1,
 section h1 {
-    @apply text-4xl md:text-5xl font-bold text-center mb-8 wrap-anywhere;
+    @apply text-4xl md:text-5xl font-extrabold tracking-tight text-center mb-8 wrap-anywhere text-black dark:text-white;
 }
 
 h2 {
-    @apply text-lg font-semibold mb-2;
+    @apply text-xl font-bold mb-4 text-black dark:text-white;
 }
 
 h3 {
@@ -50,7 +75,7 @@ h3 {
 }
 
 section {
-    @apply max-w-3xl mx-auto mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
+    @apply w-full mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
 
     ul {
         @apply list-disc space-y-1;
@@ -73,125 +98,7 @@ li {
 }
 
 header {
-    @apply border-b fixed lg:sticky top-0 lg:w-full flex flex-col lg:flex-row lg:justify-between py-6 max-w-7xl px-4 lg:px-0 lg:mx-auto backdrop-blur-xl z-10 left-0 right-0;
-    border-color: rgb(var(--ui-border) / 0.2);
-    background-color: rgb(var(--ui-surface) / 0.78);
-
-    .nav-header {
-        @apply flex justify-between items-center p-4 relative z-10 w-full;
-    }
-
-    .logo {
-        @apply contents;
-
-        img {
-            @apply hover:opacity-50;
-        }
-    }
-
-    /* Mobile menu checkbox (hidden) */
-    .mobile-menu-checkbox {
-        @apply hidden;
-    }
-
-    /* Mobile menu button */
-    .mobile-menu-toggle {
-        @apply flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer lg:hidden;
-
-        span {
-            @apply block w-6 h-0.5 bg-current transition-all duration-300;
-        }
-    }
-
-    /* Hamburger → X animation when checked */
-    .mobile-menu-checkbox:checked ~ div .mobile-menu-toggle span:nth-child(1) {
-        @apply transform rotate-45 translate-y-1.5;
-    }
-
-    .mobile-menu-checkbox:checked ~ div .mobile-menu-toggle span:nth-child(2) {
-        @apply opacity-0;
-    }
-
-    .mobile-menu-checkbox:checked ~ div .mobile-menu-toggle span:nth-child(3) {
-        @apply transform -rotate-45 -translate-y-1.5;
-    }
-
-    /* Mobile navigation */
-    .nav-main {
-        @apply hidden w-full lg:flex lg:items-center lg:gap-8 lg:justify-end;
-    }
-
-    /* Show nav when checkbox is checked */
-    .mobile-menu-checkbox:checked ~ .nav-main {
-        @apply flex flex-col lg:flex-row mt-4;
-    }
-
-    .nav-list {
-        @apply flex flex-col lg:flex-row list-none m-0 p-0 gap-4 lg:gap-8 items-center;
-    }
-
-    .nav-item {
-        @apply relative text-center space-y-4 lg:space-y-0;
-    }
-
-    .nav-link {
-        @apply py-2 lg:py-0 cursor-pointer no-underline hover:opacity-50;
-    }
-
-    .nav-dropdown {
-        @apply lg:hidden lg:absolute lg:top-full lg:left-0 lg:border lg:p-2 lg:min-w-32 lg:shadow-md space-y-4 lg:space-y-0;
-        background-color: rgb(var(--ui-surface-soft));
-        border-color: rgb(var(--ui-border) / 0.25);
-    }
-
-    .nav-dropdown-link {
-        @apply block lg:p-2 no-underline whitespace-nowrap py-2;
-    }
-
-    .nav-dropdown-link:hover {
-        background-color: rgb(var(--ui-border) / 0.12);
-    }
-
-    .nav-actions {
-        @apply flex flex-col lg:flex-row items-center mt-4 lg:mt-0 gap-4 lg:gap-6;
-    }
-
-    .search-trigger {
-        @apply inline-flex items-center justify-center w-11 h-11 rounded-full cursor-pointer transition;
-    }
-
-    .theme-trigger {
-        @apply inline-flex items-center justify-center w-11 h-11 cursor-pointer transition relative;
-    }
-
-    .theme-trigger:hover {
-        @apply opacity-60;
-    }
-
-    .theme-icon {
-        @apply absolute transition-opacity duration-200;
-    }
-
-    .theme-icon-sun {
-        @apply opacity-0;
-    }
-
-    .theme-trigger[data-theme-resolved="dark"] .theme-icon-moon {
-        @apply opacity-0;
-    }
-
-    .theme-trigger[data-theme-resolved="dark"] .theme-icon-sun {
-        @apply opacity-100;
-    }
-
-    .search-trigger:hover {
-        @apply opacity-60;
-    }
-
-    /* Custom hover za dropdown */
-    .nav-item:hover .nav-dropdown {
-        @apply block;
-    }
+    @apply sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md;
 }
 
 .search-modal {
@@ -351,40 +258,4 @@ footer {
 abbr {
     @apply text-red-600;
     text-decoration: none;
-}
-
-.language-picker {
-    @apply relative;
-}
-
-.language-toggle {
-    @apply inline-flex items-center justify-center w-11 h-11 cursor-pointer transition;
-}
-
-.language-toggle:hover {
-    @apply opacity-60;
-}
-
-.language-menu {
-    @apply absolute right-0 top-12 rounded-xl p-1.5 space-y-0.5 z-30;
-    background-color: rgb(var(--ui-surface));
-    border: 1px solid rgb(var(--ui-border) / 0.25);
-    min-width: 9.5rem;
-}
-
-.language-option {
-    @apply flex items-center gap-2 px-2 py-1.5 rounded-md no-underline;
-    font-size: 0.95rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-.language-option:hover {
-    background-color: rgb(var(--ui-border) / 0.12);
-}
-
-.language-flag {
-    @apply inline-flex items-center justify-center;
-    font-size: 1.25rem;
-    line-height: 1;
 }

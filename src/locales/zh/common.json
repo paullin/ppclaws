@@ -2,6 +2,18 @@
     "menu": {
         "list": {
             "home": "首页",
+            "skills": "Skills 精选",
+            "example": "Skills 使用",
+            "training": "培训",
+            "submit": "收录",
+            "pm_skills": "产品经理 Skills",
+            "ux_skills": "设计师 Skills",
+            "marketing_skills": "市场营销 Skills",
+            "more": "更多",
+            "req_analysis": "需求分析",
+            "proto_design": "原型设计",
+            "ab_testing": "AB 测试",
+            "seo_mining": "SEO 关键词挖掘",
             "about": "关于",
             "pages": "页面",
             "dynamicRouting": "动态路由",
@@ -20,7 +32,7 @@
         }
     },
     "footer": {
-        "description": "Astro i18n 启动模板",
+        "description": "PPClaws 网站",
         "name": "Nik Klemenc",
         "copy": "版权所有",
         "made": "基于 {{what}} 构建",

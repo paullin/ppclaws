@@ -37,10 +37,10 @@ const languageUrls = await Promise.all(
 </ul> --><!-- Dropdown selector -->
 {
     hasLanguageSwitch && (
-        <div class="language-picker" data-language-picker>
+        <div class="relative inline-block text-left" data-language-picker>
             <button
                 type="button"
-                class="language-toggle"
+                class="inline-flex items-center justify-center p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 data-language-toggle
                 aria-label={t("menu.languagesText.selectLanguage")}
                 aria-haspopup="menu"
@@ -63,20 +63,24 @@ const languageUrls = await Promise.all(
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                 </svg>
             </button>
-            <ul class="language-menu" data-language-menu hidden role="menu">
+            <ul 
+                class="absolute right-0 bottom-full lg:bottom-auto lg:top-full mb-2 lg:mb-0 lg:mt-1 w-40 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl py-2 opacity-0 invisible translate-y-2 transition-all duration-200 z-50"
+                data-language-menu 
+                role="menu"
+            >
                 {
                     languageUrls.map(({ lang, label, targetUrl }) => (
                         <li role="none">
                             <a
                                 href={targetUrl}
                                 role="menuitem"
-                                class="language-option"
+                                class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                                 aria-current={lang === currentLang ? "page" : undefined}
                             >
-                                <span class="language-flag" aria-hidden="true">
+                                <span class="text-lg" aria-hidden="true">
                                     {languageFlags[lang] || "🌐"}
                                 </span>
-                                <span>{label}</span>
+                                <span class={lang === currentLang ? "font-bold text-primary" : ""}>{label}</span>
                             </a>
                         </li>
                     ))
@@ -95,17 +99,18 @@ const languageUrls = await Promise.all(
         if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
 
         const closeMenu = () => {
-            menu.setAttribute("hidden", "");
+            menu.classList.add("opacity-0", "invisible", "translate-y-2");
             toggle.setAttribute("aria-expanded", "false");
         };
 
         const openMenu = () => {
-            menu.removeAttribute("hidden");
+            menu.classList.remove("opacity-0", "invisible", "translate-y-2");
             toggle.setAttribute("aria-expanded", "true");
         };
 
-        toggle.addEventListener("click", () => {
-            if (menu.hasAttribute("hidden")) {
+        toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (menu.classList.contains("invisible")) {
                 openMenu();
             } else {
                 closeMenu();
@@ -126,9 +131,5 @@ const languageUrls = await Promise.all(
     };
 
     document.addEventListener("astro:page-load", setupLanguagePicker);
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", setupLanguagePicker);
-    } else {
-        setupLanguagePicker();
-    }
+    setupLanguagePicker();
 </script>
