@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PPClaws - 高保真原型</title>
+  <title>PPClaws - High Fidelity Prototype</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -55,7 +55,7 @@
 </head>
 <body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
 
-  <!-- 导航栏 -->
+  <!-- Navbar -->
   <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -65,56 +65,55 @@
           <span class="font-bold text-xl tracking-tight">PPClaws</span>
         </div>
 
-        <!-- 桌面端菜单 -->
+        <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center">
-          <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">首页</a>
+          <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
           
           <div class="relative group">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Skills 精选 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
               <div class="py-1" role="menu">
-                <a href="#pm-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">产品经理 Skills</a>
-                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师 Skills</a>
-                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销 Skills</a>
-              <a href="#more-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+                <a href="#pm-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
+                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
+                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
               </div>
             </div>
           </div>
 
           <div class="relative group">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Skills 使用 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
               <div class="py-1" role="menu">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">需求分析</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">原型设计</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">AB 测试</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 关键词挖掘</a>
-              <a href="#more-examples" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
+              <a href="#more-examples" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
               </div>
             </div>
           </div>
 
           <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('training').scrollIntoView({behavior: 'smooth'})">
-            培训
+            Training
           </button>
           
-          <a href="#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">收录</a>
+          <a href="#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Submit</a>
         </nav>
 
-        <!-- 右侧功能区 -->
+        <!-- Right Functions -->
         <div class="flex items-center space-x-2 lg:space-x-4">
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="搜索">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search">
             <i data-lucide="search" class="w-5 h-5"></i>
           </button>
-          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换暗夜模式">
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Toggle Dark Mode">
             <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
           </button>
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='index-en.html'">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='index.html'">
             <i data-lucide="globe" class="w-5 h-5"></i>
           </button>
           <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
@@ -126,30 +125,30 @@
     </div>
   </header>
 
-  <!-- 主内容区 -->
+  <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
 
-    <!-- 轮播图板块：16:9 比例，跑马灯效果 -->
+    <!-- Marquee Banner: 16:9 ratio -->
     <section class="w-full">
       <div class="flex items-center justify-between mb-4">
-        <h2 class="text-2xl font-bold tracking-tight">精选内容</h2>
+        <h2 class="text-2xl font-bold tracking-tight">Featured Content</h2>
       </div>
       <div class="relative w-full aspect-video md:aspect-[21/9] lg:aspect-[16/6] bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group">
         <div id="banner-container" class="absolute inset-0 flex w-full h-full transition-transform duration-500 ease-in-out">
           <div class="w-full h-full relative flex-shrink-0">
             <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1" alt="Banner 1" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-              <span class="px-2 py-1 bg-astro-accent text-white text-xs font-bold rounded-md w-max mb-3">精选</span>
-              <h3 class="text-3xl font-bold text-white mb-2">掌握 OpenClaw 核心配置技巧</h3>
-              <p class="text-gray-200 max-w-2xl">从入门到精通，了解如何快速在您的项目中集成 OpenClaw，并构建强大的自动化流程。</p>
+              <span class="px-2 py-1 bg-astro-accent text-white text-xs font-bold rounded-md w-max mb-3">Featured</span>
+              <h3 class="text-3xl font-bold text-white mb-2">Master OpenClaw Core Configurations</h3>
+              <p class="text-gray-200 max-w-2xl">From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.</p>
             </div>
           </div>
           <div class="w-full h-full relative flex-shrink-0">
             <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2" alt="Banner 2" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-              <span class="px-2 py-1 bg-blue-500 text-white text-xs font-bold rounded-md w-max mb-3">教程</span>
-              <h3 class="text-3xl font-bold text-white mb-2">如何为 UI/UX 设计师打造专属 Skill</h3>
-              <p class="text-gray-200 max-w-2xl">释放创造力，通过定制化 Skill 提升设计工作流的效率与质量。</p>
+              <span class="px-2 py-1 bg-blue-500 text-white text-xs font-bold rounded-md w-max mb-3">Tutorial</span>
+              <h3 class="text-3xl font-bold text-white mb-2">How to Build Custom Skills for UI/UX Designers</h3>
+              <p class="text-gray-200 max-w-2xl">Unleash your creativity and improve design workflow efficiency with customized Skills.</p>
             </div>
           </div>
         </div>
@@ -169,277 +168,277 @@
     </section>
 
 
-    <!-- 子区域1：精选 Skills -->
+    <!-- Section 1: Featured Skills -->
     <section>
       <div class="flex justify-between items-end mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">精选 Skills</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">提升生产力的必备核心技能包</p>
+          <h2 class="text-2xl font-bold tracking-tight">Featured Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Essential core skill packs to boost productivity</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- 卡片重复4次 -->
+        <!-- 4 Cards -->
         
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1" alt="数据抓取利器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">效率</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">数据抓取利器 1</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2" alt="数据抓取利器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">效率</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">数据抓取利器 2</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3" alt="数据抓取利器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">效率</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">数据抓取利器 3</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4" alt="数据抓取利器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">效率</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">数据抓取利器 4</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
             </div>
           </div>
       </div>
     </section>
 
-    <!-- 子区域2：产品经理 -->
+    <!-- Section 2: Skills for Product Manager -->
     <section id="pm-skills">
       <div class="flex justify-between items-end mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">产品经理</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">助力产品经理完成竞品分析与需求管理</p>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Product Manager</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Empowering PMs with competitor analysis and requirements management</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5" alt="PRD 自动化助手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD 自动化助手 1</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6" alt="PRD 自动化助手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD 自动化助手 2</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7" alt="PRD 自动化助手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD 自动化助手 3</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8" alt="PRD 自动化助手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD 自动化助手 4</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
             </div>
           </div>
       </div>
     </section>
 
-    <!-- 子区域3：UI/UX 设计师 -->
+    <!-- Section 3: Skills for UI/UX Designer -->
     <section id="ux-skills">
       <div class="flex justify-between items-end mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">UI/UX 设计师</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">提供设计灵感收集与自动化切图能力</p>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for UI/UX Designer</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Providing design inspiration collection and automated slicing</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9" alt="色板提取器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">色板提取器 1</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键从任意网页中提取设计系统的色彩与排版规范参数。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10" alt="色板提取器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">色板提取器 2</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键从任意网页中提取设计系统的色彩与排版规范参数。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11" alt="色板提取器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">色板提取器 3</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键从任意网页中提取设计系统的色彩与排版规范参数。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12" alt="色板提取器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">色板提取器 4</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键从任意网页中提取设计系统的色彩与排版规范参数。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
             </div>
           </div>
       </div>
     </section>
 
-    <!-- 子区域4：市场营销 -->
+    <!-- Section 4: Skills for Marketing -->
     <section id="marketing-skills">
       <div class="flex justify-between items-end mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">市场营销</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">社媒内容生成与 SEO 关键词分析引擎</p>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Marketing</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Social media content generation and SEO keyword analysis engine</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13" alt="Twitter 文案生成器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">营销</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter 文案生成器 1</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据产品特性，批量生成符合平台调性的病毒式营销推文。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14" alt="Twitter 文案生成器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">营销</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter 文案生成器 2</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据产品特性，批量生成符合平台调性的病毒式营销推文。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15" alt="Twitter 文案生成器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">营销</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter 文案生成器 3</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据产品特性，批量生成符合平台调性的病毒式营销推文。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16" alt="Twitter 文案生成器" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">营销</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
               </div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter 文案生成器 4</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据产品特性，批量生成符合平台调性的病毒式营销推文。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
             </div>
           </div>
       </div>
     </section>
 
-    <!-- CTA 板块 -->
+    <!-- CTA Section -->
     <section class="w-full bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border rounded-2xl p-8 md:p-12 text-center shadow-sm">
       <div class="max-w-2xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">订阅我们的最新资讯</h2>
-        <p class="text-gray-600 dark:text-gray-400 mb-8">获取最新生产力 Skills，实战经验，免费订阅。</p>
-        <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto" onsubmit="event.preventDefault(); alert('订阅成功！');">
-          <input type="email" placeholder="您的邮箱地址" required class="flex-1 px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+        <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Subscribe to Our Newsletter</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Get the latest useful Skill updates, best practices, and exclusive tutorials.</p>
+        <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscription successful!');">
+          <input type="email" placeholder="Your email address" required class="flex-1 px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
           <button type="submit" class="px-6 py-3 rounded-lg bg-astro-accent hover:bg-purple-600 text-white font-medium transition-colors whitespace-nowrap shadow-sm">
-            立即订阅
+            Subscribe Now
           </button>
         </form>
       </div>
     </section>
 
-    <!-- 子区域5：精选案例 -->
+    <!-- Section 5: Featured Cases -->
     <section>
       <div class="flex justify-between items-end mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">精选案例</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">看看大家都在用 OpenClaw 解决什么问题</p>
+          <h2 class="text-2xl font-bold tracking-tight">Featured Cases</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">See what problems people are solving with OpenClaw</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -448,11 +447,11 @@
               Free
             </div>
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17" alt="案例研究" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">案例研究 1：提升效率指南</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">深入剖析如何组合多个基础技能，打造端到端的客户数据跟进闭环流。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 1: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
@@ -460,11 +459,11 @@
               Paid
             </div>
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18" alt="案例研究" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">案例研究 2：提升效率指南</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">深入剖析如何组合多个基础技能，打造端到端的客户数据跟进闭环流。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 2: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
@@ -472,11 +471,11 @@
               Free
             </div>
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19" alt="案例研究" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">案例研究 3：提升效率指南</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">深入剖析如何组合多个基础技能，打造端到端的客户数据跟进闭环流。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 3: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
             </div>
           </div>
           <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
@@ -484,127 +483,127 @@
               Paid
             </div>
             <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20" alt="案例研究" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-5">
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">案例研究 4：提升效率指南</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">深入剖析如何组合多个基础技能，打造端到端的客户数据跟进闭环流。</p>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 4: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
             </div>
           </div>
       </div>
     </section>
 
     
-    <!-- 培训区域 -->
+    <!-- Training Section -->
     <section id="training" class="w-full">
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">培训</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">系统化掌握 OpenClaw，从入门到商业化落地</p>
+          <h2 class="text-2xl font-bold tracking-tight">Training</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Master OpenClaw systematically, from basics to commercialization</p>
         </div>
       </div>
       <div class="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card shadow-sm flex flex-col md:flex-row">
         <div class="w-full md:w-1/2 aspect-video md:aspect-auto">
-          <img src="https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass" alt="培训课程" class="w-full h-full object-cover">
+          <img src="https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass" alt="Training Course" class="w-full h-full object-cover">
         </div>
         <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-          <span class="px-3 py-1 bg-astro-accent/10 text-astro-accent text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">限时特惠</span>
-          <h3 class="text-3xl font-bold mb-4">OpenClaw 全栈大师班</h3>
+          <span class="px-3 py-1 bg-astro-accent/10 text-astro-accent text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">LIMITED OFFER</span>
+          <h3 class="text-3xl font-bold mb-4">OpenClaw Full-Stack Masterclass</h3>
           <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-            专为想要深入理解和应用 OpenClaw 的开发者与企业设计。课程包含：
+            Designed for developers and enterprises wanting to deeply understand and apply OpenClaw. Course includes:
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
               <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>全平台环境搭建与系统安装指南</span>
+              <span>Cross-platform environment setup and installation guide</span>
             </li>
             <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
               <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>进阶参数配置与大模型无缝对接</span>
+              <span>Advanced parameter configuration and seamless LLM integration</span>
             </li>
             <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
               <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>飞书、钉钉、Discord 等全频道接入实战</span>
+              <span>Lark, DingTalk, Discord full-channel integration practice</span>
             </li>
           </ul>
           <div class="flex flex-col sm:flex-row gap-4">
             <button class="px-6 py-3 rounded-lg bg-astro-accent hover:bg-purple-600 text-white font-medium transition-colors flex items-center justify-center gap-2">
-              立刻报名 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              Enroll Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
             <button class="px-6 py-3 rounded-lg border border-gray-200 dark:border-astro-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
-              查看大纲
+              View Syllabus
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Q&A 常见问题区域 (折叠面板) -->
+    <!-- Q&A Section (Accordion) -->
     <section class="max-w-3xl mx-auto w-full">
       <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold tracking-tight mb-3">常见问题 (Q&A)</h2>
-        <p class="text-gray-500 dark:text-gray-400">关于培训与 OpenClaw 使用的常见疑惑解答</p>
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Frequently Asked Questions (Q&A)</h2>
+        
       </div>
       
       <div class="space-y-4" id="faq-container">
         <!-- FAQ 1 -->
         <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
           <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">零基础小白可以报名这个培训班吗？</span>
+            <span class="font-medium text-lg">Can beginners enroll in this training class?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
           </button>
           <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            完全可以。我们的课程从最基础的环境依赖（如 Node.js, Python）讲起，配备了详细的图文和视频操作指南。即使你没有太多编程经验，跟着教程一步步操作也能顺利完成部署。
+            Absolutely. Our course starts from the most basic environment dependencies (like Node.js, Python), equipped with detailed text and video guides. Even without much programming experience, you can complete the deployment by following step-by-step.
           </div>
         </div>
 
         <!-- FAQ 2 -->
         <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
           <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">部署 OpenClaw 需要准备什么服务器配置？</span>
+            <span class="font-medium text-lg">What server configuration is needed to deploy OpenClaw?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
           </button>
           <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            基础使用的话，推荐至少 2核 CPU 和 4GB 内存的云服务器（如阿里云轻量应用服务器）。如果你需要运行本地的大型模型，则需要配备具有较强算力的 GPU 服务器。
+            For basic use, we recommend a cloud server with at least 2-core CPU and 4GB RAM. If you need to run large local models, a GPU server with stronger computing power is required.
           </div>
         </div>
 
         <!-- FAQ 3 -->
         <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
           <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">频道接入目前支持哪些平台？</span>
+            <span class="font-medium text-lg">Which platforms are currently supported for channel integration?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
           </button>
           <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            目前官方与社区已经支持了主流平台，包括国内的微信、飞书、钉钉、企业微信，以及海外的 Discord, Telegram, Slack 和 WhatsApp 等。培训课程中会详细讲解各个平台的鉴权与回调配置方法。
+            Currently, the official and community have supported mainstream platforms, including WeChat, Feishu, DingTalk, Enterprise WeChat, as well as overseas platforms like Discord, Telegram, Slack, and WhatsApp. The training course will explain the authentication and callback configuration methods for each platform in detail.
           </div>
         </div>
       </div>
       <div class="mt-6 text-center">
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline inline-flex items-center gap-1">查看更多常见问题解答 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline inline-flex items-center gap-1">View more frequently asked questions <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
     </section>
 
-    <!-- 子区域6：提交收录 (表单) -->
+    <!-- Section 6: Submit Skills (Form) -->
     <section id="submit" class="max-w-3xl mx-auto border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card rounded-2xl p-6 sm:p-10 shadow-sm">
       <div class="text-center mb-8">
-        <h2 class="text-2xl font-bold tracking-tight mb-2">提交收录</h2>
-        <p class="text-gray-500 dark:text-gray-400 text-sm">将您的优质技能、案例或文章分享给社区，一经审核即可上架展示。</p>
+        <h2 class="text-2xl font-bold tracking-tight mb-2">Submit to us</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Share your high-quality Skills, cases, or articles with the community. Once approved, they will be listed.</p>
       </div>
-      <form action="./confirm.html" method="GET" class="space-y-6">
+      <form action="./confirm-en.html" method="GET" class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label for="name" class="block text-sm font-medium">资源名称 <span class="text-red-500">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="例如：SEO 批量查询器" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+            <label for="name" class="block text-sm font-medium">Resource Name <span class="text-red-500">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="e.g.: Bulk SEO Checker" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
           </div>
           <div class="space-y-2">
-            <label for="type" class="block text-sm font-medium">资源类型 <span class="text-red-500">*</span></label>
+            <label for="type" class="block text-sm font-medium">Resource Type <span class="text-red-500">*</span></label>
             <div class="relative">
               <select id="type" name="type" required class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors appearance-none cursor-pointer">
-                <option value="" disabled selected hidden>请选择资源类型</option>
-                <option value="skill">技能插件</option>
-                <option value="case">应用案例</option>
-                <option value="article">经验文章</option>
+                <option value="" disabled selected hidden>Select resource type</option>
+                <option value="skill">Skill</option>
+                <option value="case">Case</option>
+                <option value="article">Article</option>
               </select>
               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
@@ -614,29 +613,29 @@
         </div>
         
         <div class="space-y-2">
-          <label for="url" class="block text-sm font-medium">资源链接 <span class="text-red-500">*</span></label>
+          <label for="url" class="block text-sm font-medium">Resource Link <span class="text-red-500">*</span></label>
           <input type="url" id="url" name="url" required placeholder="https://..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
         </div>
         
         <div class="space-y-2">
-          <label for="description" class="block text-sm font-medium">简要描述 <span class="text-red-500">*</span></label>
-          <textarea id="description" name="description" rows="4" required placeholder="请简要描述您的资源特点与解决的核心痛点..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors resize-none"></textarea>
+          <label for="description" class="block text-sm font-medium">Short Description <span class="text-red-500">*</span></label>
+          <textarea id="description" name="description" rows="4" required placeholder="Please briefly describe the features of your resource and the core pain points it solves..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors resize-none"></textarea>
         </div>
         
         <div class="space-y-2">
-          <label for="contact" class="block text-sm font-medium">联系方式 (选填)</label>
-          <input type="text" id="contact" name="contact" placeholder="邮箱 / Twitter / 微信" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+          <label for="contact" class="block text-sm font-medium">Contact (Optional)</label>
+          <input type="text" id="contact" name="contact" placeholder="Email / Twitter / WeChat" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
         </div>
 
         <button type="submit" class="w-full py-3 px-4 bg-astro-accent hover:bg-purple-600 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
-          提交审核 <i data-lucide="send" class="w-4 h-4"></i>
+          Submit for Review <i data-lucide="send" class="w-4 h-4"></i>
         </button>
       </form>
     </section>
 
   </main>
 
-  <!-- 页脚 -->
+  <!-- Footer -->
   <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -645,24 +644,26 @@
             <img src="../../logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
             <span class="font-bold text-xl tracking-tight">PPClaws</span>
           </div>
-          <p class="text-sm text-gray-600 dark:text-gray-400">一人就是一支团队。</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            One person, one team.
+          </p>
         </div>
         
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills 目录</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="#pm-skills" class="hover:text-astro-accent transition-colors w-max">产品经理 Skills</a>
-            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师 Skills</a>
-            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销 Skills</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">需求分析案例</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">原型设计案例</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">AB 测试案例</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">SEO 关键词案例</a>
+            <a href="#pm-skills" class="hover:text-astro-accent transition-colors w-max">Skills for PM</a>
+            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Designer</a>
+            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Marketing</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Requirement Analysis</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Prototyping</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">SEO Keywords</a>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">关注我们</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow us</h3>
           <div class="flex items-center gap-4">
 
             <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="X (Twitter)">
@@ -671,38 +672,38 @@
             <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="YouTube">
               <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
             </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 group relative" title="微信">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 group relative" title="WeChat">
               <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
             </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="即刻">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Jike">
               <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
             </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="小红书">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Xiaohongshu">
               <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
             </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 rounded border border-current" title="墨问">
-              <span class="text-[10px] font-bold leading-none transform scale-90">墨</span>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 rounded border border-current" title="MoWen">
+              <span class="text-[10px] font-bold leading-none transform scale-90">M</span>
             </a>
                     </div>
         </div>
 
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">关联资源</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
             <li><a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors">OpenClaw</a></li>
             <li><a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors">ClawHub</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">阿里云部署指南</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">腾讯云部署指南</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">飞书开放平台</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Alibaba Cloud Guide</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Tencent Cloud Guide</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Lark Open Platform</a></li>
           
-            <li><a href="#" class="hover:text-astro-accent transition-colors">关于我们</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">隐私政策</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">About us</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Privacy</a></li>
           </ul>
         </div>
       </div>
       
       <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center text-sm text-gray-500 dark:text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>&copy; 2026 PPClaws. 保留所有权利。</p>
+        <p>&copy; 2026 PPClaws. All rights reserved.</p>
         
         
       </div>
@@ -710,20 +711,20 @@
   </footer>
 
   <script>
-    // 初始化 Lucide 图标
+    // Initialize Lucide icons
     lucide.createIcons();
 
-    // FAQ 折叠面板逻辑
+    // FAQ Accordion Logic
     const faqBtns = document.querySelectorAll('.faq-btn');
     faqBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const content = btn.nextElementSibling;
         const icon = btn.querySelector('.faq-icon');
         
-        // 切换隐藏状态
+        // Toggle hidden class
         content.classList.toggle('hidden');
         
-        // 旋转图标
+        // Rotate icon
         if (content.classList.contains('hidden')) {
           icon.style.transform = 'rotate(0deg)';
         } else {
@@ -733,11 +734,11 @@
     });
 
 
-    // 暗夜模式切换逻辑
+    // Dark Mode Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
-    // 如果未设置，默认为白天模式
+    // Default to light mode if not set
     if (localStorage.theme === 'dark') {
       htmlElement.classList.add('dark');
     } else {
