@@ -198,7 +198,27 @@
         ],
         "buttonText": "立刻报名",
         "buttonLink": "/zh/training",
-        "secondaryButtonText": "查看大纲",
-        "secondaryButtonLink": "/zh/training#syllabus"
+        "secondaryButtonText": "咨询客服",
+        "secondaryButtonLink": "https://work.weixin.qq.com/..."
+    },
+    "faq": {
+        "title": "常见问题 (Q&A)",
+        "subtitle": "关于培训与 OpenClaw 使用的常见疑惑解答",
+        "items": [
+            {
+                "question": "零基础小白可以报名这个培训班吗？",
+                "answer": "完全可以。我们的课程从最基础的环境依赖（如 Node.js, Python）讲起，配备了详细的图文和视频操作指南。即使你没有太多编程经验，跟着教程一步步操作也能顺利完成部署。"
+            },
+            {
+                "question": "部署 OpenClaw 需要准备什么服务器配置？",
+                "answer": "基础使用的话，推荐至少 2核 CPU 和 4GB 内存的云服务器（如阿里云轻量应用服务器）。如果你需要运行本地的大型模型，则需要配备具有较强算力的 GPU 服务器。"
+            },
+            {
+                "question": "频道接入目前支持哪些平台？",
+                "answer": "目前官方与社区已经支持了主流平台，包括国内的微信、飞书、钉钉、企业微信，以及海外的 Discord, Telegram, Slack 和 WhatsApp 等。培训课程中会详细讲解各个平台的鉴权与回调配置方法。"
+            }
+        ],
+        "moreText": "查看更多常见问题解答",
+        "moreLink": "#"
     }
 }

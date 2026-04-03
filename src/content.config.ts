@@ -83,6 +83,18 @@ const homepage = defineCollection({
                 secondaryButtonText: z.string().optional(),
                 secondaryButtonLink: z.string().optional(),
             }).optional(),
+            faq: z.object({
+                title: z.string().optional(),
+                subtitle: z.string().optional(),
+                items: z.array(
+                    z.object({
+                        question: z.string(),
+                        answer: z.string(),
+                    })
+                ),
+                moreText: z.string().optional(),
+                moreLink: z.string().optional(),
+            }).optional(),
         }),
 });
 

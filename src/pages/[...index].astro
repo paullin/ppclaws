@@ -8,16 +8,17 @@ import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
 import TrainingSection from "@components/TrainingSection.astro";
+import FAQ from "@components/FAQ.svelte";
 
 // Get current language from URL
 export function getStaticPaths() {
     return [
         {
-            params: { index: "/" },
+            params: { index: undefined },
             props: { lang: "en" },
         },
         {
-            params: { index: "zh/" },
+            params: { index: "zh" },
             props: { lang: "zh" },
         },
     ];
@@ -94,6 +95,17 @@ const homepageSections = data?.sections || [];
                 buttonLink={data.training.buttonLink}
                 secondaryButtonText={data.training.secondaryButtonText}
                 secondaryButtonLink={data.training.secondaryButtonLink}
+            />
+        )}
+
+        {data?.faq && (
+            <FAQ 
+                client:load 
+                title={data.faq.title} 
+                subtitle={data.faq.subtitle} 
+                items={data.faq.items} 
+                moreText={data.faq.moreText}
+                moreLink={data.faq.moreLink}
             />
         )}
     </div>

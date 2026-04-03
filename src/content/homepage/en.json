@@ -200,5 +200,25 @@
         "buttonLink": "/training",
         "secondaryButtonText": "View Syllabus",
         "secondaryButtonLink": "/training#syllabus"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions (Q&A)",
+        "subtitle": "",
+        "items": [
+            {
+                "question": "Can beginners enroll in this training class?",
+                "answer": "Absolutely. Our course starts from the most basic environment dependencies (like Node.js, Python), equipped with detailed text and video guides. Even without much programming experience, you can complete the deployment by following step-by-step."
+            },
+            {
+                "question": "What server configuration is needed to deploy OpenClaw?",
+                "answer": "For basic use, we recommend a cloud server with at least 2-core CPU and 4GB RAM. If you need to run large local models, a GPU server with stronger computing power is required."
+            },
+            {
+                "question": "Which platforms are currently supported for channel integration?",
+                "answer": "Currently, the official and community have supported mainstream platforms, including WeChat, Feishu, DingTalk, Enterprise WeChat, as well as overseas platforms like Discord, Telegram, Slack, and WhatsApp. The training course will explain the authentication and callback configuration methods for each platform in detail."
+            }
+        ],
+        "moreText": "View more frequently asked questions",
+        "moreLink": "#"
     }
 }
