@@ -1,0 +1,21 @@
+---
+interface Props {
+    columns?: 1 | 2 | 4;
+    className?: string;
+}
+
+const { columns = 4, className = "" } = Astro.props;
+
+// Map columns to Tailwind classes
+const columnClasses = {
+    1: "grid-cols-1",
+    2: "grid-cols-1 sm:grid-cols-2",
+    4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+};
+
+const gridClass = columnClasses[columns] || columnClasses[4];
+---
+
+<div class={`grid ${gridClass} gap-6 ${className}`}>
+    <slot />
+</div>

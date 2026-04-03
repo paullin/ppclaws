@@ -4,6 +4,9 @@ import { useTranslations } from "@i18n/utils";
 import Base from "@layouts/Base.astro";
 import { getEntry } from "astro:content";
 import HeroCarousel from "@components/HeroCarousel.svelte";
+import SectionHeader from "@components/SectionHeader.astro";
+import SectionGrid from "@components/SectionGrid.astro";
+import SkillCard from "@components/SkillCard.astro";
 
 // Get current language from URL
 export function getStaticPaths() {
@@ -24,19 +27,16 @@ const { lang } = Astro.props;
 
 // Translations
 const t = useTranslations(lang);
-type FeatureItem = {
-    p: string;
-};
-type FeatureSection = {
-    title: string;
-    list: FeatureItem[];
-    github?: string;
-};
-const features = t("main:features") as FeatureSection[];
 
-const homeEntry = await getEntry("homepage", "home");
-const heroItems = homeEntry?.data.hero || [];
-const sectionTitle = homeEntry?.data.title || "Featured Content";
+// Determine which json to load based on language
+const entryId = lang === "zh" ? "zh" : "en";
+const homeEntry = await getEntry("homepage", entryId);
+// Fallback to "home" if specific lang entry doesn't exist
+const data = homeEntry?.data || (await getEntry("homepage", "home"))?.data;
+
+const heroItems = data?.hero || [];
+const sectionTitle = data?.title || "Featured Content";
+const homepageSections = data?.sections || [];
 ---
 
 <Base
@@ -46,7 +46,7 @@ const sectionTitle = homeEntry?.data.title || "Featured Content";
         keywords: t("main:head.keywords"),
     }}
 >
-    <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="max-w-7xl mx-auto px-4 py-8 space-y-24">
         {heroItems.length > 0 && (
             <div class="space-y-6">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{sectionTitle}</h2>
@@ -54,41 +54,27 @@ const sectionTitle = homeEntry?.data.title || "Featured Content";
             </div>
         )}
 
-        <section aria-labelledby="main-title" class="mt-16">
-            <h1 id="main-title">{t("main:title")}</h1>
-        <p class="text-2xl font-semibold mb-4 text-center">
-            {t("main:description")}
-        </p>
-        <p class="mb-4 text-center">
-            {t("main:intro")}
-        </p>
-
-        {
-            features.map((section: FeatureSection, key: number) => (
-                <>
-                    <hr aria-hidden="true" />
-                    <section aria-labelledby={`features-title-${key}`}>
-                        <h2 id={`features-title-${key}`}>{section.title}</h2>
-                        <ul aria-label={section.title}>
-                            {section.list.map((item: FeatureItem) => (
-                                <li set:html={item.p} />
-                            ))}
-                        </ul>
-                        {section.github && (
-                            <a
-                                href="https://github.com/Scorpio3310/astro-i18n-starter"
-                                aria-label="GitHub Astro i18n Starter"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="button w-fit mt-4"
-                            >
-                                {section.github} →
-                            </a>
-                        )}
-                    </section>
-                </>
-            ))
-        }
-    </section>
+        {homepageSections.map((section) => (
+            <section class="max-w-none">
+                <SectionHeader 
+                    title={section.title} 
+                    subtitle={section.subtitle} 
+                    moreLink={section.moreLink}
+                    moreText={section.moreText}
+                />
+                <SectionGrid columns={4}>
+                    {section.items.map((item) => (
+                        <SkillCard 
+                            title={item.title} 
+                            description={item.description}
+                            tags={item.tags}
+                            cover={item.cover}
+                            link={item.link}
+                            icon={item.icon}
+                        />
+                    ))}
+                </SectionGrid>
+            </section>
+        ))}
     </div>
 </Base>

@@ -1,0 +1,49 @@
+{
+    "title": "精选内容",
+    "hero": [
+        {
+            "image": "../../assets/hero1.jpg",
+            "title": "掌握 OpenClaw 核心配置",
+            "description": "从入门到精通，了解如何将 OpenClaw 快速集成到您的项目中，构建强大的自动化工作流。",
+            "badge": "推荐",
+            "link": "/zh/blog/master-openclaw"
+        },
+        {
+            "image": "../../assets/hero2.jpg",
+            "title": "高级网页抓取技巧",
+            "description": "探索如何使用 PPClaws 的最新工具处理动态内容、验证码以及复杂的网站结构。",
+            "badge": "热门",
+            "link": "/zh/blog/advanced-scraping"
+        }
+    ],
+    "sections": [
+        {
+            "title": "核心能力",
+            "subtitle": "打造全方位的爬虫自动化解决方案",
+            "moreLink": "/zh/blog",
+            "moreText": "查看更多技术文档",
+            "items": [
+                {
+                    "title": "高并发采集",
+                    "description": "基于协程的高并发抓取引擎，轻松处理百万级数据采集需求。",
+                    "tags": ["Performance", "Concurrency"]
+                },
+                {
+                    "title": "智能验证码识别",
+                    "description": "集成多种 AI 识别算法，支持各种复杂图形验证码与滑动验证。",
+                    "tags": ["AI", "Security"]
+                },
+                {
+                    "title": "动态内容渲染",
+                    "description": "完美支持 Playwright/Puppeteer，轻松应对单页应用 (SPA) 抓取。",
+                    "tags": ["Headless", "Browser"]
+                },
+                {
+                    "title": "分布式调度",
+                    "description": "多节点协同作业，支持任务优先级调度与失败重试机制。",
+                    "tags": ["Distributed", "System"]
+                }
+            ]
+        }
+    ]
+}

@@ -48,7 +48,7 @@
 }
 
 body {
-    @apply font-sans px-4 min-h-dvh flex flex-col antialiased transition-colors duration-300;
+    @apply font-sans min-h-dvh flex flex-col antialiased transition-colors duration-300;
     color: rgb(var(--ui-text));
     background-color: rgb(var(--ui-bg));
     text-rendering: optimizeLegibility;
@@ -75,7 +75,7 @@ h3 {
 }
 
 section {
-    @apply max-w-3xl mx-auto mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
+    @apply w-full mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
 
     ul {
         @apply list-disc space-y-1;

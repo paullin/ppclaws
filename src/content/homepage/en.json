@@ -1,0 +1,53 @@
+{
+    "title": "Featured Content",
+    "hero": [
+        {
+            "image": "../../assets/hero1.jpg",
+            "title": "Master OpenClaw Core Configurations",
+            "description": "From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.",
+            "badge": "Featured",
+            "link": "/blog/master-openclaw"
+        },
+        {
+            "image": "../../assets/hero2.jpg",
+            "title": "Advanced Web Scraping Techniques",
+            "description": "Discover how to handle dynamic content, CAPTCHAs, and complex site structures using PPClaws' latest tools.",
+            "badge": "Hot",
+            "link": "/blog/advanced-scraping"
+        }
+    ],
+    "sections": [
+        {
+            "title": "Featured Skills",
+            "subtitle": "Essential core skill packs to boost productivity",
+            "moreLink": "/blog",
+            "moreText": "View More",
+            "items": [
+                {
+                    "title": "Data Scraping Tool 1",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1"
+                },
+                {
+                    "title": "Data Scraping Tool 2",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2"
+                },
+                {
+                    "title": "Data Scraping Tool 3",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3"
+                },
+                {
+                    "title": "Data Scraping Tool 4",
+                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
+                    "tags": ["Efficiency"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4"
+                }
+            ]
+        }
+    ]
+}

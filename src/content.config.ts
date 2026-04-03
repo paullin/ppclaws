@@ -51,14 +51,17 @@ const homepage = defineCollection({
             ),
             sections: z.array(
                 z.object({
-                    id: z.string(),
                     title: z.string(),
                     subtitle: z.string().optional(),
+                    moreLink: z.string().optional(),
+                    moreText: z.string().optional(),
                     items: z.array(
                         z.object({
                             title: z.string(),
-                            desc: z.string(),
-                            cover: image(),
+                            description: z.string(),
+                            tags: z.array(z.string()).optional(),
+                            cover: z.string().optional(),
+                            icon: z.string().optional(),
                             link: z.string().optional(),
                         })
                     ),
