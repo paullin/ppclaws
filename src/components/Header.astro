@@ -236,29 +236,27 @@ const themeLabel = lang === "zh" ? "暗黑模式" : "Theme";
         if (!(button instanceof HTMLButtonElement)) return;
         if (button.getAttribute("data-bound") === "true") return;
 
-        const updateIcon = () => {
-            const resolvedTheme =
-                document.documentElement.attributes.getNamedItem("data-theme")?.value ||
-                "light";
-            button.setAttribute("data-theme-resolved", resolvedTheme);
+        const updateTheme = (isDark: boolean) => {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                button.setAttribute("data-theme-resolved", "dark");
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                button.setAttribute("data-theme-resolved", "light");
+                localStorage.setItem('theme', 'light');
+            }
         };
 
         button.addEventListener("click", () => {
-            const resolvedTheme =
-                document.documentElement.attributes.getNamedItem("data-theme")?.value ||
-                "light";
-            const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
-            document.dispatchEvent(
-                new CustomEvent("set-theme", {
-                    detail: nextTheme,
-                })
-            );
-            window.setTimeout(updateIcon, 0);
+            const isDark = document.documentElement.classList.contains('dark');
+            updateTheme(!isDark);
         });
 
-        window.addEventListener("storage", updateIcon);
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateIcon);
-        updateIcon();
+        // Initialize icon state
+        const isDark = document.documentElement.classList.contains('dark');
+        button.setAttribute("data-theme-resolved", isDark ? "dark" : "light");
+        
         button.setAttribute("data-bound", "true");
     };
 

@@ -1,30 +1,54 @@
 @import "tailwindcss";
 
 @theme {
+    /* 核心品牌色 */
     --color-main: #111111;
     --color-primary: #6c24d8;
+    --color-primary-hover: #5a1db4;
+    
+    /* 响应式断点 */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* 字体系统 */
+    --font-sans: "Inter", "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-mono: "Fira Code", "Cascadia Code", "Source Code Pro", monospace;
 }
 
 :root {
+    /* 全局语义化变量 - 浅色模式 */
     --ui-bg: 255 255 255;
     --ui-text: 17 17 17;
+    --ui-text-muted: 100 116 139;
     --ui-surface: 255 255 255;
     --ui-surface-soft: 248 250 252;
     --ui-border: 15 23 42;
+    --ui-border-muted: 226 232 240;
     --ui-overlay: 15 23 42;
+    
+    /* 阴影变量 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-html[data-theme="dark"] {
+.dark {
+    /* 全局语义化变量 - 深色模式 */
     --ui-bg: 10 14 22;
     --ui-text: 235 240 255;
+    --ui-text-muted: 148 163 184;
     --ui-surface: 17 23 34;
     --ui-surface-soft: 26 33 48;
     --ui-border: 148 163 184;
+    --ui-border-muted: 30 41 59;
     --ui-overlay: 2 6 23;
 }
 
 body {
-    @apply font-sans px-4 min-h-dvh flex flex-col;
+    @apply font-sans px-4 min-h-dvh flex flex-col antialiased transition-colors duration-300;
     color: rgb(var(--ui-text));
     background-color: rgb(var(--ui-bg));
 }

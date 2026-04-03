@@ -32,7 +32,40 @@ const authors = defineCollection({
         }),
 });
 
+const homepage = defineCollection({
+    loader: glob({
+        pattern: "**/*.json",
+        base: "./src/content/homepage",
+    }),
+    schema: ({ image }) =>
+        z.object({
+            hero: z.array(
+                z.object({
+                    image: image(),
+                    title: z.string(),
+                    link: z.string(),
+                })
+            ),
+            sections: z.array(
+                z.object({
+                    id: z.string(),
+                    title: z.string(),
+                    subtitle: z.string().optional(),
+                    items: z.array(
+                        z.object({
+                            title: z.string(),
+                            desc: z.string(),
+                            cover: image(),
+                            link: z.string().optional(),
+                        })
+                    ),
+                })
+            ),
+        }),
+});
+
 export const collections = {
     blog: blogCollection,
     authors: authors,
+    homepage: homepage,
 };
