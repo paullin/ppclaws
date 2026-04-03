@@ -149,6 +149,39 @@
                     "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
                 }
             ]
+        },
+        {
+            "title": "精选案例",
+            "subtitle": "看看大家都在用 OpenClaw 解决什么问题",
+            "moreLink": "#",
+            "moreText": "浏览更多",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "案例研究 1：效率提升...",
+                    "description": "深入分析如何结合多种基础技能来...",
+                    "badge": "免费",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17"
+                },
+                {
+                    "title": "案例研究 2：效率提升...",
+                    "description": "深入分析如何结合多种基础技能来...",
+                    "badge": "付费",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18"
+                },
+                {
+                    "title": "案例研究 3：效率提升...",
+                    "description": "深入分析如何结合多种基础技能来...",
+                    "badge": "免费",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19"
+                },
+                {
+                    "title": "案例研究 4：效率提升...",
+                    "description": "深入分析如何结合多种基础技能来...",
+                    "badge": "付费",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20"
+                }
+            ]
         }
     ]
 }
