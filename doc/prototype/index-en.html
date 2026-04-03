@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPClaws - High Fidelity Prototype</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              dark: '#0d0f14',
+              card: '#1e2330',
+              border: '#2e364f',
+              accent: '#8b5cf6',
+            }
+          },
+          
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Astro style base */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6b7280;
+    }
+    
+    /* Dropdown Hover */
+    .group:hover .group-hover\:block {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo & Name -->
+        <div class="flex items-center flex-shrink-0 cursor-pointer">
+          <img src="../../logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <span class="font-bold text-xl tracking-tight">PPClaws</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center">
+          <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
+          
+          <div class="relative group">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
+              <div class="py-1" role="menu">
+                <a href="#pm-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
+                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
+                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
+              <div class="py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
+              <a href="#more-examples" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('training').scrollIntoView({behavior: 'smooth'})">
+            Training
+          </button>
+          
+          <a href="#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Submit</a>
+        </nav>
+
+        <!-- Right Functions -->
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Toggle Dark Mode">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='index.html'">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+    <!-- Marquee Banner: 16:9 ratio -->
+    <section class="w-full">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold tracking-tight">Featured Content</h2>
+      </div>
+      <div class="relative w-full aspect-video md:aspect-[21/9] lg:aspect-[16/6] bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group">
+        <div id="banner-container" class="absolute inset-0 flex w-full h-full transition-transform duration-500 ease-in-out">
+          <div class="w-full h-full relative flex-shrink-0">
+            <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1" alt="Banner 1" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+              <span class="px-2 py-1 bg-astro-accent text-white text-xs font-bold rounded-md w-max mb-3">Featured</span>
+              <h3 class="text-3xl font-bold text-white mb-2">Master OpenClaw Core Configurations</h3>
+              <p class="text-gray-200 max-w-2xl">From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.</p>
+            </div>
+          </div>
+          <div class="w-full h-full relative flex-shrink-0">
+            <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2" alt="Banner 2" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+              <span class="px-2 py-1 bg-blue-500 text-white text-xs font-bold rounded-md w-max mb-3">Tutorial</span>
+              <h3 class="text-3xl font-bold text-white mb-2">How to Build Custom Skills for UI/UX Designers</h3>
+              <p class="text-gray-200 max-w-2xl">Unleash your creativity and improve design workflow efficiency with customized Skills.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Indicators -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+          <button class="banner-dot w-2 h-2 rounded-full bg-white hover:bg-white transition-colors"></button>
+          <button class="banner-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+        </div>
+        <!-- Arrows -->
+        <button id="banner-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <button id="banner-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Section 1: Featured Skills -->
+    <section>
+      <div class="flex justify-between items-end mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Featured Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Essential core skill packs to boost productivity</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4 Cards -->
+        
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4" alt="Data Scraping Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Efficiency</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Data Scraping Tool 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">One-click config for web scraping rules to turn unstructured data into structured insights.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Skills for Product Manager -->
+    <section id="pm-skills">
+      <div class="flex justify-between items-end mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Product Manager</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Empowering PMs with competitor analysis and requirements management</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8" alt="PRD Automation Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Skills for UI/UX Designer -->
+    <section id="ux-skills">
+      <div class="flex justify-between items-end mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for UI/UX Designer</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Providing design inspiration collection and automated slicing</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Skills for Marketing -->
+    <section id="marketing-skills">
+      <div class="flex justify-between items-end mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Marketing</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Social media content generation and SEO keyword analysis engine</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 1</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 2</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 3</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16" alt="Twitter Copy Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator 4</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone based on product features.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border rounded-2xl p-8 md:p-12 text-center shadow-sm">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Subscribe to Our Newsletter</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Get the latest useful Skill updates, best practices, and exclusive tutorials.</p>
+        <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscription successful!');">
+          <input type="email" placeholder="Your email address" required class="flex-1 px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+          <button type="submit" class="px-6 py-3 rounded-lg bg-astro-accent hover:bg-purple-600 text-white font-medium transition-colors whitespace-nowrap shadow-sm">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section 5: Featured Cases -->
+    <section>
+      <div class="flex justify-between items-end mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Featured Cases</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">See what problems people are solving with OpenClaw</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
+            <div class="absolute top-3 right-3 z-10 px-2.5 py-1 text-xs font-bold rounded-md border bg-green-500/10 text-green-500 border-green-500/20 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 uppercase tracking-wider">
+              Free
+            </div>
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 1: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
+            <div class="absolute top-3 right-3 z-10 px-2.5 py-1 text-xs font-bold rounded-md border bg-orange-500/10 text-orange-500 border-orange-500/20 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 uppercase tracking-wider">
+              Paid
+            </div>
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 2: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
+            <div class="absolute top-3 right-3 z-10 px-2.5 py-1 text-xs font-bold rounded-md border bg-green-500/10 text-green-500 border-green-500/20 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 uppercase tracking-wider">
+              Free
+            </div>
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 3: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
+            </div>
+          </div>
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm relative">
+            <div class="absolute top-3 right-3 z-10 px-2.5 py-1 text-xs font-bold rounded-md border bg-orange-500/10 text-orange-500 border-orange-500/20 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 uppercase tracking-wider">
+              Paid
+            </div>
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20" alt="Case Study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Case Study 4: Efficiency Improvement Guide</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">An in-depth analysis of how to combine multiple basic skills to create an end-to-end closed-loop customer data follow-up flow.</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    
+    <!-- Training Section -->
+    <section id="training" class="w-full">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Training</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Master OpenClaw systematically, from basics to commercialization</p>
+        </div>
+      </div>
+      <div class="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card shadow-sm flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 aspect-video md:aspect-auto">
+          <img src="https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass" alt="Training Course" class="w-full h-full object-cover">
+        </div>
+        <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <span class="px-3 py-1 bg-astro-accent/10 text-astro-accent text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">LIMITED OFFER</span>
+          <h3 class="text-3xl font-bold mb-4">OpenClaw Full-Stack Masterclass</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Designed for developers and enterprises wanting to deeply understand and apply OpenClaw. Course includes:
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
+              <span>Cross-platform environment setup and installation guide</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
+              <span>Advanced parameter configuration and seamless LLM integration</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
+              <span>Lark, DingTalk, Discord full-channel integration practice</span>
+            </li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="px-6 py-3 rounded-lg bg-astro-accent hover:bg-purple-600 text-white font-medium transition-colors flex items-center justify-center gap-2">
+              Enroll Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <button class="px-6 py-3 rounded-lg border border-gray-200 dark:border-astro-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+              View Syllabus
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q&A Section (Accordion) -->
+    <section class="max-w-3xl mx-auto w-full">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Frequently Asked Questions (Q&A)</h2>
+        
+      </div>
+      
+      <div class="space-y-4" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
+          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-lg">Can beginners enroll in this training class?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
+            Absolutely. Our course starts from the most basic environment dependencies (like Node.js, Python), equipped with detailed text and video guides. Even without much programming experience, you can complete the deployment by following step-by-step.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
+          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-lg">What server configuration is needed to deploy OpenClaw?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
+            For basic use, we recommend a cloud server with at least 2-core CPU and 4GB RAM. If you need to run large local models, a GPU server with stronger computing power is required.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
+          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-lg">Which platforms are currently supported for channel integration?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
+            Currently, the official and community have supported mainstream platforms, including WeChat, Feishu, DingTalk, Enterprise WeChat, as well as overseas platforms like Discord, Telegram, Slack, and WhatsApp. The training course will explain the authentication and callback configuration methods for each platform in detail.
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline inline-flex items-center gap-1">View more frequently asked questions <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+    </section>
+
+    <!-- Section 6: Submit Skills (Form) -->
+    <section id="submit" class="max-w-3xl mx-auto border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card rounded-2xl p-6 sm:p-10 shadow-sm">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold tracking-tight mb-2">Submit to us</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Share your high-quality Skills, cases, or articles with the community. Once approved, they will be listed.</p>
+      </div>
+      <form action="./confirm-en.html" method="GET" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="name" class="block text-sm font-medium">Resource Name <span class="text-red-500">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="e.g.: Bulk SEO Checker" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+          </div>
+          <div class="space-y-2">
+            <label for="type" class="block text-sm font-medium">Resource Type <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <select id="type" name="type" required class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors appearance-none cursor-pointer">
+                <option value="" disabled selected hidden>Select resource type</option>
+                <option value="skill">Skill</option>
+                <option value="case">Case</option>
+                <option value="article">Article</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-2">
+          <label for="url" class="block text-sm font-medium">Resource Link <span class="text-red-500">*</span></label>
+          <input type="url" id="url" name="url" required placeholder="https://..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+        </div>
+        
+        <div class="space-y-2">
+          <label for="description" class="block text-sm font-medium">Short Description <span class="text-red-500">*</span></label>
+          <textarea id="description" name="description" rows="4" required placeholder="Please briefly describe the features of your resource and the core pain points it solves..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors resize-none"></textarea>
+        </div>
+        
+        <div class="space-y-2">
+          <label for="contact" class="block text-sm font-medium">Contact (Optional)</label>
+          <input type="text" id="contact" name="contact" placeholder="Email / Twitter / WeChat" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+        </div>
+
+        <button type="submit" class="w-full py-3 px-4 bg-astro-accent hover:bg-purple-600 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+          Submit for Review <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center flex-shrink-0 mb-4">
+            <img src="../../logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+            <span class="font-bold text-xl tracking-tight">PPClaws</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            One person, one team.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="#pm-skills" class="hover:text-astro-accent transition-colors w-max">Skills for PM</a>
+            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Designer</a>
+            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Marketing</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Requirement Analysis</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Prototyping</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">SEO Keywords</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow us</h3>
+          <div class="flex items-center gap-4">
+
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="YouTube">
+              <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 group relative" title="WeChat">
+              <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Jike">
+              <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Xiaohongshu">
+              <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 rounded border border-current" title="MoWen">
+              <span class="text-[10px] font-bold leading-none transform scale-90">M</span>
+            </a>
+                    </div>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+            <li><a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors">OpenClaw</a></li>
+            <li><a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors">ClawHub</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Alibaba Cloud Guide</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Tencent Cloud Guide</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Lark Open Platform</a></li>
+          
+            <li><a href="#" class="hover:text-astro-accent transition-colors">About us</a></li>
+            <li><a href="#" class="hover:text-astro-accent transition-colors">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center text-sm text-gray-500 dark:text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 PPClaws. All rights reserved.</p>
+        
+        
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // FAQ Accordion Logic
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        
+        // Toggle hidden class
+        content.classList.toggle('hidden');
+        
+        // Rotate icon
+        if (content.classList.contains('hidden')) {
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+
+    // Dark Mode Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Default to light mode if not set
+    if (localStorage.theme === 'dark') {
+      htmlElement.classList.add('dark');
+    } else {
+      htmlElement.classList.remove('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        htmlElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+  
+    // Banner Carousel Logic
+    const bannerContainer = document.getElementById('banner-container');
+    if (bannerContainer) {
+      const itemCount = bannerContainer.children.length;
+      let currentIndex = 0;
+      const dots = document.querySelectorAll('.banner-dot');
+      const prevBtn = document.getElementById('banner-prev');
+      const nextBtn = document.getElementById('banner-next');
+      let intervalId;
+
+      function updateBanner(index) {
+        currentIndex = index;
+        if (currentIndex >= itemCount) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = itemCount - 1;
+        bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        dots.forEach((dot, i) => {
+          if (i === currentIndex) {
+            dot.classList.add('bg-white');
+            dot.classList.remove('bg-white/50');
+          } else {
+            dot.classList.add('bg-white/50');
+            dot.classList.remove('bg-white');
+          }
+        });
+      }
+
+      function startAutoSlide() {
+        intervalId = setInterval(() => {
+          updateBanner(currentIndex + 1);
+        }, 3000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(intervalId);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          stopAutoSlide();
+          updateBanner(currentIndex - 1);
+          startAutoSlide();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          stopAutoSlide();
+          updateBanner(currentIndex + 1);
+          startAutoSlide();
+        });
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          stopAutoSlide();
+          updateBanner(i);
+          startAutoSlide();
+        });
+      });
+
+      startAutoSlide();
+    }
+  </script>
+</body>
+</html>
