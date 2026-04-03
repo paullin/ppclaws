@@ -39,10 +39,13 @@ const homepage = defineCollection({
     }),
     schema: ({ image }) =>
         z.object({
+            title: z.string().optional(),
             hero: z.array(
                 z.object({
                     image: image(),
                     title: z.string(),
+                    description: z.string().optional(),
+                    badge: z.string().optional(),
                     link: z.string(),
                 })
             ),

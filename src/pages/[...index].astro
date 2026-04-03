@@ -2,6 +2,8 @@
 //Imports
 import { useTranslations } from "@i18n/utils";
 import Base from "@layouts/Base.astro";
+import { getEntry } from "astro:content";
+import HeroCarousel from "@components/HeroCarousel.svelte";
 
 // Get current language from URL
 export function getStaticPaths() {
@@ -31,6 +33,10 @@ type FeatureSection = {
     github?: string;
 };
 const features = t("main:features") as FeatureSection[];
+
+const homeEntry = await getEntry("homepage", "home");
+const heroItems = homeEntry?.data.hero || [];
+const sectionTitle = homeEntry?.data.title || "Featured Content";
 ---
 
 <Base
@@ -40,8 +46,16 @@ const features = t("main:features") as FeatureSection[];
         keywords: t("main:head.keywords"),
     }}
 >
-    <section aria-labelledby="main-title">
-        <h1 id="main-title">{t("main:title")}</h1>
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        {heroItems.length > 0 && (
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{sectionTitle}</h2>
+                <HeroCarousel client:load items={heroItems} />
+            </div>
+        )}
+
+        <section aria-labelledby="main-title" class="mt-16">
+            <h1 id="main-title">{t("main:title")}</h1>
         <p class="text-2xl font-semibold mb-4 text-center">
             {t("main:description")}
         </p>
@@ -76,4 +90,5 @@ const features = t("main:features") as FeatureSection[];
             ))
         }
     </section>
+    </div>
 </Base>
