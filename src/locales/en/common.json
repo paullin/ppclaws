@@ -2,6 +2,10 @@
     "menu": {
         "list": {
             "home": "Home",
+            "skills": "Skills",
+            "example": "Example",
+            "training": "Training",
+            "submit": "Submit",
             "about": "About",
             "pages": "Pages",
             "dynamicRouting": "Dynamic Routing",
@@ -20,7 +24,7 @@
         }
     },
     "footer": {
-        "description": "Astro i18n Starter Kit",
+        "description": "PPClaws Site",
         "name": "Nik Klemenc",
         "copy": "Copyright",
         "made": "Made with {{what}}",

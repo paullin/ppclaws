@@ -2,6 +2,10 @@
     "menu": {
         "list": {
             "home": "首页",
+            "skills": "技能",
+            "example": "案例",
+            "training": "实战",
+            "submit": "收录",
             "about": "关于",
             "pages": "页面",
             "dynamicRouting": "动态路由",
@@ -20,7 +24,7 @@
         }
     },
     "footer": {
-        "description": "Astro i18n 启动模板",
+        "description": "PPClaws 网站",
         "name": "Nik Klemenc",
         "copy": "版权所有",
         "made": "基于 {{what}} 构建",

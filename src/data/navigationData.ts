@@ -1,22 +1,37 @@
 const navigationData = [
     {
-        label: "menu.list.home",
+        label: "common:menu.list.home",
         href: "/",
         children: [],
     },
     {
-        label: "menu.list.blog",
-        href: "/blog",
+        label: "common:menu.list.skills",
+        href: "/skills",
+        children: [
+            {
+                label: "common:menu.list.subpage-1",
+                href: "/skills/1",
+            },
+        ],
+    },
+    {
+        label: "common:menu.list.example",
+        href: "/example",
+        children: [
+            {
+                label: "common:menu.list.subpage-1",
+                href: "/example/1",
+            },
+        ],
+    },
+    {
+        label: "common:menu.list.training",
+        href: "/training",
         children: [],
     },
     {
-        label: "menu.list.about",
-        href: "/about",
-        children: [],
-    },
-    {
-        label: "menu.list.contact",
-        href: "/contact",
+        label: "common:menu.list.submit",
+        href: "/submit",
         children: [],
     },
 ];

@@ -7,7 +7,7 @@ import {
 } from "@i18n/utils";
 import { Image } from "astro:assets";
 import navigationData from "@data/navigationData";
-import logo from "@assets/logo.svg";
+import logo from "@assets/logo.webp";
 import LanguagePicker from "./LanguagePicker.astro";
 import Search from "astro-pagefind/components/Search";
 
@@ -19,171 +19,182 @@ const searchLabel = lang === "zh" ? "搜索" : "Search";
 const themeLabel = lang === "zh" ? "暗黑模式" : "Theme";
 ---
 
-<header class="nav-header" role="banner">
+<header class="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-gray-200/50 dark:border-gray-800/50" role="banner">
     <!-- Mobile menu toggle (CSS only) -->
     <input
         type="checkbox"
         id="mobile-menu-toggle"
-        class="mobile-menu-checkbox"
+        class="mobile-menu-checkbox hidden"
         aria-label="Toggle mobile menu"
     />
 
-    <div class="flex items-center justify-between">
-        <a
-            href={translatePath("/")}
-            class="logo"
-            aria-label={t("main.title")}
-            tabindex="0"
-        >
-            <Image
-                src={logo}
-                alt={t("main.title")}
-                loading="eager"
-                width={100}
-            />
-        </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-14 lg:h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center z-10">
+                <a
+                    href={translatePath("/")}
+                    class="flex items-center gap-2 group transition-transform hover:scale-[1.02]"
+                    aria-label={t("main.title")}
+                >
+                    <Image
+                        src={logo}
+                        alt={t("main.title")}
+                        loading="eager"
+                        width={128}
+                        height={128}
+                        class="w-8 h-8 object-contain"
+                    />
+                    <span class="text-xl font-black tracking-tight text-black dark:text-white">
+                        PPClaws
+                    </span>
+                </a>
+            </div>
 
-        <label for="mobile-menu-toggle" class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+            <!-- Desktop Navigation - Centered -->
+            <nav class="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none" role="navigation" aria-label="Main navigation">
+                <ul class="flex items-center gap-1 list-none m-0 p-0 pointer-events-auto" role="menubar">
+                    {
+                        navigationData.map((item) => (
+                            <li class="relative group" role="none">
+                                <a
+                                    href={translatePath(item.href)}
+                                    class="px-4 py-2 text-sm font-bold text-black dark:text-gray-100 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors flex items-center gap-1"
+                                    role="menuitem"
+                                >
+                                    {t(item.label)}
+                                    {item.children?.length > 0 && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-100 group-hover:rotate-180 transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
+                                    )}
+                                </a>
+
+                                {item.children?.length > 0 && (
+                                    <ul
+                                        class="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-48 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-xl py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50"
+                                        role="menu"
+                                    >
+                                        {item.children.map((child: any) => (
+                                            <li role="none">
+                                                <a
+                                                    href={translatePath(child.href)}
+                                                    class="block px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                                    role="menuitem"
+                                                >
+                                                    {t(child.label)}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+
+            <!-- Actions - Right -->
+            <div class="flex items-center gap-2 z-10">
+                <div class="hidden lg:flex items-center gap-2">
+                    <button
+                        type="button"
+                        class="p-2 text-black hover:opacity-70 dark:text-gray-300 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        data-search-open
+                        aria-label={searchLabel}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="p-2 text-black hover:opacity-70 dark:text-gray-300 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        data-theme-toggle
+                        aria-label={themeLabel}
+                    >
+                        <svg class="theme-icon-moon dark:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+                        <svg class="theme-icon-sun hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </button>
+
+                    <LanguagePicker />
+                </div>
+
+                <!-- Mobile only actions -->
+                <div class="flex items-center lg:hidden gap-1">
+                    <button
+                        type="button"
+                        class="p-2 text-black hover:opacity-70 dark:text-gray-300 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        data-search-open
+                        aria-label={searchLabel}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                    
+                    <label for="mobile-menu-toggle" class="p-2 text-black hover:opacity-70 dark:text-gray-400 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer relative w-10 h-10 flex items-center justify-center">
+                        <svg id="menu-icon" class="absolute transition-opacity duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <svg id="close-icon" class="absolute opacity-0 transition-opacity duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <nav class="nav-main" role="navigation" aria-label="Main navigation">
-        <ul class="nav-list" role="menubar">
+    <!-- Mobile Navigation Menu -->
+    <div class="nav-main-mobile lg:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800">
+        <div class="px-4 pt-2 pb-6 space-y-1">
             {
                 navigationData.map((item) => (
-                    <li class="nav-item lg:relative" role="none">
+                    <div class="space-y-1">
                         <a
                             href={translatePath(item.href)}
-                            class="nav-link block"
-                            role="menuitem"
-                            aria-label={t(item.label)}
+                            class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                         >
                             {t(item.label)}
                         </a>
-
                         {item.children?.length > 0 && (
-                            <ul
-                                class="nav-dropdown"
-                                role="menu"
-                                aria-label={`${t(item.label)}`}
-                            >
+                            <div class="pl-4 space-y-1 border-l-2 border-gray-100 dark:border-gray-800 ml-3">
                                 {item.children.map((child: any) => (
-                                    <li role="none">
-                                        <a
-                                            href={translatePath(child.href)}
-                                            class="nav-dropdown-link"
-                                            role="menuitem"
-                                            aria-label={t(child.label)}
-                                        >
-                                            {t(child.label)}
-                                        </a>
-                                    </li>
+                                    <a
+                                        href={translatePath(child.href)}
+                                        class="block px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                                    >
+                                        {t(child.label)}
+                                    </a>
                                 ))}
-                            </ul>
+                            </div>
                         )}
-                    </li>
+                    </div>
                 ))
             }
-        </ul>
-        <div class="nav-actions">
-            <button
-                type="button"
-                class="search-trigger"
-                data-search-open
-                aria-label={searchLabel}
-                title={searchLabel}
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </svg>
-            </button>
-            <button
-                type="button"
-                class="theme-trigger"
-                data-theme-toggle
-                aria-label={themeLabel}
-                title={themeLabel}
-            >
-                <svg
-                    class="theme-icon theme-icon-moon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                >
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
-                </svg>
-                <svg
-                    class="theme-icon theme-icon-sun"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                >
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <path d="M12 2v2"></path>
-                    <path d="M12 20v2"></path>
-                    <path d="m4.93 4.93 1.41 1.41"></path>
-                    <path d="m17.66 17.66 1.41 1.41"></path>
-                    <path d="M2 12h2"></path>
-                    <path d="M20 12h2"></path>
-                    <path d="m6.34 17.66-1.41 1.41"></path>
-                    <path d="m19.07 4.93-1.41 1.41"></path>
-                </svg>
-            </button>
-            <LanguagePicker />
-            <a
-                href="https://github.com/Scorpio3310/astro-i18n-starter"
-                aria-label="GitHub Astro i18n Starter"
-                target="_blank"
-                rel="noopener noreferrer"
-                tabindex="0"
-                class="hover:opacity-50"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 16 16"
-                    aria-hidden="true"
-                    focusable="false"
-                >
-                    <path
-                        fill="currentColor"
-                        d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27s-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8"
-                    ></path>
-                </svg>
-            </a>
+            <div class="pt-4 flex items-center justify-between px-3">
+                <div class="flex items-center gap-4">
+                    <button
+                        type="button"
+                        class="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        data-theme-toggle
+                    >
+                        <svg class="theme-icon-moon dark:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+                        <svg class="theme-icon-sun hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </button>
+                    <LanguagePicker />
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
+
+<style>
+    #mobile-menu-toggle:checked ~ .nav-main-mobile {
+        max-height: 100vh;
+    }
+    #mobile-menu-toggle:checked ~ div label #menu-icon {
+        opacity: 0;
+        pointer-events: none;
+    }
+    #mobile-menu-toggle:checked ~ div label #close-icon {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
+
 <div class="search-modal" data-search-modal hidden>
     <button
         type="button"
