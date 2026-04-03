@@ -6,8 +6,7 @@ import {
     useTranslatedPath,
 } from "@i18n/utils";
 import { Image } from "astro:assets";
-import navigationData from "@data/navigationData";
-import logo from "@assets/logo.svg";
+import logo from "@assets/logo.webp";
 
 // Translations
 const lang = getLangFromUrl(Astro.url);
@@ -18,60 +17,96 @@ const translatePath = useTranslatedPath(lang);
 const currentYear = new Date().getFullYear();
 ---
 
-<footer role="contentinfo" aria-labelledby="footer-title">
-    <div class="container">
-        <div>
-            <a
-                href={translatePath("/")}
-                aria-label={`${t("main.title")} - ${t("footer.backToHome")}`}
-                tabindex="0"
-            >
-                <Image
-                    src={logo}
-                    alt={t("main.title")}
-                    width={100}
-                    class="mb-3 mx-auto hover:opacity-50"
-                    loading="eager"
-                />
-            </a>
-            <p>{t("footer.description")}</p>
+<footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <!-- Column 1: Logo & Slogan -->
+            <div class="col-span-1 text-left">
+                <div class="flex items-center flex-shrink-0 mb-4">
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        width={128}
+                        height={128}
+                        loading="eager"
+                        class="h-8 w-8 rounded-md mr-3 object-cover"
+                    />
+                    <span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">PPClaws</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    {t("footer.slogan")}
+                </p>
+            </div>
+
+            <!-- Column 2: Skills Hub -->
+            <div class="text-left">
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+                    {t("footer.skills_hub")}
+                </h3>
+                <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col items-start">
+                    <li><a href="#pm-skills" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.pm")}</a></li>
+                    <li><a href="#ux-skills" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.ux")}</a></li>
+                    <li><a href="#marketing-skills" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.marketing")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.req_analysis")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.proto_design")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.ab_testing")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.skills_links.seo_mining")}</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Follow us -->
+            <div class="text-left">
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+                    {t("footer.follow_us")}
+                </h3>
+                <div class="flex items-center gap-4 flex-wrap">
+                    <!-- X (Twitter) -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="X (Twitter)">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="YouTube">
+                        <img src="/social/youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity" />
+                    </a>
+                    <!-- WeChat -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 group relative" title="微信">
+                        <img src="/social/微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity" />
+                    </a>
+                    <!-- Jike -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="即刻">
+                        <img src="/social/即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity" />
+                    </a>
+                    <!-- Xiaohongshu -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="小红书">
+                        <img src="/social/小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity" />
+                    </a>
+                    <!-- MoWen -->
+                    <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 rounded border border-current" title={lang === "zh" ? "墨问" : "MoWen"}>
+                        <span class="text-[10px] font-bold leading-none transform scale-90">{lang === "zh" ? "墨" : "M"}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 4: Related Resources -->
+            <div class="text-left">
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+                    {t("footer.related_resources")}
+                </h3>
+                <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col items-start">
+                    <li><a href="https://openclaw.com" target="_blank" rel="noopener noreferrer" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.openclaw")}</a></li>
+                    <li><a href="https://clawhub.com" target="_blank" rel="noopener noreferrer" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.clawhub")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.aliyun")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.tencent")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.feishu")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.about")}</a></li>
+                    <li><a href="#" class="hover:text-astro-accent transition-colors block">{t("footer.related_links.privacy")}</a></li>
+                </ul>
+            </div>
         </div>
 
-        <nav aria-label="Footer navigation">
-            <h3 id="footer-title">{t("footer.index")}</h3>
-            <ul role="list">
-                {
-                    navigationData.map(
-                        (entry: any) =>
-                            entry.href && (
-                                <li>
-                                    <a
-                                        href={translatePath(entry.href)}
-                                        tabindex="0"
-                                        aria-label={t(entry.label)}
-                                    >
-                                        {t(entry.label)}
-                                    </a>
-                                </li>
-                            )
-                    )
-                }
-            </ul>
-        </nav>
-    </div>
-
-    <div class="credit" role="complementary" aria-label="Site information">
-        <a
-            href="https://www.klemenc.si"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${t("footer.name")}`}
-            tabindex="0"
-            class="hover:opacity-50"
-        >
-            {t("footer.name")}
-        </a>
-        <span> // &copy; {t("footer.copy")} {currentYear}</span>
-        <span> // {t("footer.made", { what: "Astro" })}</span>
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-gray-200 dark:border-astro-border flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-500 dark:text-gray-400">&copy; {currentYear} PPClaws. {t("footer.copyright")}</p>
+        </div>
     </div>
 </footer>
