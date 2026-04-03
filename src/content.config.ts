@@ -63,6 +63,7 @@ const homepage = defineCollection({
                             description: z.string(),
                             tags: z.array(z.string()).optional(),
                             cover: z.string().optional(),
+                            badge: z.string().optional(),
                             icon: z.string().optional(),
                             link: z.string().optional(),
                         })

@@ -149,6 +149,39 @@
                     "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
                 }
             ]
+        },
+        {
+            "title": "Featured Cases",
+            "subtitle": "See what problems people are solving with OpenClaw",
+            "moreLink": "#",
+            "moreText": "Browse More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "Case Study 1: Efficiency...",
+                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "badge": "FREE",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17"
+                },
+                {
+                    "title": "Case Study 2: Efficiency...",
+                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "badge": "PAID",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18"
+                },
+                {
+                    "title": "Case Study 3: Efficiency...",
+                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "badge": "FREE",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19"
+                },
+                {
+                    "title": "Case Study 4: Efficiency...",
+                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "badge": "PAID",
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20"
+                }
+            ]
         }
     ]
 }
