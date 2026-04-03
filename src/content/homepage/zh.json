@@ -1,47 +1,152 @@
 {
-    "title": "精选内容",
+    "title": "PPClaws",
+    "description": "为现代开发者打造的强大自动化工具",
     "hero": [
         {
-            "image": "../../assets/hero1.jpg",
-            "title": "掌握 OpenClaw 核心配置",
-            "description": "从入门到精通，了解如何将 OpenClaw 快速集成到您的项目中，构建强大的自动化工作流。",
-            "badge": "推荐",
+            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1",
+            "title": "掌握 OpenClaw 核心配置技巧",
+            "description": "从入门到精通，了解如何快速在您的项目中集成 OpenClaw，并构建强大的自动化流程。",
+            "badge": "精选",
             "link": "/zh/blog/master-openclaw"
         },
         {
-            "image": "../../assets/hero2.jpg",
-            "title": "高级网页抓取技巧",
-            "description": "探索如何使用 PPClaws 的最新工具处理动态内容、验证码以及复杂的网站结构。",
-            "badge": "热门",
-            "link": "/zh/blog/advanced-scraping"
+            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2",
+            "title": "如何为 UI/UX 设计师打造专属 Skill",
+            "description": "释放创造力，通过定制化 Skill 提升设计工作流的效率与质量。",
+            "badge": "教程",
+            "link": "/zh/blog/custom-skills"
         }
     ],
     "sections": [
         {
-            "title": "核心能力",
-            "subtitle": "打造全方位的爬虫自动化解决方案",
-            "moreLink": "/zh/blog",
-            "moreText": "查看更多技术文档",
+            "title": "精选 Skills",
+            "subtitle": "提升生产力的必备核心技能包",
+            "moreLink": "#",
+            "moreText": "浏览更多",
+            "columns": 4,
             "items": [
                 {
-                    "title": "高并发采集",
-                    "description": "基于协程的高并发抓取引擎，轻松处理百万级数据采集需求。",
-                    "tags": ["Performance", "Concurrency"]
+                    "title": "数据抓取利器 1",
+                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
+                    "tags": ["效率"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1"
                 },
                 {
-                    "title": "智能验证码识别",
-                    "description": "集成多种 AI 识别算法，支持各种复杂图形验证码与滑动验证。",
-                    "tags": ["AI", "Security"]
+                    "title": "数据抓取利器 2",
+                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
+                    "tags": ["效率"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2"
                 },
                 {
-                    "title": "动态内容渲染",
-                    "description": "完美支持 Playwright/Puppeteer，轻松应对单页应用 (SPA) 抓取。",
-                    "tags": ["Headless", "Browser"]
+                    "title": "数据抓取利器 3",
+                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
+                    "tags": ["效率"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3"
                 },
                 {
-                    "title": "分布式调度",
-                    "description": "多节点协同作业，支持任务优先级调度与失败重试机制。",
-                    "tags": ["Distributed", "System"]
+                    "title": "数据抓取利器 4",
+                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
+                    "tags": ["效率"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4"
+                }
+            ]
+        },
+        {
+            "title": "产品经理",
+            "subtitle": "助力产品经理完成竞品分析与需求管理",
+            "moreLink": "#",
+            "moreText": "浏览更多",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "PRD 自动化助手 1",
+                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5"
+                },
+                {
+                    "title": "PRD 自动化助手 2",
+                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6"
+                },
+                {
+                    "title": "PRD 自动化助手 3",
+                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7"
+                },
+                {
+                    "title": "PRD 自动化助手 4",
+                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
+                    "tags": ["PM"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8"
+                }
+            ]
+        },
+        {
+            "title": "UI/UX 设计师",
+            "subtitle": "提供设计灵感收集与自动化切图能力",
+            "moreLink": "#",
+            "moreText": "浏览更多",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "色板提取器 1",
+                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9"
+                },
+                {
+                    "title": "色板提取器 2",
+                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10"
+                },
+                {
+                    "title": "色板提取器 3",
+                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11"
+                },
+                {
+                    "title": "色板提取器 4",
+                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
+                    "tags": ["UI/UX"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12"
+                }
+            ]
+        },
+        {
+            "title": "市场营销",
+            "subtitle": "社媒内容生成与 SEO 关键词分析引擎",
+            "moreLink": "#",
+            "moreText": "浏览更多",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "Twitter 文案生成器 1",
+                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
+                    "tags": ["营销"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13"
+                },
+                {
+                    "title": "Twitter 文案生成器 2",
+                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
+                    "tags": ["营销"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14"
+                },
+                {
+                    "title": "Twitter 文案生成器 3",
+                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
+                    "tags": ["营销"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15"
+                },
+                {
+                    "title": "Twitter 文案生成器 4",
+                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
+                    "tags": ["营销"],
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
                 }
             ]
         }

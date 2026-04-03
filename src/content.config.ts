@@ -40,9 +40,10 @@ const homepage = defineCollection({
     schema: ({ image }) =>
         z.object({
             title: z.string().optional(),
+            description: z.string().optional(),
             hero: z.array(
                 z.object({
-                    image: image(),
+                    image: z.string(), // Changed to string for flexibility in external/internal paths
                     title: z.string(),
                     description: z.string().optional(),
                     badge: z.string().optional(),
@@ -55,6 +56,7 @@ const homepage = defineCollection({
                     subtitle: z.string().optional(),
                     moreLink: z.string().optional(),
                     moreText: z.string().optional(),
+                    columns: z.number().default(4),
                     items: z.array(
                         z.object({
                             title: z.string(),

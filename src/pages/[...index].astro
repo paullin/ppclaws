@@ -31,38 +31,40 @@ const t = useTranslations(lang);
 // Determine which json to load based on language
 const entryId = lang === "zh" ? "zh" : "en";
 const homeEntry = await getEntry("homepage", entryId);
-// Fallback to "home" if specific lang entry doesn't exist
-const data = homeEntry?.data || (await getEntry("homepage", "home"))?.data;
+const data = homeEntry?.data;
 
 const heroItems = data?.hero || [];
-const sectionTitle = data?.title || "Featured Content";
+const pageTitle = data?.title || t("main:head.title");
+const pageDescription = data?.description || t("main:head.description");
 const homepageSections = data?.sections || [];
 ---
 
 <Base
-    title={t("main:head.title")}
+    title={pageTitle}
     meta={{
-        description: t("main:head.description"),
+        description: pageDescription,
         keywords: t("main:head.keywords"),
     }}
 >
     <div class="max-w-7xl mx-auto px-4 py-8 space-y-24">
         {heroItems.length > 0 && (
             <div class="space-y-6">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{sectionTitle}</h2>
                 <HeroCarousel client:load items={heroItems} />
             </div>
         )}
 
-        {homepageSections.map((section) => (
-            <section class="max-w-none">
+        {homepageSections.map((section, index) => (
+            <section 
+                id={index === 0 ? "featured-skills" : index === 1 ? "pm-skills" : index === 2 ? "ux-skills" : "marketing-skills"} 
+                class="max-w-none scroll-mt-20"
+            >
                 <SectionHeader 
                     title={section.title} 
                     subtitle={section.subtitle} 
                     moreLink={section.moreLink}
                     moreText={section.moreText}
                 />
-                <SectionGrid columns={4}>
+                <SectionGrid columns={section.columns as 1 | 2 | 4}>
                     {section.items.map((item) => (
                         <SkillCard 
                             title={item.title} 
