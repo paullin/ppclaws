@@ -57,15 +57,6 @@ const { Content } = await render(skill);
     meta={{ description: skill.data.description || "" }}
 >
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-        <Breadcrumbs 
-            items={[
-                { label: t("common:menu.list.home") || "Home", href: translatePath("/") },
-                { label: t("common:footer.skills_hub") || "Skills Hub", href: translatePath("/skills") },
-                { label: categoryTitle, href: translatePath(`/skills/${categorySlug}`) },
-                { label: skill.data.title }
-            ]} 
-        />
-        
         <ArticleHeader 
             title={skill.data.title}
             description={skill.data.description || ""}

@@ -31,15 +31,6 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
     }}
 >
     <div class="py-8 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Breadcrumbs -->
-        <div class="flex items-center justify-between">
-            <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                <a href={translatePath("/")} class="hover:text-primary transition-colors">{t("common:menu.list.home") || "Home"}</a>
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                <span class="text-gray-900 dark:text-white font-medium">{t("common:menu.list.example") || "Example Hub"}</span>
-            </nav>
-        </div>
-
         <div class="text-center space-y-4">
             <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">{t("common:menu.list.example") || "Example Hub"}</h1>
             <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{t("common:menu.list.example_desc")}</p>
@@ -92,5 +83,12 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
                 </a>
             </div>
         </section>
+
+        <div class="pt-8 flex justify-center">
+            <a href={translatePath("/")} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                {lang === 'zh' ? `返回首页` : `Back to Home`}
+            </a>
+        </div>
     </div>
 </Base>

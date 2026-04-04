@@ -58,15 +58,6 @@ const { Content } = await render(example);
     meta={{ description: example.data.description || "" }}
 >
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-        <Breadcrumbs 
-            items={[
-                { label: t("common:menu.list.home") || "Home", href: translatePath("/") },
-                { label: t("common:menu.list.explore_examples") || "Examples", href: translatePath("/example") },
-                { label: categoryTitle, href: translatePath(`/example/${categorySlug}`) },
-                { label: example.data.title }
-            ]} 
-        />
-        
         <ArticleHeader 
             title={example.data.title}
             description={example.data.description || ""}
