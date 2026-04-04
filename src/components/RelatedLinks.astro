@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+}
+
+const { title, links } = Astro.props;
+---
+
+<section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+  <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h2>
+  <div class="flex flex-col gap-2">
+    {
+      links.map((link) => (
+        <a 
+          href={link.href} 
+          class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm"
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+</section>

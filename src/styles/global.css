@@ -8,6 +8,7 @@
     --color-primary-hover: #7c3aed;
     --color-astro-border: var(--color-astro-border);
     --color-astro-card: var(--color-astro-card);
+    --color-astro-accent: #8b5cf6;
 
     /* 响应式断点 */
     --breakpoint-sm: 640px;
@@ -71,6 +72,38 @@
     }
 
     /* 移除全局 H1, H2, H3 等样式，改由组件完全控制 */
+
+    /* 自定义 .prose 样式覆盖 */
+    .prose {
+        @apply text-gray-600 dark:text-gray-400;
+    }
+    
+    .prose h2 {
+        @apply text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-white;
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        margin-top: 2.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .prose p {
+        @apply mb-4 leading-relaxed;
+        line-height: 1.7 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .prose ul {
+        @apply list-disc pl-6 space-y-2 mb-4;
+    }
+
+    .prose li {
+        @apply mb-2;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .prose strong {
+        @apply font-bold text-gray-900 dark:text-white;
+    }
 }
 
 /* Pagefind Search Styles */
