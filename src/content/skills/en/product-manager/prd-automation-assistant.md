@@ -7,6 +7,18 @@ tags: ["Tool","Efficiency"]
 category: "product-manager"
 coverImage: "https://picsum.photos/seed/ppclaws201/600/400"
 badge: "FREE"
+relatedResources:
+  - title: "PRD Template Library"
+    link: "#"
+  - title: "OpenClaw SDK"
+    link: "#"
+  - title: "Video Tutorials"
+    link: "#"
+recommendedReading:
+  - title: "Competitor Tracker"
+    link: "#"
+  - title: "Roadmap Builder"
+    link: "#"
 ---
 
 ## PRD Automation Assistant

@@ -7,6 +7,18 @@ tags: ["Tool","Efficiency"]
 category: "marketing"
 coverImage: "https://picsum.photos/seed/ppclaws210/600/400"
 badge: "PRO"
+relatedResources:
+  - title: "PRD Template Library"
+    link: "#"
+  - title: "OpenClaw SDK"
+    link: "#"
+  - title: "Video Tutorials"
+    link: "#"
+recommendedReading:
+  - title: "Competitor Tracker"
+    link: "#"
+  - title: "Roadmap Builder"
+    link: "#"
 ---
 
 ## SEO Meta Optimizer

@@ -7,6 +7,18 @@ tags: ["Case Study"]
 category: "prototyping"
 coverImage: "https://picsum.photos/seed/ppclaws221/600/400"
 badge: "NEW"
+relatedResources:
+  - title: "PRD Template Library"
+    link: "#"
+  - title: "OpenClaw SDK"
+    link: "#"
+  - title: "Video Tutorials"
+    link: "#"
+recommendedReading:
+  - title: "Competitor Tracker"
+    link: "#"
+  - title: "Roadmap Builder"
+    link: "#"
 ---
 
 ## Wireframing Basics

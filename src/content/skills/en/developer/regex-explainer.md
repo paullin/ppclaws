@@ -7,6 +7,18 @@ tags: ["Tool","Efficiency"]
 category: "developer"
 coverImage: "https://picsum.photos/seed/ppclaws214/600/400"
 badge: "PRO"
+relatedResources:
+  - title: "PRD Template Library"
+    link: "#"
+  - title: "OpenClaw SDK"
+    link: "#"
+  - title: "Video Tutorials"
+    link: "#"
+recommendedReading:
+  - title: "Competitor Tracker"
+    link: "#"
+  - title: "Roadmap Builder"
+    link: "#"
 ---
 
 ## Regex Explainer
