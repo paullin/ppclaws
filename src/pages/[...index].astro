@@ -35,7 +35,7 @@ const t = useTranslations(lang);
 // Determine which json to load based on language
 const entryId = lang === "zh" ? "zh" : "en";
 const homepageEntries = await getCollection("homepage");
-const homeEntry = homepageEntries.find((entry) => entry.id === entryId);
+const homeEntry = homepageEntries.find((entry) => entry.id === entryId || entry.id === `${entryId}.json`);
 const data = homeEntry?.data;
 
 const heroItems = data?.hero || [];

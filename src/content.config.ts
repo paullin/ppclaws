@@ -36,6 +36,9 @@ const homepage = defineCollection({
     loader: glob({
         pattern: "**/*.json",
         base: "./src/content/homepage",
+        generateId: ({ entry }) => {
+            return entry.replace(/\.json$/, "");
+        },
     }),
     schema: ({ image }) =>
         z.object({
