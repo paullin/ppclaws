@@ -32,7 +32,7 @@ const {
     <!-- Section Header -->
     <div class="flex items-center justify-between mb-6">
         <div>
-            <h2 class="text-2xl font-bold tracking-tight">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {sectionTitle}
             </h2>
             {sectionSubtitle && (
@@ -57,11 +57,11 @@ const {
         <!-- Right: Content -->
         <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
             {subtitle && (
-                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">
+                <span class="px-3 py-1 bg-[#8b5cf6]/10 text-primary text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">
                     {subtitle}
                 </span>
             )}
-            <h3 class="text-3xl font-bold mb-4">
+            <h3 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
                 {title}
             </h3>
             <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
@@ -73,7 +73,9 @@ const {
                 {features.map((feature) => (
                     <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                         <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-3 h-3"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
                         </div>
                         <span>{feature}</span>
                     </li>
@@ -86,12 +88,16 @@ const {
                     href={buttonLink} 
                     class="px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white font-medium transition-colors flex items-center justify-center gap-2"
                 >
-                    {buttonText} <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    {buttonText} 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </a>
                 {secondaryButtonText && (
                     <a 
                         href={secondaryButtonLink || "#"} 
-                        class="px-6 py-3 rounded-lg border border-gray-200 dark:border-astro-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium flex items-center justify-center"
+                        class="px-6 py-3 rounded-lg border border-gray-200 dark:border-astro-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium text-gray-900 dark:text-white flex items-center justify-center"
                     >
                         {secondaryButtonText}
                     </a>

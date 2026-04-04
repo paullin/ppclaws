@@ -45,7 +45,7 @@
   {#if title || subtitle}
     <div class="text-center mb-10">
       {#if title}
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">{title}</h2>
+        <h2 class="text-3xl font-bold tracking-tight mb-3 text-gray-900 dark:text-white">{title}</h2>
       {/if}
       {#if subtitle}
         <p class="text-gray-500 dark:text-gray-400">{subtitle}</p>
@@ -55,13 +55,13 @@
 
   <div class="space-y-4" id="faq-container">
     {#each items as item, index}
-      <div class="border border-gray-200 dark:border-[#2e364f] rounded-xl bg-white dark:bg-[#1e2330] overflow-hidden transition-all duration-300">
+      <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
         <button
-          class="w-full flex items-center justify-between px-6 py-4 text-left focus:outline-none group"
+          class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
           onclick={() => toggle(index)}
           aria-expanded={openIndexes.includes(index)}
         >
-          <span class="text-lg font-medium text-gray-900 dark:text-white transition-colors">
+          <span class="font-medium text-lg text-gray-900 dark:text-white">
             {item.question}
           </span>
           <svg

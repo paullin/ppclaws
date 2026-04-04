@@ -53,9 +53,9 @@ const footerData = data?.footer;
     }}
     footerData={footerData}
 >
-    <div class="max-w-7xl mx-auto px-4 py-8 space-y-24">
+    <div class="py-8 space-y-16">
         {heroItems.length > 0 && (
-            <div class="space-y-6">
+            <div class="w-full">
                 <HeroCarousel client:load items={heroItems} />
             </div>
         )}
@@ -140,25 +140,29 @@ const footerData = data?.footer;
         )}
 
         {data?.faq && (
-            <FAQ 
-                client:load 
-                title={data.faq.title} 
-                subtitle={data.faq.subtitle} 
-                items={data.faq.items} 
-                moreText={data.faq.moreText}
-                moreLink={data.faq.moreLink}
-            />
+            <div class="w-full">
+                <FAQ 
+                    client:load 
+                    title={data.faq.title} 
+                    subtitle={data.faq.subtitle} 
+                    items={data.faq.items} 
+                    moreText={data.faq.moreText}
+                    moreLink={data.faq.moreLink}
+                />
+            </div>
         )}
 
         {data?.submission && (
-            <SubmissionForm 
-                client:load
-                title={data.submission.title}
-                description={data.submission.description}
-                labels={data.submission.labels}
-                placeholders={data.submission.placeholders}
-                types={data.submission.types}
-            />
+            <div class="w-full">
+                <SubmissionForm 
+                    client:load
+                    title={data.submission.title}
+                    description={data.submission.description}
+                    labels={data.submission.labels}
+                    placeholders={data.submission.placeholders}
+                    types={data.submission.types}
+                />
+            </div>
         )}
     </div>
 </Base>

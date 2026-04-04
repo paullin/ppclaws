@@ -3,12 +3,11 @@
 @theme {
     /* 核心品牌色 */
     --color-main: #111111;
-    --color-primary: #8b5cf6; /* Update to match prototype astro-accent */
-    --color-primary-hover: #7c3aed; /* Updated hover state */
+    --color-primary: #8b5cf6;
+    --color-primary-hover: #7c3aed;
     --color-astro-border: var(--color-astro-border);
     --color-astro-card: var(--color-astro-card);
 
-    
     /* 响应式断点 */
     --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
@@ -58,46 +57,22 @@
     --color-astro-border: #2e364f;
 }
 
-body {
-    @apply font-sans min-h-dvh flex flex-col antialiased transition-colors duration-300;
-    color: rgb(var(--ui-text));
-    background-color: rgb(var(--ui-bg));
-    text-rendering: optimizeLegibility;
+@layer base {
+    body {
+        @apply font-sans min-h-dvh flex flex-col antialiased transition-colors duration-300;
+        color: rgb(var(--ui-text));
+        background-color: rgb(var(--ui-bg));
+        text-rendering: optimizeLegibility;
+    }
+
+    main {
+        @apply max-w-7xl mx-auto flex-1 w-full px-4 sm:px-6 lg:px-8;
+    }
+
+    /* 移除全局 H1, H2, H3 等样式，改由组件完全控制 */
 }
 
-main {
-    @apply max-w-7xl mx-auto flex-1 w-full;
-}
-
-h1,
-article h1,
-aside h1,
-nav h1,
-section h1 {
-    @apply text-4xl md:text-5xl font-extrabold tracking-tight text-center mb-8 wrap-anywhere text-black dark:text-white;
-}
-
-h2 {
-    @apply text-xl font-bold mb-4 text-black dark:text-white;
-}
-
-h3 {
-    @apply text-base font-semibold mb-2;
-}
-
-section {
-    @apply w-full mb-16 last:mb-36 first:mt-36 lg:first:mt-28;
-}
-
-hr {
-    @apply my-10 border;
-    border-color: rgb(var(--ui-border) / 0.15);
-}
-
-header {
-    @apply sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md;
-}
-
+/* Pagefind Search Styles */
 .search-modal {
     @apply fixed inset-0 z-[1000] opacity-0 pointer-events-none transition-opacity duration-200;
 }
@@ -144,7 +119,7 @@ header {
 }
 
 .pagefind-ui-custom .pagefind-ui__search-input:focus {
-    @apply outline-none border-blue-500 ring-2 ring-blue-100;
+    @apply outline-none border-primary ring-2 ring-primary/20;
 }
 
 .pagefind-ui-custom .pagefind-ui__drawer {
@@ -167,71 +142,9 @@ header {
     @apply bg-transparent;
 }
 
-/* Footer styles removed - moved to components/Footer.astro */
-
-
+/* Legacy Helpers - to be replaced by utility classes */
 .card {
-    p {
-        @apply line-clamp-2;
-    }
-}
-
-.card-blog {
-    a {
-        @apply grid  md:grid-cols-2 gap-8 justify-center items-center;
-    }
-    .date {
-        @apply text-sm opacity-60;
-    }
-    .text {
-        @apply space-y-3;
-    }
-    p {
-        @apply line-clamp-2;
-    }
-}
-
-.author {
-    @apply flex items-center gap-2;
-
-    h3 {
-        @apply mb-0.5 text-sm;
-    }
-
-    .position {
-        @apply text-xs opacity-60;
-    }
-}
-
-.author-time {
-    @apply flex justify-between mb-10;
-
-    .date {
-        @apply text-sm opacity-60;
-    }
-}
-
-.button {
-    @apply py-2 px-4 rounded-4xl border hover:opacity-50 block cursor-pointer;
-    border-color: rgb(var(--ui-border) / 0.3);
-
-    &.disabled {
-        @apply opacity-30 cursor-not-allowed hover:opacity-30;
-    }
-}
-
-.input {
-    @apply py-2 px-6 rounded-4xl border;
-    border-color: rgb(var(--ui-border) / 0.3);
-    background-color: rgb(var(--ui-surface-soft));
-}
-
-.pagination {
-    @apply flex items-center justify-center;
-
-    .current {
-        @apply px-8 font-semibold;
-    }
+    p { @apply line-clamp-2; }
 }
 
 abbr {

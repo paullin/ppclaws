@@ -102,7 +102,7 @@
 </script>
 
 <div 
-  class="relative w-full overflow-hidden group aspect-[16/9] md:aspect-[21/9] bg-neutral-900 rounded-2xl shadow-lg"
+  class="relative w-full aspect-video md:aspect-[21/9] lg:aspect-[16/6] bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group"
   onmouseenter={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
   bind:this={carouselRef}
@@ -135,18 +135,22 @@
           draggable="false"
         />
         <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent flex items-end">
-          <div class="w-full p-6 md:p-12 text-left">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+          <div class="text-left">
             {#if item.badge}
-              <span class="inline-block bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded mb-3 tracking-wider uppercase">
+              <span class={`px-2 py-1 text-white text-xs font-bold rounded-md w-max mb-3 inline-block ${
+                item.badge?.toLowerCase().includes('tutorial') || item.badge?.includes('教程')
+                  ? 'bg-blue-500'
+                  : 'bg-primary'
+              }`}>
                 {item.badge}
               </span>
             {/if}
-            <h2 class="text-2xl md:text-4xl font-bold text-white mb-2 leading-tight max-w-2xl drop-shadow-sm">
+            <h2 class="text-3xl font-bold text-white mb-2 max-w-3xl">
               {item.title}
             </h2>
             {#if item.description}
-              <p class="text-sm md:text-base text-gray-200 max-w-xl line-clamp-2 md:line-clamp-none opacity-90">
+              <p class="text-gray-200 max-w-2xl">
                 {item.description}
               </p>
             {/if}
@@ -157,11 +161,11 @@
   </div>
 
   <!-- Indicators -->
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+  <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
     {#each items as _, index}
       <button 
         type="button"
-        class="w-2 h-2 rounded-full transition-all duration-300 {currentIndex === index ? 'bg-white w-4' : 'bg-white/40 hover:bg-white/60'}"
+        class="banner-dot w-2 h-2 rounded-full transition-colors {currentIndex === index ? 'bg-white' : 'bg-white/50 hover:bg-white'}"
         onclick={(e) => { e.preventDefault(); goTo(index); }}
         aria-label="Go to slide {index + 1}"
       ></button>
@@ -170,7 +174,7 @@
 
   <!-- Navigation Arrows -->
   <button 
-    class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/30 backdrop-blur-sm z-10"
+    class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20"
     onclick={(e) => { e.preventDefault(); prev(); }}
     aria-label="Previous slide"
   >
@@ -179,7 +183,7 @@
     </svg>
   </button>
   <button 
-    class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/30 backdrop-blur-sm z-10"
+    class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20"
     onclick={(e) => { e.preventDefault(); next(); }}
     aria-label="Next slide"
   >
