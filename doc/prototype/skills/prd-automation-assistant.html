@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills for Product Manager - PPClaws</title>
+  <title>PRD Automation Assistant - PPClaws</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -32,6 +32,11 @@
     ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
     .group:hover .group-hover\:block { display: block; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4b5563; }
+    .dark .prose p { color: #9ca3af; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
@@ -87,7 +92,7 @@
             <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
           </button>
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='skills-for-product-manager-cn.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='prd-automation-assistant-cn.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
           <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
           <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
         </div>
@@ -95,89 +100,109 @@
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
     <!-- Breadcrumbs -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-        <a href="../index-en.html" class="hover:text-astro-accent transition-colors">Home</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        <a href="../skills.html" class="hover:text-astro-accent transition-colors">Skills Hub</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        <span class="text-gray-900 dark:text-white font-medium">Skills for Product Manager</span>
-      </nav>
-    </div>
+    <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="../index-en.html" class="hover:text-astro-accent transition-colors">Home</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="../skills.html" class="hover:text-astro-accent transition-colors">Skills Hub</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="./skills-for-product-manager.html" class="hover:text-astro-accent transition-colors font-medium">Skills for PM</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <span class="text-gray-900 dark:text-white font-medium">PRD Automation Assistant</span>
+    </nav>
 
-    <div class="space-y-4">
-      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Skills for Product Manager</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">A comprehensive collection of skills tailored for product managers to automate routine tasks, analyze competitors, and manage requirements more effectively.</p>
-    </div>
+    <!-- Header Section: Image (16:9) -->
+    <section class="space-y-8">
+      <div class="relative aspect-video w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border shadow-lg">
+        <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=PRD+Automation+Assistant" alt="PRD Automation Assistant" class="w-full h-full object-cover">
+        <div class="absolute top-4 left-4">
+          <span class="px-3 py-1 bg-astro-accent text-white text-xs font-bold rounded-full shadow-lg">Featured Tool</span>
+        </div>
+      </div>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- 8-12 Cards for L3 Page -->
-      <script>
-        const cards = [
-          { title: "PRD Automation Assistant", desc: "Auto-generate standard PRD documents from basic skeletons.", img: "PM+Skill+1" },
-          { title: "Competitor Tracker", desc: "Monitor competitor updates and generate weekly reports automatically.", img: "PM+Skill+2" },
-          { title: "User Story Generator", desc: "Convert messy notes into structured user stories.", img: "PM+Skill+3" },
-          { title: "Roadmap Builder", desc: "Visualize your product strategy with interactive roadmaps.", img: "PM+Skill+4" },
-          { title: "Feedback Analyzer", desc: "Categorize and prioritize user feedback using AI.", img: "PM+Skill+5" },
-          { title: "Market Size Estimator", desc: "Quickly calculate TAM/SAM/SOM with market data.", img: "PM+Skill+6" },
-          { title: "AB Test Planner", desc: "Design statistically significant experiments for your features.", img: "PM+Skill+7" },
-          { title: "Stakeholder Reporter", desc: "Generate tailored progress updates for different teams.", img: "PM+Skill+8" },
-        ];
-        
-        document.write(cards.map(card => `
-          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./prd-automation-assistant.html'">
-            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=${card.img}" alt="${card.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">${card.title}</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">${card.desc}</p>
-            </div>
+      <!-- Introduction Area -->
+      <div class="space-y-4">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">PRD Automation Assistant</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>OpenClaw Team</span>
           </div>
-        `).join(''));
-      </script>
-    </div>
-
-    <!-- Related Links Section -->
-    <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
-      <h2 class="text-2xl font-bold tracking-tight mb-6">Explore Other Categories</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <a href="../skills.html#ux-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="palette" class="w-6 h-6"></i>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>2024-04-04</span>
           </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">UI/UX Designer</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Design & inspiration tools</div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-4 h-4"></i>
+            <span>PM / Automation / Docs</span>
           </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
-        <a href="../skills.html#marketing-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="megaphone" class="w-6 h-6"></i>
-          </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">Marketing</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Growth & SEO automation</div>
-          </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
-        <a href="../skills.html#developer-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="code" class="w-6 h-6"></i>
-          </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">Developer</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Code & workflow efficiency</div>
-          </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
+        </div>
+        <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+          Say goodbye to tedious documentation. The PRD Automation Assistant uses AI to transform your core product logic and feature outlines into structured, professional PRD documents in seconds.
+        </p>
       </div>
     </section>
+
+    <hr class="border-gray-200 dark:border-astro-border">
+
+    <!-- Body Content -->
+    <article class="prose dark:prose-invert max-w-none">
+      <h2 class="text-2xl font-bold">Key Features</h2>
+      <p>The PRD Automation Assistant is designed to solve the most common pain points for Product Managers:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Intelligent Structure Generation</strong>: Automatically creates standard sections including background, user personas, functional modules, and business flows (Mermaid syntax).</li>
+        <li><strong>Requirement Decomposition</strong>: Breaks down simple descriptions into detailed User Stories and Acceptance Criteria.</li>
+        <li><strong>Interactive Prototype Specs</strong>: Generates detailed interaction descriptions based on feature logic for better developer handoff.</li>
+        <li><strong>Logic & Edge Case Checking</strong>: Identifies potential logic gaps and suggests handling for edge cases.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-10">How to Use</h2>
+      <p>Generate high-quality documentation in three simple steps:</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">1</div>
+          <h4 class="font-bold mb-2">Input Core Concepts</h4>
+          <p class="text-sm text-gray-500">Enter the product name and core features in the editor.</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">2</div>
+          <h4 class="font-bold mb-2">AI Generation</h4>
+          <p class="text-sm text-gray-500">Click "Generate" and let the AI expand and polish your document.</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">3</div>
+          <h4 class="font-bold mb-2">Export & Collaborate</h4>
+          <p class="text-sm text-gray-500">Export to Markdown, PDF, or sync with tools like Lark/Feishu.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Resources -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Related Resources</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">PRD Templates</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">OpenClaw SDK</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Video Tutorials</a>
+      </div>
+    </section>
+
+    <!-- Recommended Reading -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Recommended Reading</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Competitor Tracker</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Roadmap Builder</a>
+      </div>
+    </section>
+
+    <!-- Back Link -->
+    <div class="pt-8 flex justify-center">
+      <a href="./skills-for-product-manager.html" class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Skills for Product Manager
+      </a>
+    </div>
 
   </main>
 

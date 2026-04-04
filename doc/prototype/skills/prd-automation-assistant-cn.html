@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>产品经理 Skills - PPClaws</title>
+  <title>PRD 自动化助手 - PPClaws</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -32,6 +32,11 @@
     ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
     .group:hover .group-hover\:block { display: block; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4b5563; }
+    .dark .prose p { color: #9ca3af; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
@@ -87,7 +92,7 @@
             <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
           </button>
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='skills-for-product-manager.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='prd-automation-assistant.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
           <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
           <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
         </div>
@@ -95,88 +100,109 @@
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
     <!-- 面包屑导航 -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-        <a href="../index.html" class="hover:text-astro-accent transition-colors">首页</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        <a href="../skills-cn.html" class="hover:text-astro-accent transition-colors">Skills 技能中心</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        <span class="text-gray-900 dark:text-white font-medium">产品经理 Skills</span>
-      </nav>
-    </div>
+    <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="../index.html" class="hover:text-astro-accent transition-colors">首页</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="../skills-cn.html" class="hover:text-astro-accent transition-colors">Skills 技能中心</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="./skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors font-medium">产品经理 Skills</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <span class="text-gray-900 dark:text-white font-medium">PRD 自动化助手</span>
+    </nav>
 
-    <div class="space-y-4">
-      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">产品经理 Skills</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">专为产品经理量身定制的技能全集，旨在自动化日常琐碎任务、深入分析竞品并高效管理产品需求。</p>
-    </div>
+    <!-- 详情页头部：大图 (16:9) -->
+    <section class="space-y-8">
+      <div class="relative aspect-video w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border shadow-lg">
+        <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=PRD+Automation+Assistant" alt="PRD Automation Assistant" class="w-full h-full object-cover">
+        <div class="absolute top-4 left-4">
+          <span class="px-3 py-1 bg-astro-accent text-white text-xs font-bold rounded-full shadow-lg">推荐工具</span>
+        </div>
+      </div>
 
-    <!-- 卡片网格 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <script>
-        const cards = [
-          { title: "PRD 自动化助手", desc: "根据基础大纲自动生成标准 PRD 文档。", img: "PM+Skill+1" },
-          { title: "竞品分析追踪器", desc: "自动监控竞品更新并生成周报。", img: "PM+Skill+2" },
-          { title: "用户故事生成器", desc: "将凌乱的笔记转化为结构化的用户故事。", img: "PM+Skill+3" },
-          { title: "产品路线图构建器", desc: "可视化您的产品策略，生成互动的路线图。", img: "PM+Skill+4" },
-          { title: "反馈分析专家", desc: "利用 AI 对用户反馈进行自动分类与优先级排序。", img: "PM+Skill+5" },
-          { title: "市场规模估算器", desc: "结合市场数据快速计算 TAM/SAM/SOM。", img: "PM+Skill+6" },
-          { title: "AB 测试规划助手", desc: "为您的新功能设计具有统计学意义的实验方案。", img: "PM+Skill+7" },
-          { title: "利益相关者报告生成器", desc: "为不同团队定制化生成项目进展报告。", img: "PM+Skill+8" },
-        ];
-        
-        document.write(cards.map(card => `
-          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./prd-automation-assistant-cn.html'">
-            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-              <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=${card.img}" alt="${card.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
-              <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">${card.title}</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">${card.desc}</p>
-            </div>
+      <!-- 简介区域 -->
+      <div class="space-y-4">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">PRD 自动化助手</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>OpenClaw 团队</span>
           </div>
-        `).join(''));
-      </script>
-    </div>
-
-    <!-- 相关链接区域 -->
-    <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
-      <h2 class="text-2xl font-bold tracking-tight mb-6">探索其他分类</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <a href="../skills-cn.html#ux-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="palette" class="w-6 h-6"></i>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>2024-04-04</span>
           </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">设计师 Skills</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">设计与灵感工具</div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-4 h-4"></i>
+            <span>产品经理 / 自动化 / 文档</span>
           </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
-        <a href="../skills-cn.html#marketing-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="megaphone" class="w-6 h-6"></i>
-          </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">市场营销 Skills</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">增长与 SEO 自动化</div>
-          </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
-        <a href="../skills-cn.html#developer-skills" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card">
-          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="code" class="w-6 h-6"></i>
-          </div>
-          <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">开发者 Skills</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">代码与工作流效率</div>
-          </div>
-          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
-        </a>
+        </div>
+        <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+          告别繁琐的文档编写工作。PRD 自动化助手基于 AI 技术，只需输入产品核心逻辑和功能大纲，即可在数秒内为您生成结构严谨、内容详实、符合行业标准的 PRD 文档。
+        </p>
       </div>
     </section>
+
+    <hr class="border-gray-200 dark:border-astro-border">
+
+    <!-- 正文区域 -->
+    <article class="prose dark:prose-invert max-w-none">
+      <h2 class="text-2xl font-bold">功能亮点</h2>
+      <p>PRD 自动化助手专为解决产品经理在文档编写阶段的痛点而设计，其核心优势包括：</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>智能结构化生成</strong>：自动生成包括项目背景、用户角色、功能模块、业务流程图（Mermaid 语法）等在内的标准章节。</li>
+        <li><strong>多维度需求拆解</strong>：基于用户的一句话描述，自动拆解为详细的用户故事（User Stories）和验收标准（Acceptance Criteria）。</li>
+        <li><strong>交互原型描述</strong>：根据功能逻辑，自动生成详细的页面交互描述，方便设计师与开发理解。</li>
+        <li><strong>合规性与边界检查</strong>：自动识别潜在的逻辑漏洞，并提供异常情况（Edge Cases）的处理建议。</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-10">如何使用</h2>
+      <p>仅需简单的三个步骤，即可完成高质量文档的输出：</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">1</div>
+          <h4 class="font-bold mb-2">输入核心概念</h4>
+          <p class="text-sm text-gray-500">在编辑器中输入产品名称和核心功能点。</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">2</div>
+          <h4 class="font-bold mb-2">AI 智能生成</h4>
+          <p class="text-sm text-gray-500">点击“一键生成”，AI 将自动完成文档扩充与润色。</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">3</div>
+          <h4 class="font-bold mb-2">导出与协作</h4>
+          <p class="text-sm text-gray-500">支持导出为 Markdown、PDF 或同步至飞书文档。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 关联资源区域 -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">关联资源</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">PRD 模板库</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">OpenClaw SDK</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">视频教程</a>
+      </div>
+    </section>
+
+    <!-- 推荐阅读 -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">推荐阅读</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">竞品分析追踪器</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">产品路线图构建器</a>
+      </div>
+    </section>
+
+    <!-- 返回链接 -->
+    <div class="pt-8 flex justify-center">
+      <a href="./skills-for-product-manager-cn.html" class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回产品经理 Skills 列表
+      </a>
+    </div>
 
   </main>
 
