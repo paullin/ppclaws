@@ -1,0 +1,19 @@
+{
+  "id": "product-manager",
+  "title": "产品经理技能图谱",
+  "description": "产品经理核心技能与工具使用指南。",
+  "sections": [
+    {
+      "id": "prd-writing",
+      "title": "PRD 撰写与自动化",
+      "items": [
+        {
+          "title": "PRD 自动化助手",
+          "description": "利用 AI 自动生成产品需求文档，提升编写效率。",
+          "link": "/skills/product-manager/prd-automation-assistant",
+          "badge": "热门"
+        }
+      ]
+    }
+  ]
+}

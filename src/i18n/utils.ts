@@ -150,24 +150,7 @@ function interpolateParams(
 export async function buildContentLinks(): Promise<
     Record<string, Record<string, string>>
 > {
-    const allPosts = await getCollection(
-        "blog",
-        (entry) => !entry.data.isDraft
-    );
     const links: Record<string, Record<string, string>> = {};
-
-    allPosts.forEach((post) => {
-        const { linkedContent } = post.data;
-        if (linkedContent) {
-            const [lang] = post.id.split("/");
-
-            if (!links[linkedContent]) {
-                links[linkedContent] = {};
-            }
-            links[linkedContent][lang] = post.id;
-        }
-    });
-
     return links;
 }
 
