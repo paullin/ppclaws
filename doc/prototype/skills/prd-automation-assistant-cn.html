@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRD 自动化助手 - PPClaws</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              dark: '#0d0f14',
+              card: '#1e2330',
+              border: '#2e364f',
+              accent: '#8b5cf6',
+            }
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    .group:hover .group-hover\:block { display: block; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4b5563; }
+    .dark .prose p { color: #9ca3af; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- 导航栏 -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-shrink-0 cursor-pointer" onclick="window.location.href='../index.html'">
+          <img src="../../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <span class="font-bold text-xl tracking-tight">PPClaws</span>
+        </div>
+
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
+          <a href="../index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">首页</a>
+          
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
+              Skills 精选 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">产品经理 Skills</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师 Skills</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销 Skills</a>
+                <a href="../skills-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Skills 使用 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">需求分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">原型设计</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">AB 测试</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 关键词挖掘</a>
+                <a href="../example-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="../index.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">培训</a>
+          <a href="../index.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">收录</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="搜索"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换暗夜模式">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='prd-automation-assistant.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <!-- 面包屑导航 -->
+    <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="../index.html" class="hover:text-astro-accent transition-colors">首页</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="../skills-cn.html" class="hover:text-astro-accent transition-colors">Skills 技能中心</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="./skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors font-medium">产品经理 Skills</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <span class="text-gray-900 dark:text-white font-medium">PRD 自动化助手</span>
+    </nav>
+
+    <!-- 详情页头部：大图 (16:9) -->
+    <section class="space-y-8">
+      <div class="relative aspect-video w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border shadow-lg">
+        <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=PRD+Automation+Assistant" alt="PRD Automation Assistant" class="w-full h-full object-cover">
+        <div class="absolute top-4 left-4">
+          <span class="px-3 py-1 bg-astro-accent text-white text-xs font-bold rounded-full shadow-lg">推荐工具</span>
+        </div>
+      </div>
+
+      <!-- 简介区域 -->
+      <div class="space-y-4">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">PRD 自动化助手</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>OpenClaw 团队</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>2024-04-04</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-4 h-4"></i>
+            <span>产品经理 / 自动化 / 文档</span>
+          </div>
+        </div>
+        <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+          告别繁琐的文档编写工作。PRD 自动化助手基于 AI 技术，只需输入产品核心逻辑和功能大纲，即可在数秒内为您生成结构严谨、内容详实、符合行业标准的 PRD 文档。
+        </p>
+      </div>
+    </section>
+
+    <hr class="border-gray-200 dark:border-astro-border">
+
+    <!-- 正文区域 -->
+    <article class="prose dark:prose-invert max-w-none">
+      <h2 class="text-2xl font-bold">功能亮点</h2>
+      <p>PRD 自动化助手专为解决产品经理在文档编写阶段的痛点而设计，其核心优势包括：</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>智能结构化生成</strong>：自动生成包括项目背景、用户角色、功能模块、业务流程图（Mermaid 语法）等在内的标准章节。</li>
+        <li><strong>多维度需求拆解</strong>：基于用户的一句话描述，自动拆解为详细的用户故事（User Stories）和验收标准（Acceptance Criteria）。</li>
+        <li><strong>交互原型描述</strong>：根据功能逻辑，自动生成详细的页面交互描述，方便设计师与开发理解。</li>
+        <li><strong>合规性与边界检查</strong>：自动识别潜在的逻辑漏洞，并提供异常情况（Edge Cases）的处理建议。</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-10">如何使用</h2>
+      <p>仅需简单的三个步骤，即可完成高质量文档的输出：</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">1</div>
+          <h4 class="font-bold mb-2">输入核心概念</h4>
+          <p class="text-sm text-gray-500">在编辑器中输入产品名称和核心功能点。</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">2</div>
+          <h4 class="font-bold mb-2">AI 智能生成</h4>
+          <p class="text-sm text-gray-500">点击“一键生成”，AI 将自动完成文档扩充与润色。</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">3</div>
+          <h4 class="font-bold mb-2">导出与协作</h4>
+          <p class="text-sm text-gray-500">支持导出为 Markdown、PDF 或同步至飞书文档。</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 关联资源区域 -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">关联资源</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">PRD 模板库</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">OpenClaw SDK</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">视频教程</a>
+      </div>
+    </section>
+
+    <!-- 推荐阅读 -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">推荐阅读</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">竞品分析追踪器</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">产品路线图构建器</a>
+      </div>
+    </section>
+
+    <!-- 返回链接 -->
+    <div class="pt-8 flex justify-center">
+      <a href="./skills-for-product-manager-cn.html" class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回产品经理 Skills 列表
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center flex-shrink-0 mb-4 cursor-pointer" onclick="window.location.href='../index.html'">
+            <img src="../../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+            <span class="font-bold text-xl tracking-tight">PPClaws</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            为现代开发者提供的强大自动化工具
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills 技能中心</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="./skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors w-max">产品经理 Skills</a>
+            <a href="../skills-cn.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师 Skills</a>
+            <a href="../skills-cn.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销 Skills</a>
+            <a href="../example-cn.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">需求分析</a>
+            <a href="../example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
+            <a href="../example-cn.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">AB 测试</a>
+            <a href="../example-cn.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO 关键词挖掘</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">相关资源</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw 官网</a>
+            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub 社区</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">阿里云</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">腾讯云</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">飞书</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">关注我们</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="YouTube">
+              <img src="../youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="微信">
+              <img src="../微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="即刻">
+              <img src="../即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="小红书">
+              <img src="../小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+</body>
+</html>

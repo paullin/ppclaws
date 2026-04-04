@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRD Automation Assistant - PPClaws</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              dark: '#0d0f14',
+              card: '#1e2330',
+              border: '#2e364f',
+              accent: '#8b5cf6',
+            }
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    .group:hover .group-hover\:block { display: block; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4b5563; }
+    .dark .prose p { color: #9ca3af; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-shrink-0 cursor-pointer" onclick="window.location.href='../index-en.html'">
+          <img src="../../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <span class="font-bold text-xl tracking-tight">PPClaws</span>
+        </div>
+
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
+          <a href="../index-en.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
+          
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
+              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills-for-product-manager.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">Skills for PM</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
+                <a href="../skills.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
+                <a href="../example.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="../index-en.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Training</a>
+          <a href="../index-en.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Submit</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Toggle Dark Mode">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='prd-automation-assistant-cn.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="../index-en.html" class="hover:text-astro-accent transition-colors">Home</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="../skills.html" class="hover:text-astro-accent transition-colors">Skills Hub</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <a href="./skills-for-product-manager.html" class="hover:text-astro-accent transition-colors font-medium">Skills for PM</a>
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <span class="text-gray-900 dark:text-white font-medium">PRD Automation Assistant</span>
+    </nav>
+
+    <!-- Header Section: Image (16:9) -->
+    <section class="space-y-8">
+      <div class="relative aspect-video w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border shadow-lg">
+        <img src="https://placehold.co/1600x900/f3f4f6/6b7280?text=PRD+Automation+Assistant" alt="PRD Automation Assistant" class="w-full h-full object-cover">
+        <div class="absolute top-4 left-4">
+          <span class="px-3 py-1 bg-astro-accent text-white text-xs font-bold rounded-full shadow-lg">Featured Tool</span>
+        </div>
+      </div>
+
+      <!-- Introduction Area -->
+      <div class="space-y-4">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">PRD Automation Assistant</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>OpenClaw Team</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>2024-04-04</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-4 h-4"></i>
+            <span>PM / Automation / Docs</span>
+          </div>
+        </div>
+        <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+          Say goodbye to tedious documentation. The PRD Automation Assistant uses AI to transform your core product logic and feature outlines into structured, professional PRD documents in seconds.
+        </p>
+      </div>
+    </section>
+
+    <hr class="border-gray-200 dark:border-astro-border">
+
+    <!-- Body Content -->
+    <article class="prose dark:prose-invert max-w-none">
+      <h2 class="text-2xl font-bold">Key Features</h2>
+      <p>The PRD Automation Assistant is designed to solve the most common pain points for Product Managers:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Intelligent Structure Generation</strong>: Automatically creates standard sections including background, user personas, functional modules, and business flows (Mermaid syntax).</li>
+        <li><strong>Requirement Decomposition</strong>: Breaks down simple descriptions into detailed User Stories and Acceptance Criteria.</li>
+        <li><strong>Interactive Prototype Specs</strong>: Generates detailed interaction descriptions based on feature logic for better developer handoff.</li>
+        <li><strong>Logic & Edge Case Checking</strong>: Identifies potential logic gaps and suggests handling for edge cases.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-10">How to Use</h2>
+      <p>Generate high-quality documentation in three simple steps:</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">1</div>
+          <h4 class="font-bold mb-2">Input Core Concepts</h4>
+          <p class="text-sm text-gray-500">Enter the product name and core features in the editor.</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">2</div>
+          <h4 class="font-bold mb-2">AI Generation</h4>
+          <p class="text-sm text-gray-500">Click "Generate" and let the AI expand and polish your document.</p>
+        </div>
+        <div class="bg-white dark:bg-astro-card p-6 rounded-xl border border-gray-200 dark:border-astro-border">
+          <div class="w-10 h-10 rounded-full bg-astro-accent/10 text-astro-accent flex items-center justify-center font-bold mb-4">3</div>
+          <h4 class="font-bold mb-2">Export & Collaborate</h4>
+          <p class="text-sm text-gray-500">Export to Markdown, PDF, or sync with tools like Lark/Feishu.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Resources -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Related Resources</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">PRD Templates</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">OpenClaw SDK</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Video Tutorials</a>
+      </div>
+    </section>
+
+    <!-- Recommended Reading -->
+    <section class="space-y-4 pt-8 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Recommended Reading</h2>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Competitor Tracker</a>
+        <a href="#" class="text-gray-900 dark:text-gray-300 hover:text-astro-accent underline transition-colors text-sm">Roadmap Builder</a>
+      </div>
+    </section>
+
+    <!-- Back Link -->
+    <div class="pt-8 flex justify-center">
+      <a href="./skills-for-product-manager.html" class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Skills for Product Manager
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center flex-shrink-0 mb-4 cursor-pointer" onclick="window.location.href='../index-en.html'">
+            <img src="../../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+            <span class="font-bold text-xl tracking-tight">PPClaws</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Powerful automation tools for modern developers
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="./skills-for-product-manager.html" class="hover:text-astro-accent transition-colors w-max">PM Skills</a>
+            <a href="../skills.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">UX Skills</a>
+            <a href="../skills.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Marketing Skills</a>
+            <a href="../example.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">Req Analysis</a>
+            <a href="../example.html#prototyping" class="hover:text-astro-accent transition-colors w-max">Proto Design</a>
+            <a href="../example.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
+            <a href="../example.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO Mining</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw Site</a>
+            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub Community</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Aliyun</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Tencent Cloud</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Feishu</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="YouTube">
+              <img src="../youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="WeChat">
+              <img src="../微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Jike">
+              <img src="../即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Xiaohongshu">
+              <img src="../小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+</body>
+</html>
