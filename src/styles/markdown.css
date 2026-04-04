@@ -1,69 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-    --color-main: #111111;
-    --color-primary: #6c24d8;
+    --color-primary: #8b5cf6;
 }
 
 #md-content {
     h2 {
-        @apply text-2xl md:text-3xl font-bold mb-4 wrap-anywhere;
+        @apply text-2xl md:text-3xl font-extrabold mb-4 wrap-anywhere text-black dark:text-white;
     }
 
     h3 {
-        @apply text-xl md:text-2xl font-bold mb-4 wrap-anywhere;
+        @apply text-xl md:text-2xl font-bold mb-4 wrap-anywhere text-black dark:text-white;
     }
 
     h4 {
-        @apply text-lg md:text-xl font-bold mb-4 wrap-anywhere;
+        @apply text-lg md:text-xl font-bold mb-4 wrap-anywhere text-black dark:text-white;
     }
 
     h5,
     h6 {
-        @apply text-lg font-bold mb-4 wrap-anywhere;
+        @apply text-lg font-bold mb-4 wrap-anywhere text-black dark:text-white;
     }
 
     p {
-        @apply text-base mb-4;
-        color: rgb(var(--ui-text) / 0.88);
+        @apply text-base mb-4 leading-relaxed;
+        color: rgb(var(--ui-text) / 0.85);
     }
 
     blockquote {
-        @apply bg-primary/10 border-l-2 border-primary pl-4 py-2 text-primary font-medium mt-2 mb-8;
+        @apply bg-[#8b5cf6]/10 border-l-4 border-primary pl-4 py-3 text-primary font-medium mt-2 mb-8 rounded-r-lg;
         p {
             @apply mb-0;
         }
     }
 
     ol {
-        @apply list-decimal space-y-1;
+        @apply list-decimal space-y-2 mb-6;
         li {
-            @apply ml-8 mt-1 last:mb-8;
+            @apply ml-8 mt-1;
+            color: rgb(var(--ui-text) / 0.85);
         }
     }
 
     ul {
-        @apply list-disc space-y-1;
+        @apply list-disc space-y-2 mb-6;
         li {
-            @apply ml-8 mt-1 last:mb-8;
+            @apply ml-8 mt-1;
+            color: rgb(var(--ui-text) / 0.85);
         }
     }
 
     a {
-        @apply underline text-primary;
+        @apply underline decoration-primary/30 underline-offset-4 text-primary hover:decoration-primary transition-all;
     }
 
     .astro-code {
-        @apply p-4 rounded-xl font-mono mb-8 text-sm w-full;
-        background-color: rgb(var(--ui-border) / 0.14);
+        @apply p-5 rounded-2xl font-mono mb-8 text-sm w-full border;
+        border-color: rgb(var(--ui-border) / 0.1);
+        background-color: rgb(var(--ui-surface-soft)) !important;
     }
 
     table {
-        @apply w-full border mb-8;
+        @apply w-full border-collapse mb-8 rounded-xl overflow-hidden border;
         border-color: rgb(var(--ui-border) / 0.2);
 
         th {
-            @apply border text-left p-3;
+            @apply border text-left p-3 font-bold;
             background-color: rgb(var(--ui-border) / 0.1);
             border-color: rgb(var(--ui-border) / 0.2);
         }
@@ -75,9 +77,6 @@
     }
 
     code:not(pre code) {
-        @apply bg-primary/10 px-1 py-0.5 rounded-md font-mono text-wrap flex-wrap;
-    }
-    code {
-        @apply text-wrap flex-wrap wrap-anywhere;
+        @apply bg-[#8b5cf6]/10 text-primary px-1.5 py-0.5 rounded-md font-mono text-[0.9em];
     }
 }

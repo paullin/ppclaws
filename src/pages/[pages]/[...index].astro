@@ -31,7 +31,7 @@ const { Content, frontmatter } = await import(`./_pages-${lang}.mdx`);
         keywords: frontmatter?.keywords,
     }}
 >
-    <section id="md-content" aria-label="Page content">
+    <section id="md-content" aria-label="Page content" class="py-12 md:py-20">
         <Content />
     </section>
 </Base>
