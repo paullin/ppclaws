@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Hub - PPClaws</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              dark: '#0d0f14',
+              card: '#1e2330',
+              border: '#2e364f',
+              accent: '#8b5cf6',
+            }
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    .group:hover .group-hover\:block { display: block; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-shrink-0 cursor-pointer" onclick="window.location.href='./index-en.html'">
+          <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <span class="font-bold text-xl tracking-tight">PPClaws</span>
+        </div>
+
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
+          <a href="./index-en.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
+          
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
+              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills/skills-for-product-manager.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
+                <a href="./skills.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
+                <a href="./example.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="./index-en.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Training</a>
+          <a href="./index-en.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Submit</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Toggle Dark Mode">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='skills-cn.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+    <!-- Breadcrumbs -->
+    <div class="flex items-center justify-between">
+      <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+        <a href="./index-en.html" class="hover:text-astro-accent transition-colors">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-gray-900 dark:text-white font-medium">Skills Hub</span>
+      </nav>
+    </div>
+
+    <div class="text-center space-y-4">
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Skills Hub</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Explore all professional skill packs designed to supercharge your workflow across different roles.</p>
+    </div>
+
+    <!-- Section 1: Skills for Product Manager -->
+    <section id="pm-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Product Manager</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Empowering PMs with competitor analysis and requirements management</p>
+        </div>
+        <a href="./skills/skills-for-product-manager.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4 Cards -->
+        <template id="card-template">
+          <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+            <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+              <img src="" alt="" class="card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="card-tag px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"></span>
+              </div>
+              <h3 class="card-title font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1"></h3>
+              <p class="card-desc text-sm text-gray-600 dark:text-gray-400 line-clamp-2"></p>
+            </div>
+          </div>
+        </template>
+
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+1" alt="PRD Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD Automation Assistant</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Auto-generate standard PRD documents from basic skeletons.</p>
+          </div>
+        </div>
+        <!-- ... 3 more cards ... -->
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+2" alt="Competitor Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Competitor Tracker</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Monitor competitor updates and generate weekly reports automatically.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+3" alt="User Story Gen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">User Story Generator</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Convert messy notes into structured user stories and acceptance criteria.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+4" alt="Roadmap Builder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Roadmap Builder</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Visualize your product strategy with beautiful, interactive roadmaps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Skills for UI/UX Designer -->
+    <section id="ux-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for UI/UX Designer</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Providing design inspiration collection and automated slicing</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+1" alt="Palette Extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Palette Extractor</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Extract color and typography specs from any webpage with one click.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+2" alt="Icon Finder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Icon Auto-Slicer</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch export icons in multiple formats and sizes for developers.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+3" alt="Inspiration Bot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Inspiration Collector</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">AI-powered moodboard generator based on your project description.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+4" alt="Accessibility Check" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Accessibility Checker</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Validate contrast and readability against WCAG 2.1 standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Skills for Marketing -->
+    <section id="marketing-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Marketing</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Social media content generation and SEO keyword analysis engine</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+1" alt="Twitter Gen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter Copy Generator</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Batch generate viral marketing tweets that match platform tone.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+2" alt="SEO Keywords" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">SEO Keyword Finder</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Discover high-intent keywords your competitors are missing.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+3" alt="Email Campaigns" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Email Campaign Wizard</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Draft high-converting cold outreach and newsletter sequences.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+4" alt="Ads Optimizer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Marketing</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Ad Copy Optimizer</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Improve your Google and Meta ad CTR with AI-suggested hooks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Skills for Developer -->
+    <section id="developer-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Skills for Developer</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Automating code review, documentation, and API testing</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+1" alt="Code Review" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Developer</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">AI Code Reviewer</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Get instant feedback on your PRs for security and performance issues.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+2" alt="Doc Gen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Developer</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">API Doc Generator</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Keep your Swagger/OpenAPI docs in sync with your source code automatically.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+3" alt="Unit Test" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Developer</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Test Case Architect</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Generate comprehensive unit and integration tests from function specs.</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+4" alt="CI/CD Pipelines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Developer</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Pipeline Automator</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">Configure GitHub Actions or GitLab CI pipelines for any stack in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Content Section -->
+    <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight mb-6">Related Content</h2>
+      <div class="flex flex-wrap gap-6">
+        <a href="./example.html" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card w-full sm:w-72">
+          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
+            <i data-lucide="layout-grid" class="w-6 h-6"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">Examples Hub</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Explore real-world use cases</div>
+          </div>
+          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center flex-shrink-0 mb-4 cursor-pointer" onclick="window.location.href='./index-en.html'">
+            <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+            <span class="font-bold text-xl tracking-tight">PPClaws</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Powerful automation tools for modern developers
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="./skills/skills-for-product-manager.html" class="hover:text-astro-accent transition-colors w-max">PM Skills</a>
+            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">UX Skills</a>
+            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Marketing Skills</a>
+            <a href="./example.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">Req Analysis</a>
+            <a href="./example.html#prototyping" class="hover:text-astro-accent transition-colors w-max">Proto Design</a>
+            <a href="./example.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
+            <a href="./example.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO Mining</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw Site</a>
+            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub Community</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Aliyun</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Tencent Cloud</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Feishu</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="YouTube">
+              <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="WeChat">
+              <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Jike">
+              <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Xiaohongshu">
+              <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+</body>
+</html>

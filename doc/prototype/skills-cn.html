@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills 技能中心 - PPClaws</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              dark: '#0d0f14',
+              card: '#1e2330',
+              border: '#2e364f',
+              accent: '#8b5cf6',
+            }
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    .group:hover .group-hover\:block { display: block; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+  <!-- 导航栏 -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center flex-shrink-0 cursor-pointer" onclick="window.location.href='./index.html'">
+          <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <span class="font-bold text-xl tracking-tight">PPClaws</span>
+        </div>
+
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
+          <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">首页</a>
+          
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
+              Skills 精选 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills/skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">产品经理 Skills</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师 Skills</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销 Skills</a>
+                <a href="./skills-cn.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">更多</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Skills 使用 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">需求分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">原型设计</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">AB 测试</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 关键词挖掘</a>
+                <a href="./example-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">更多</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="./index.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">培训</a>
+          <a href="./index.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">收录</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="搜索"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换暗夜模式">
+            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='skills.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+    <!-- 面包屑导航 -->
+    <div class="flex items-center justify-between">
+      <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+        <a href="./index.html" class="hover:text-astro-accent transition-colors">首页</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-gray-900 dark:text-white font-medium">Skills 技能中心</span>
+      </nav>
+    </div>
+
+    <div class="text-center space-y-4">
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Skills 技能中心</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">探索专为不同角色设计的专业技能包，助力您的工作流全面自动化。</p>
+    </div>
+
+    <!-- 子区域 1：产品经理 Skills -->
+    <section id="pm-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">产品经理 Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">助力 PM 进行竞品分析、需求管理与 PRD 自动化</p>
+        </div>
+        <a href="./skills/skills-for-product-manager-cn.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+1" alt="PRD 助手" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">PRD 自动化助手</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据基础大纲自动生成标准 PRD 文档。</p>
+          </div>
+        </div>
+        <!-- ... 3 更多卡片 ... -->
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+2" alt="竞品追踪" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">竞品分析追踪器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">自动监控竞品更新并生成周报。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+3" alt="用户故事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">用户故事生成器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">将凌乱的笔记转化为结构化的用户故事与验收标准。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=PM+Skill+4" alt="路线图" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PM</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">产品路线图构建器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">可视化您的产品策略，生成美观的互动路线图。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 子区域 2：设计师 Skills -->
+    <section id="ux-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">设计师 Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">提供设计灵感采集、自动化切图与配色提取</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+1" alt="配色提取" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">配色方案提取器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">一键提取任何网页的颜色与字体规范。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+2" alt="自动切图" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">图标自动切图助手</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">为开发者批量导出多种格式与尺寸的图标。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+3" alt="灵感采集" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">设计灵感采集机器人</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">基于项目描述自动生成 AI 情绪板。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=UX+Skill+4" alt="无障碍检查" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">UI/UX</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">设计无障碍检查器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">验证对比度与可读性是否符合 WCAG 2.1 标准。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 子区域 3：市场营销 Skills -->
+    <section id="marketing-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">市场营销 Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">社交媒体内容生成与 SEO 关键词分析引擎</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+1" alt="推文生成" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">市场营销</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">Twitter 爆款推文生成器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">批量生成符合平台调性的病毒式营销推文。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+2" alt="SEO 关键词" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">市场营销</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">SEO 蓝海关键词挖掘机</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">发现竞争对手错过的潜力高转化关键词。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+3" alt="邮件营销" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">市场营销</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">邮件营销话术专家</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">自动撰写高转化率的开发信与订阅周报序列。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=MKT+Skill+4" alt="广告优化" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">市场营销</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">广告文案优化器</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">通过 AI 建议的钩子提升 Google 和 Meta 广告点击率。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 子区域 4：开发者 Skills -->
+    <section id="developer-skills">
+      <div class="flex justify-between items-end mb-6 border-b border-gray-200 dark:border-astro-border pb-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">开发者 Skills</h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">自动化代码审查、文档生成与 API 测试</p>
+        </div>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+1" alt="代码审查" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">开发者</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">AI 代码审查助手</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">在 PR 阶段即时获得关于安全性与性能的反馈。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+2" alt="文档生成" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">开发者</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">API 文档自动同步</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">让 Swagger/OpenAPI 文档与源代码实时同步。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+3" alt="单元测试" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">开发者</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">单元测试架构师</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">根据函数规范生成全面的单元测试与集成测试。</p>
+          </div>
+        </div>
+        <div class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-colors shadow-sm cursor-pointer" onclick="window.location.href='./skills/prd-automation-assistant-cn.html'">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+            <img src="https://placehold.co/600x400/f3f4f6/6b7280?text=Dev+Skill+4" alt="流水线" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">开发者</span></div>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-astro-accent transition-colors line-clamp-1">CI/CD 流水线自动配置</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">数秒内为任何技术栈配置 GitHub Actions 流水线。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关内容区域 -->
+    <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
+      <h2 class="text-2xl font-bold tracking-tight mb-6">相关内容</h2>
+      <div class="flex flex-wrap gap-6">
+        <a href="./example-cn.html" class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-astro-accent transition-all hover:shadow-lg bg-white dark:bg-astro-card w-full sm:w-72">
+          <div class="w-12 h-12 rounded-lg bg-astro-accent/10 text-astro-accent flex items-center justify-center group-hover:scale-110 transition-transform">
+            <i data-lucide="layout-grid" class="w-6 h-6"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">精选案例中心</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">探索真实世界的应用案例</div>
+          </div>
+          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center flex-shrink-0 mb-4 cursor-pointer" onclick="window.location.href='./index.html'">
+            <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+            <span class="font-bold text-xl tracking-tight">PPClaws</span>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            为现代开发者提供的强大自动化工具
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills 技能中心</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="./skills/skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors w-max">产品经理 Skills</a>
+            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师 Skills</a>
+            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销 Skills</a>
+            <a href="./example-cn.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">需求分析</a>
+            <a href="./example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
+            <a href="./example-cn.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">AB 测试</a>
+            <a href="./example-cn.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO 关键词挖掘</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">相关资源</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw 官网</a>
+            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub 社区</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">阿里云</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">腾讯云</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">飞书</a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">关注我们</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="YouTube">
+              <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="微信">
+              <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="即刻">
+              <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="小红书">
+              <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+</body>
+</html>
