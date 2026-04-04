@@ -10,19 +10,19 @@ const navigationData = [
         children: [
             {
                 label: "common:menu.list.pm_skills",
-                href: "/#pm-skills",
+                href: "/skills/product-manager",
             },
             {
                 label: "common:menu.list.ux_skills",
-                href: "/#ux-skills",
+                href: "/skills/ui-ux-designer",
             },
             {
                 label: "common:menu.list.marketing_skills",
-                href: "/#marketing-skills",
+                href: "/skills/marketing",
             },
             {
                 label: "common:menu.list.more",
-                href: "/#more-skills",
+                href: "/skills",
             },
         ],
     },
@@ -32,23 +32,23 @@ const navigationData = [
         children: [
             {
                 label: "common:menu.list.req_analysis",
-                href: "#",
+                href: "/example/requirement-analysis",
             },
             {
                 label: "common:menu.list.proto_design",
-                href: "#",
+                href: "/example/prototyping",
             },
             {
                 label: "common:menu.list.ab_testing",
-                href: "#",
+                href: "/example/ab-testing",
             },
             {
                 label: "common:menu.list.seo_mining",
-                href: "#",
+                href: "/example/seo-keyword-mining",
             },
             {
                 label: "common:menu.list.more",
-                href: "/#more-examples",
+                href: "/example",
             },
         ],
     },

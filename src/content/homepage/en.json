@@ -56,7 +56,7 @@
             "id": "pm-skills",
             "title": "Skills for Product Manager",
             "subtitle": "Empowering PMs with competitor analysis and requirements management",
-            "moreLink": "#",
+            "moreLink": "/skills/product-manager",
             "moreText": "Browse More",
             "columns": 4,
             "items": [
@@ -64,25 +64,29 @@
                     "title": "PRD Automation Assistant 1",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5"
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5",
+                    "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 2",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6"
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6",
+                    "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 3",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7"
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7",
+                    "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 4",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8"
+                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8",
+                    "link": "/skills/product-manager/prd-automation-assistant"
                 }
             ]
         },
@@ -90,7 +94,7 @@
             "id": "ux-skills",
             "title": "Skills for UI/UX Designer",
             "subtitle": "Providing design inspiration collection and automated slicing",
-            "moreLink": "#",
+            "moreLink": "/skills/ui-ux-designer",
             "moreText": "Browse More",
             "columns": 4,
             "items": [

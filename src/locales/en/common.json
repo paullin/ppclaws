@@ -2,8 +2,8 @@
     "menu": {
         "list": {
             "home": "Home",
-            "skills": "Skills",
-            "example": "Example",
+            "skills": "Skills Hub",
+            "example": "Example Hub",
             "training": "Training",
             "submit": "Submit",
             "pm_skills": "Skills for PM",
@@ -21,7 +21,15 @@
             "subpage-2": "Subpage 2",
             "blog": "Blog",
             "pagination": "Pagination",
-            "contact": "Contact"
+            "contact": "Contact",
+            "skills_desc": "Explore all professional skill packs designed to supercharge your workflow across different roles.",
+            "example_desc": "Explore practical examples to accelerate your workflow.",
+            "view_all": "View All",
+            "related_content": "Related Content",
+            "explore_examples": "Examples Hub",
+            "explore_examples_desc": "Explore real-world use cases",
+            "explore_skills": "Skills Hub",
+            "explore_skills_desc": "Explore professional skill packs"
         },
         "languagesText": {
             "selectLanguage": "Select Language"
