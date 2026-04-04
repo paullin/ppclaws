@@ -60,39 +60,40 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo & Name -->
-        <div class="flex items-center flex-shrink-0 cursor-pointer">
-          <img src="../../logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+        <div class="flex items-center flex-shrink-0 cursor-pointer" onclick="window.location.href='./index-en.html'">
+          <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
           <span class="font-bold text-xl tracking-tight">PPClaws</span>
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center">
-          <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
+        <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
+          <a href="./index-en.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
           
-          <div class="relative group">
+          <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
               Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
-            <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
-              <div class="py-1" role="menu">
-                <a href="#pm-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills/skills-for-product-manager.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
                 <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
                 <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
+                <a href="./skills.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">More</a>
               </div>
             </div>
           </div>
 
-          <div class="relative group">
+          <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
               Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
-            <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border hidden group-hover:block">
-              <div class="py-1" role="menu">
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
-              <a href="#more-examples" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+                <a href="./example.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">More</a>
               </div>
             </div>
           </div>
@@ -130,9 +131,6 @@
 
     <!-- Marquee Banner: 16:9 ratio -->
     <section class="w-full">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-2xl font-bold tracking-tight">Featured Content</h2>
-      </div>
       <div class="relative w-full aspect-video md:aspect-[21/9] lg:aspect-[16/6] bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group">
         <div id="banner-container" class="absolute inset-0 flex w-full h-full transition-transform duration-500 ease-in-out">
           <div class="w-full h-full relative flex-shrink-0">
@@ -175,7 +173,7 @@
           <h2 class="text-2xl font-bold tracking-tight">Featured Skills</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Essential core skill packs to boost productivity</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="./skills.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">View More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- 4 Cards -->
@@ -238,7 +236,7 @@
           <h2 class="text-2xl font-bold tracking-tight">Skills for Product Manager</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Empowering PMs with competitor analysis and requirements management</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="./skills/skills-for-product-manager.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">Browse More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -640,72 +638,63 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-1 md:col-span-1">
-          <div class="flex items-center flex-shrink-0 mb-4">
-            <img src="../../logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
+          <div class="flex items-center flex-shrink-0 mb-4 cursor-pointer" onclick="window.location.href='./index-en.html'">
+            <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
             <span class="font-bold text-xl tracking-tight">PPClaws</span>
           </div>
           <p class="text-sm text-gray-600 dark:text-gray-400">
-            One person, one team.
+            Powerful automation tools for modern developers
           </p>
         </div>
         
         <div>
           <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="#pm-skills" class="hover:text-astro-accent transition-colors w-max">Skills for PM</a>
-            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Designer</a>
-            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Skills for Marketing</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">Requirement Analysis</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">Prototyping</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">SEO Keywords</a>
+            <a href="./skills/skills-for-product-manager.html" class="hover:text-astro-accent transition-colors w-max">PM Skills</a>
+            <a href="./skills.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">UX Skills</a>
+            <a href="./skills.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Marketing Skills</a>
+            <a href="./example.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">Req Analysis</a>
+            <a href="./example.html#prototyping" class="hover:text-astro-accent transition-colors w-max">Proto Design</a>
+            <a href="./example.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
+            <a href="./example.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO Mining</a>
           </ul>
-        </div>
-
-        <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow us</h3>
-          <div class="flex items-center gap-4">
-
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="X (Twitter)">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="YouTube">
-              <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
-            </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 group relative" title="WeChat">
-              <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
-            </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Jike">
-              <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
-            </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5" title="Xiaohongshu">
-              <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
-            </a>
-            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors flex items-center justify-center w-5 h-5 rounded border border-current" title="MoWen">
-              <span class="text-[10px] font-bold leading-none transform scale-90">M</span>
-            </a>
-                    </div>
         </div>
 
         <div>
           <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
-          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-            <li><a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors">OpenClaw</a></li>
-            <li><a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors">ClawHub</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">Alibaba Cloud Guide</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">Tencent Cloud Guide</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">Lark Open Platform</a></li>
-          
-            <li><a href="#" class="hover:text-astro-accent transition-colors">About us</a></li>
-            <li><a href="#" class="hover:text-astro-accent transition-colors">Privacy</a></li>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
+            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw Site</a>
+            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub Community</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Aliyun</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Tencent Cloud</a>
+            <a href="#" class="hover:text-astro-accent transition-colors w-max">Feishu</a>
           </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h3>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="X (Twitter)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.91z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="YouTube">
+              <img src="./youtube.png" alt="YouTube" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="WeChat">
+              <img src="./微信.png" alt="WeChat" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Jike">
+              <img src="./即刻.png" alt="Jike" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+            <a href="#" class="text-gray-500 hover:text-astro-accent transition-colors" title="Xiaohongshu">
+              <img src="./小红书.png" alt="Xiaohongshu" class="w-5 h-5 rounded hover:opacity-80 transition-opacity">
+            </a>
+          </div>
         </div>
       </div>
       
-      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center text-sm text-gray-500 dark:text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>&copy; 2026 PPClaws. All rights reserved.</p>
-        
-        
+      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. All rights reserved.</p>
       </div>
     </div>
   </footer>
