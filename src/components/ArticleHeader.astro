@@ -79,7 +79,7 @@ const displayInitials = getInitials(cover_text || title);
             {displayInitials}
         </div>
         <div class="absolute inset-0 flex flex-col justify-end p-8 sm:p-12">
-            <h1 class={`text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
+            <div class={`text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
         </div>
         
         {isFeatured && (
@@ -99,7 +99,7 @@ const displayInitials = getInitials(cover_text || title);
   ) : (
     <div class="relative aspect-video w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border shadow-lg bg-gray-100 dark:bg-gray-800">
       <div class="absolute inset-0 flex flex-col justify-end p-8 sm:p-12">
-          <h1 class="text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide text-gray-900 dark:text-white" set:html={displayCoverText} />
+          <div class="text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide text-gray-900 dark:text-white" set:html={displayCoverText} />
       </div>
       
       {isFeatured && (
