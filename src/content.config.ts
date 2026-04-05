@@ -36,6 +36,8 @@ const homepage = defineCollection({
                             description: z.string(),
                             tags: z.array(z.string()).optional(),
                             cover: z.string().optional(),
+                            cover_text: z.string().optional(),
+                            cover_theme: z.string().optional(),
                             badge: z.string().optional(),
                             icon: z.string().optional(),
                             link: z.string().optional(),
@@ -140,6 +142,8 @@ export const collections = {
                     description: z.string().optional(),
                     link: z.string().optional(),
                     icon: z.string().optional(),
+                    cover_text: z.string().optional(),
+                    cover_theme: z.string().optional(),
                     badge: z.string().optional(),
                 })).optional()
             })).optional()
@@ -165,6 +169,8 @@ export const collections = {
                     description: z.string().optional(),
                     link: z.string().optional(),
                     icon: z.string().optional(),
+                    cover_text: z.string().optional(),
+                    cover_theme: z.string().optional(),
                     badge: z.string().optional(),
                 })).optional()
             })).optional()
@@ -183,6 +189,8 @@ export const collections = {
             tags: z.array(z.string()).optional(),
             category: z.string().optional(),
             coverImage: z.string().optional(),
+            cover_text: z.string().optional(),
+            cover_theme: z.string().optional(),
             badge: z.string().optional(),
             featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({
@@ -208,6 +216,8 @@ export const collections = {
             tags: z.array(z.string()).optional(),
             category: z.string().optional(),
             coverImage: z.string().optional(),
+            cover_text: z.string().optional(),
+            cover_theme: z.string().optional(),
             badge: z.string().optional(),
             featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({

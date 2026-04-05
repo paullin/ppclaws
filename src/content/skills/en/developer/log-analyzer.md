@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["Tool","Efficiency"]
 category: "developer"
+cover_text: "Dev<br>Tools"
+cover_theme: "dark-emerald"
 coverImage: "https://picsum.photos/seed/ppclaws216/600/400"
 badge: "PRO"
 relatedResources:

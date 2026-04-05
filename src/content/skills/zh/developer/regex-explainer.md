@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["工具","效率"]
 category: "developer"
+cover_text: "Dev<br>Tools"
+cover_theme: "dark-emerald"
 coverImage: "https://picsum.photos/seed/ppclaws214/600/400"
 badge: "专业版"
 relatedResources:

@@ -41,7 +41,7 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8" role="contentinfo">
+<footer class="w-full border-t border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 pt-16 pb-8 transition-colors" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <!-- Column 1: Logo & Slogan -->
@@ -165,7 +165,7 @@ const { data } = Astro.props;
         </div>
 
         <!-- Copyright -->
-        <div class="pt-8 border-t border-gray-200 dark:border-astro-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="pt-8 border-t border-gray-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 {data ? data.copyright : `© ${currentYear} PPClaws. ${t("footer.copyright")}`}
             </p>

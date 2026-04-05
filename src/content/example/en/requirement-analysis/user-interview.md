@@ -5,6 +5,8 @@ author: "Research"
 date: "2024-01-10"
 tags: ["Research", "User Needs"]
 category: "requirement-analysis"
+cover_text: "Core<br>Skill"
+cover_theme: "light-stone"
 coverImage: "https://picsum.photos/seed/ppclaws10/600/400"
 badge: "GUIDE"
 relatedResources:

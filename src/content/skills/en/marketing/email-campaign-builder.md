@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["Tool","Efficiency"]
 category: "marketing"
+cover_text: "MKT<br>Growth"
+cover_theme: "dark-rose"
 coverImage: "https://picsum.photos/seed/ppclaws211/600/400"
 badge: "FREE"
 relatedResources:

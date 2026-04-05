@@ -29,38 +29,54 @@
                 {
                     "title": "PRD Automation Assistant",
                     "description": "Auto-generate product requirements from basic skeletons using AI.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "badge": "FREE",
                     "cover": "https://picsum.photos/seed/ppclaws201/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
                 },
                 {
                     "title": "Competitor Tracker",
                     "description": "Automatically monitor competitor updates and generate weekly reports.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "badge": "PAID",
                     "cover": "https://picsum.photos/seed/ppclaws202/600/400",
                     "link": "/skills/product-manager/competitor-tracker",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "Competitor<br>Tracker"
                 },
                 {
                     "title": "Design System Sync",
                     "description": "Automatically synchronize design tokens and components across platforms.",
-                    "tags": ["UI/UX"],
+                    "tags": [
+                        "UI/UX"
+                    ],
                     "badge": "FREE",
                     "cover": "https://picsum.photos/seed/ppclaws205/600/400",
                     "link": "/skills/ui-ux-designer/design-system-sync",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Design<br>System"
                 },
                 {
                     "title": "API Doc Generator",
                     "description": "Extract and generate interactive API docs from source code comments.",
-                    "tags": ["Dev"],
+                    "tags": [
+                        "Dev"
+                    ],
                     "badge": "FREE",
                     "cover": "https://picsum.photos/seed/ppclaws213/600/400",
                     "link": "/skills/developer/api-doc-generator",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-emerald",
+                    "cover_text": "API<br>Doc"
                 }
             ]
         },
@@ -75,30 +91,46 @@
                 {
                     "title": "PRD Automation Assistant 1",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "cover": "https://picsum.photos/seed/skill5/600/400",
-                    "link": "/skills/product-manager/prd-automation-assistant"
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
                 },
                 {
                     "title": "PRD Automation Assistant 2",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "cover": "https://picsum.photos/seed/skill6/600/400",
-                    "link": "/skills/product-manager/prd-automation-assistant"
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
                 },
                 {
                     "title": "PRD Automation Assistant 3",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "cover": "https://picsum.photos/seed/skill7/600/400",
-                    "link": "/skills/product-manager/prd-automation-assistant"
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
                 },
                 {
                     "title": "PRD Automation Assistant 4",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "cover": "https://picsum.photos/seed/skill8/600/400",
-                    "link": "/skills/product-manager/prd-automation-assistant"
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
                 }
             ]
         },
@@ -113,26 +145,46 @@
                 {
                     "title": "Palette Extractor 1",
                     "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill9/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill9/600/400",
+                    "link": "/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Palette<br>Extractor"
                 },
                 {
                     "title": "Palette Extractor 2",
                     "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill10/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill10/600/400",
+                    "link": "/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Palette<br>Extractor"
                 },
                 {
                     "title": "Palette Extractor 3",
                     "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill11/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill11/600/400",
+                    "link": "/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Palette<br>Extractor"
                 },
                 {
                     "title": "Palette Extractor 4",
                     "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill12/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill12/600/400",
+                    "link": "/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Palette<br>Extractor"
                 }
             ]
         },
@@ -140,33 +192,53 @@
             "id": "marketing-skills",
             "title": "Skills for Marketing",
             "subtitle": "Social media content generation and SEO keyword analysis engine",
-            "moreLink": "#",
+            "moreLink": "/skills/marketing",
             "moreText": "Browse More",
             "columns": 4,
             "items": [
                 {
                     "title": "Twitter Copy Generator 1",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": ["Marketing"],
-                    "cover": "https://picsum.photos/seed/skill13/600/400"
+                    "tags": [
+                        "Marketing"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill13/600/400",
+                    "link": "/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>Copy"
                 },
                 {
                     "title": "Twitter Copy Generator 2",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": ["Marketing"],
-                    "cover": "https://picsum.photos/seed/skill14/600/400"
+                    "tags": [
+                        "Marketing"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill14/600/400",
+                    "link": "/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>Copy"
                 },
                 {
                     "title": "Twitter Copy Generator 3",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": ["Marketing"],
-                    "cover": "https://picsum.photos/seed/skill15/600/400"
+                    "tags": [
+                        "Marketing"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill15/600/400",
+                    "link": "/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>Copy"
                 },
                 {
                     "title": "Twitter Copy Generator 4",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": ["Marketing"],
-                    "cover": "https://picsum.photos/seed/skill16/600/400"
+                    "tags": [
+                        "Marketing"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill16/600/400",
+                    "link": "/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>Copy"
                 }
             ]
         },
@@ -184,7 +256,9 @@
                     "badge": "FREE",
                     "cover": "https://picsum.photos/seed/ex301/600/400",
                     "link": "/example/requirement-analysis/user-needs-interview-framework",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-stone",
+                    "cover_text": "User<br>Needs"
                 },
                 {
                     "title": "Search Intent Analysis",
@@ -192,7 +266,9 @@
                     "badge": "PAID",
                     "cover": "https://picsum.photos/seed/ex302/600/400",
                     "link": "/example/seo-keyword-mining/search-intent-analysis",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-slate",
+                    "cover_text": "Search<br>Intent"
                 },
                 {
                     "title": "Interactive Mockups",
@@ -200,7 +276,9 @@
                     "badge": "FREE",
                     "cover": "https://picsum.photos/seed/ex303/600/400",
                     "link": "/example/prototyping/interactive-mockups",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-sand",
+                    "cover_text": "Interactive<br>Mockups"
                 },
                 {
                     "title": "Multivariate Testing",
@@ -208,7 +286,9 @@
                     "badge": "PAID",
                     "cover": "https://picsum.photos/seed/ex304/600/400",
                     "link": "/example/ab-testing/multivariate-testing",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-mint",
+                    "cover_text": "Multivariate<br>Testing"
                 }
             ]
         }
@@ -275,9 +355,18 @@
             "contact": "Email / Twitter / WeChat"
         },
         "types": [
-            { "value": "skill", "label": "Skill" },
-            { "value": "case", "label": "Case" },
-            { "value": "article", "label": "Article" }
+            {
+                "value": "skill",
+                "label": "Skill"
+            },
+            {
+                "value": "case",
+                "label": "Case"
+            },
+            {
+                "value": "article",
+                "label": "Article"
+            }
         ]
     },
     "footer": {
@@ -286,32 +375,78 @@
             {
                 "title": "Skills Hub",
                 "links": [
-                    { "text": "PM Skills", "link": "#pm-skills" },
-                    { "text": "UX Skills", "link": "#ux-skills" },
-                    { "text": "Marketing Skills", "link": "#marketing-skills" },
-                    { "text": "Req Analysis", "link": "#" },
-                    { "text": "Proto Design", "link": "#" },
-                    { "text": "A/B Testing", "link": "#" },
-                    { "text": "SEO Mining", "link": "#" }
+                    {
+                        "text": "PM Skills",
+                        "link": "/skills/product-manager"
+                    },
+                    {
+                        "text": "UX Skills",
+                        "link": "/skills/ui-ux-designer"
+                    },
+                    {
+                        "text": "Marketing Skills",
+                        "link": "/skills/marketing"
+                    },
+                    {
+                        "text": "Featured Examples",
+                        "link": "/example/featured"
+                    }
                 ]
             },
             {
                 "title": "Related Resources",
                 "links": [
-                    { "text": "OpenClaw Site", "link": "https://openclaw.com", "external": true },
-                    { "text": "ClawHub Community", "link": "https://clawhub.com", "external": true },
-                    { "text": "Aliyun", "link": "#" },
-                    { "text": "Tencent Cloud", "link": "#" },
-                    { "text": "Feishu", "link": "#" }
+                    {
+                        "text": "OpenClaw Site",
+                        "link": "https://openclaw.com",
+                        "external": true
+                    },
+                    {
+                        "text": "ClawHub Community",
+                        "link": "https://clawhub.com",
+                        "external": true
+                    },
+                    {
+                        "text": "Aliyun",
+                        "link": "#"
+                    },
+                    {
+                        "text": "Tencent Cloud",
+                        "link": "#"
+                    },
+                    {
+                        "text": "Feishu",
+                        "link": "#"
+                    }
                 ]
             }
         ],
         "socials": [
-            { "platform": "X (Twitter)", "link": "#", "icon": "twitter" },
-            { "platform": "YouTube", "link": "#", "image": "/social/youtube.png" },
-            { "platform": "WeChat", "link": "#", "image": "/social/微信.png" },
-            { "platform": "Jike", "link": "#", "image": "/social/即刻.png" },
-            { "platform": "Xiaohongshu", "link": "#", "image": "/social/小红书.png" }
+            {
+                "platform": "X (Twitter)",
+                "link": "#",
+                "icon": "twitter"
+            },
+            {
+                "platform": "YouTube",
+                "link": "#",
+                "image": "/social/youtube.png"
+            },
+            {
+                "platform": "WeChat",
+                "link": "#",
+                "image": "/social/微信.png"
+            },
+            {
+                "platform": "Jike",
+                "link": "#",
+                "image": "/social/即刻.png"
+            },
+            {
+                "platform": "Xiaohongshu",
+                "link": "#",
+                "image": "/social/小红书.png"
+            }
         ],
         "copyright": "© 2026 PPClaws. All rights reserved."
     }
