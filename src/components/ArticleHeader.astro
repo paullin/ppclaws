@@ -80,7 +80,7 @@ const displayInitials = getInitials(cover_text || title);
             {displayInitials}
         </div>
         <div class="absolute inset-0 flex flex-col justify-end p-8 sm:p-12">
-            <h1 class={`text-5xl sm:text-6xl font-serif-elegant font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
+            <h1 class={`text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
         </div>
         
         {isFeatured && (

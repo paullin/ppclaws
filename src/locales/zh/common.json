@@ -2,8 +2,8 @@
     "menu": {
         "list": {
             "home": "首页",
-            "skills": "Skills 目录",
-            "example": "示例 目录",
+            "skills": "Skills",
+            "example": "案例",
             "training": "培训",
             "submit": "收录",
             "pm_skills": "产品经理 Skills",
@@ -28,9 +28,9 @@
             "example_desc": "探索可加速您工作流的实战示例。",
             "view_all": "查看全部",
             "related_content": "关联内容",
-            "explore_examples": "示例 目录",
+            "explore_examples": "案例",
             "explore_examples_desc": "探索真实场景应用案例",
-            "explore_skills": "Skills 目录",
+            "explore_skills": "Skills",
             "explore_skills_desc": "探索专业的工作流提效技能包"
         },
         "languagesText": {
@@ -43,7 +43,7 @@
     },
     "footer": {
         "slogan": "一人就是一支团队。",
-        "skills_hub": "Skills 目录",
+        "skills_hub": "Skills",
         "follow_us": "关注我们",
         "related_resources": "关联资源",
         "copyright": "© 2026 PPClaws. 保留所有权利。",
