@@ -21,6 +21,7 @@
 
     /* 字体系统 */
     --font-sans: "Inter", "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: "Fira Code", "Cascadia Code", "Source Code Pro", monospace;
 }
 
