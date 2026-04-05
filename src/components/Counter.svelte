@@ -18,7 +18,7 @@
     aria-labelledby="counter-title"
     aria-describedby="counter-description"
 >
-    <h3 id="counter-title" class="!text-xl">{t.title}</h3>
+    <h3 id="counter-title" class="text-xl!">{t.title}</h3>
 
     <div class="flex items-center gap-2 justify-center mt-4" role="group">
         <button
