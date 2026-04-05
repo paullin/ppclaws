@@ -3,18 +3,18 @@
     "description": "为现代开发者打造的强大自动化工具",
     "hero": [
         {
-            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1",
+            "image": "https://picsum.photos/seed/banner1/1600/900",
             "title": "掌握 OpenClaw 核心配置技巧",
             "description": "从入门到精通，了解如何快速在您的项目中集成 OpenClaw，并构建强大的自动化流程。",
             "badge": "精选",
-            "link": "/zh/blog/master-openclaw"
+            "link": "/zh/skills/product-manager/prd-automation-assistant"
         },
         {
-            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2",
+            "image": "https://picsum.photos/seed/banner2/1600/900",
             "title": "如何为 UI/UX 设计师打造专属 Skill",
             "description": "释放创造力，通过定制化 Skill 提升设计工作流的效率与质量。",
             "badge": "教程",
-            "link": "/zh/blog/custom-skills"
+            "link": "/zh/skills/ui-ux-designer/design-system-sync"
         }
     ],
     "sections": [
@@ -22,33 +22,45 @@
             "id": "featured-skills",
             "title": "精选 Skills",
             "subtitle": "提升生产力的必备核心技能包",
-            "moreLink": "#",
+            "moreLink": "/zh/skills/featured",
             "moreText": "浏览更多",
             "columns": 4,
             "items": [
                 {
-                    "title": "数据抓取利器 1",
-                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
-                    "tags": ["效率"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1"
+                    "title": "PRD 自动化助手",
+                    "description": "利用AI自动生成产品需求文档，提升编写效率。",
+                    "tags": ["PM"],
+                    "badge": "免费",
+                    "cover": "https://picsum.photos/seed/ppclaws201/600/400",
+                    "link": "/zh/skills/product-manager/prd-automation-assistant",
+                    "featured": true
                 },
                 {
-                    "title": "数据抓取利器 2",
-                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
-                    "tags": ["效率"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2"
+                    "title": "竞品追踪器",
+                    "description": "自动监控竞品更新并生成周报。",
+                    "tags": ["PM"],
+                    "badge": "付费",
+                    "cover": "https://picsum.photos/seed/ppclaws202/600/400",
+                    "link": "/zh/skills/product-manager/competitor-tracker",
+                    "featured": true
                 },
                 {
-                    "title": "数据抓取利器 3",
-                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
-                    "tags": ["效率"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3"
+                    "title": "设计规范同步器",
+                    "description": "跨平台自动同步设计令牌与组件规范。",
+                    "tags": ["UI/UX"],
+                    "badge": "免费",
+                    "cover": "https://picsum.photos/seed/ppclaws205/600/400",
+                    "link": "/zh/skills/ui-ux-designer/design-system-sync",
+                    "featured": true
                 },
                 {
-                    "title": "数据抓取利器 4",
-                    "description": "一键配置你的网页抓取规则，将非结构化数据转化为结构化洞察。",
-                    "tags": ["效率"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4"
+                    "title": "API 文档生成器",
+                    "description": "从源码注释自动提取并生成可交互的API接口文档。",
+                    "tags": ["开发"],
+                    "badge": "免费",
+                    "cover": "https://picsum.photos/seed/ppclaws213/600/400",
+                    "link": "/zh/skills/developer/api-doc-generator",
+                    "featured": true
                 }
             ]
         },
@@ -64,25 +76,25 @@
                     "title": "PRD 自动化助手 1",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5"
+                    "cover": "https://picsum.photos/seed/skill5/600/400"
                 },
                 {
                     "title": "PRD 自动化助手 2",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6"
+                    "cover": "https://picsum.photos/seed/skill6/600/400"
                 },
                 {
                     "title": "PRD 自动化助手 3",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7"
+                    "cover": "https://picsum.photos/seed/skill7/600/400"
                 },
                 {
                     "title": "PRD 自动化助手 4",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8"
+                    "cover": "https://picsum.photos/seed/skill8/600/400"
                 }
             ]
         },
@@ -98,25 +110,25 @@
                     "title": "色板提取器 1",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9"
+                    "cover": "https://picsum.photos/seed/skill9/600/400"
                 },
                 {
                     "title": "色板提取器 2",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10"
+                    "cover": "https://picsum.photos/seed/skill10/600/400"
                 },
                 {
                     "title": "色板提取器 3",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11"
+                    "cover": "https://picsum.photos/seed/skill11/600/400"
                 },
                 {
                     "title": "色板提取器 4",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12"
+                    "cover": "https://picsum.photos/seed/skill12/600/400"
                 }
             ]
         },
@@ -132,25 +144,25 @@
                     "title": "Twitter 文案生成器 1",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
                     "tags": ["营销"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13"
+                    "cover": "https://picsum.photos/seed/skill13/600/400"
                 },
                 {
                     "title": "Twitter 文案生成器 2",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
                     "tags": ["营销"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14"
+                    "cover": "https://picsum.photos/seed/skill14/600/400"
                 },
                 {
                     "title": "Twitter 文案生成器 3",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
                     "tags": ["营销"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15"
+                    "cover": "https://picsum.photos/seed/skill15/600/400"
                 },
                 {
                     "title": "Twitter 文案生成器 4",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
                     "tags": ["营销"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
+                    "cover": "https://picsum.photos/seed/skill16/600/400"
                 }
             ]
         },
@@ -158,33 +170,41 @@
             "id": "featured-cases",
             "title": "精选案例",
             "subtitle": "看看大家都在用 OpenClaw 解决什么问题",
-            "moreLink": "#",
+            "moreLink": "/zh/example/featured",
             "moreText": "浏览更多",
             "columns": 4,
             "items": [
                 {
-                    "title": "案例研究 1：效率提升...",
-                    "description": "深入分析如何结合多种基础技能来...",
+                    "title": "用户需求访谈框架",
+                    "description": "系统化梳理用户需求与痛点，建立标准访谈流程。",
                     "badge": "免费",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17"
+                    "cover": "https://picsum.photos/seed/ex301/600/400",
+                    "link": "/zh/example/requirement-analysis/user-needs-interview-framework",
+                    "featured": true
                 },
                 {
-                    "title": "案例研究 2：效率提升...",
-                    "description": "深入分析如何结合多种基础技能来...",
+                    "title": "搜索意图分析模型",
+                    "description": "分析用户搜索行为，匹配高质量长尾词。",
                     "badge": "付费",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18"
+                    "cover": "https://picsum.photos/seed/ex302/600/400",
+                    "link": "/zh/example/seo-keyword-mining/search-intent-analysis",
+                    "featured": true
                 },
                 {
-                    "title": "案例研究 3：效率提升...",
-                    "description": "深入分析如何结合多种基础技能来...",
+                    "title": "交互式原型设计",
+                    "description": "快速构建可交互的高保真原型并进行测试验证。",
                     "badge": "免费",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19"
+                    "cover": "https://picsum.photos/seed/ex303/600/400",
+                    "link": "/zh/example/prototyping/interactive-mockups",
+                    "featured": true
                 },
                 {
-                    "title": "案例研究 4：效率提升...",
-                    "description": "深入分析如何结合多种基础技能来...",
+                    "title": "多变量测试设计",
+                    "description": "设计并执行A/B测试和多变量测试，优化转化率。",
                     "badge": "付费",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20"
+                    "cover": "https://picsum.photos/seed/ex304/600/400",
+                    "link": "/zh/example/ab-testing/multivariate-testing",
+                    "featured": true
                 }
             ]
         }
@@ -195,7 +215,7 @@
         "title": "OpenClaw 全栈大师班",
         "subtitle": "限时特惠",
         "description": "专为想要深入理解和应用 OpenClaw 的开发者与企业设计。课程包含：",
-        "image": "https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass",
+        "image": "https://picsum.photos/seed/masterclass/800/600",
         "features": [
             "全平台环境搭建与系统安装指南",
             "进阶参数配置与大模型无缝对接",

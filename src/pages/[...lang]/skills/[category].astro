@@ -1,0 +1,112 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@layouts/Base.astro";
+import SectionGrid from "@components/SectionGrid.astro";
+import SkillCard from "@components/SkillCard.astro";
+import { useTranslations, useTranslatedPath } from "@i18n/utils";
+import ExploreMore from "@components/ExploreMore.astro";
+
+export async function getStaticPaths() {
+    const allCategories = await getCollection("skillsCategory");
+    
+    const paths = [];
+    const langs = ["en", "zh"];
+    
+    for (const lang of langs) {
+        // filter categories by lang folder
+        const categories = allCategories.filter(c => c.id.startsWith(`${lang}/`));
+        for (const category of categories) {
+            const categorySlug = category.id.split('/').pop();
+            paths.push({
+                params: {
+                    lang: lang === "en" ? undefined : lang,
+                    category: categorySlug,
+                },
+                props: {
+                    lang,
+                    category,
+                    categorySlug,
+                }
+            });
+        }
+    }
+    
+    return paths;
+}
+
+const { lang, category, categorySlug } = Astro.props;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const allSkills = await getCollection("skills");
+const categorySkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.category === categorySlug);
+
+// We should get siblings for the ExploreMore component
+const allCategories = await getCollection("skillsCategory");
+const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !== category.id).slice(0, 3);
+---
+
+<Base 
+    title={`${category.data.title} - ${t("common:footer.skills_hub") || "Skills Hub"}`} 
+    meta={{ description: category.data.description || "" }}
+>
+    <div class="pt-16 pb-8 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">{category.data.title}</h1>
+            {category.data.description && (
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{category.data.description}</p>
+            )}
+        </div>
+
+        <!-- Cards Grid -->
+        <SectionGrid columns={4}>
+            {categorySkills.map(skill => {
+                const slug = skill.id.split('/').pop();
+                return (
+                    <SkillCard 
+                        title={skill.data.title} 
+                        description={skill.data.description || ""}
+                        tags={skill.data.tags}
+                        cover={skill.data.coverImage}
+                        badge={skill.data.badge}
+                        isFeatured={skill.data.featured}
+                        lang={lang}
+                        link={translatePath(`/skills/${categorySlug}/${slug}`)}
+                    />
+                );
+            })}
+        </SectionGrid>
+
+        <!-- Related Links Section -->
+        {siblings.length > 0 && (
+            <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
+                <h2 class="text-2xl font-bold tracking-tight mb-6">Explore Other Categories</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    {siblings.map(sibling => {
+                        const siblingSlug = sibling.id.split('/').pop();
+                        return (
+                        <a href={translatePath(`/skills/${siblingSlug}`)} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
+                            <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-base font-bold group-hover:text-primary transition-colors">{sibling.data.title}</div>
+                                {sibling.data.description && (
+                                    <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">{sibling.data.description}</div>
+                                )}
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                    )})}
+                </div>
+            </section>
+        )}
+
+        <div class="pt-8 flex justify-center">
+            <a href={translatePath("/skills")} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                {lang === 'zh' ? `返回 Skills 目录` : `Back to Skills Hub`}
+            </a>
+        </div>
+    </div>
+</Base>

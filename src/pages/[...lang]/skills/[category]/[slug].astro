@@ -1,0 +1,105 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "@layouts/Base.astro";
+import { useTranslations, useTranslatedPath } from "@i18n/utils";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import ArticleHeader from "@components/ArticleHeader.astro";
+import RelatedLinks from "@components/RelatedLinks.astro";
+
+export async function getStaticPaths() {
+    const allSkills = await getCollection("skills");
+    const langs = ["en", "zh"];
+    
+    const paths = [];
+    
+    for (const lang of langs) {
+        // filter skills by lang folder
+        const skills = allSkills.filter(s => s.id.startsWith(`${lang}/`));
+        for (const skill of skills) {
+            // id is like zh/product-manager/prd-automation-assistant
+            const parts = skill.id.split('/');
+            const categorySlug = parts[1];
+            const slug = parts[2];
+            
+            paths.push({
+                params: {
+                    lang: lang === "en" ? undefined : lang,
+                    category: categorySlug,
+                    slug: slug,
+                },
+                props: {
+                    lang,
+                    categorySlug,
+                    slug,
+                    skill,
+                }
+            });
+        }
+    }
+    
+    return paths;
+}
+
+const { lang, categorySlug, slug, skill } = Astro.props;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// Get the category data for the breadcrumbs
+const allCategories = await getCollection("skillsCategory");
+const category = allCategories.find(c => c.id === `${lang}/${categorySlug}`);
+const categoryTitle = category ? category.data.title : categorySlug;
+
+const { Content } = await render(skill);
+---
+
+<Base 
+    title={`${skill.data.title} - ${categoryTitle}`} 
+    meta={{ description: skill.data.description || "" }}
+>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        <ArticleHeader 
+            title={skill.data.title}
+            description={skill.data.description || ""}
+            author={skill.data.author}
+            date={skill.data.date}
+            tags={skill.data.tags}
+            coverImage={skill.data.coverImage}
+            badge={skill.data.badge}
+            isFeatured={skill.data.featured}
+            lang={lang}
+        />
+
+        <hr class="border-gray-200 dark:border-astro-border" />
+
+        <article class="prose dark:prose-invert max-w-none">
+            <Content />
+        </article>
+
+        {skill.data.relatedResources && skill.data.relatedResources.length > 0 && (
+            <RelatedLinks 
+                title={lang === 'zh' ? '关联资源' : 'Related Resources'}
+                links={skill.data.relatedResources.map(link => ({
+                    label: link.title,
+                    href: link.link
+                }))}
+            />
+        )}
+
+        {skill.data.recommendedReading && skill.data.recommendedReading.length > 0 && (
+            <RelatedLinks 
+                title={lang === 'zh' ? '推荐阅读' : 'Recommended Reading'}
+                links={skill.data.recommendedReading.map(link => ({
+                    label: link.title,
+                    href: link.link
+                }))}
+            />
+        )}
+
+        <div class="pt-8 flex justify-center">
+            <a href={translatePath(`/skills/${categorySlug}`)} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                {lang === 'zh' ? `返回 ${categoryTitle} 列表` : `Back to ${categoryTitle} List`}
+            </a>
+        </div>
+    </main>
+</Base>

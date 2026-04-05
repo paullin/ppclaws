@@ -2,18 +2,20 @@
     "menu": {
         "list": {
             "home": "首页",
-            "skills": "Skills 精选",
-            "example": "Skills 使用",
+            "skills": "Skills 目录",
+            "example": "示例 目录",
             "training": "培训",
             "submit": "收录",
             "pm_skills": "产品经理 Skills",
             "ux_skills": "设计师 Skills",
             "marketing_skills": "市场营销 Skills",
+            "featured_skills": "精选 Skills",
             "more": "更多",
             "req_analysis": "需求分析",
             "proto_design": "原型设计",
             "ab_testing": "AB 测试",
             "seo_mining": "SEO 关键词挖掘",
+            "featured_cases": "精选案例",
             "about": "关于",
             "pages": "页面",
             "dynamicRouting": "动态路由",
@@ -21,7 +23,15 @@
             "subpage-2": "子页面 2",
             "blog": "博客",
             "pagination": "分页",
-            "contact": "联系"
+            "contact": "联系",
+            "skills_desc": "探索为提升各职能工作流效率而设计的专业技能包。",
+            "example_desc": "探索可加速您工作流的实战示例。",
+            "view_all": "查看全部",
+            "related_content": "关联内容",
+            "explore_examples": "示例 目录",
+            "explore_examples_desc": "探索真实场景应用案例",
+            "explore_skills": "Skills 目录",
+            "explore_skills_desc": "探索专业的工作流提效技能包"
         },
         "languagesText": {
             "selectLanguage": "选择语言"
