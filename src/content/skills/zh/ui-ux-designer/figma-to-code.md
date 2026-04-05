@@ -7,7 +7,6 @@ tags: ["工具", "效率"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
-coverImage: "https://picsum.photos/seed/ppclaws206/600/400"
 badge: "专业版"
 relatedResources:
   - title: "PRD 模板库"

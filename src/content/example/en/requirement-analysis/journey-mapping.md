@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ppclaws220/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"

@@ -49,9 +49,8 @@ const featuredSkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`)
                         title={skill.data.title} 
                         description={skill.data.description || ""}
                         tags={skill.data.tags}
-                        cover={skill.data.coverImage}
-                            cover_text={skill.data.cover_text}
-                            cover_theme={skill.data.cover_theme}
+                        cover_text={skill.data.cover_text}
+                        cover_theme={skill.data.cover_theme}
                         badge={skill.data.badge}
                         isFeatured={skill.data.featured}
                         lang={lang}

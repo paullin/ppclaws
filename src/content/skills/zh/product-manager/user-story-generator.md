@@ -7,7 +7,6 @@ tags: ["工具", "效率"]
 category: "product-manager"
 cover_text: "PM<br>Pro"
 cover_theme: "dark-blue"
-coverImage: "https://picsum.photos/seed/ppclaws203/600/400"
 featured: true
 badge: "免费"
 relatedResources:

@@ -7,7 +7,6 @@ tags: ["Tool", "Efficiency"]
 category: "developer"
 cover_text: "Dev<br>Tools"
 cover_theme: "dark-emerald"
-coverImage: "https://picsum.photos/seed/ppclaws214/600/400"
 badge: "PRO"
 relatedResources:
   - title: "PRD Template Library"

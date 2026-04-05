@@ -7,7 +7,6 @@ tags: ["开发"]
 category: "developer"
 cover_text: "Dev<br>Tools"
 cover_theme: "dark-emerald"
-coverImage: "https://picsum.photos/seed/ppclaws213/600/400"
 featured: true
 badge: "免费"
 relatedResources:

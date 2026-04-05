@@ -7,7 +7,6 @@ tags: ["工具", "效率"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
-coverImage: "https://picsum.photos/seed/ppclaws212/600/400"
 badge: "专业版"
 relatedResources:
   - title: "PRD 模板库"

@@ -7,7 +7,6 @@ tags: ["工具", "效率"]
 category: "developer"
 cover_text: "Dev<br>Tools"
 cover_theme: "dark-emerald"
-coverImage: "https://picsum.photos/seed/ppclaws215/600/400"
 badge: "免费"
 relatedResources:
   - title: "PRD 模板库"

@@ -7,7 +7,6 @@ tags: ["PM"]
 category: "product-manager"
 cover_text: "PM<br>Pro"
 cover_theme: "dark-blue"
-coverImage: "https://picsum.photos/seed/ppclaws201/600/400"
 featured: true
 badge: "FREE"
 relatedResources:

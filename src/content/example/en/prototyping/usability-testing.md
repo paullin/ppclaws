@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "prototyping"
 cover_text: "Core<br>Skill"
 cover_theme: "light-sand"
-coverImage: "https://picsum.photos/seed/ppclaws223/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"

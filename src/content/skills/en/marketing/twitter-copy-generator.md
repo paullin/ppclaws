@@ -7,7 +7,6 @@ tags: ["Tool", "Efficiency"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
-coverImage: "https://picsum.photos/seed/ppclaws209/600/400"
 badge: "FREE"
 relatedResources:
   - title: "PRD Template Library"

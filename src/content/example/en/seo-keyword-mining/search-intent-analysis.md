@@ -7,7 +7,6 @@ tags: ["SEO"]
 category: "seo-keyword-mining"
 cover_text: "Core<br>Skill"
 cover_theme: "light-slate"
-coverImage: "https://picsum.photos/seed/ex302/600/400"
 featured: true
 badge: "PAID"
 relatedResources:

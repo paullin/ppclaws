@@ -7,7 +7,6 @@ tags: ["研究", "用户需求"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ppclaws10/600/400"
 badge: "GUIDE"
 relatedResources:
   - title: "PRD 模板库"

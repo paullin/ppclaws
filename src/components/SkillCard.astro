@@ -4,8 +4,6 @@ import { useTranslations } from "@i18n/utils";
 interface Props {
     title: string;
     description: string;
-    icon?: string;
-    cover?: string;
     cover_text?: string;
     cover_theme?: string;
     badge?: string;
@@ -15,7 +13,7 @@ interface Props {
     lang?: string;
 }
 
-const { title, description, icon, cover, cover_text, cover_theme, badge, link, tags = [], isFeatured = false, lang = "en" } = Astro.props;
+const { title, description, cover_text, cover_theme, badge, link, tags = [], isFeatured = false, lang = "en" } = Astro.props;
 const t = useTranslations(lang);
 
 // Badge color logic

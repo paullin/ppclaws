@@ -7,7 +7,6 @@ tags: ["Proto"]
 category: "prototyping"
 cover_text: "Core<br>Skill"
 cover_theme: "light-sand"
-coverImage: "https://picsum.photos/seed/ex303/600/400"
 featured: true
 badge: "FREE"
 relatedResources:

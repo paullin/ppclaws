@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "seo-keyword-mining"
 cover_text: "Core<br>Skill"
 cover_theme: "light-slate"
-coverImage: "https://picsum.photos/seed/ppclaws232/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"

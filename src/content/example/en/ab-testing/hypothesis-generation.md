@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "ab-testing"
 cover_text: "Core<br>Skill"
 cover_theme: "light-mint"
-coverImage: "https://picsum.photos/seed/ppclaws225/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"

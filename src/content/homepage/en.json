@@ -33,7 +33,6 @@
                         "PM"
                     ],
                     "badge": "FREE",
-                    "cover": "https://picsum.photos/seed/ppclaws201/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
                     "featured": true,
                     "cover_theme": "dark-blue",
@@ -46,7 +45,6 @@
                         "PM"
                     ],
                     "badge": "PAID",
-                    "cover": "https://picsum.photos/seed/ppclaws202/600/400",
                     "link": "/skills/product-manager/competitor-tracker",
                     "featured": true,
                     "cover_theme": "dark-blue",
@@ -59,7 +57,6 @@
                         "UI/UX"
                     ],
                     "badge": "FREE",
-                    "cover": "https://picsum.photos/seed/ppclaws205/600/400",
                     "link": "/skills/ui-ux-designer/design-system-sync",
                     "featured": true,
                     "cover_theme": "dark-purple",
@@ -72,7 +69,6 @@
                         "Dev"
                     ],
                     "badge": "FREE",
-                    "cover": "https://picsum.photos/seed/ppclaws213/600/400",
                     "link": "/skills/developer/api-doc-generator",
                     "featured": true,
                     "cover_theme": "dark-emerald",
@@ -94,7 +90,6 @@
                     "tags": [
                         "PM"
                     ],
-                    "cover": "https://picsum.photos/seed/skill5/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
                     "cover_theme": "dark-blue",
                     "cover_text": "PRD<br>Automation"
@@ -105,7 +100,6 @@
                     "tags": [
                         "PM"
                     ],
-                    "cover": "https://picsum.photos/seed/skill6/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
                     "cover_theme": "dark-blue",
                     "cover_text": "PRD<br>Automation"
@@ -116,7 +110,6 @@
                     "tags": [
                         "PM"
                     ],
-                    "cover": "https://picsum.photos/seed/skill7/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
                     "cover_theme": "dark-blue",
                     "cover_text": "PRD<br>Automation"
@@ -127,7 +120,6 @@
                     "tags": [
                         "PM"
                     ],
-                    "cover": "https://picsum.photos/seed/skill8/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant",
                     "cover_theme": "dark-blue",
                     "cover_text": "PRD<br>Automation"
@@ -148,7 +140,6 @@
                     "tags": [
                         "UI/UX"
                     ],
-                    "cover": "https://picsum.photos/seed/skill9/600/400",
                     "link": "/skills/ui-ux-designer/palette-extractor",
                     "cover_theme": "dark-purple",
                     "cover_text": "Palette<br>Extractor"
@@ -159,7 +150,6 @@
                     "tags": [
                         "UI/UX"
                     ],
-                    "cover": "https://picsum.photos/seed/skill10/600/400",
                     "link": "/skills/ui-ux-designer/palette-extractor",
                     "cover_theme": "dark-purple",
                     "cover_text": "Palette<br>Extractor"
@@ -170,7 +160,6 @@
                     "tags": [
                         "UI/UX"
                     ],
-                    "cover": "https://picsum.photos/seed/skill11/600/400",
                     "link": "/skills/ui-ux-designer/palette-extractor",
                     "cover_theme": "dark-purple",
                     "cover_text": "Palette<br>Extractor"
@@ -181,7 +170,6 @@
                     "tags": [
                         "UI/UX"
                     ],
-                    "cover": "https://picsum.photos/seed/skill12/600/400",
                     "link": "/skills/ui-ux-designer/palette-extractor",
                     "cover_theme": "dark-purple",
                     "cover_text": "Palette<br>Extractor"
@@ -202,7 +190,6 @@
                     "tags": [
                         "Marketing"
                     ],
-                    "cover": "https://picsum.photos/seed/skill13/600/400",
                     "link": "/skills/marketing/twitter-copy-generator",
                     "cover_theme": "dark-rose",
                     "cover_text": "Twitter<br>Copy"
@@ -213,7 +200,6 @@
                     "tags": [
                         "Marketing"
                     ],
-                    "cover": "https://picsum.photos/seed/skill14/600/400",
                     "link": "/skills/marketing/twitter-copy-generator",
                     "cover_theme": "dark-rose",
                     "cover_text": "Twitter<br>Copy"
@@ -224,7 +210,6 @@
                     "tags": [
                         "Marketing"
                     ],
-                    "cover": "https://picsum.photos/seed/skill15/600/400",
                     "link": "/skills/marketing/twitter-copy-generator",
                     "cover_theme": "dark-rose",
                     "cover_text": "Twitter<br>Copy"
@@ -235,7 +220,6 @@
                     "tags": [
                         "Marketing"
                     ],
-                    "cover": "https://picsum.photos/seed/skill16/600/400",
                     "link": "/skills/marketing/twitter-copy-generator",
                     "cover_theme": "dark-rose",
                     "cover_text": "Twitter<br>Copy"
@@ -254,7 +238,6 @@
                     "title": "User Needs Interview Framework",
                     "description": "Systematically sort out user needs and pain points, establishing standard processes.",
                     "badge": "FREE",
-                    "cover": "https://picsum.photos/seed/ex301/600/400",
                     "link": "/example/requirement-analysis/user-needs-interview-framework",
                     "featured": true,
                     "cover_theme": "light-stone",
@@ -264,7 +247,6 @@
                     "title": "Search Intent Analysis",
                     "description": "Analyze user search behavior and match high-quality long-tail keywords.",
                     "badge": "PAID",
-                    "cover": "https://picsum.photos/seed/ex302/600/400",
                     "link": "/example/seo-keyword-mining/search-intent-analysis",
                     "featured": true,
                     "cover_theme": "light-slate",
@@ -274,7 +256,6 @@
                     "title": "Interactive Mockups",
                     "description": "Quickly build and test interactive high-fidelity prototypes.",
                     "badge": "FREE",
-                    "cover": "https://picsum.photos/seed/ex303/600/400",
                     "link": "/example/prototyping/interactive-mockups",
                     "featured": true,
                     "cover_theme": "light-sand",
@@ -284,7 +265,6 @@
                     "title": "Multivariate Testing",
                     "description": "Design and execute A/B and multivariate tests to optimize conversion rates.",
                     "badge": "PAID",
-                    "cover": "https://picsum.photos/seed/ex304/600/400",
                     "link": "/example/ab-testing/multivariate-testing",
                     "featured": true,
                     "cover_theme": "light-mint",

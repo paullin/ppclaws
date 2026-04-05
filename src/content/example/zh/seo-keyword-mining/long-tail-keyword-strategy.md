@@ -7,7 +7,6 @@ tags: ["案例"]
 category: "seo-keyword-mining"
 cover_text: "Core<br>Skill"
 cover_theme: "light-slate"
-coverImage: "https://picsum.photos/seed/ppclaws229/600/400"
 badge: "最新"
 relatedResources:
   - title: "PRD 模板库"

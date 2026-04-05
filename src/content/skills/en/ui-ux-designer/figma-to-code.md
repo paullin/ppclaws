@@ -7,7 +7,6 @@ tags: ["Tool", "Efficiency"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
-coverImage: "https://picsum.photos/seed/ppclaws206/600/400"
 badge: "PRO"
 relatedResources:
   - title: "PRD Template Library"
