@@ -1,12 +1,13 @@
 ---
 title: "Design System Sync"
-description: "Keep your design tokens synced across platforms."
+description: "Automatically synchronize design tokens and components across platforms."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["UI/UX"]
 category: "ui-ux-designer"
-coverImage: "https://picsum.photos/seed/ppclaws208/600/400"
-badge: "PRO"
+coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
+featured: true
+badge: "FREE"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

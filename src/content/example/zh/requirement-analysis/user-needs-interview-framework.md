@@ -1,12 +1,13 @@
 ---
 title: "用户需求访谈框架"
-description: "进行有效用户访谈的结构化方法。"
+description: "系统化梳理用户需求与痛点，建立标准访谈流程。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["案例"]
+tags: ["需求分析"]
 category: "requirement-analysis"
-coverImage: "https://picsum.photos/seed/ppclaws217/600/400"
-badge: "最新"
+coverImage: "https://picsum.photos/seed/ex301/600/400"
+featured: true
+badge: "免费"
 relatedResources:
   - title: "PRD 模板库"
     link: "#"

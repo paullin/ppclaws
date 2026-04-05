@@ -2,18 +2,20 @@
     "menu": {
         "list": {
             "home": "Home",
-            "skills": "Skills Hub",
-            "example": "Example Hub",
+            "skills": "Skills",
+            "example": "Examples",
             "training": "Training",
             "submit": "Submit",
             "pm_skills": "Skills for PM",
             "ux_skills": "Skills for Designer",
             "marketing_skills": "Skills for Marketing",
+            "featured_skills": "Featured Skills",
             "more": "More",
             "req_analysis": "Requirement Analysis",
             "proto_design": "Prototyping",
             "ab_testing": "A/B Testing",
             "seo_mining": "SEO Keyword Mining",
+            "featured_cases": "Featured Examples",
             "about": "About",
             "pages": "Pages",
             "dynamicRouting": "Dynamic Routing",
@@ -26,9 +28,9 @@
             "example_desc": "Explore practical examples to accelerate your workflow.",
             "view_all": "View All",
             "related_content": "Related Content",
-            "explore_examples": "Examples Hub",
+            "explore_examples": "Examples",
             "explore_examples_desc": "Explore real-world use cases",
-            "explore_skills": "Skills Hub",
+            "explore_skills": "Skills",
             "explore_skills_desc": "Explore professional skill packs"
         },
         "languagesText": {
@@ -41,7 +43,7 @@
     },
     "footer": {
         "slogan": "One person, one team.",
-        "skills_hub": "Skills Hub",
+        "skills_hub": "Skills",
         "follow_us": "Follow us",
         "related_resources": "Related Resources",
         "copyright": "© 2026 PPClaws. All rights reserved.",

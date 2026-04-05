@@ -184,6 +184,7 @@ export const collections = {
             category: z.string().optional(),
             coverImage: z.string().optional(),
             badge: z.string().optional(),
+            featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({
                 title: z.string(),
                 link: z.string(),
@@ -208,6 +209,7 @@ export const collections = {
             category: z.string().optional(),
             coverImage: z.string().optional(),
             badge: z.string().optional(),
+            featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({
                 title: z.string(),
                 link: z.string(),

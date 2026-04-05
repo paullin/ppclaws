@@ -6,6 +6,7 @@ date: "2024-01-01"
 tags: ["案例"]
 category: "ab-testing"
 coverImage: "https://picsum.photos/seed/ppclaws226/600/400"
+featured: true
 badge: "最新"
 relatedResources:
   - title: "PRD 模板库"

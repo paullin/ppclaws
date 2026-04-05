@@ -1,12 +1,13 @@
 ---
-title: "设计系统同步"
-description: "跨平台保持设计令牌同步。"
+title: "设计规范同步器"
+description: "跨平台自动同步设计令牌与组件规范。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["UI/UX"]
 category: "ui-ux-designer"
-coverImage: "https://picsum.photos/seed/ppclaws208/600/400"
-badge: "专业版"
+coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
+featured: true
+badge: "免费"
 relatedResources:
   - title: "PRD 模板库"
     link: "#"

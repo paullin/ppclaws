@@ -3,18 +3,18 @@
     "description": "Powerful automation tools for modern developers",
     "hero": [
         {
-            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+1",
+            "image": "https://picsum.photos/seed/banner1/1600/900",
             "title": "Master OpenClaw Core Configurations",
             "description": "From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.",
             "badge": "Featured",
-            "link": "/blog/master-openclaw"
+            "link": "/skills/product-manager/prd-automation-assistant"
         },
         {
-            "image": "https://placehold.co/1600x900/f3f4f6/6b7280?text=Banner+2",
+            "image": "https://picsum.photos/seed/banner2/1600/900",
             "title": "How to Build Custom Skills for UI/UX Designers",
             "description": "Unleash your creativity and improve design workflow efficiency with customized Skills.",
             "badge": "Tutorial",
-            "link": "/blog/custom-skills"
+            "link": "/skills/ui-ux-designer/design-system-sync"
         }
     ],
     "sections": [
@@ -22,33 +22,45 @@
             "id": "featured-skills",
             "title": "Featured Skills",
             "subtitle": "Essential core skill packs to boost productivity",
-            "moreLink": "#",
+            "moreLink": "/skills/featured",
             "moreText": "View More",
             "columns": 4,
             "items": [
                 {
-                    "title": "Data Scraping Tool 1",
-                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
-                    "tags": ["Efficiency"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+1"
+                    "title": "PRD Automation Assistant",
+                    "description": "Auto-generate product requirements from basic skeletons using AI.",
+                    "tags": ["PM"],
+                    "badge": "FREE",
+                    "cover": "https://picsum.photos/seed/ppclaws201/600/400",
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "featured": true
                 },
                 {
-                    "title": "Data Scraping Tool 2",
-                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
-                    "tags": ["Efficiency"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+2"
+                    "title": "Competitor Tracker",
+                    "description": "Automatically monitor competitor updates and generate weekly reports.",
+                    "tags": ["PM"],
+                    "badge": "PAID",
+                    "cover": "https://picsum.photos/seed/ppclaws202/600/400",
+                    "link": "/skills/product-manager/competitor-tracker",
+                    "featured": true
                 },
                 {
-                    "title": "Data Scraping Tool 3",
-                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
-                    "tags": ["Efficiency"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+3"
+                    "title": "Design System Sync",
+                    "description": "Automatically synchronize design tokens and components across platforms.",
+                    "tags": ["UI/UX"],
+                    "badge": "FREE",
+                    "cover": "https://picsum.photos/seed/ppclaws205/600/400",
+                    "link": "/skills/ui-ux-designer/design-system-sync",
+                    "featured": true
                 },
                 {
-                    "title": "Data Scraping Tool 4",
-                    "description": "One-click config for web scraping rules to turn unstructured data into structured insights.",
-                    "tags": ["Efficiency"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+4"
+                    "title": "API Doc Generator",
+                    "description": "Extract and generate interactive API docs from source code comments.",
+                    "tags": ["Dev"],
+                    "badge": "FREE",
+                    "cover": "https://picsum.photos/seed/ppclaws213/600/400",
+                    "link": "/skills/developer/api-doc-generator",
+                    "featured": true
                 }
             ]
         },
@@ -64,28 +76,28 @@
                     "title": "PRD Automation Assistant 1",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+5",
+                    "cover": "https://picsum.photos/seed/skill5/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 2",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+6",
+                    "cover": "https://picsum.photos/seed/skill6/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 3",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+7",
+                    "cover": "https://picsum.photos/seed/skill7/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant"
                 },
                 {
                     "title": "PRD Automation Assistant 4",
                     "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
                     "tags": ["PM"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+8",
+                    "cover": "https://picsum.photos/seed/skill8/600/400",
                     "link": "/skills/product-manager/prd-automation-assistant"
                 }
             ]
@@ -102,25 +114,25 @@
                     "title": "Palette Extractor 1",
                     "description": "Extract color and typography specs from any webpage with one click.",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+9"
+                    "cover": "https://picsum.photos/seed/skill9/600/400"
                 },
                 {
                     "title": "Palette Extractor 2",
                     "description": "Extract color and typography specs from any webpage with one click.",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+10"
+                    "cover": "https://picsum.photos/seed/skill10/600/400"
                 },
                 {
                     "title": "Palette Extractor 3",
                     "description": "Extract color and typography specs from any webpage with one click.",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+11"
+                    "cover": "https://picsum.photos/seed/skill11/600/400"
                 },
                 {
                     "title": "Palette Extractor 4",
                     "description": "Extract color and typography specs from any webpage with one click.",
                     "tags": ["UI/UX"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+12"
+                    "cover": "https://picsum.photos/seed/skill12/600/400"
                 }
             ]
         },
@@ -136,59 +148,67 @@
                     "title": "Twitter Copy Generator 1",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
                     "tags": ["Marketing"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+13"
+                    "cover": "https://picsum.photos/seed/skill13/600/400"
                 },
                 {
                     "title": "Twitter Copy Generator 2",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
                     "tags": ["Marketing"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+14"
+                    "cover": "https://picsum.photos/seed/skill14/600/400"
                 },
                 {
                     "title": "Twitter Copy Generator 3",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
                     "tags": ["Marketing"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+15"
+                    "cover": "https://picsum.photos/seed/skill15/600/400"
                 },
                 {
                     "title": "Twitter Copy Generator 4",
                     "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
                     "tags": ["Marketing"],
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+16"
+                    "cover": "https://picsum.photos/seed/skill16/600/400"
                 }
             ]
         },
         {
             "id": "featured-cases",
-            "title": "Featured Cases",
+            "title": "Featured Examples",
             "subtitle": "See what problems people are solving with OpenClaw",
-            "moreLink": "#",
+            "moreLink": "/example/featured",
             "moreText": "Browse More",
             "columns": 4,
             "items": [
                 {
-                    "title": "Case Study 1: Efficiency...",
-                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "title": "User Needs Interview Framework",
+                    "description": "Systematically sort out user needs and pain points, establishing standard processes.",
                     "badge": "FREE",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+17"
+                    "cover": "https://picsum.photos/seed/ex301/600/400",
+                    "link": "/example/requirement-analysis/user-needs-interview-framework",
+                    "featured": true
                 },
                 {
-                    "title": "Case Study 2: Efficiency...",
-                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "title": "Search Intent Analysis",
+                    "description": "Analyze user search behavior and match high-quality long-tail keywords.",
                     "badge": "PAID",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+18"
+                    "cover": "https://picsum.photos/seed/ex302/600/400",
+                    "link": "/example/seo-keyword-mining/search-intent-analysis",
+                    "featured": true
                 },
                 {
-                    "title": "Case Study 3: Efficiency...",
-                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "title": "Interactive Mockups",
+                    "description": "Quickly build and test interactive high-fidelity prototypes.",
                     "badge": "FREE",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+19"
+                    "cover": "https://picsum.photos/seed/ex303/600/400",
+                    "link": "/example/prototyping/interactive-mockups",
+                    "featured": true
                 },
                 {
-                    "title": "Case Study 4: Efficiency...",
-                    "description": "An in-depth analysis of how to combine multiple basic skills to...",
+                    "title": "Multivariate Testing",
+                    "description": "Design and execute A/B and multivariate tests to optimize conversion rates.",
                     "badge": "PAID",
-                    "cover": "https://placehold.co/600x400/f3f4f6/6b7280?text=Skill+Cover+20"
+                    "cover": "https://picsum.photos/seed/ex304/600/400",
+                    "link": "/example/ab-testing/multivariate-testing",
+                    "featured": true
                 }
             ]
         }
@@ -199,7 +219,7 @@
         "title": "OpenClaw Full-Stack Masterclass",
         "subtitle": "LIMITED OFFER",
         "description": "Designed for developers and enterprises wanting to deeply understand and apply OpenClaw. Course includes:",
-        "image": "https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass",
+        "image": "https://picsum.photos/seed/masterclass/800/600",
         "features": [
             "Cross-platform environment setup and installation guide",
             "Advanced parameter configuration and seamless LLM integration",

@@ -1,12 +1,13 @@
 ---
-title: "多变量测试"
-description: "超越简单的A/B测试，进行多变量测试。"
+title: "多变量测试设计"
+description: "设计并执行A/B测试和多变量测试，优化转化率。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["案例"]
+tags: ["测试"]
 category: "ab-testing"
-coverImage: "https://picsum.photos/seed/ppclaws228/600/400"
-badge: "最新"
+coverImage: "https://picsum.photos/seed/ex304/600/400"
+featured: true
+badge: "付费"
 relatedResources:
   - title: "PRD 模板库"
     link: "#"

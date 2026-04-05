@@ -1,12 +1,13 @@
 ---
 title: "User Needs Interview Framework"
-description: "A structured approach to conducting effective user interviews."
+description: "Systematically sort out user needs and pain points, establishing standard processes."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Case Study"]
+tags: ["Req Analysis"]
 category: "requirement-analysis"
-coverImage: "https://picsum.photos/seed/ppclaws217/600/400"
-badge: "NEW"
+coverImage: "https://picsum.photos/seed/ex301/600/400"
+featured: true
+badge: "FREE"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

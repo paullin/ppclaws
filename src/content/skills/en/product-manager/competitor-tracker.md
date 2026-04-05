@@ -1,12 +1,13 @@
 ---
 title: "Competitor Tracker"
-description: "Monitor competitor updates and generate weekly reports automatically."
+description: "Automatically monitor competitor updates and generate weekly reports."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["PM"]
 category: "product-manager"
 coverImage: "https://picsum.photos/seed/ppclaws202/600/400"
-badge: "PRO"
+featured: true
+badge: "PAID"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

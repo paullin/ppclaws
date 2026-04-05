@@ -18,7 +18,27 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const allCategories = await getCollection("skillsCategory");
-const categories = allCategories.filter(entry => entry.id.startsWith(`${lang}/`));
+let categories = allCategories.filter(entry => entry.id.startsWith(`${lang}/`));
+
+// Defined desired order for Skills Hub
+const categoryOrder = [
+    "product-manager",
+    "ui-ux-designer",
+    "marketing",
+    "developer"
+];
+
+categories = categories.sort((a, b) => {
+    const slugA = a.id.split('/').pop() || "";
+    const slugB = b.id.split('/').pop() || "";
+    const indexA = categoryOrder.indexOf(slugA);
+    const indexB = categoryOrder.indexOf(slugB);
+    
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return 0;
+});
 
 const allSkills = await getCollection("skills");
 const skills = allSkills.filter(entry => entry.id.startsWith(`${lang}/`));
@@ -59,6 +79,8 @@ const skills = allSkills.filter(entry => entry.id.startsWith(`${lang}/`));
                                     tags={skill.data.tags}
                                     cover={skill.data.coverImage}
                                     badge={skill.data.badge}
+                                    isFeatured={skill.data.featured}
+                                    lang={lang}
                                     link={translatePath(`/skills/${categorySlug}/${slug}`)}
                                 />
                             );

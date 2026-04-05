@@ -1,12 +1,13 @@
 ---
 title: "Interactive Mockups"
-description: "Adding interactivity to your Figma prototypes."
+description: "Quickly build and test interactive high-fidelity prototypes."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Case Study"]
+tags: ["Proto"]
 category: "prototyping"
-coverImage: "https://picsum.photos/seed/ppclaws222/600/400"
-badge: "NEW"
+coverImage: "https://picsum.photos/seed/ex303/600/400"
+featured: true
+badge: "FREE"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

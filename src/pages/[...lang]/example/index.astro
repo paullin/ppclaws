@@ -18,7 +18,27 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const allCategories = await getCollection("exampleCategory");
-const categories = allCategories.filter(entry => entry.id.startsWith(`${lang}/`));
+let categories = allCategories.filter(entry => entry.id.startsWith(`${lang}/`));
+
+// Defined desired order for Example Hub
+const categoryOrder = [
+    "requirement-analysis",
+    "prototyping",
+    "ab-testing",
+    "seo-keyword-mining"
+];
+
+categories = categories.sort((a, b) => {
+    const slugA = a.id.split('/').pop() || "";
+    const slugB = b.id.split('/').pop() || "";
+    const indexA = categoryOrder.indexOf(slugA);
+    const indexB = categoryOrder.indexOf(slugB);
+    
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return 0;
+});
 
 const allExamples = await getCollection("example");
 const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
@@ -58,6 +78,8 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
                                     tags={ex.data.tags}
                                     cover={ex.data.coverImage}
                                     badge={ex.data.badge}
+                                    isFeatured={ex.data.featured}
+                                    lang={lang}
                                     link={translatePath(`/example/${categorySlug}/${slug}`)}
                                 />
                             );

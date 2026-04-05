@@ -6,6 +6,7 @@ date: "2024-01-01"
 tags: ["Tool","Efficiency"]
 category: "product-manager"
 coverImage: "https://picsum.photos/seed/ppclaws204/600/400"
+featured: true
 badge: "PRO"
 relatedResources:
   - title: "PRD Template Library"

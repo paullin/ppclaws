@@ -1,12 +1,13 @@
 ---
 title: "Multivariate Testing"
-description: "Going beyond simple A/B tests with multivariate testing."
+description: "Design and execute A/B and multivariate tests to optimize conversion rates."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Case Study"]
+tags: ["Testing"]
 category: "ab-testing"
-coverImage: "https://picsum.photos/seed/ppclaws228/600/400"
-badge: "NEW"
+coverImage: "https://picsum.photos/seed/ex304/600/400"
+featured: true
+badge: "PAID"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

@@ -1,12 +1,13 @@
 ---
-title: "搜索意图分析"
-description: "将您的内容与用户搜索意图匹配。"
+title: "搜索意图分析模型"
+description: "分析用户搜索行为，匹配高质量长尾词。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["案例"]
+tags: ["SEO"]
 category: "seo-keyword-mining"
-coverImage: "https://picsum.photos/seed/ppclaws231/600/400"
-badge: "最新"
+coverImage: "https://picsum.photos/seed/ex302/600/400"
+featured: true
+badge: "付费"
 relatedResources:
   - title: "PRD 模板库"
     link: "#"

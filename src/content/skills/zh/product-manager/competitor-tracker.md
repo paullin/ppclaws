@@ -3,10 +3,11 @@ title: "竞品追踪器"
 description: "自动监控竞品更新并生成周报。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["PM"]
 category: "product-manager"
 coverImage: "https://picsum.photos/seed/ppclaws202/600/400"
-badge: "专业版"
+featured: true
+badge: "付费"
 relatedResources:
   - title: "PRD 模板库"
     link: "#"

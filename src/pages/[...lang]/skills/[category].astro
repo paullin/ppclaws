@@ -69,6 +69,8 @@ const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !
                         tags={skill.data.tags}
                         cover={skill.data.coverImage}
                         badge={skill.data.badge}
+                        isFeatured={skill.data.featured}
+                        lang={lang}
                         link={translatePath(`/skills/${categorySlug}/${slug}`)}
                     />
                 );

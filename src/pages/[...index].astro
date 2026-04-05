@@ -60,7 +60,7 @@ const footerData = data?.footer;
             </div>
         )}
 
-        {homepageSections.slice(0, 4).map((section) => (
+        {homepageSections.slice(0, 4).map((section: any) => (
             <section 
                 id={section.id} 
                 class="max-w-none scroll-mt-20"
@@ -72,7 +72,7 @@ const footerData = data?.footer;
                     moreText={section.moreText}
                 />
                 <SectionGrid columns={section.columns as 1 | 2 | 4}>
-                    {section.items.map((item) => (
+                    {section.items.map((item: any) => (
                         <SkillCard 
                             title={item.title} 
                             description={item.description}
@@ -81,6 +81,8 @@ const footerData = data?.footer;
                             badge={item.badge}
                             link={item.link}
                             icon={item.icon}
+                            isFeatured={item.featured}
+                            lang={lang}
                         />
                     ))}
                 </SectionGrid>
@@ -96,7 +98,7 @@ const footerData = data?.footer;
             />
         )}
 
-        {homepageSections.slice(4).map((section) => (
+        {homepageSections.slice(4).map((section: any) => (
             <section 
                 id={section.id || "featured-cases"}
                 class="max-w-none scroll-mt-20"
@@ -108,7 +110,7 @@ const footerData = data?.footer;
                     moreText={section.moreText}
                 />
                 <SectionGrid columns={section.columns as 1 | 2 | 4}>
-                    {section.items.map((item) => (
+                    {section.items.map((item: any) => (
                         <SkillCard 
                             title={item.title} 
                             description={item.description}
@@ -117,6 +119,8 @@ const footerData = data?.footer;
                             badge={item.badge}
                             link={item.link}
                             icon={item.icon}
+                            isFeatured={item.featured}
+                            lang={lang}
                         />
                     ))}
                 </SectionGrid>

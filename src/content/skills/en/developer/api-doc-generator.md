@@ -1,11 +1,12 @@
 ---
 title: "API Doc Generator"
-description: "Create interactive OpenAPI docs directly from code comments."
+description: "Extract and generate interactive API docs from source code comments."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Dev"]
 category: "developer"
 coverImage: "https://picsum.photos/seed/ppclaws213/600/400"
+featured: true
 badge: "FREE"
 relatedResources:
   - title: "PRD Template Library"

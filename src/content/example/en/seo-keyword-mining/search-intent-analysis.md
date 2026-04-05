@@ -1,12 +1,13 @@
 ---
 title: "Search Intent Analysis"
-description: "Matching your content to user search intent."
+description: "Analyze user search behavior and match high-quality long-tail keywords."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Case Study"]
+tags: ["SEO"]
 category: "seo-keyword-mining"
-coverImage: "https://picsum.photos/seed/ppclaws231/600/400"
-badge: "NEW"
+coverImage: "https://picsum.photos/seed/ex302/600/400"
+featured: true
+badge: "PAID"
 relatedResources:
   - title: "PRD Template Library"
     link: "#"

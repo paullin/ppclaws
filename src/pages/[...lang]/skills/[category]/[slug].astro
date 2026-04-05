@@ -65,6 +65,8 @@ const { Content } = await render(skill);
             tags={skill.data.tags}
             coverImage={skill.data.coverImage}
             badge={skill.data.badge}
+            isFeatured={skill.data.featured}
+            lang={lang}
         />
 
         <hr class="border-gray-200 dark:border-astro-border" />
