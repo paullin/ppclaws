@@ -7,7 +7,6 @@ tags: ["UI/UX"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
-coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
 featured: true
 badge: "FREE"
 relatedResources:
@@ -30,4 +29,4 @@ Keep your design tokens synced across platforms.
 
 ### How it works
 
-This is a simulated markdown content for Design System Sync. 
+This is a simulated markdown content for Design System Sync.

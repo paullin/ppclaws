@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ppclaws218/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"
@@ -29,4 +28,4 @@ How to use Kano model to prioritize features.
 
 ### How it works
 
-This is a simulated markdown content for Kano Model Application. 
+This is a simulated markdown content for Kano Model Application.

@@ -7,7 +7,6 @@ tags: ["案例"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ppclaws219/600/400"
 badge: "最新"
 relatedResources:
   - title: "PRD 模板库"
@@ -29,4 +28,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 用户画像创建. 
+This is a simulated markdown content for 用户画像创建.

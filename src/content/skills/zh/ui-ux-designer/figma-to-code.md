@@ -3,11 +3,10 @@ title: "Figma转代码"
 description: "将Figma设计即时转换为干净的React/Vue组件。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
-coverImage: "https://picsum.photos/seed/ppclaws206/600/400"
 badge: "专业版"
 relatedResources:
   - title: "PRD 模板库"
@@ -29,4 +28,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for Figma转代码. 
+This is a simulated markdown content for Figma转代码.

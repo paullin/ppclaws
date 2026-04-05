@@ -102,7 +102,7 @@
 </script>
 
 <div 
-  class="relative w-full aspect-video md:aspect-[21/9] lg:aspect-[16/6] bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group"
+  class="relative w-full aspect-video md:aspect-21/9 lg:aspect-16/6 bg-gray-200 dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border group"
   onmouseenter={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
   bind:this={carouselRef}
@@ -125,7 +125,7 @@
     {#each items as item, index}
       <a 
         href={item.link}
-        class="w-full h-full flex-shrink-0 relative select-none block no-underline"
+        class="w-full h-full shrink-0 relative select-none block no-underline"
         draggable="false"
       >
         <img 
@@ -135,7 +135,7 @@
           draggable="false"
         />
         <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
           <div class="text-left">
             {#if item.badge}
               <span class={`px-2 py-1 text-white text-xs font-bold rounded-md w-max mb-3 inline-block ${

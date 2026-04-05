@@ -7,7 +7,6 @@ tags: ["Testing"]
 category: "ab-testing"
 cover_text: "Core<br>Skill"
 cover_theme: "light-mint"
-coverImage: "https://picsum.photos/seed/ex304/600/400"
 featured: true
 badge: "PAID"
 relatedResources:
@@ -30,4 +29,4 @@ Going beyond simple A/B tests with multivariate testing.
 
 ### How it works
 
-This is a simulated markdown content for Multivariate Testing. 
+This is a simulated markdown content for Multivariate Testing.

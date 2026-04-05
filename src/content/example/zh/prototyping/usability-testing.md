@@ -7,7 +7,6 @@ tags: ["案例"]
 category: "prototyping"
 cover_text: "Core<br>Skill"
 cover_theme: "light-sand"
-coverImage: "https://picsum.photos/seed/ppclaws223/600/400"
 badge: "最新"
 relatedResources:
   - title: "PRD 模板库"
@@ -29,4 +28,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 可用性测试. 
+This is a simulated markdown content for 可用性测试.

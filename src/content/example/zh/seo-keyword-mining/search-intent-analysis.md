@@ -7,7 +7,6 @@ tags: ["SEO"]
 category: "seo-keyword-mining"
 cover_text: "Core<br>Skill"
 cover_theme: "light-slate"
-coverImage: "https://picsum.photos/seed/ex302/600/400"
 featured: true
 badge: "付费"
 relatedResources:
@@ -30,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 搜索意图分析. 
+This is a simulated markdown content for 搜索意图分析.

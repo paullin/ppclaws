@@ -53,6 +53,7 @@ const footerData = data?.footer;
     }}
     footerData={footerData}
 >
+    <h1 class="sr-only">{pageTitle}</h1>
     <div class="py-8 space-y-16">
         {heroItems.length > 0 && (
             <div class="w-full">
@@ -77,12 +78,10 @@ const footerData = data?.footer;
                             title={item.title} 
                             description={item.description}
                             tags={item.tags}
-                            cover={item.cover}
                             cover_text={item.cover_text}
                             cover_theme={item.cover_theme}
                             badge={item.badge}
                             link={item.link}
-                            icon={item.icon}
                             isFeatured={item.featured}
                             lang={lang}
                         />
@@ -117,12 +116,10 @@ const footerData = data?.footer;
                             title={item.title} 
                             description={item.description}
                             tags={item.tags}
-                            cover={item.cover}
                             cover_text={item.cover_text}
                             cover_theme={item.cover_theme}
                             badge={item.badge}
                             link={item.link}
-                            icon={item.icon}
                             isFeatured={item.featured}
                             lang={lang}
                         />

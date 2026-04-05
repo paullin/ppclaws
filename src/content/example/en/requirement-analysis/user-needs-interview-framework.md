@@ -7,7 +7,6 @@ tags: ["Req Analysis"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ex301/600/400"
 featured: true
 badge: "FREE"
 relatedResources:
@@ -30,4 +29,4 @@ A structured approach to conducting effective user interviews.
 
 ### How it works
 
-This is a simulated markdown content for User Needs Interview Framework. 
+This is a simulated markdown content for User Needs Interview Framework.

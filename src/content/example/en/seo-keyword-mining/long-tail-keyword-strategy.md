@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "seo-keyword-mining"
 cover_text: "Core<br>Skill"
 cover_theme: "light-slate"
-coverImage: "https://picsum.photos/seed/ppclaws229/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"
@@ -29,4 +28,4 @@ Finding high-intent, low-competition keywords.
 
 ### How it works
 
-This is a simulated markdown content for Long-tail Keyword Strategy. 
+This is a simulated markdown content for Long-tail Keyword Strategy.

@@ -7,7 +7,6 @@ tags: ["案例"]
 category: "requirement-analysis"
 cover_text: "Core<br>Skill"
 cover_theme: "light-stone"
-coverImage: "https://picsum.photos/seed/ppclaws218/600/400"
 badge: "最新"
 relatedResources:
   - title: "PRD 模板库"
@@ -29,4 +28,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for Kano模型应用. 
+This is a simulated markdown content for Kano模型应用.

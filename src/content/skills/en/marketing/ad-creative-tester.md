@@ -3,11 +3,10 @@ title: "Ad Creative Tester"
 description: "Generate multiple ad variations for A/B testing."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Tool", "Efficiency"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
-coverImage: "https://picsum.photos/seed/ppclaws212/600/400"
 badge: "PRO"
 relatedResources:
   - title: "PRD Template Library"
@@ -29,4 +28,4 @@ Generate multiple ad variations for A/B testing.
 
 ### How it works
 
-This is a simulated markdown content for Ad Creative Tester. 
+This is a simulated markdown content for Ad Creative Tester.

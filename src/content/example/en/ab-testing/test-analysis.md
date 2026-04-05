@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "ab-testing"
 cover_text: "Core<br>Skill"
 cover_theme: "light-mint"
-coverImage: "https://picsum.photos/seed/ppclaws227/600/400"
 featured: true
 badge: "NEW"
 relatedResources:
@@ -30,4 +29,4 @@ How to analyze and interpret A/B test results.
 
 ### How it works
 
-This is a simulated markdown content for Test Analysis. 
+This is a simulated markdown content for Test Analysis.

@@ -7,7 +7,6 @@ tags: ["案例"]
 category: "ab-testing"
 cover_text: "Core<br>Skill"
 cover_theme: "light-mint"
-coverImage: "https://picsum.photos/seed/ppclaws227/600/400"
 featured: true
 badge: "最新"
 relatedResources:
@@ -30,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 测试分析. 
+This is a simulated markdown content for 测试分析.

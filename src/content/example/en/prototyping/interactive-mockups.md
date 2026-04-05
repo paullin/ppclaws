@@ -7,7 +7,6 @@ tags: ["Proto"]
 category: "prototyping"
 cover_text: "Core<br>Skill"
 cover_theme: "light-sand"
-coverImage: "https://picsum.photos/seed/ex303/600/400"
 featured: true
 badge: "FREE"
 relatedResources:
@@ -30,4 +29,4 @@ Adding interactivity to your Figma prototypes.
 
 ### How it works
 
-This is a simulated markdown content for Interactive Mockups. 
+This is a simulated markdown content for Interactive Mockups.

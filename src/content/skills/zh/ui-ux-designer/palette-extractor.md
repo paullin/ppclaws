@@ -3,11 +3,10 @@ title: "调色板提取器"
 description: "一键从任何网页提取颜色和排版规范。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
-coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
 badge: "免费"
 relatedResources:
   - title: "PRD 模板库"
@@ -29,4 +28,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 调色板提取器. 
+This is a simulated markdown content for 调色板提取器.

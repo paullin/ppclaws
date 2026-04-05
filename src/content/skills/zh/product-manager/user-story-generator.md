@@ -3,11 +3,10 @@ title: "用户故事生成器"
 description: "将杂乱的笔记转化为结构化的用户故事。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "product-manager"
 cover_text: "PM<br>Pro"
 cover_theme: "dark-blue"
-coverImage: "https://picsum.photos/seed/ppclaws203/600/400"
 featured: true
 badge: "免费"
 relatedResources:
@@ -30,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 用户故事生成器. 
+This is a simulated markdown content for 用户故事生成器.

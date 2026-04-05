@@ -7,7 +7,6 @@ tags: ["Case Study"]
 category: "prototyping"
 cover_text: "Core<br>Skill"
 cover_theme: "light-sand"
-coverImage: "https://picsum.photos/seed/ppclaws221/600/400"
 badge: "NEW"
 relatedResources:
   - title: "PRD Template Library"
@@ -29,4 +28,4 @@ Start your design process with low-fidelity wireframes.
 
 ### How it works
 
-This is a simulated markdown content for Wireframing Basics. 
+This is a simulated markdown content for Wireframing Basics.
