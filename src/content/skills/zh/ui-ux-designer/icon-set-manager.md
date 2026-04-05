@@ -3,7 +3,7 @@ title: "图标集管理器"
 description: "组织和导出SVG图标集。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 图标集管理器. 
+This is a simulated markdown content for 图标集管理器.

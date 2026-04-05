@@ -29,4 +29,4 @@ Finding high-intent, low-competition keywords.
 
 ### How it works
 
-This is a simulated markdown content for Long-tail Keyword Strategy. 
+This is a simulated markdown content for Long-tail Keyword Strategy.

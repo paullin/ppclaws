@@ -3,7 +3,7 @@ title: "Palette Extractor"
 description: "Extract color and typography specs from any webpage with one click."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Tool", "Efficiency"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
@@ -29,4 +29,4 @@ Extract color and typography specs from any webpage with one click.
 
 ### How it works
 
-This is a simulated markdown content for Palette Extractor. 
+This is a simulated markdown content for Palette Extractor.

@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 竞品关键词差距. 
+This is a simulated markdown content for 竞品关键词差距.

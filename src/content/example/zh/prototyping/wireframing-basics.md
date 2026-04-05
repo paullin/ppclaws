@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 线框图基础. 
+This is a simulated markdown content for 线框图基础.

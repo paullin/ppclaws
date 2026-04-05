@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 搜索意图分析. 
+This is a simulated markdown content for 搜索意图分析.

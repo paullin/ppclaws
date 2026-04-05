@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for PRD 自动化助手. 
+This is a simulated markdown content for PRD 自动化助手.

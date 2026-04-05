@@ -30,4 +30,4 @@ A structured approach to conducting effective user interviews.
 
 ### How it works
 
-This is a simulated markdown content for User Needs Interview Framework. 
+This is a simulated markdown content for User Needs Interview Framework.

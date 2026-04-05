@@ -30,4 +30,4 @@ Keep your design tokens synced across platforms.
 
 ### How it works
 
-This is a simulated markdown content for Design System Sync. 
+This is a simulated markdown content for Design System Sync.

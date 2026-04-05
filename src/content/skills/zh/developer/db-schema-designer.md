@@ -3,7 +3,7 @@ title: "数据库Schema设计"
 description: "可视化设计数据库架构并导出SQL。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "developer"
 cover_text: "Dev<br>Tools"
 cover_theme: "dark-emerald"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 数据库Schema设计. 
+This is a simulated markdown content for 数据库Schema设计.

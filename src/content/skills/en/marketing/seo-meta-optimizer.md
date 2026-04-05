@@ -3,7 +3,7 @@ title: "SEO Meta Optimizer"
 description: "Automatically write high-converting meta titles and descriptions."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Tool", "Efficiency"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
@@ -29,4 +29,4 @@ Automatically write high-converting meta titles and descriptions.
 
 ### How it works
 
-This is a simulated markdown content for SEO Meta Optimizer. 
+This is a simulated markdown content for SEO Meta Optimizer.

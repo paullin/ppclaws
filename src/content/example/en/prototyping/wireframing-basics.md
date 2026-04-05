@@ -29,4 +29,4 @@ Start your design process with low-fidelity wireframes.
 
 ### How it works
 
-This is a simulated markdown content for Wireframing Basics. 
+This is a simulated markdown content for Wireframing Basics.

@@ -3,7 +3,7 @@ title: "广告创意测试"
 description: "生成多个广告变体用于A/B测试。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 广告创意测试. 
+This is a simulated markdown content for 广告创意测试.

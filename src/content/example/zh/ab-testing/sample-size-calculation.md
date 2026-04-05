@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 样本量计算. 
+This is a simulated markdown content for 样本量计算.

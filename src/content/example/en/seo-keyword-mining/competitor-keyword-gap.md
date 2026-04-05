@@ -29,4 +29,4 @@ Identify keywords your competitors rank for but you dont.
 
 ### How it works
 
-This is a simulated markdown content for Competitor Keyword Gap. 
+This is a simulated markdown content for Competitor Keyword Gap.

@@ -29,4 +29,4 @@ Visualizing the customer experience to find pain points.
 
 ### How it works
 
-This is a simulated markdown content for Journey Mapping. 
+This is a simulated markdown content for Journey Mapping.

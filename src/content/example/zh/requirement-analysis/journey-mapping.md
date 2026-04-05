@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 用户旅程映射. 
+This is a simulated markdown content for 用户旅程映射.

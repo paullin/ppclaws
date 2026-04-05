@@ -3,7 +3,7 @@ title: "邮件营销构建器"
 description: "设计响应式邮件模板和滴水营销活动。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 邮件营销构建器. 
+This is a simulated markdown content for 邮件营销构建器.

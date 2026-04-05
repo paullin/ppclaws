@@ -29,4 +29,4 @@ Step-by-step guide to building accurate user personas.
 
 ### How it works
 
-This is a simulated markdown content for Persona Creation. 
+This is a simulated markdown content for Persona Creation.

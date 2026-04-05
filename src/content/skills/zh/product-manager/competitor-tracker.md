@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 竞品追踪器. 
+This is a simulated markdown content for 竞品追踪器.

@@ -30,4 +30,4 @@ Determine the right sample size for statistical significance.
 
 ### How it works
 
-This is a simulated markdown content for Sample Size Calculation. 
+This is a simulated markdown content for Sample Size Calculation.

@@ -30,4 +30,4 @@ Monitor competitor updates and generate weekly reports automatically.
 
 ### How it works
 
-This is a simulated markdown content for Competitor Tracker. 
+This is a simulated markdown content for Competitor Tracker.

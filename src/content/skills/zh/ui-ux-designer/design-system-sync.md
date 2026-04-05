@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 设计系统同步. 
+This is a simulated markdown content for 设计系统同步.

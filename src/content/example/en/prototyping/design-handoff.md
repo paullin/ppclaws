@@ -29,4 +29,4 @@ Best practices for handing off prototypes to developers.
 
 ### How it works
 
-This is a simulated markdown content for Design Handoff. 
+This is a simulated markdown content for Design Handoff.

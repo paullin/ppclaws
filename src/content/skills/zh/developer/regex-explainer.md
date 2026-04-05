@@ -3,7 +3,7 @@ title: "正则解释器"
 description: "将复杂的正则表达式分解为通俗易懂的语言。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "developer"
 cover_text: "Dev<br>Tools"
 cover_theme: "dark-emerald"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 正则解释器. 
+This is a simulated markdown content for 正则解释器.

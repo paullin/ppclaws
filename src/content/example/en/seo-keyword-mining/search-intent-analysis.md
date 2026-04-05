@@ -30,4 +30,4 @@ Matching your content to user search intent.
 
 ### How it works
 
-This is a simulated markdown content for Search Intent Analysis. 
+This is a simulated markdown content for Search Intent Analysis.

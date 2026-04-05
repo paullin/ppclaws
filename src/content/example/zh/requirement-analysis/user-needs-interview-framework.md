@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 用户需求访谈框架. 
+This is a simulated markdown content for 用户需求访谈框架.

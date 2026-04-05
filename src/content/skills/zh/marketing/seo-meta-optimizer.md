@@ -3,7 +3,7 @@ title: "SEO元数据优化"
 description: "自动编写高转化率的元标题和描述。"
 author: "Admin"
 date: "2024-01-01"
-tags: ["工具","效率"]
+tags: ["工具", "效率"]
 category: "marketing"
 cover_text: "MKT<br>Growth"
 cover_theme: "dark-rose"
@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for SEO元数据优化. 
+This is a simulated markdown content for SEO元数据优化.

@@ -30,4 +30,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for API文档生成. 
+This is a simulated markdown content for API文档生成.

@@ -29,4 +29,4 @@ Formulating strong hypotheses for your A/B tests.
 
 ### How it works
 
-This is a simulated markdown content for Hypothesis Generation. 
+This is a simulated markdown content for Hypothesis Generation.

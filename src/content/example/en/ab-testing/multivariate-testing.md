@@ -30,4 +30,4 @@ Going beyond simple A/B tests with multivariate testing.
 
 ### How it works
 
-This is a simulated markdown content for Multivariate Testing. 
+This is a simulated markdown content for Multivariate Testing.

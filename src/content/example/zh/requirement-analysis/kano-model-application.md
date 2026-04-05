@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for Kano模型应用. 
+This is a simulated markdown content for Kano模型应用.

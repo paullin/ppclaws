@@ -3,7 +3,7 @@ title: "Icon Set Manager"
 description: "Organize and export SVG icon sets seamlessly."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Tool", "Efficiency"]
 category: "ui-ux-designer"
 cover_text: "Core<br>Skill"
 cover_theme: "dark-purple"
@@ -29,4 +29,4 @@ Organize and export SVG icon sets seamlessly.
 
 ### How it works
 
-This is a simulated markdown content for Icon Set Manager. 
+This is a simulated markdown content for Icon Set Manager.

@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 假设生成. 
+This is a simulated markdown content for 假设生成.

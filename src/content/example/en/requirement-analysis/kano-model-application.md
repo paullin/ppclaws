@@ -29,4 +29,4 @@ How to use Kano model to prioritize features.
 
 ### How it works
 
-This is a simulated markdown content for Kano Model Application. 
+This is a simulated markdown content for Kano Model Application.

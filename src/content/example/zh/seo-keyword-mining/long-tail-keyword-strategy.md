@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 长尾关键词策略. 
+This is a simulated markdown content for 长尾关键词策略.

@@ -3,7 +3,7 @@ title: "Roadmap Builder"
 description: "Visualize your product strategy with interactive roadmaps."
 author: "Admin"
 date: "2024-01-01"
-tags: ["Tool","Efficiency"]
+tags: ["Tool", "Efficiency"]
 category: "product-manager"
 cover_text: "PM<br>Pro"
 cover_theme: "dark-blue"
@@ -30,4 +30,4 @@ Visualize your product strategy with interactive roadmaps.
 
 ### How it works
 
-This is a simulated markdown content for Roadmap Builder. 
+This is a simulated markdown content for Roadmap Builder.

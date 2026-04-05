@@ -29,4 +29,4 @@ recommendedReading:
 
 ### How it works
 
-This is a simulated markdown content for 可用性测试. 
+This is a simulated markdown content for 可用性测试.

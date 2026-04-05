@@ -30,4 +30,4 @@ Auto-generate standard PRD documents from basic skeletons.
 
 ### How it works
 
-This is a simulated markdown content for PRD Automation Assistant. 
+This is a simulated markdown content for PRD Automation Assistant.
