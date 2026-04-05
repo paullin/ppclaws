@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["案例"]
 category: "prototyping"
+cover_text: "Core<br>Skill"
+cover_theme: "light-sand"
 coverImage: "https://picsum.photos/seed/ppclaws223/600/400"
 badge: "最新"
 relatedResources:

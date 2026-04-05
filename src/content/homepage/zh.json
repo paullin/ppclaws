@@ -29,38 +29,54 @@
                 {
                     "title": "PRD 自动化助手",
                     "description": "利用AI自动生成产品需求文档，提升编写效率。",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "badge": "免费",
                     "cover": "https://picsum.photos/seed/ppclaws201/600/400",
                     "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>自动化助手"
                 },
                 {
                     "title": "竞品追踪器",
                     "description": "自动监控竞品更新并生成周报。",
-                    "tags": ["PM"],
+                    "tags": [
+                        "PM"
+                    ],
                     "badge": "付费",
                     "cover": "https://picsum.photos/seed/ppclaws202/600/400",
                     "link": "/zh/skills/product-manager/competitor-tracker",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "竞品追踪器"
                 },
                 {
                     "title": "设计规范同步器",
                     "description": "跨平台自动同步设计令牌与组件规范。",
-                    "tags": ["UI/UX"],
+                    "tags": [
+                        "UI/UX"
+                    ],
                     "badge": "免费",
                     "cover": "https://picsum.photos/seed/ppclaws205/600/400",
                     "link": "/zh/skills/ui-ux-designer/design-system-sync",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-purple",
+                    "cover_text": "设计规范同步器"
                 },
                 {
                     "title": "API 文档生成器",
                     "description": "从源码注释自动提取并生成可交互的API接口文档。",
-                    "tags": ["开发"],
+                    "tags": [
+                        "开发"
+                    ],
                     "badge": "免费",
                     "cover": "https://picsum.photos/seed/ppclaws213/600/400",
                     "link": "/zh/skills/developer/api-doc-generator",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "dark-emerald",
+                    "cover_text": "API<br>文档生成器"
                 }
             ]
         },
@@ -68,33 +84,53 @@
             "id": "pm-skills",
             "title": "产品经理",
             "subtitle": "助力产品经理完成竞品分析与需求管理",
-            "moreLink": "#",
+            "moreLink": "/zh/skills/product-manager",
             "moreText": "浏览更多",
             "columns": 4,
             "items": [
                 {
                     "title": "PRD 自动化助手 1",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": ["PM"],
-                    "cover": "https://picsum.photos/seed/skill5/600/400"
+                    "tags": [
+                        "PM"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill5/600/400",
+                    "link": "/zh/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>自动化助手"
                 },
                 {
                     "title": "PRD 自动化助手 2",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": ["PM"],
-                    "cover": "https://picsum.photos/seed/skill6/600/400"
+                    "tags": [
+                        "PM"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill6/600/400",
+                    "link": "/zh/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>自动化助手"
                 },
                 {
                     "title": "PRD 自动化助手 3",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": ["PM"],
-                    "cover": "https://picsum.photos/seed/skill7/600/400"
+                    "tags": [
+                        "PM"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill7/600/400",
+                    "link": "/zh/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>自动化助手"
                 },
                 {
                     "title": "PRD 自动化助手 4",
                     "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": ["PM"],
-                    "cover": "https://picsum.photos/seed/skill8/600/400"
+                    "tags": [
+                        "PM"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill8/600/400",
+                    "link": "/zh/skills/product-manager/prd-automation-assistant",
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>自动化助手"
                 }
             ]
         },
@@ -102,33 +138,53 @@
             "id": "ux-skills",
             "title": "UI/UX 设计师",
             "subtitle": "提供设计灵感收集与自动化切图能力",
-            "moreLink": "#",
+            "moreLink": "/zh/skills/ui-ux-designer",
             "moreText": "浏览更多",
             "columns": 4,
             "items": [
                 {
                     "title": "色板提取器 1",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill9/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill9/600/400",
+                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "色板提取器<br>1"
                 },
                 {
                     "title": "色板提取器 2",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill10/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill10/600/400",
+                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "色板提取器<br>2"
                 },
                 {
                     "title": "色板提取器 3",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill11/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill11/600/400",
+                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "色板提取器<br>3"
                 },
                 {
                     "title": "色板提取器 4",
                     "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": ["UI/UX"],
-                    "cover": "https://picsum.photos/seed/skill12/600/400"
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill12/600/400",
+                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
+                    "cover_theme": "dark-purple",
+                    "cover_text": "色板提取器<br>4"
                 }
             ]
         },
@@ -136,33 +192,53 @@
             "id": "marketing-skills",
             "title": "市场营销",
             "subtitle": "社媒内容生成与 SEO 关键词分析引擎",
-            "moreLink": "#",
+            "moreLink": "/zh/skills/marketing",
             "moreText": "浏览更多",
             "columns": 4,
             "items": [
                 {
                     "title": "Twitter 文案生成器 1",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": ["营销"],
-                    "cover": "https://picsum.photos/seed/skill13/600/400"
+                    "tags": [
+                        "营销"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill13/600/400",
+                    "link": "/zh/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>文案生成器"
                 },
                 {
                     "title": "Twitter 文案生成器 2",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": ["营销"],
-                    "cover": "https://picsum.photos/seed/skill14/600/400"
+                    "tags": [
+                        "营销"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill14/600/400",
+                    "link": "/zh/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>文案生成器"
                 },
                 {
                     "title": "Twitter 文案生成器 3",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": ["营销"],
-                    "cover": "https://picsum.photos/seed/skill15/600/400"
+                    "tags": [
+                        "营销"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill15/600/400",
+                    "link": "/zh/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>文案生成器"
                 },
                 {
                     "title": "Twitter 文案生成器 4",
                     "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": ["营销"],
-                    "cover": "https://picsum.photos/seed/skill16/600/400"
+                    "tags": [
+                        "营销"
+                    ],
+                    "cover": "https://picsum.photos/seed/skill16/600/400",
+                    "link": "/zh/skills/marketing/twitter-copy-generator",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "Twitter<br>文案生成器"
                 }
             ]
         },
@@ -180,7 +256,9 @@
                     "badge": "免费",
                     "cover": "https://picsum.photos/seed/ex301/600/400",
                     "link": "/zh/example/requirement-analysis/user-needs-interview-framework",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-stone",
+                    "cover_text": "用户需求访谈框架"
                 },
                 {
                     "title": "搜索意图分析模型",
@@ -188,7 +266,9 @@
                     "badge": "付费",
                     "cover": "https://picsum.photos/seed/ex302/600/400",
                     "link": "/zh/example/seo-keyword-mining/search-intent-analysis",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-slate",
+                    "cover_text": "搜索意图分析模型"
                 },
                 {
                     "title": "交互式原型设计",
@@ -196,7 +276,9 @@
                     "badge": "免费",
                     "cover": "https://picsum.photos/seed/ex303/600/400",
                     "link": "/zh/example/prototyping/interactive-mockups",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-sand",
+                    "cover_text": "交互式原型设计"
                 },
                 {
                     "title": "多变量测试设计",
@@ -204,7 +286,9 @@
                     "badge": "付费",
                     "cover": "https://picsum.photos/seed/ex304/600/400",
                     "link": "/zh/example/ab-testing/multivariate-testing",
-                    "featured": true
+                    "featured": true,
+                    "cover_theme": "light-mint",
+                    "cover_text": "多变量测试设计"
                 }
             ]
         }
@@ -271,9 +355,18 @@
             "contact": "邮箱 / Twitter / 微信"
         },
         "types": [
-            { "value": "skill", "label": "技能插件" },
-            { "value": "case", "label": "应用案例" },
-            { "value": "article", "label": "经验文章" }
+            {
+                "value": "skill",
+                "label": "技能插件"
+            },
+            {
+                "value": "case",
+                "label": "应用案例"
+            },
+            {
+                "value": "article",
+                "label": "经验文章"
+            }
         ]
     },
     "footer": {
@@ -282,32 +375,78 @@
             {
                 "title": "Skills 枢纽",
                 "links": [
-                    { "text": "PM 技能", "link": "#pm-skills" },
-                    { "text": "UX 技能", "link": "#ux-skills" },
-                    { "text": "营销技能", "link": "#marketing-skills" },
-                    { "text": "需求分析", "link": "#" },
-                    { "text": "原型设计", "link": "#" },
-                    { "text": "A/B 测试", "link": "#" },
-                    { "text": "SEO 挖掘", "link": "#" }
+                    {
+                        "text": "PM 技能",
+                        "link": "/zh/skills/product-manager"
+                    },
+                    {
+                        "text": "UX 技能",
+                        "link": "/zh/skills/ui-ux-designer"
+                    },
+                    {
+                        "text": "营销技能",
+                        "link": "/zh/skills/marketing"
+                    },
+                    {
+                        "text": "精选案例",
+                        "link": "/zh/example/featured"
+                    }
                 ]
             },
             {
                 "title": "相关资源",
                 "links": [
-                    { "text": "OpenClaw 官网", "link": "https://openclaw.com", "external": true },
-                    { "text": "ClawHub 社区", "link": "https://clawhub.com", "external": true },
-                    { "text": "阿里云", "link": "#" },
-                    { "text": "腾讯云", "link": "#" },
-                    { "text": "飞书", "link": "#" }
+                    {
+                        "text": "OpenClaw 官网",
+                        "link": "https://openclaw.com",
+                        "external": true
+                    },
+                    {
+                        "text": "ClawHub 社区",
+                        "link": "https://clawhub.com",
+                        "external": true
+                    },
+                    {
+                        "text": "阿里云",
+                        "link": "#"
+                    },
+                    {
+                        "text": "腾讯云",
+                        "link": "#"
+                    },
+                    {
+                        "text": "飞书",
+                        "link": "#"
+                    }
                 ]
             }
         ],
         "socials": [
-            { "platform": "X (Twitter)", "link": "#", "icon": "twitter" },
-            { "platform": "YouTube", "link": "#", "image": "/social/youtube.png" },
-            { "platform": "微信", "link": "#", "image": "/social/微信.png" },
-            { "platform": "即刻", "link": "#", "image": "/social/即刻.png" },
-            { "platform": "小红书", "link": "#", "image": "/social/小红书.png" }
+            {
+                "platform": "X (Twitter)",
+                "link": "#",
+                "icon": "twitter"
+            },
+            {
+                "platform": "YouTube",
+                "link": "#",
+                "image": "/social/youtube.png"
+            },
+            {
+                "platform": "微信",
+                "link": "#",
+                "image": "/social/微信.png"
+            },
+            {
+                "platform": "即刻",
+                "link": "#",
+                "image": "/social/即刻.png"
+            },
+            {
+                "platform": "小红书",
+                "link": "#",
+                "image": "/social/小红书.png"
+            }
         ],
         "copyright": "© 2026 PPClaws. 保留所有权利。"
     }

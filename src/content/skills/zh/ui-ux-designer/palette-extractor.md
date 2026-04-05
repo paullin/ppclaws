@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["工具","效率"]
 category: "ui-ux-designer"
+cover_text: "Core<br>Skill"
+cover_theme: "dark-purple"
 coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
 badge: "免费"
 relatedResources:

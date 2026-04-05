@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["Req Analysis"]
 category: "requirement-analysis"
+cover_text: "Core<br>Skill"
+cover_theme: "light-stone"
 coverImage: "https://picsum.photos/seed/ex301/600/400"
 featured: true
 badge: "FREE"

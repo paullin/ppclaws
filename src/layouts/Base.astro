@@ -51,7 +51,7 @@ const { meta, title, footerData } = Astro.props as Props;
         
         <!-- Dark Mode Persistence Script -->
         <script is:inline>
-            const theme = (() => {
+            const getTheme = () => {
                 if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
                     return localStorage.getItem('theme');
                 }
@@ -59,14 +59,23 @@ const { meta, title, footerData } = Astro.props as Props;
                     return 'dark';
                 }
                 return 'light';
-            })();
-          
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-            window.localStorage.setItem('theme', theme);
+            };
+
+            const setTheme = () => {
+                const theme = getTheme();
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                window.localStorage.setItem('theme', theme);
+            };
+
+            // Run on initial load
+            setTheme();
+
+            // Run after view transitions
+            document.addEventListener('astro:after-swap', setTheme);
         </script>
 
         <meta name="theme-color" content="#FFFFFF" id="theme-color-meta" />
@@ -113,9 +122,9 @@ const { meta, title, footerData } = Astro.props as Props;
                 "image": meta.image || "/og-image.jpg"
             })}
         </script>
-    </head>
-    <body>
         <ClientRouter />
+    </head>
+    <body class="bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <Header />
         <main id="main-content" role="main">
             <slot />

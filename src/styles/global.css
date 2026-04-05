@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
     /* 核心品牌色 */
     --color-main: #111111;
@@ -60,6 +62,32 @@
 }
 
 @layer base {
+    /* 卡片基础动效 */
+    .typography-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .typography-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* 高级 Serif 字体 */
+    .font-serif-elegant {
+        font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+
+    /* ========== 亮色系背景 (高级感) ========== */
+    .bg-light-stone { background-color: #fafaf9; background-image: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%); }
+    .bg-light-slate { background-color: #f8fafc; background-image: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+    .bg-light-sand { background-color: #fdfbf7; background-image: linear-gradient(135deg, #fdfbf7 0%, #f5f0e6 100%); }
+    .bg-light-mint { background-color: #f2fbf7; background-image: linear-gradient(135deg, #f2fbf7 0%, #e6f5ee 100%); }
+    
+    /* ========== 暗色系背景 (深色微光高级感) ========== */
+    .bg-dark-blue { background: radial-gradient(circle at top right, rgba(30, 58, 138, 0.3), transparent 70%), #0f172a; }
+    .bg-dark-emerald { background: radial-gradient(circle at top right, rgba(6, 78, 59, 0.3), transparent 70%), #022c22; }
+    .bg-dark-purple { background: radial-gradient(circle at top right, rgba(88, 28, 135, 0.3), transparent 70%), #1e1b4b; }
+    .bg-dark-rose { background: radial-gradient(circle at top right, rgba(159, 18, 57, 0.3), transparent 70%), #2a0412; }
+
     body {
         @apply font-sans min-h-dvh flex flex-col antialiased transition-colors duration-300;
         color: rgb(var(--ui-text));

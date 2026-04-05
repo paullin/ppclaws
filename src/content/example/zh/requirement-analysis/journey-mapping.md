@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["案例"]
 category: "requirement-analysis"
+cover_text: "Core<br>Skill"
+cover_theme: "light-stone"
 coverImage: "https://picsum.photos/seed/ppclaws220/600/400"
 badge: "最新"
 relatedResources:

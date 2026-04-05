@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["案例"]
 category: "ab-testing"
+cover_text: "Core<br>Skill"
+cover_theme: "light-mint"
 coverImage: "https://picsum.photos/seed/ppclaws226/600/400"
 featured: true
 badge: "最新"

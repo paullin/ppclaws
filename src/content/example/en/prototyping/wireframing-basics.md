@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["Case Study"]
 category: "prototyping"
+cover_text: "Core<br>Skill"
+cover_theme: "light-sand"
 coverImage: "https://picsum.photos/seed/ppclaws221/600/400"
 badge: "NEW"
 relatedResources:

@@ -1,19 +1,21 @@
 {
-  "id": "basic",
-  "title": "基础样例",
-  "description": "这是样例功能的展示目录。",
-  "sections": [
-    {
-      "id": "basic-examples",
-      "title": "基础示例列表",
-      "items": [
+    "id": "basic",
+    "title": "基础样例",
+    "description": "这是样例功能的展示目录。",
+    "sections": [
         {
-          "title": "第一个基础样例",
-          "description": "展示 Markdown 内容的渲染与结构。",
-          "link": "/example/basic/sample-page",
-          "badge": "Demo"
+            "id": "basic-examples",
+            "title": "基础示例列表",
+            "items": [
+                {
+                    "title": "第一个基础样例",
+                    "description": "展示 Markdown 内容的渲染与结构。",
+                    "link": "/example/basic/sample-page",
+                    "badge": "Demo",
+                    "cover_theme": "dark-rose",
+                    "cover_text": "第一个基础样例"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

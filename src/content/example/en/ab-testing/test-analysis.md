@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["Case Study"]
 category: "ab-testing"
+cover_text: "Core<br>Skill"
+cover_theme: "light-mint"
 coverImage: "https://picsum.photos/seed/ppclaws227/600/400"
 featured: true
 badge: "NEW"

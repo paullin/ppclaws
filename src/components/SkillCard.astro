@@ -6,6 +6,8 @@ interface Props {
     description: string;
     icon?: string;
     cover?: string;
+    cover_text?: string;
+    cover_theme?: string;
     badge?: string;
     link?: string;
     tags?: string[];
@@ -13,14 +15,14 @@ interface Props {
     lang?: string;
 }
 
-const { title, description, icon, cover, badge, link, tags = [], isFeatured = false, lang = "en" } = Astro.props;
+const { title, description, icon, cover, cover_text, cover_theme, badge, link, tags = [], isFeatured = false, lang = "en" } = Astro.props;
 const t = useTranslations(lang);
 
 // Badge color logic
 const badgeStyles: Record<string, string> = {
-    FREE: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
-    PAID: "bg-orange-500/10 text-orange-600 border-orange-500/20",
-    DEFAULT: "bg-slate-500/10 text-slate-600 border-slate-500/20"
+    FREE: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-emerald-500/20",
+    PAID: "bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-100 dark:border-orange-500/20",
+    DEFAULT: "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700"
 };
 
 // Check if badge is 免费 or 付费
@@ -30,14 +32,109 @@ if (badge) {
     else if (badge.toUpperCase() === "PAID" || badge === "付费") badgeKey = "PAID";
 }
 const currentBadgeStyle = badge ? (badgeStyles[badgeKey] || badgeStyles.DEFAULT) : "";
+
+// Theme mapping logic
+export const themeMap: Record<string, any> = {
+    'light-stone': {
+        bg: 'bg-light-stone dark:bg-stone-900 dark:bg-none border-b border-stone-200/50 dark:border-stone-800',
+        textBg: 'text-stone-900/5 dark:text-white/5',
+        text: 'text-stone-900 dark:text-white',
+        tag: 'bg-stone-200/50 dark:bg-stone-500/20 text-stone-700 dark:text-stone-300 border border-stone-300/50 dark:border-stone-500/30',
+        hoverTitle: 'group-hover:text-stone-600 dark:group-hover:text-stone-400'
+    },
+    'light-slate': {
+        bg: 'bg-light-slate dark:bg-slate-900 dark:bg-none border-b border-slate-200/50 dark:border-slate-800',
+        textBg: 'text-slate-900/5 dark:text-white/5',
+        text: 'text-slate-900 dark:text-white',
+        tag: 'bg-slate-200/50 dark:bg-slate-500/20 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-500/30',
+        hoverTitle: 'group-hover:text-slate-600 dark:group-hover:text-slate-400'
+    },
+    'light-sand': {
+        bg: 'bg-light-sand dark:bg-neutral-900 dark:bg-none border-b border-neutral-200/50 dark:border-neutral-800',
+        textBg: 'text-neutral-900/5 dark:text-white/5',
+        text: 'text-neutral-900 dark:text-white',
+        tag: 'bg-neutral-200/50 dark:bg-neutral-500/20 text-neutral-700 dark:text-neutral-300 border border-neutral-300/50 dark:border-neutral-500/30',
+        hoverTitle: 'group-hover:text-neutral-600 dark:group-hover:text-neutral-400'
+    },
+    'light-mint': {
+        bg: 'bg-light-mint dark:bg-emerald-950 dark:bg-none border-b border-emerald-200/50 dark:border-emerald-900',
+        textBg: 'text-emerald-900/5 dark:text-white/5',
+        text: 'text-emerald-900 dark:text-white',
+        tag: 'bg-emerald-200/50 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300/50 dark:border-emerald-500/30',
+        hoverTitle: 'group-hover:text-emerald-700 dark:group-hover:text-emerald-400'
+    },
+    'dark-blue': {
+        bg: 'bg-dark-blue border-b border-transparent dark:border-slate-800',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-white/10 dark:bg-slate-800 text-blue-50 dark:text-blue-300 border border-transparent',
+        hoverTitle: 'group-hover:text-blue-400 dark:group-hover:text-blue-400'
+    },
+    'dark-emerald': {
+        bg: 'bg-dark-emerald border-b border-transparent dark:border-emerald-900',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-white/10 dark:bg-emerald-900 text-emerald-50 dark:text-emerald-300 border border-transparent',
+        hoverTitle: 'group-hover:text-emerald-400 dark:group-hover:text-emerald-400'
+    },
+    'dark-purple': {
+        bg: 'bg-dark-purple border-b border-transparent dark:border-purple-900',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-white/10 dark:bg-purple-900 text-purple-50 dark:text-purple-300 border border-transparent',
+        hoverTitle: 'group-hover:text-purple-400 dark:group-hover:text-purple-400'
+    },
+    'dark-rose': {
+        bg: 'bg-dark-rose border-b border-transparent dark:border-rose-900',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-white/10 dark:bg-rose-900 text-rose-50 dark:text-rose-300 border border-transparent',
+        hoverTitle: 'group-hover:text-rose-400 dark:group-hover:text-rose-400'
+    }
+};
+
+const getTheme = (themeStr?: string) => {
+    if (themeStr && themeMap[themeStr]) return themeMap[themeStr];
+    // Simple stable randomizer based on title length
+    const themes = Object.keys(themeMap);
+    const index = (title.length) % themes.length;
+    return themeMap[themes[index]];
+};
+
+const currentTheme = getTheme(cover_theme);
+
+// Format cover text:
+// If cover_text is explicitly provided, use it (replace spaces with <br> if needed)
+// Else, take up to 2 words from title
+let displayCoverText = title;
+if (cover_text) {
+    displayCoverText = cover_text.replace(' ', '<br>');
+} else {
+    const words = title.split(' ');
+    if (words.length >= 2) {
+        displayCoverText = words.slice(0, 2).join('<br>');
+    }
+}
+
+// Extract initials for the background large text
+const getInitials = (text: string) => {
+    return text.replace(/<[^>]*>?/gm, ' ') // Remove html tags if any
+               .split(' ')
+               .filter(w => w.length > 0)
+               .map(w => w[0])
+               .join('')
+               .substring(0, 2)
+               .toUpperCase();
+};
+const displayInitials = getInitials(cover_text || title);
 ---
 
 <a 
     href={link || "#"} 
-    class="group bg-white dark:bg-astro-card rounded-xl overflow-hidden border border-gray-200 dark:border-astro-border hover:border-primary transition-colors shadow-sm h-full relative flex flex-col"
+    class="typography-card group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden flex flex-col border border-gray-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-zinc-600 transition-colors shadow-sm h-full relative"
 >
     {isFeatured && (
-        <div class="absolute top-3 left-3 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/90 dark:bg-gray-900/90 shadow-sm border border-gray-100 dark:border-gray-800 backdrop-blur-sm" title={lang === 'zh' ? '精选' : 'Featured'}>
+        <div class="absolute top-4 left-4 z-20 flex items-center justify-center w-8 h-8 rounded-full bg-white/90 dark:bg-gray-900/90 shadow-sm border border-gray-100 dark:border-gray-800 backdrop-blur-sm" title={lang === 'zh' ? '精选' : 'Featured'}>
             <svg class="w-4 h-4 text-red-500 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
@@ -45,39 +142,36 @@ const currentBadgeStyle = badge ? (badgeStyles[badgeKey] || badgeStyles.DEFAULT)
     )}
 
     {badge && (
-        <div class={`absolute top-3 right-3 z-10 px-2.5 py-1 text-xs font-bold rounded-md border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 uppercase tracking-wider`}>
+        <div class={`absolute top-4 right-4 z-20 px-2.5 py-1 text-[10px] font-bold rounded-md border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
             {badge}
         </div>
     )}
 
-    {cover ? (
-        <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
-            <img src={cover} alt={title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+    <!-- 视觉区 (替代原本的 cover / icon) -->
+    <div class={`h-52 flex items-end justify-start p-6 relative overflow-hidden transition-colors ${currentTheme.bg}`}>
+        <div class={`absolute -top-6 -right-6 text-[7rem] font-black select-none leading-none tracking-tighter transition-colors ${currentTheme.textBg}`}>
+            {displayInitials}
         </div>
-    ) : icon ? (
-        <div class="p-5 pb-0">
-            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#8b5cf6]/10 text-primary transition-colors">
-                <Fragment set:html={icon} />
-            </div>
-        </div>
-    ) : null}
+        <h3 class={`text-3xl font-serif-elegant font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
+    </div>
     
-    <div class="p-5 flex flex-col flex-1">
+    <!-- 文本区 -->
+    <div class="p-6 flex-1 flex flex-col">
         {tags.length > 0 && (
-            <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <div class="flex items-center gap-2 mb-3 flex-wrap">
                 {tags.map(tag => (
-                    <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                    <span class={`px-2 py-1 rounded text-[10px] font-semibold uppercase tracking-wider transition-colors ${currentTheme.tag}`}>
                         {tag}
                     </span>
                 ))}
             </div>
         )}
         
-        <h3 class="font-bold text-lg mb-2 text-gray-900 dark:text-white group-hover:text-primary transition-colors line-clamp-1">
+        <h3 class={`text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-1 transition-colors ${currentTheme.hoverTitle} min-h-[1.75rem]`}>
             {title}
         </h3>
         
-        <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+        <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 min-h-[2.5rem]">
             {description}
         </p>
     </div>

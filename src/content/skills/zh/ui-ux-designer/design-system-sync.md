@@ -5,6 +5,8 @@ author: "Admin"
 date: "2024-01-01"
 tags: ["UI/UX"]
 category: "ui-ux-designer"
+cover_text: "Core<br>Skill"
+cover_theme: "dark-purple"
 coverImage: "https://picsum.photos/seed/ppclaws205/600/400"
 featured: true
 badge: "免费"

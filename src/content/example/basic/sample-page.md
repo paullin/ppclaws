@@ -5,6 +5,8 @@ author: "Admin"
 date: "2023-10-02"
 tags: ["样例", "测试"]
 category: "basic"
+cover_text: "Core<br>Skill"
+cover_theme: "light-blue"
 badge: "Demo"
 relatedResources:
   - title: "PRD Template Library"
