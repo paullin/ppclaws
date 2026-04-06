@@ -1,0 +1,46 @@
+【2026-04-06】
+
+类型：skills
+领域：产品经理
+URL：
+ - https://github.com/obra/superpowers/tree/main/skills/brainstorming
+ - https://github.com/mattpocock/skills/tree/main/write-a-prd
+ - https://github.com/obra/superpowers/tree/main/skills/writing-plans
+ - https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-test-setup
+ - https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics-tracking
+ - https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding-cro
+
+类型：skills
+领域：设计师
+URL：
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/banner-design/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/brand/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/design-system/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/design/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/slides/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-styling/SKILL.md
+  - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max
+  - https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md
+
+类型：skills
+领域：市场营销人员
+URL：
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/marketing-ideas/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/marketing-psychology/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/launch-strategy/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing-strategy/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/SKILL.md
+  - https://github.com/coreyhaines31/marketingskills/blob/main/skills/email-sequence/SKILL.md
+
+
+类型：skills
+领域：开发者
+URL：
+  - https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md
+  - https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md
+  - https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md
+  - https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md
+  - https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md
+  - https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md

@@ -13,8 +13,8 @@ export async function getStaticPaths() {
     const paths = [];
     
     for (const lang of langs) {
-        // filter examples by lang folder
-        const examples = allExamples.filter(e => e.id.startsWith(`${lang}/`));
+        // filter examples by lang folder and ignore dummy
+        const examples = allExamples.filter(e => e.id.startsWith(`${lang}/`) && !e.id.includes('dummy'));
         for (const example of examples) {
             // id is like zh/requirement-analysis/user-interview
             const parts = example.id.split('/');

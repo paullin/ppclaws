@@ -1,22 +1,7 @@
 {
     "title": "PPClaws",
     "description": "Powerful automation tools for modern developers",
-    "hero": [
-        {
-            "image": "https://picsum.photos/seed/banner1/1600/900",
-            "title": "Master OpenClaw Core Configurations",
-            "description": "From beginner to expert, learn how to quickly integrate OpenClaw into your projects and build powerful automation workflows.",
-            "badge": "Featured",
-            "link": "/skills/product-manager/prd-automation-assistant"
-        },
-        {
-            "image": "https://picsum.photos/seed/banner2/1600/900",
-            "title": "How to Build Custom Skills for UI/UX Designers",
-            "description": "Unleash your creativity and improve design workflow efficiency with customized Skills.",
-            "badge": "Tutorial",
-            "link": "/skills/ui-ux-designer/design-system-sync"
-        }
-    ],
+    "hero": [],
     "sections": [
         {
             "id": "pm-skills",
@@ -25,48 +10,7 @@
             "moreLink": "/skills/product-manager",
             "moreText": "Browse More",
             "columns": 4,
-            "items": [
-                {
-                    "title": "PRD Automation Assistant 1",
-                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>Automation"
-                },
-                {
-                    "title": "PRD Automation Assistant 2",
-                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>Automation"
-                },
-                {
-                    "title": "PRD Automation Assistant 3",
-                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>Automation"
-                },
-                {
-                    "title": "PRD Automation Assistant 4",
-                    "description": "Auto-generate standard PRD documents from basic skeletons, saving 80% of writing time.",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>Automation"
-                }
-            ]
+            "items": []
         },
         {
             "id": "ux-skills",
@@ -75,48 +19,7 @@
             "moreLink": "/skills/ui-ux-designer",
             "moreText": "Browse More",
             "columns": 4,
-            "items": [
-                {
-                    "title": "Palette Extractor 1",
-                    "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "Palette<br>Extractor"
-                },
-                {
-                    "title": "Palette Extractor 2",
-                    "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "Palette<br>Extractor"
-                },
-                {
-                    "title": "Palette Extractor 3",
-                    "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "Palette<br>Extractor"
-                },
-                {
-                    "title": "Palette Extractor 4",
-                    "description": "Extract color and typography specs from any webpage with one click.",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "Palette<br>Extractor"
-                }
-            ]
+            "items": []
         },
         {
             "id": "marketing-skills",
@@ -125,48 +28,7 @@
             "moreLink": "/skills/marketing",
             "moreText": "Browse More",
             "columns": 4,
-            "items": [
-                {
-                    "title": "Twitter Copy Generator 1",
-                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": [
-                        "Marketing"
-                    ],
-                    "link": "/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>Copy"
-                },
-                {
-                    "title": "Twitter Copy Generator 2",
-                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": [
-                        "Marketing"
-                    ],
-                    "link": "/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>Copy"
-                },
-                {
-                    "title": "Twitter Copy Generator 3",
-                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": [
-                        "Marketing"
-                    ],
-                    "link": "/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>Copy"
-                },
-                {
-                    "title": "Twitter Copy Generator 4",
-                    "description": "Batch generate viral marketing tweets that match platform tone based on product features.",
-                    "tags": [
-                        "Marketing"
-                    ],
-                    "link": "/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>Copy"
-                }
-            ]
+            "items": []
         }
     ],
     "training": {
