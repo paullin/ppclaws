@@ -1,7 +1,22 @@
 {
     "title": "PPClaws",
     "description": "Powerful automation tools for modern developers",
-    "hero": [],
+    "hero": [
+        {
+            "cssClass": "bg-wave-brainstorming",
+            "title": "Master Project Planning with Brainstorming",
+            "description": "Explore user intent, requirements, and design before implementation. Formulate structured specifications for your next big feature.",
+            "badge": "HOT",
+            "link": "/skills/product-manager/brainstorming"
+        },
+        {
+            "cssClass": "bg-wave-uiux",
+            "title": "Elevate Your Designs with UI/UX Pro Max",
+            "description": "Access 50+ styles, 161 color palettes, and 99 UX guidelines across 10 stacks to build stunning, professional interfaces.",
+            "badge": "NEW",
+            "link": "/skills/ui-ux-designer/ui-ux-pro-max"
+        }
+    ],
     "sections": [
         {
             "id": "pm-skills",

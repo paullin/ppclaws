@@ -15,7 +15,8 @@ const homepage = defineCollection({
             description: z.string().optional(),
             hero: z.array(
                 z.object({
-                    image: z.string(), // Changed to string for flexibility in external/internal paths
+                    image: z.string().optional(),
+                    cssClass: z.string().optional(),
                     title: z.string(),
                     description: z.string().optional(),
                     badge: z.string().optional(),
