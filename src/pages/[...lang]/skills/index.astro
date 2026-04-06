@@ -59,7 +59,14 @@ const skills = allSkills.filter(entry => entry.id.startsWith(`${lang}/`));
         {categories.map(category => {
             // e.g. "en/product-manager" -> "product-manager"
             const categorySlug = category.id.split('/').pop();
-            const categorySkills = skills.filter(skill => skill.data.category === categorySlug);
+            const categorySkills = skills.filter(skill => skill.data.category === categorySlug).sort((a, b) => {
+                const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+                const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+                if (timeB !== timeA) {
+                    return timeB - timeA;
+                }
+                return b.id.localeCompare(a.id);
+            });
             
             return (
                 <section id={categorySlug} class="max-w-none scroll-mt-20">

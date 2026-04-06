@@ -39,7 +39,18 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const allSkills = await getCollection("skills");
-const categorySkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.category === categorySlug);
+let categorySkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.category === categorySlug);
+
+// Sort by date, newest first. If dates are equal, sort by file path / id (descending) as a tie-breaker.
+categorySkills = categorySkills.sort((a, b) => {
+    const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+    if (timeB !== timeA) {
+        return timeB - timeA;
+    }
+    // tie-breaker: fallback to descending order of id (so later added items appear first when date is the same)
+    return b.id.localeCompare(a.id);
+});
 
 // We should get siblings for the ExploreMore component
 const allCategories = await getCollection("skillsCategory");
