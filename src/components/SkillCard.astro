@@ -6,7 +6,7 @@ interface Props {
     description: string;
     cover_text?: string;
     cover_theme?: string;
-    badge?: string;
+    badge?: string | string[];
     link?: string;
     tags?: string[];
     isFeatured?: boolean;
@@ -18,18 +18,36 @@ const t = useTranslations(lang);
 
 // Badge color logic
 const badgeStyles: Record<string, string> = {
+    NEW: "bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-100 dark:border-blue-500/20",
+    HOT: "bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-400 border-red-100 dark:border-red-500/20",
     FREE: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-emerald-500/20",
-    PAID: "bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-100 dark:border-orange-500/20",
+    PRO: "bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-400 border-purple-100 dark:border-purple-500/20",
     DEFAULT: "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700"
 };
 
-// Check if badge is 免费 or 付费
-let badgeKey = "DEFAULT";
-if (badge) {
-    if (badge.toUpperCase() === "FREE" || badge === "免费") badgeKey = "FREE";
-    else if (badge.toUpperCase() === "PAID" || badge === "付费") badgeKey = "PAID";
+// Process badges
+let badges: string[] = [];
+if (Array.isArray(badge)) {
+    badges = badge;
+} else if (typeof badge === 'string' && badge.trim() !== '') {
+    // Also support comma-separated string just in case
+    badges = badge.split(',').map((b: string) => b.trim());
 }
-const currentBadgeStyle = badge ? (badgeStyles[badgeKey] || badgeStyles.DEFAULT) : "";
+
+// Limit to max 2 badges
+const displayBadges = badges.slice(0, 2).map((b: string) => {
+    let styleKey = "DEFAULT";
+    const bUpper = b.toUpperCase();
+    if (bUpper === "NEW" || b === "最新") styleKey = "NEW";
+    else if (bUpper === "HOT" || b === "热门") styleKey = "HOT";
+    else if (bUpper === "FREE" || b === "免费") styleKey = "FREE";
+    else if (bUpper === "PRO" || b === "专业版") styleKey = "PRO";
+    
+    return {
+        text: b,
+        style: badgeStyles[styleKey] || badgeStyles.DEFAULT
+    };
+});
 
 // Theme mapping logic
 export const themeMap: Record<string, any> = {
@@ -88,6 +106,20 @@ export const themeMap: Record<string, any> = {
         text: 'text-white',
         tag: 'bg-rose-100 dark:bg-rose-900 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-transparent',
         hoverTitle: 'group-hover:text-rose-600 dark:group-hover:text-rose-400'
+    },
+    'dark-green': {
+        bg: 'bg-dark-green border-b border-transparent dark:border-green-900',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 border border-green-200 dark:border-transparent',
+        hoverTitle: 'group-hover:text-green-600 dark:group-hover:text-green-400'
+    },
+    'dark-orange': {
+        bg: 'bg-dark-orange border-b border-transparent dark:border-orange-900',
+        textBg: 'text-white/5',
+        text: 'text-white',
+        tag: 'bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-transparent',
+        hoverTitle: 'group-hover:text-orange-600 dark:group-hover:text-orange-400'
     }
 };
 
@@ -131,9 +163,13 @@ const displayInitials = getInitials(cover_text || title);
     href={link || "#"} 
     class="typography-card group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden flex flex-col border border-gray-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-zinc-600 transition-colors shadow-sm h-full relative"
 >
-    {badge && (
-        <div class={`absolute top-4 right-4 z-20 px-2.5 py-1 text-[10px] font-bold rounded-md border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
-            {badge}
+    {displayBadges.length > 0 && (
+        <div class="absolute top-4 right-4 z-20 flex gap-2">
+            {displayBadges.map(b => (
+                <div class={`px-2.5 py-1 text-[10px] font-bold rounded-md border ${b.style} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
+                    {b.text}
+                </div>
+            ))}
         </div>
     )}
 

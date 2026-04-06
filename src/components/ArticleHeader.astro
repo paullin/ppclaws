@@ -7,7 +7,7 @@ interface Props {
   tags?: string[];
   cover_theme?: string;
   cover_text?: string;
-  badge?: string;
+  badge?: string | string[];
   isFeatured?: boolean;
   lang?: string;
 }
@@ -25,17 +25,36 @@ const formattedDate = date
 
 // Badge color logic for Article Header
 const badgeStyles: Record<string, string> = {
+    NEW: "bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-100 dark:border-blue-500/20",
+    HOT: "bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-400 border-red-100 dark:border-red-500/20",
     FREE: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-100 dark:border-emerald-500/20",
-    PAID: "bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-100 dark:border-orange-500/20",
+    PRO: "bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-400 border-purple-100 dark:border-purple-500/20",
     DEFAULT: "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700"
 };
 
-let badgeKey = "DEFAULT";
-if (badge) {
-    if (badge.toUpperCase() === "FREE" || badge === "免费") badgeKey = "FREE";
-    else if (badge.toUpperCase() === "PAID" || badge === "付费") badgeKey = "PAID";
+// Process badges
+let badges: string[] = [];
+if (Array.isArray(badge)) {
+    badges = badge;
+} else if (typeof badge === 'string' && badge.trim() !== '') {
+    // Also support comma-separated string just in case
+    badges = badge.split(',').map((b: string) => b.trim());
 }
-const currentBadgeStyle = badge ? (badgeStyles[badgeKey] || badgeStyles.DEFAULT) : "";
+
+// Limit to max 2 badges
+const displayBadges = badges.slice(0, 2).map((b: string) => {
+    let styleKey = "DEFAULT";
+    const bUpper = b.toUpperCase();
+    if (bUpper === "NEW" || b === "最新") styleKey = "NEW";
+    else if (bUpper === "HOT" || b === "热门") styleKey = "HOT";
+    else if (bUpper === "FREE" || b === "免费") styleKey = "FREE";
+    else if (bUpper === "PRO" || b === "专业版") styleKey = "PRO";
+    
+    return {
+        text: b,
+        style: badgeStyles[styleKey] || badgeStyles.DEFAULT
+    };
+});
 
 import { themeMap } from './SkillCard.astro';
 
@@ -82,9 +101,13 @@ const displayInitials = getInitials(cover_text || title);
             <div class={`text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
         </div>
 
-        {badge && (
-          <div class={`absolute top-6 right-6 z-20 px-3 py-1.5 text-sm font-bold rounded-lg border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
-              {badge}
+        {displayBadges.length > 0 && (
+          <div class="absolute top-6 right-6 z-20 flex gap-2">
+            {displayBadges.map(b => (
+              <div class={`px-3 py-1.5 text-sm font-bold rounded-lg border ${b.style} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
+                  {b.text}
+              </div>
+            ))}
           </div>
         )}
     </div>
@@ -94,9 +117,13 @@ const displayInitials = getInitials(cover_text || title);
           <div class="text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide text-gray-900 dark:text-white" set:html={displayCoverText} />
       </div>
 
-      {badge && (
-        <div class={`absolute top-6 right-6 z-20 px-3 py-1.5 text-sm font-bold rounded-lg border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
-            {badge}
+      {displayBadges.length > 0 && (
+        <div class="absolute top-6 right-6 z-20 flex gap-2">
+          {displayBadges.map(b => (
+            <div class={`px-3 py-1.5 text-sm font-bold rounded-lg border ${b.style} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
+                {b.text}
+            </div>
+          ))}
         </div>
       )}
     </div>
@@ -106,6 +133,7 @@ const displayInitials = getInitials(cover_text || title);
     <h1 class="sr-only">{title}</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+      
       {author && (
         <div class="flex items-center gap-1.5">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>

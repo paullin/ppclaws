@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  
   type HeroItem = {
-    image: any;
+    image?: any;
+    cssClass?: string;
     title: string;
     description?: string;
     badge?: string;
@@ -17,8 +16,8 @@
   let currentTranslate = $state(0);
   let prevTranslate = $state(0);
   
-  let carouselRef: HTMLElement;
-  let autoplayTimer: ReturnType<typeof setInterval>;
+  let carouselRef: HTMLElement | undefined;
+  let autoplayTimer: ReturnType<typeof setInterval> | undefined;
   let isHovered = $state(false);
   
   const startAutoplay = () => {
@@ -37,16 +36,19 @@
   };
   
   const next = () => {
+    if (items.length <= 1) return;
     currentIndex = (currentIndex + 1) % items.length;
     resetTranslate();
   };
   
   const prev = () => {
+    if (items.length <= 1) return;
     currentIndex = (currentIndex - 1 + items.length) % items.length;
     resetTranslate();
   };
   
   const goTo = (index: number) => {
+    if (items.length <= 1) return;
     currentIndex = index;
     resetTranslate();
     startAutoplay(); // Reset timer on manual action
@@ -59,6 +61,7 @@
   
   // Touch handlers
   const touchStart = (event: TouchEvent | MouseEvent) => {
+    if (items.length <= 1) return;
     isDragging = true;
     startX = getPositionX(event);
     stopAutoplay();
@@ -92,12 +95,13 @@
       : (event as TouchEvent).touches[0].clientX;
   };
   
-  onMount(() => {
-    startAutoplay();
-  });
-  
-  onDestroy(() => {
-    stopAutoplay();
+  $effect(() => {
+    if (items.length > 1) {
+      startAutoplay();
+    }
+    return () => {
+      stopAutoplay();
+    };
   });
 </script>
 
@@ -125,15 +129,17 @@
     {#each items as item, index}
       <a 
         href={item.link}
-        class="w-full h-full shrink-0 relative select-none block no-underline"
+        class={`w-full h-full shrink-0 relative select-none block no-underline ${item.cssClass || ''}`}
         draggable="false"
       >
-        <img 
-          src={typeof item.image === 'string' ? item.image : item.image?.src} 
-          alt={item.title} 
-          class="w-full h-full object-cover pointer-events-none"
-          draggable="false"
-        />
+        {#if item.image}
+          <img 
+            src={typeof item.image === 'string' ? item.image : item.image?.src} 
+            alt={item.title} 
+            class="w-full h-full object-cover pointer-events-none"
+            draggable="false"
+          />
+        {/if}
         <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
           <div class="text-left">

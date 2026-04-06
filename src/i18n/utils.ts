@@ -1,4 +1,5 @@
 import { ui, defaultLang, showDefaultLang, type TranslationKey } from "./ui";
+export { ui, defaultLang, showDefaultLang, type TranslationKey };
 import { routes } from "./routes";
 import { getCollection } from "astro:content";
 

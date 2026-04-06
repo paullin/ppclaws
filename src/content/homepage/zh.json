@@ -1,7 +1,22 @@
 {
     "title": "PPClaws",
     "description": "为现代开发者打造的强大自动化工具，全面提升工作效率",
-    "hero": [],
+    "hero": [
+        {
+            "cssClass": "bg-wave-brainstorming",
+            "title": "使用 Brainstorming 掌控项目规划",
+            "description": "在实施前探索用户意图、需求和设计，为您的下一个核心功能制定结构化的规范文档。",
+            "badge": "HOT",
+            "link": "/zh/skills/product-manager/brainstorming"
+        },
+        {
+            "cssClass": "bg-wave-uiux",
+            "title": "使用 UI/UX Pro Max 提升设计质感",
+            "description": "获取跨 10 个技术栈的 50+ 种样式、161 种调色板和 99 条 UX 指南，打造令人惊艳的专业界面。",
+            "badge": "NEW",
+            "link": "/zh/skills/ui-ux-designer/ui-ux-pro-max"
+        }
+    ],
     "sections": [
         {
             "id": "pm-skills",
