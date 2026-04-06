@@ -39,7 +39,7 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const allSkills = await getCollection("skills");
-let categorySkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.category === categorySlug);
+let categorySkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && (skill.data.category === categorySlug || skill.id.split('/')[1] === categorySlug));
 
 // Sort by date, newest first. If dates are equal, sort by file path / id (descending) as a tie-breaker.
 categorySkills = categorySkills.sort((a, b) => {

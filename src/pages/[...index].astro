@@ -43,6 +43,58 @@ const pageTitle = data?.title || t("main:head.title");
 const pageDescription = data?.description || t("main:head.description");
 const homepageSections = data?.sections || [];
 const footerData = data?.footer;
+
+const allSkills = await getCollection("skills");
+const skills = allSkills.filter(entry => entry.id.startsWith(`${lang}/`));
+
+// Create dynamic sections by merging json config with live skills data
+const dynamicSections = homepageSections.map((section: any) => {
+    // Map section.id to category slug
+    const categoryMap: Record<string, string> = {
+        "pm-skills": "product-manager",
+        "ux-skills": "ui-ux-designer",
+        "marketing-skills": "marketing",
+        "dev-skills": "developer"
+    };
+    
+    const categorySlug = categoryMap[section.id];
+    let items = section.items || [];
+    
+    // If it's a known category, fetch the latest 4 skills
+    if (categorySlug) {
+        const categorySkills = skills
+            .filter(skill => skill.data.category === categorySlug || skill.id.split('/')[1] === categorySlug)
+            .sort((a, b) => {
+                const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+                const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+                if (timeB !== timeA) return timeB - timeA;
+                return b.id.localeCompare(a.id);
+            })
+            .slice(0, 4);
+            
+        if (categorySkills.length > 0) {
+            items = categorySkills.map(skill => {
+                const slug = skill.id.split('/').pop();
+                const prefix = lang === 'en' ? '/en' : '/zh';
+                return {
+                    title: skill.data.title,
+                    description: skill.data.description || "",
+                    tags: skill.data.tags || [],
+                    cover_text: skill.data.cover_text,
+                    cover_theme: skill.data.cover_theme,
+                    badge: skill.data.badge,
+                    featured: skill.data.featured,
+                    link: `${prefix}/skills/${categorySlug}/${slug}`
+                };
+            });
+        }
+    }
+    
+    return {
+        ...section,
+        items
+    };
+});
 ---
 
 <Base
@@ -61,7 +113,7 @@ const footerData = data?.footer;
             </div>
         )}
 
-        {homepageSections.slice(0, 4).map((section: any) => (
+        {dynamicSections.slice(0, 4).map((section: any) => (
             <section 
                 id={section.id} 
                 class="max-w-none scroll-mt-20"

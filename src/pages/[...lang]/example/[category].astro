@@ -38,7 +38,18 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const allExamples = await getCollection("example");
-const categoryExamples = allExamples.filter(ex => ex.id.startsWith(`${lang}/`) && ex.data.category === categorySlug);
+let categoryExamples = allExamples.filter(ex => ex.id.startsWith(`${lang}/`) && (ex.data.category === categorySlug || ex.id.split('/')[1] === categorySlug));
+
+// Sort by date, newest first. If dates are equal, sort by file path / id (descending) as a tie-breaker.
+categoryExamples = categoryExamples.sort((a, b) => {
+    const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+    if (timeB !== timeA) {
+        return timeB - timeA;
+    }
+    // tie-breaker: fallback to descending order of id (so later added items appear first when date is the same)
+    return b.id.localeCompare(a.id);
+});
 
 const allCategories = await getCollection("exampleCategory");
 const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !== category.id).slice(0, 3);
