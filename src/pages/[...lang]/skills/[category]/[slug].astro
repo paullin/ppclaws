@@ -13,8 +13,8 @@ export async function getStaticPaths() {
     const paths = [];
     
     for (const lang of langs) {
-        // filter skills by lang folder
-        const skills = allSkills.filter(s => s.id.startsWith(`${lang}/`));
+        // filter skills by lang folder and ignore dummy
+        const skills = allSkills.filter(s => s.id.startsWith(`${lang}/`) && !s.id.includes('dummy'));
         for (const skill of skills) {
             // id is like zh/product-manager/prd-automation-assistant
             const parts = skill.id.split('/');

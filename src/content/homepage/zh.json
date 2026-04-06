@@ -1,22 +1,7 @@
 {
     "title": "PPClaws",
     "description": "为现代开发者打造的强大自动化工具，全面提升工作效率",
-    "hero": [
-        {
-            "image": "https://picsum.photos/seed/banner1/1600/900",
-            "title": "掌握 OpenClaw 核心配置技巧",
-            "description": "从入门到精通，了解如何快速在您的项目中集成 OpenClaw，并构建强大的自动化流程。",
-            "badge": "精选",
-            "link": "/zh/skills/product-manager/prd-automation-assistant"
-        },
-        {
-            "image": "https://picsum.photos/seed/banner2/1600/900",
-            "title": "如何为 UI/UX 设计师打造专属 Skill",
-            "description": "释放创造力，通过定制化 Skill 提升设计工作流的效率与质量。",
-            "badge": "教程",
-            "link": "/zh/skills/ui-ux-designer/design-system-sync"
-        }
-    ],
+    "hero": [],
     "sections": [
         {
             "id": "featured-skills",
@@ -25,56 +10,7 @@
             "moreLink": "/zh/skills/featured",
             "moreText": "浏览更多",
             "columns": 4,
-            "items": [
-                {
-                    "title": "PRD 自动化助手",
-                    "description": "利用AI自动生成产品需求文档，提升编写效率。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "featured": true,
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                },
-                {
-                    "title": "竞品追踪器",
-                    "description": "自动监控竞品更新并生成周报。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "badge": "付费",
-                    "link": "/zh/skills/product-manager/competitor-tracker",
-                    "featured": true,
-                    "cover_theme": "dark-blue",
-                    "cover_text": "竞品追踪器"
-                },
-                {
-                    "title": "设计规范同步器",
-                    "description": "跨平台自动同步设计令牌与组件规范。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/ui-ux-designer/design-system-sync",
-                    "featured": true,
-                    "cover_theme": "dark-purple",
-                    "cover_text": "设计规范同步器"
-                },
-                {
-                    "title": "API 文档生成器",
-                    "description": "从源码注释自动提取并生成可交互的API接口文档。",
-                    "tags": [
-                        "开发"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/developer/api-doc-generator",
-                    "featured": true,
-                    "cover_theme": "dark-emerald",
-                    "cover_text": "API<br>文档生成器"
-                }
-            ]
+            "items": []
         },
         {
             "id": "pm-skills",
@@ -83,48 +19,7 @@
             "moreLink": "/zh/skills/product-manager",
             "moreText": "浏览更多",
             "columns": 4,
-            "items": [
-                {
-                    "title": "PRD 自动化助手 1",
-                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                },
-                {
-                    "title": "PRD 自动化助手 2",
-                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                },
-                {
-                    "title": "PRD 自动化助手 3",
-                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                },
-                {
-                    "title": "PRD 自动化助手 4",
-                    "description": "根据基础骨架自动生成标准的 PRD 文档，节省 80% 的撰写时间。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                }
-            ]
+            "items": []
         },
         {
             "id": "ux-skills",
@@ -133,48 +28,7 @@
             "moreLink": "/zh/skills/ui-ux-designer",
             "moreText": "浏览更多",
             "columns": 4,
-            "items": [
-                {
-                    "title": "色板提取器 1",
-                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "色板提取器<br>1"
-                },
-                {
-                    "title": "色板提取器 2",
-                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "色板提取器<br>2"
-                },
-                {
-                    "title": "色板提取器 3",
-                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "色板提取器<br>3"
-                },
-                {
-                    "title": "色板提取器 4",
-                    "description": "一键从任意网页中提取设计系统的色彩与排版规范参数。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "link": "/zh/skills/ui-ux-designer/palette-extractor",
-                    "cover_theme": "dark-purple",
-                    "cover_text": "色板提取器<br>4"
-                }
-            ]
+            "items": []
         },
         {
             "id": "marketing-skills",
@@ -183,48 +37,7 @@
             "moreLink": "/zh/skills/marketing",
             "moreText": "浏览更多",
             "columns": 4,
-            "items": [
-                {
-                    "title": "Twitter 文案生成器 1",
-                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": [
-                        "营销"
-                    ],
-                    "link": "/zh/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>文案生成器"
-                },
-                {
-                    "title": "Twitter 文案生成器 2",
-                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": [
-                        "营销"
-                    ],
-                    "link": "/zh/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>文案生成器"
-                },
-                {
-                    "title": "Twitter 文案生成器 3",
-                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": [
-                        "营销"
-                    ],
-                    "link": "/zh/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>文案生成器"
-                },
-                {
-                    "title": "Twitter 文案生成器 4",
-                    "description": "根据产品特性，批量生成符合平台调性的病毒式营销推文。",
-                    "tags": [
-                        "营销"
-                    ],
-                    "link": "/zh/skills/marketing/twitter-copy-generator",
-                    "cover_theme": "dark-rose",
-                    "cover_text": "Twitter<br>文案生成器"
-                }
-            ]
+            "items": []
         },
         {
             "id": "featured-cases",
@@ -233,44 +46,7 @@
             "moreLink": "/zh/example/featured",
             "moreText": "浏览更多",
             "columns": 4,
-            "items": [
-                {
-                    "title": "用户需求访谈框架",
-                    "description": "系统化梳理用户需求与痛点，建立标准访谈流程。",
-                    "badge": "免费",
-                    "link": "/zh/example/requirement-analysis/user-needs-interview-framework",
-                    "featured": true,
-                    "cover_theme": "light-stone",
-                    "cover_text": "用户需求访谈框架"
-                },
-                {
-                    "title": "搜索意图分析模型",
-                    "description": "分析用户搜索行为，匹配高质量长尾词。",
-                    "badge": "付费",
-                    "link": "/zh/example/seo-keyword-mining/search-intent-analysis",
-                    "featured": true,
-                    "cover_theme": "light-slate",
-                    "cover_text": "搜索意图分析模型"
-                },
-                {
-                    "title": "交互式原型设计",
-                    "description": "快速构建可交互的高保真原型并进行测试验证。",
-                    "badge": "免费",
-                    "link": "/zh/example/prototyping/interactive-mockups",
-                    "featured": true,
-                    "cover_theme": "light-sand",
-                    "cover_text": "交互式原型设计"
-                },
-                {
-                    "title": "多变量测试设计",
-                    "description": "设计并执行A/B测试和多变量测试，优化转化率。",
-                    "badge": "付费",
-                    "link": "/zh/example/ab-testing/multivariate-testing",
-                    "featured": true,
-                    "cover_theme": "light-mint",
-                    "cover_text": "多变量测试设计"
-                }
-            ]
+            "items": []
         }
     ],
     "training": {
