@@ -5,6 +5,7 @@ import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
 import { useTranslations, useTranslatedPath } from "@i18n/utils";
+import { showDefaultLang } from "../../../i18n/ui";
 
 export async function getStaticPaths() {
     return [
@@ -58,6 +59,7 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
 
         {categories.map(category => {
             const categorySlug = category.id.split('/').pop();
+            const prefix = lang === 'en' && !showDefaultLang ? '' : `/${lang}`;
             const categoryExamples = examples.filter(ex => ex.data.category === categorySlug || ex.id.split('/')[1] === categorySlug).sort((a, b) => {
                 const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
                 const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
@@ -72,7 +74,7 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
                     <SectionHeader 
                         title={category.data.title} 
                         subtitle={category.data.description} 
-                        moreLink={translatePath(`/example/${categorySlug}`)}
+                        moreLink={translatePath(`${prefix}/example/${categorySlug}`)}
                         moreText={t("common:menu.list.view_all") || "View All"}
                     />
                     <SectionGrid columns={4}>
@@ -88,7 +90,7 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
                                     badge={ex.data.badge}
                                     isFeatured={ex.data.featured}
                                     lang={lang}
-                                    link={translatePath(`/example/${categorySlug}/${slug}`)}
+                                    link={translatePath(`${prefix}/example/${categorySlug}/${slug}`)}
                                 />
                             );
                         })}
@@ -101,7 +103,7 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
         <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
             <h2 class="text-2xl font-bold tracking-tight mb-6">{t("common:menu.list.related_content") || "Related Content"}</h2>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <a href={translatePath("/skills")} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
+                <a href={translatePath(`${lang === 'en' && !showDefaultLang ? '' : `/${lang}`}/skills`)} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
                     <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
                     </div>
@@ -115,7 +117,7 @@ const examples = allExamples.filter(entry => entry.id.startsWith(`${lang}/`));
         </section>
 
         <div class="pt-8 flex justify-center">
-            <a href={translatePath("/")} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+            <a href={translatePath(`${lang === 'en' && !showDefaultLang ? '' : `/${lang}`}/`)} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
                 {lang === 'zh' ? `返回首页` : `Back to Home`}
             </a>

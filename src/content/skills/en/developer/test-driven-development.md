@@ -7,6 +7,7 @@ tags: []
 cover_theme: dark-purple
 featured: false
 category: "developer"
+badge: ["HOT"]
 ---
 
 ## Introduction

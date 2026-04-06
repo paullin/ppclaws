@@ -7,6 +7,7 @@ tags: []
 cover_theme: dark-green
 featured: false
 category: "ui-ux-designer"
+badge: ["HOT"]
 ---
 
 ## 简介

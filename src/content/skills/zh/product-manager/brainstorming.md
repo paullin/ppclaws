@@ -7,6 +7,7 @@ tags: []
 cover_theme: dark-blue
 featured: false
 category: "product-manager"
+badge: ["HOT"]
 ---
 
 ## 简介

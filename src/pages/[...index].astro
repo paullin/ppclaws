@@ -1,6 +1,7 @@
 ---
 //Imports
 import { useTranslations } from "@i18n/utils";
+import { showDefaultLang } from "../i18n/ui";
 import Base from "@layouts/Base.astro";
 import { getCollection, getEntry } from "astro:content";
 import HeroCarousel from "@components/HeroCarousel.svelte";
@@ -73,16 +74,28 @@ const dynamicSections = homepageSections.map((section: any) => {
             .slice(0, 4);
             
         if (categorySkills.length > 0) {
-            items = categorySkills.map(skill => {
+            items = categorySkills.map((skill, index) => {
                 const slug = skill.id.split('/').pop();
-                const prefix = lang === 'en' ? '/en' : '/zh';
+                const prefix = lang === 'en' && !showDefaultLang ? '' : `/${lang}`;
+                
+                // Add NEW badge dynamically for first 4 items
+                let dynamicBadge = skill.data.badge;
+                if (index < 4) {
+                    if (!dynamicBadge) dynamicBadge = ["NEW"];
+                    else if (typeof dynamicBadge === "string" && dynamicBadge.toUpperCase() !== "NEW" && dynamicBadge !== "最新") {
+                        dynamicBadge = ["NEW", dynamicBadge];
+                    } else if (Array.isArray(dynamicBadge) && !dynamicBadge.some(b => b.toUpperCase() === "NEW" || b === "最新")) {
+                        dynamicBadge = ["NEW", ...dynamicBadge];
+                    }
+                }
+
                 return {
                     title: skill.data.title,
                     description: skill.data.description || "",
                     tags: skill.data.tags || [],
                     cover_text: skill.data.cover_text,
                     cover_theme: skill.data.cover_theme,
-                    badge: skill.data.badge,
+                    badge: dynamicBadge,
                     featured: skill.data.featured,
                     link: `${prefix}/skills/${categorySlug}/${slug}`
                 };

@@ -7,6 +7,7 @@ tags: []
 cover_theme: dark-orange
 featured: false
 category: "marketing"
+badge: ["HOT"]
 ---
 
 ## Introduction

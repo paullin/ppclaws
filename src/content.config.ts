@@ -37,7 +37,7 @@ const homepage = defineCollection({
                             tags: z.array(z.string()).optional(),
                             cover_text: z.string().optional(),
                             cover_theme: z.string().optional(),
-                            badge: z.string().optional(),
+                            badge: z.union([z.string(), z.array(z.string())]).optional(),
                             link: z.string().optional(),
                         })
                     ),
@@ -141,7 +141,7 @@ export const collections = {
                     link: z.string().optional(),
                     cover_text: z.string().optional(),
                     cover_theme: z.string().optional(),
-                    badge: z.string().optional(),
+                    badge: z.union([z.string(), z.array(z.string())]).optional(),
                 })).optional()
             })).optional()
         })
@@ -167,7 +167,7 @@ export const collections = {
                     link: z.string().optional(),
                     cover_text: z.string().optional(),
                     cover_theme: z.string().optional(),
-                    badge: z.string().optional(),
+                    badge: z.union([z.string(), z.array(z.string())]).optional(),
                 })).optional()
             })).optional()
         })
@@ -186,7 +186,7 @@ export const collections = {
             category: z.string().optional(),
             cover_text: z.string().optional(),
             cover_theme: z.string().optional(),
-            badge: z.string().optional(),
+            badge: z.union([z.string(), z.array(z.string())]).optional(),
             featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({
                 title: z.string(),
@@ -212,7 +212,7 @@ export const collections = {
             category: z.string().optional(),
             cover_text: z.string().optional(),
             cover_theme: z.string().optional(),
-            badge: z.string().optional(),
+            badge: z.union([z.string(), z.array(z.string())]).optional(),
             featured: z.boolean().default(false).optional(),
             relatedResources: z.array(z.object({
                 title: z.string(),
