@@ -9,6 +9,10 @@ const navigationData = [
         href: "/skills",
         children: [
             {
+                label: "common:menu.list.featured_skills",
+                href: "/skills/featured",
+            },
+            {
                 label: "common:menu.list.pm_skills",
                 href: "/skills/product-manager",
             },
@@ -30,6 +34,10 @@ const navigationData = [
         label: "common:menu.list.example",
         href: "/example",
         children: [
+            {
+                label: "common:menu.list.featured_cases",
+                href: "/example/featured",
+            },
             {
                 label: "common:menu.list.req_analysis",
                 href: "/example/requirement-analysis",

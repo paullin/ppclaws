@@ -19,6 +19,64 @@
     ],
     "sections": [
         {
+            "id": "featured-skills",
+            "title": "Featured Skills",
+            "subtitle": "Essential core skill packs to boost productivity",
+            "moreLink": "/skills/featured",
+            "moreText": "View More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "PRD Automation Assistant",
+                    "description": "Auto-generate product requirements from basic skeletons using AI.",
+                    "tags": [
+                        "PM"
+                    ],
+                    "badge": "FREE",
+                    "link": "/skills/product-manager/prd-automation-assistant",
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "PRD<br>Automation"
+                },
+                {
+                    "title": "Competitor Tracker",
+                    "description": "Automatically monitor competitor updates and generate weekly reports.",
+                    "tags": [
+                        "PM"
+                    ],
+                    "badge": "PAID",
+                    "link": "/skills/product-manager/competitor-tracker",
+                    "featured": true,
+                    "cover_theme": "dark-blue",
+                    "cover_text": "Competitor<br>Tracker"
+                },
+                {
+                    "title": "Design System Sync",
+                    "description": "Automatically synchronize design tokens and components across platforms.",
+                    "tags": [
+                        "UI/UX"
+                    ],
+                    "badge": "FREE",
+                    "link": "/skills/ui-ux-designer/design-system-sync",
+                    "featured": true,
+                    "cover_theme": "dark-purple",
+                    "cover_text": "Design<br>System"
+                },
+                {
+                    "title": "API Doc Generator",
+                    "description": "Extract and generate interactive API docs from source code comments.",
+                    "tags": [
+                        "Dev"
+                    ],
+                    "badge": "FREE",
+                    "link": "/skills/developer/api-doc-generator",
+                    "featured": true,
+                    "cover_theme": "dark-emerald",
+                    "cover_text": "API<br>Doc"
+                }
+            ]
+        },
+        {
             "id": "pm-skills",
             "title": "Skills for Product Manager",
             "subtitle": "Empowering PMs with competitor analysis and requirements management",
@@ -167,6 +225,52 @@
                     "cover_text": "Twitter<br>Copy"
                 }
             ]
+        },
+        {
+            "id": "featured-cases",
+            "title": "Featured Examples",
+            "subtitle": "See what problems people are solving with OpenClaw",
+            "moreLink": "/example/featured",
+            "moreText": "Browse More",
+            "columns": 4,
+            "items": [
+                {
+                    "title": "User Needs Interview Framework",
+                    "description": "Systematically sort out user needs and pain points, establishing standard processes.",
+                    "badge": "FREE",
+                    "link": "/example/requirement-analysis/user-needs-interview-framework",
+                    "featured": true,
+                    "cover_theme": "light-stone",
+                    "cover_text": "User<br>Needs"
+                },
+                {
+                    "title": "Search Intent Analysis",
+                    "description": "Analyze user search behavior and match high-quality long-tail keywords.",
+                    "badge": "PAID",
+                    "link": "/example/seo-keyword-mining/search-intent-analysis",
+                    "featured": true,
+                    "cover_theme": "light-slate",
+                    "cover_text": "Search<br>Intent"
+                },
+                {
+                    "title": "Interactive Mockups",
+                    "description": "Quickly build and test interactive high-fidelity prototypes.",
+                    "badge": "FREE",
+                    "link": "/example/prototyping/interactive-mockups",
+                    "featured": true,
+                    "cover_theme": "light-sand",
+                    "cover_text": "Interactive<br>Mockups"
+                },
+                {
+                    "title": "Multivariate Testing",
+                    "description": "Design and execute A/B and multivariate tests to optimize conversion rates.",
+                    "badge": "PAID",
+                    "link": "/example/ab-testing/multivariate-testing",
+                    "featured": true,
+                    "cover_theme": "light-mint",
+                    "cover_text": "Multivariate<br>Testing"
+                }
+            ]
         }
     ],
     "training": {
@@ -262,6 +366,10 @@
                     {
                         "text": "Marketing Skills",
                         "link": "/skills/marketing"
+                    },
+                    {
+                        "text": "Featured Examples",
+                        "link": "/example/featured"
                     }
                 ]
             },

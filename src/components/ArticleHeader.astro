@@ -81,6 +81,14 @@ const displayInitials = getInitials(cover_text || title);
         <div class="absolute inset-0 flex flex-col justify-end p-8 sm:p-12">
             <div class={`text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide transition-colors ${currentTheme.text}`} set:html={displayCoverText} />
         </div>
+        
+        {isFeatured && (
+          <div class="absolute top-6 left-6 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-white/90 dark:bg-gray-900/90 shadow-sm border border-gray-100 dark:border-gray-800 backdrop-blur-sm" title={lang === 'zh' ? '精选' : 'Featured'}>
+              <svg class="w-6 h-6 text-red-500 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+          </div>
+        )}
 
         {badge && (
           <div class={`absolute top-6 right-6 z-20 px-3 py-1.5 text-sm font-bold rounded-lg border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>
@@ -93,6 +101,14 @@ const displayInitials = getInitials(cover_text || title);
       <div class="absolute inset-0 flex flex-col justify-end p-8 sm:p-12">
           <div class="text-5xl sm:text-6xl font-bold relative z-10 leading-snug tracking-wide text-gray-900 dark:text-white" set:html={displayCoverText} />
       </div>
+      
+      {isFeatured && (
+        <div class="absolute top-6 left-6 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-white/90 dark:bg-gray-900/90 shadow-sm border border-gray-100 dark:border-gray-800 backdrop-blur-sm" title={lang === 'zh' ? '精选' : 'Featured'}>
+            <svg class="w-6 h-6 text-red-500 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+        </div>
+      )}
 
       {badge && (
         <div class={`absolute top-6 right-6 z-20 px-3 py-1.5 text-sm font-bold rounded-lg border ${currentBadgeStyle} backdrop-blur-sm bg-white/80 dark:bg-zinc-900/80 uppercase tracking-wider`}>

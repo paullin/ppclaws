@@ -1,0 +1,96 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@layouts/Base.astro";
+import SectionGrid from "@components/SectionGrid.astro";
+import SkillCard from "@components/SkillCard.astro";
+import { useTranslations, useTranslatedPath } from "@i18n/utils";
+
+export async function getStaticPaths() {
+    const langs = ["en", "zh"];
+    
+    return langs.map(lang => ({
+        params: {
+            lang: lang === "en" ? undefined : lang,
+        },
+        props: { lang }
+    }));
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const title = lang === 'zh' ? '精选技能' : 'Featured Skills';
+const description = lang === 'zh' ? '为您挑选的最受欢迎的技能包' : 'Essential core skill packs to boost productivity';
+
+const allSkills = await getCollection("skills");
+// filter only featured skills for the current lang
+const featuredSkills = allSkills
+    .filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.featured)
+    .sort((a, b) => {
+        const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+        const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+        if (timeB !== timeA) {
+            return timeB - timeA;
+        }
+        return b.id.localeCompare(a.id);
+    });
+
+---
+
+<Base 
+    title={`${title} - ${t("common:footer.skills_hub") || "Skills Hub"}`} 
+    meta={{ description: description }}
+>
+    <div class="pt-16 pb-8 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{description}</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <SectionGrid columns={4}>
+            {featuredSkills.map(skill => {
+                const slug = skill.id.split('/').pop();
+                const categorySlug = skill.data.category;
+                return (
+                    <SkillCard 
+                        title={skill.data.title} 
+                        description={skill.data.description || ""}
+                        tags={skill.data.tags}
+                        cover_text={skill.data.cover_text}
+                        cover_theme={skill.data.cover_theme}
+                        badge={skill.data.badge}
+                        isFeatured={skill.data.featured}
+                        lang={lang}
+                        link={translatePath(`/skills/${categorySlug}/${slug}`)}
+                    />
+                );
+            })}
+        </SectionGrid>
+
+        <!-- Related Links Section -->
+        <section class="pt-16 border-t border-gray-200 dark:border-astro-border">
+            <h2 class="text-2xl font-bold tracking-tight mb-6">{t("common:menu.list.related_content") || "Related Content"}</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <a href={translatePath("/example/featured")} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-base font-bold group-hover:text-primary transition-colors">{t("common:menu.list.featured_cases") || "Featured Cases"}</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">{t("common:menu.list.explore_examples_desc") || "Explore real-world use cases"}</div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <div class="pt-8 flex justify-center">
+            <a href={translatePath("/skills")} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                {lang === 'zh' ? `返回 Skills 目录` : `Back to Skills Hub`}
+            </a>
+        </div>
+    </div>
+</Base>
