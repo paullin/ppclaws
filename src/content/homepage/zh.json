@@ -4,15 +4,6 @@
     "hero": [],
     "sections": [
         {
-            "id": "featured-skills",
-            "title": "精选 Skills",
-            "subtitle": "提升生产力的必备核心技能包",
-            "moreLink": "/zh/skills/featured",
-            "moreText": "浏览更多",
-            "columns": 4,
-            "items": []
-        },
-        {
             "id": "pm-skills",
             "title": "产品经理",
             "subtitle": "助力产品经理完成竞品分析与需求管理",
@@ -35,15 +26,6 @@
             "title": "市场营销",
             "subtitle": "社媒内容生成与 SEO 关键词分析引擎",
             "moreLink": "/zh/skills/marketing",
-            "moreText": "浏览更多",
-            "columns": 4,
-            "items": []
-        },
-        {
-            "id": "featured-cases",
-            "title": "精选案例",
-            "subtitle": "看看大家都在用 OpenClaw 解决什么问题",
-            "moreLink": "/zh/example/featured",
             "moreText": "浏览更多",
             "columns": 4,
             "items": []
@@ -142,10 +124,6 @@
                     {
                         "text": "营销技能",
                         "link": "/zh/skills/marketing"
-                    },
-                    {
-                        "text": "精选案例",
-                        "link": "/zh/example/featured"
                     }
                 ]
             },

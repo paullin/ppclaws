@@ -4,15 +4,6 @@
     "hero": [],
     "sections": [
         {
-            "id": "featured-skills",
-            "title": "Featured Skills",
-            "subtitle": "Essential core skill packs to boost productivity",
-            "moreLink": "/skills/featured",
-            "moreText": "View More",
-            "columns": 4,
-            "items": []
-        },
-        {
             "id": "pm-skills",
             "title": "Skills for Product Manager",
             "subtitle": "Empowering PMs with competitor analysis and requirements management",
@@ -35,15 +26,6 @@
             "title": "Skills for Marketing",
             "subtitle": "Social media content generation and SEO keyword analysis engine",
             "moreLink": "/skills/marketing",
-            "moreText": "Browse More",
-            "columns": 4,
-            "items": []
-        },
-        {
-            "id": "featured-cases",
-            "title": "Featured Examples",
-            "subtitle": "See what problems people are solving with OpenClaw",
-            "moreLink": "/example/featured",
             "moreText": "Browse More",
             "columns": 4,
             "items": []
@@ -142,10 +124,6 @@
                     {
                         "text": "Marketing Skills",
                         "link": "/skills/marketing"
-                    },
-                    {
-                        "text": "Featured Examples",
-                        "link": "/example/featured"
                     }
                 ]
             },
