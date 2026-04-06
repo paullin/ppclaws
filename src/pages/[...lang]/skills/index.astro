@@ -62,7 +62,10 @@ const skills = allSkills.filter(entry => entry.id.startsWith(`${lang}/`));
             const categorySkills = skills.filter(skill => skill.data.category === categorySlug).sort((a, b) => {
                 const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
                 const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
-                return timeB - timeA;
+                if (timeB !== timeA) {
+                    return timeB - timeA;
+                }
+                return b.id.localeCompare(a.id);
             });
             
             return (
