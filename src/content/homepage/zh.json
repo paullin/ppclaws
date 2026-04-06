@@ -19,64 +19,6 @@
     ],
     "sections": [
         {
-            "id": "featured-skills",
-            "title": "精选 Skills",
-            "subtitle": "提升生产力的必备核心技能包",
-            "moreLink": "/zh/skills/featured",
-            "moreText": "浏览更多",
-            "columns": 4,
-            "items": [
-                {
-                    "title": "PRD 自动化助手",
-                    "description": "利用AI自动生成产品需求文档，提升编写效率。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/product-manager/prd-automation-assistant",
-                    "featured": true,
-                    "cover_theme": "dark-blue",
-                    "cover_text": "PRD<br>自动化助手"
-                },
-                {
-                    "title": "竞品追踪器",
-                    "description": "自动监控竞品更新并生成周报。",
-                    "tags": [
-                        "PM"
-                    ],
-                    "badge": "付费",
-                    "link": "/zh/skills/product-manager/competitor-tracker",
-                    "featured": true,
-                    "cover_theme": "dark-blue",
-                    "cover_text": "竞品追踪器"
-                },
-                {
-                    "title": "设计规范同步器",
-                    "description": "跨平台自动同步设计令牌与组件规范。",
-                    "tags": [
-                        "UI/UX"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/ui-ux-designer/design-system-sync",
-                    "featured": true,
-                    "cover_theme": "dark-purple",
-                    "cover_text": "设计规范同步器"
-                },
-                {
-                    "title": "API 文档生成器",
-                    "description": "从源码注释自动提取并生成可交互的API接口文档。",
-                    "tags": [
-                        "开发"
-                    ],
-                    "badge": "免费",
-                    "link": "/zh/skills/developer/api-doc-generator",
-                    "featured": true,
-                    "cover_theme": "dark-emerald",
-                    "cover_text": "API<br>文档生成器"
-                }
-            ]
-        },
-        {
             "id": "pm-skills",
             "title": "产品经理",
             "subtitle": "助力产品经理完成竞品分析与需求管理",
@@ -225,52 +167,6 @@
                     "cover_text": "Twitter<br>文案生成器"
                 }
             ]
-        },
-        {
-            "id": "featured-cases",
-            "title": "精选案例",
-            "subtitle": "看看大家都在用 OpenClaw 解决什么问题",
-            "moreLink": "/zh/example/featured",
-            "moreText": "浏览更多",
-            "columns": 4,
-            "items": [
-                {
-                    "title": "用户需求访谈框架",
-                    "description": "系统化梳理用户需求与痛点，建立标准访谈流程。",
-                    "badge": "免费",
-                    "link": "/zh/example/requirement-analysis/user-needs-interview-framework",
-                    "featured": true,
-                    "cover_theme": "light-stone",
-                    "cover_text": "用户需求访谈框架"
-                },
-                {
-                    "title": "搜索意图分析模型",
-                    "description": "分析用户搜索行为，匹配高质量长尾词。",
-                    "badge": "付费",
-                    "link": "/zh/example/seo-keyword-mining/search-intent-analysis",
-                    "featured": true,
-                    "cover_theme": "light-slate",
-                    "cover_text": "搜索意图分析模型"
-                },
-                {
-                    "title": "交互式原型设计",
-                    "description": "快速构建可交互的高保真原型并进行测试验证。",
-                    "badge": "免费",
-                    "link": "/zh/example/prototyping/interactive-mockups",
-                    "featured": true,
-                    "cover_theme": "light-sand",
-                    "cover_text": "交互式原型设计"
-                },
-                {
-                    "title": "多变量测试设计",
-                    "description": "设计并执行A/B测试和多变量测试，优化转化率。",
-                    "badge": "付费",
-                    "link": "/zh/example/ab-testing/multivariate-testing",
-                    "featured": true,
-                    "cover_theme": "light-mint",
-                    "cover_text": "多变量测试设计"
-                }
-            ]
         }
     ],
     "training": {
@@ -366,10 +262,6 @@
                     {
                         "text": "营销技能",
                         "link": "/zh/skills/marketing"
-                    },
-                    {
-                        "text": "精选案例",
-                        "link": "/zh/example/featured"
                     }
                 ]
             },
