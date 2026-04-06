@@ -25,7 +25,13 @@ const description = lang === 'zh' ? '为您挑选的最受欢迎的技能包' : 
 
 const allSkills = await getCollection("skills");
 // filter only featured skills for the current lang
-const featuredSkills = allSkills.filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.featured);
+const featuredSkills = allSkills
+    .filter(skill => skill.id.startsWith(`${lang}/`) && skill.data.featured)
+    .sort((a, b) => {
+        const timeA = a.data.date ? new Date(a.data.date).getTime() : 0;
+        const timeB = b.data.date ? new Date(b.data.date).getTime() : 0;
+        return timeB - timeA;
+    });
 
 ---
 
