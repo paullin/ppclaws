@@ -20,8 +20,20 @@ export default defineConfig({
               (process.env.PRODUCTION_DOMAIN || "http://localhost:4321") +
                   "/zh/", // Chinese home - priority 1.0
           ],
-          changefreq: "monthly",
+          changefreq: "weekly",
           priority: 0.7,
+          serialize(item) {
+              // Extract the path from the URL
+              const url = new URL(item.url);
+              const path = url.pathname;
+              
+              // Set priority 1.0 for English and Chinese homepages
+              if (path === '/' || path === '/zh/') {
+                  item.priority = 1.0;
+              }
+              
+              return item;
+          },
           lastmod: new Date(),
       }),
       svelte(),
