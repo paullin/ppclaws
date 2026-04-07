@@ -1,33 +1,30 @@
 ---
 title: "frontend-design"
-description: "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics."
-author: anthropics
-date: 2026-04-06 20:13
+description: "Designer skill documentation"
+author: "nextlevelbuilder"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-green
+cover_theme: "dark-green"
 featured: false
-category: "ui-ux-designer"
 ---
 
 ## Introduction
+This skill acts as a virtual Senior Product Designer. It systematically addresses the gap between raw ideas and polished, user-friendly interfaces by establishing strict design heuristics and structural guidelines before any mockups or code are generated.
 
-Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.
+## Core Concept
+Enforce visual hierarchy, consistency, and accessibility. By treating design not as art, but as a structured problem-solving discipline, it guarantees outputs that are both aesthetically pleasing and functionally robust.
 
-## Features
+## Installation and Usage Guide
+https://github.com/anthropics/claude-code
 
-- Builds production-grade frontend interfaces
-- Avoids generic, repetitive AI design aesthetics
-- Focuses on high-quality visual polish and typography
-- Creates distinctive web components and pages
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md)
 
-## Applicability
+- **Requirement Gathering**: Always begins by establishing the core user goal, target audience, and platform constraints.
+- **Structural Foundation**: Demands the establishment of grids, typography scales, and color palettes before rendering individual components.
+- **Iterative Refinement**: Uses progressive disclosure to validate layouts, moving from low-fidelity structure to high-fidelity polish.
 
-Ideal for developers who want their AI-generated UIs to look custom-designed, professional, and visually unique rather than boilerplate.
-
-## Highlights
-
-Specifically engineered to break out of typical AI generation patterns, pushing for creative layouts and refined micro-interactions.
-
-## Usage
-
-Use this skill when you want to build a frontend component or page that needs to look highly polished and distinctly not 'AI-generated'.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Tightly couples visual design principles with front-end implementation constraints, ensuring that generated designs are actually buildable in code.
+- **Potential Limitations**: It may default to specific UI frameworks (like Tailwind CSS) that the user's project doesn't use, requiring careful overrides.
+- **What Makes a Good Skill**: It strictly forbids the use of placeholder "lorem ipsum" data during implementation, forcing the AI to generate realistic component states and edge cases.

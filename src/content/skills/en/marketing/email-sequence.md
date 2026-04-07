@@ -1,33 +1,30 @@
 ---
 title: "email-sequence"
-description: "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program."
-author: coreyhaines31
-date: 2026-04-06 20:14
+description: ""
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-orange
+cover_theme: "dark-orange"
 featured: false
-category: "marketing"
 ---
 
 ## Introduction
+This skill serves as a specialized marketing framework for AI, transforming it into a domain expert. It addresses the common challenge of users not knowing where to start or how to structure their marketing efforts by providing systematic, proven methodologies.
 
-When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program.
+## Core Concept
+Leverage structured methodologies and pre-defined frameworks to generate actionable, context-aware marketing strategies and assets, moving beyond generic advice to tailored, practical solutions.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Designs multi-email automated flows and drip campaigns
-- Creates onboarding, welcome, and nurture sequences
-- Develops re-engagement and trigger-based emails
-- Establishes optimal email cadence and timing
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/email-sequence/SKILL.md)
 
-## Applicability
+- **Context First**: Always checks for an existing `.agents/product-marketing-context.md` file to ensure advice is grounded in the specific product and audience.
+- **Initial Assessment**: Forces the AI to gather necessary context (goals, current state, audience) before making any recommendations.
+- **Structured Frameworks**: Applies specific mental models, templates, or categorical breakdowns to organize the output logically.
 
-Ideal for SaaS founders and email marketers needing to set up automated communication journeys to activate or retain users.
-
-## Highlights
-
-Provides end-to-end sequence strategy, including what emails to send, when to send them, and the specific copy for each touchpoint.
-
-## Usage
-
-Call this skill when you need to set up a welcome series, an onboarding drip campaign, or figure out your lifecycle email strategy.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Categorizes email sequences into distinct types (Welcome, Nurture, Re-engagement, etc.) right at the start, ensuring the AI adopts the correct strategic framework for the user's specific goal.
+- **Potential Limitations**: Email deliverability and technical platform constraints (like segmentation logic in Mailchimp vs. Hubspot) cannot be fully accounted for in pure text generation.
+- **What Makes a Good Skill**: By demanding a clear understanding of the sequence type and the existing marketing context, it prevents the generation of generic, spam-like email templates.

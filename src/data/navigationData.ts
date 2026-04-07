@@ -1,65 +1,65 @@
 const navigationData = [
     {
         label: "common:menu.list.home",
-        href: "/",
+        href: "",
         children: [],
     },
     {
         label: "common:menu.list.skills",
-        href: "/skills",
+        href: "skills",
         children: [
             {
                 label: "common:menu.list.pm_skills",
-                href: "/skills/product-manager",
+                href: "skills/product-manager",
             },
             {
                 label: "common:menu.list.ux_skills",
-                href: "/skills/ui-ux-designer",
+                href: "skills/ui-ux-designer",
             },
             {
                 label: "common:menu.list.marketing_skills",
-                href: "/skills/marketing",
+                href: "skills/marketing",
             },
             {
                 label: "common:menu.list.more",
-                href: "/skills",
+                href: "skills",
             },
         ],
     },
     {
         label: "common:menu.list.example",
-        href: "/example",
+        href: "example",
         children: [
             {
                 label: "common:menu.list.req_analysis",
-                href: "/example/requirement-analysis",
+                href: "example/requirement-analysis",
             },
             {
                 label: "common:menu.list.proto_design",
-                href: "/example/prototyping",
+                href: "example/prototyping",
             },
             {
                 label: "common:menu.list.ab_testing",
-                href: "/example/ab-testing",
+                href: "example/ab-testing",
             },
             {
                 label: "common:menu.list.seo_mining",
-                href: "/example/seo-keyword-mining",
+                href: "example/seo-keyword-mining",
             },
             {
                 label: "common:menu.list.more",
-                href: "/example",
+                href: "example",
             },
         ],
     },
     {
         label: "common:menu.list.training",
-        href: "/#training",
+        href: "#training",
         children: [],
     },
     {
         label: "common:menu.list.submit",
-        href: "/#submit",
+        href: "#submit",
         children: [],
     },
 ];

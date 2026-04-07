@@ -1,33 +1,30 @@
 ---
 title: "launch-strategy"
-description: "When the user wants to plan a product launch, feature announcement, or release strategy. Use this whenever someone is preparing to release something publicly."
-author: coreyhaines31
-date: 2026-04-06 20:14
+description: "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas."
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-orange
+cover_theme: "dark-orange"
 featured: false
-category: "marketing"
 ---
 
 ## Introduction
+This skill serves as a specialized marketing framework for AI, transforming it into a domain expert. It addresses the common challenge of users not knowing where to start or how to structure their marketing efforts by providing systematic, proven methodologies.
 
-When the user wants to plan a product launch, feature announcement, or release strategy. Use this whenever someone is preparing to release something publicly.
+## Core Concept
+Leverage structured methodologies and pre-defined frameworks to generate actionable, context-aware marketing strategies and assets, moving beyond generic advice to tailored, practical solutions.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Plans comprehensive product and feature launches
-- Develops go-to-market (GTM) strategies
-- Creates launch checklists and timeline planning
-- Strategizes for platforms like Product Hunt and beta releases
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/launch-strategy/SKILL.md)
 
-## Applicability
+- **Context First**: Always checks for an existing `.agents/product-marketing-context.md` file to ensure advice is grounded in the specific product and audience.
+- **Initial Assessment**: Forces the AI to gather necessary context (goals, current state, audience) before making any recommendations.
+- **Structured Frameworks**: Applies specific mental models, templates, or categorical breakdowns to organize the output logically.
 
-Crucial for startups, indie hackers, and product teams preparing to bring a new product or major feature to the public market.
-
-## Highlights
-
-Turns chaotic release processes into structured, step-by-step launch plans that maximize visibility and user acquisition.
-
-## Usage
-
-Use this skill when you are about to ship, need a GTM plan, or are asking 'how do I launch this effectively?'
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Establishes a strong philosophical foundation ("launch again and again") that reorients the user away from viewing launches as one-off events.
+- **Potential Limitations**: The framework might be overly geared toward SaaS and tech products (e.g., Product Hunt launches), making it less adaptable for traditional retail or enterprise B2B sales cycles.
+- **What Makes a Good Skill**: By insisting on checking the existing marketing context first, it prevents the AI from asking repetitive foundational questions, immediately elevating the conversation to strategic planning.

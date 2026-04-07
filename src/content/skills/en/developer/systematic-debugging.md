@@ -1,33 +1,31 @@
 ---
 title: "systematic-debugging"
-description: "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes."
-author: obra
-date: 2026-04-06 20:15
+description: "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+author: "obra"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-purple
+cover_theme: "dark-purple"
 featured: false
-category: "developer"
 ---
 
 ## Introduction
+The `systematic-debugging` skill enforces a disciplined, evidence-based approach to fixing software issues. It solves the widespread problem of developers (and AI agents) guessing at solutions, throwing random patches at a problem, and ultimately masking the true underlying issue or creating new bugs.
 
-Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes.
+## Core Concept
+"No fixes without root cause investigation first." By mandating a four-phase diagnostic process, this skill ensures that every fix addresses the actual failure rather than just treating the symptom.
 
-## Features
+## Installation and Usage Guide
+https://github.com/obra/superpowers
 
-- Applies a rigorous, systematic approach to finding bugs
-- Analyzes stack traces, logs, and test failures
-- Formulates and tests hypotheses before writing fixes
-- Prevents 'whack-a-mole' debugging and regression
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md)
 
-## Applicability
+- **Read error messages carefully**: Demands that the AI fully read stack traces, file paths, and error codes rather than skipping past them.
+- **Reproduce consistently**: Instructs the AI to verify if the issue happens reliably and to gather more data instead of guessing if it doesn't.
+- **Check recent changes**: Forces a review of Git diffs, new dependencies, and configuration changes to identify what triggered the failure.
+- **Gather evidence in multi-component systems**: Before proposing any fix, the AI must add diagnostic instrumentation (like logging data entering and exiting a component) to isolate exactly where the system breaks.
 
-Crucial for developers facing stubborn bugs, flaky tests, or complex regressions where guessing the fix leads to more broken code.
-
-## Highlights
-
-Forces the AI to stop guessing and start measuring, ensuring that the root cause is mathematically proven before any code is changed.
-
-## Usage
-
-Trigger this skill immediately when a test fails or a bug is reported, before asking the AI to 'fix the code'.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Enforces an "Iron Law" that strictly forbids proposing fixes without first investigating the root cause. Mandates a structured four-phase diagnostic approach, particularly emphasizing the addition of diagnostic instrumentation in multi-component systems.
+- **Potential Limitations**: The absolute refusal to attempt quick patches might frustrate users who are facing trivial syntax errors or obvious typos where the root cause is already known.
+- **What Makes a Good Skill**: It directly addresses the psychological traps of debugging (e.g., rushing under time pressure or guessing) by codifying a methodical, evidence-based approach that prioritizes long-term stability over quick fixes.

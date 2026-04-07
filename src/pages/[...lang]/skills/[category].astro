@@ -97,7 +97,7 @@ const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !
                         badge={dynamicBadge}
                         isFeatured={skill.data.featured}
                         lang={lang}
-                        link={translatePath(`${prefix}/skills/${categorySlug}/${slug}`)}
+                        link={translatePath(`skills/${categorySlug}/${slug}`, lang)}
                     />
                 );
             })}
@@ -112,7 +112,7 @@ const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !
                         const siblingSlug = sibling.id.split('/').pop();
                         const prefix = lang === 'en' && !showDefaultLang ? '' : `/${lang}`;
                         return (
-                        <a href={translatePath(`${prefix}/skills/${siblingSlug}`)} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
+                        <a href={translatePath(`skills/${siblingSlug}`, lang)} class="group flex items-center gap-4 p-5 rounded-xl border border-gray-200 dark:border-astro-border hover:border-primary transition-all hover:shadow-lg bg-white dark:bg-astro-card">
                             <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                             </div>
@@ -130,7 +130,7 @@ const siblings = allCategories.filter(c => c.id.startsWith(`${lang}/`) && c.id !
         )}
 
         <div class="pt-8 flex justify-center">
-            <a href={translatePath(`${lang === 'en' && !showDefaultLang ? '' : `/${lang}`}/skills`)} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
+            <a href={translatePath(`skills`, lang)} class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-astro-accent hover:text-white transition-all font-medium text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
                 {lang === 'zh' ? `返回 Skills 目录` : `Back to Skills Hub`}
             </a>

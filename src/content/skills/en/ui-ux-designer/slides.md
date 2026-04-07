@@ -1,33 +1,30 @@
 ---
 title: "slides"
-description: "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies."
-author: nextlevelbuilder
-date: 2026-04-06 20:13
+description: "Designer skill documentation"
+author: "nextlevelbuilder"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-green
+cover_theme: "dark-green"
 featured: false
-category: "ui-ux-designer"
 ---
 
 ## Introduction
+This skill acts as a virtual Senior Product Designer. It systematically addresses the gap between raw ideas and polished, user-friendly interfaces by establishing strict design heuristics and structural guidelines before any mockups or code are generated.
 
-Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+## Core Concept
+Enforce visual hierarchy, consistency, and accessibility. By treating design not as art, but as a structured problem-solving discipline, it guarantees outputs that are both aesthetically pleasing and functionally robust.
 
-## Features
+## Installation and Usage Guide
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 
-- Builds HTML-based presentations and pitch decks
-- Integrates Chart.js for data visualization
-- Applies design tokens and responsive layouts
-- Utilizes proven copywriting formulas for slide content
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/slides/SKILL.md)
 
-## Applicability
+- **Requirement Gathering**: Always begins by establishing the core user goal, target audience, and platform constraints.
+- **Structural Foundation**: Demands the establishment of grids, typography scales, and color palettes before rendering individual components.
+- **Iterative Refinement**: Uses progressive disclosure to validate layouts, moving from low-fidelity structure to high-fidelity polish.
 
-Perfect for founders, sales teams, and marketers needing to quickly generate professional, data-rich presentations.
-
-## Highlights
-
-Moves beyond static images by generating responsive, interactive HTML slides powered by real design tokens.
-
-## Usage
-
-Invoke this skill to build a presentation, specifying your topic, data points, and desired strategic narrative.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Emphasizes the "one idea per slide" rule, effectively preventing the common anti-pattern of overcrowding presentations with text.
+- **Potential Limitations**: The AI cannot directly output standard presentation files (like .pptx or .key), requiring the user to manually transfer the suggested structures into their software.
+- **What Makes a Good Skill**: It structures the narrative arc before designing the visuals, ensuring the presentation tells a coherent story rather than just displaying disjointed data.

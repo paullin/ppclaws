@@ -1,33 +1,30 @@
 ---
 title: "copywriting"
-description: "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages."
-author: coreyhaines31
-date: 2026-04-06 20:14
+description: ""
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-orange
+cover_theme: "dark-orange"
 featured: false
-category: "marketing"
 ---
 
 ## Introduction
+This skill serves as a specialized marketing framework for AI, transforming it into a domain expert. It addresses the common challenge of users not knowing where to start or how to structure their marketing efforts by providing systematic, proven methodologies.
 
-When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.
+## Core Concept
+Leverage structured methodologies and pre-defined frameworks to generate actionable, context-aware marketing strategies and assets, moving beyond generic advice to tailored, practical solutions.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Writes high-converting marketing copy from scratch
-- Crafts compelling headlines, subheadlines, and CTAs
-- Develops clear value propositions and taglines
-- Structures hero sections and above-the-fold content
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md)
 
-## Applicability
+- **Context First**: Always checks for an existing `.agents/product-marketing-context.md` file to ensure advice is grounded in the specific product and audience.
+- **Initial Assessment**: Forces the AI to gather necessary context (goals, current state, audience) before making any recommendations.
+- **Structured Frameworks**: Applies specific mental models, templates, or categorical breakdowns to organize the output logically.
 
-Essential for anyone building a new website, launching a product, or needing to overhaul the persuasive text on their core pages.
-
-## Highlights
-
-Applies proven copywriting frameworks to ensure the text not only sounds good but is strategically designed to convert visitors.
-
-## Usage
-
-Use this skill when you need to write copy for a new page, generate headline ideas, or describe your product compellingly.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Requires defining the "ONE primary action" the page should drive before writing any copy, perfectly mirroring professional conversion copywriting methodologies.
+- **Potential Limitations**: AI models often naturally default to overly enthusiastic or generic marketing speak, which might require additional prompting to keep the tone grounded and brand-specific.
+- **What Makes a Good Skill**: It separates the "what to write" from the "who we are writing for" by mandating an audience analysis phase, ensuring the resulting copy is problem-centric rather than feature-centric.

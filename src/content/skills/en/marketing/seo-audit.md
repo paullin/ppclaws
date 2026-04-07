@@ -1,33 +1,30 @@
 ---
 title: "seo-audit"
-description: "When the user wants to audit, review, or diagnose SEO issues on their site. Use this even if the user just says something vague like 'my SEO is bad'."
-author: coreyhaines31
-date: 2026-04-06 20:14
+description: ""
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-orange
+cover_theme: "dark-orange"
 featured: false
-category: "marketing"
 ---
 
 ## Introduction
+This skill serves as a specialized marketing framework for AI, transforming it into a domain expert. It addresses the common challenge of users not knowing where to start or how to structure their marketing efforts by providing systematic, proven methodologies.
 
-When the user wants to audit, review, or diagnose SEO issues on their site. Use this even if the user just says something vague like 'my SEO is bad'.
+## Core Concept
+Leverage structured methodologies and pre-defined frameworks to generate actionable, context-aware marketing strategies and assets, moving beyond generic advice to tailored, practical solutions.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Conducts comprehensive technical and on-page SEO audits
-- Diagnoses ranking drops, crawl errors, and indexing issues
-- Reviews meta tags, core web vitals, and page speed
-- Provides actionable recommendations to improve Google visibility
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md)
 
-## Applicability
+- **Context First**: Always checks for an existing `.agents/product-marketing-context.md` file to ensure advice is grounded in the specific product and audience.
+- **Initial Assessment**: Forces the AI to gather necessary context (goals, current state, audience) before making any recommendations.
+- **Structured Frameworks**: Applies specific mental models, templates, or categorical breakdowns to organize the output logically.
 
-Perfect for site owners, marketers, and developers who have noticed a drop in search traffic or want to ensure their site is search-engine friendly.
-
-## Highlights
-
-Takes a diagnostic approach to uncover the root causes of poor search performance before suggesting random optimizations.
-
-## Usage
-
-Invoke this skill when your site isn't ranking, traffic dropped, or you need a technical SEO health check.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Establishes a rigorous baseline by demanding an understanding of the site context and primary business goals before diving into technical SEO diagnostics.
+- **Potential Limitations**: As an AI, it lacks real-time, authenticated access to tools like Google Search Console or Ahrefs, meaning the "audit" is limited to theoretical or provided text rather than live site crawling.
+- **What Makes a Good Skill**: It intercepts vague user complaints (e.g., "my SEO is bad") and forces them into a structured diagnostic funnel, acting like a senior SEO consultant triaging a new client.

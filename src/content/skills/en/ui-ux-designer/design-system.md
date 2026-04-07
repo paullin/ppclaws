@@ -1,33 +1,30 @@
 ---
 title: "design-system"
-description: "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales."
-author: nextlevelbuilder
-date: 2026-04-06 20:13
+description: "Designer skill documentation"
+author: "nextlevelbuilder"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-green
+cover_theme: "dark-green"
 featured: false
-category: "ui-ux-designer"
 ---
 
 ## Introduction
+This skill acts as a virtual Senior Product Designer. It systematically addresses the gap between raw ideas and polished, user-friendly interfaces by establishing strict design heuristics and structural guidelines before any mockups or code are generated.
 
-Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales.
+## Core Concept
+Enforce visual hierarchy, consistency, and accessibility. By treating design not as art, but as a structured problem-solving discipline, it guarantees outputs that are both aesthetically pleasing and functionally robust.
 
-## Features
+## Installation and Usage Guide
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 
-- Builds robust token architectures (primitive, semantic, component)
-- Generates CSS variables and spacing/typography scales
-- Creates detailed component specifications
-- Ensures systematic design implementation
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/design-system/SKILL.md)
 
-## Applicability
+- **Requirement Gathering**: Always begins by establishing the core user goal, target audience, and platform constraints.
+- **Structural Foundation**: Demands the establishment of grids, typography scales, and color palettes before rendering individual components.
+- **Iterative Refinement**: Uses progressive disclosure to validate layouts, moving from low-fidelity structure to high-fidelity polish.
 
-Crucial for UI/UX teams and frontend developers building scalable, maintainable design systems from scratch.
-
-## Highlights
-
-Implements a professional three-layer token methodology, bridging the gap between Figma designs and code implementation.
-
-## Usage
-
-Call this skill when you need to define design tokens, create a new design system, or standardize CSS variables across a project.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Enforces atomic design principles, ensuring that the AI constructs scalable and reusable components rather than isolated UI elements.
+- **Potential Limitations**: Implementing a full design system requires strict adherence to tokenization, which can be difficult to enforce purely through text-based prompt interactions.
+- **What Makes a Good Skill**: It requires the explicit definition of design tokens (colors, spacing, typography) before assembling components, preventing technical debt in front-end development.

@@ -59,9 +59,9 @@
             "Lark, DingTalk, Discord full-channel integration practice"
         ],
         "buttonText": "Enroll Now",
-        "buttonLink": "/training",
+        "buttonLink": "#training",
         "secondaryButtonText": "View Syllabus",
-        "secondaryButtonLink": "/training#syllabus"
+        "secondaryButtonLink": "#training"
     },
     "faq": {
         "title": "Frequently Asked Questions (Q&A)",
