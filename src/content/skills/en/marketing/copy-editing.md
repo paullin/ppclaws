@@ -1,33 +1,30 @@
 ---
 title: "copy-editing"
-description: "When the user wants to edit, review, or improve existing marketing copy. Use this when the user already has copy and wants it improved rather than rewritten from scratch."
-author: coreyhaines31
-date: 2026-04-06 20:14
+description: "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting."
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-orange
+cover_theme: "dark-orange"
 featured: false
-category: "marketing"
 ---
 
 ## Introduction
+This skill serves as a specialized marketing framework for AI, transforming it into a domain expert. It addresses the common challenge of users not knowing where to start or how to structure their marketing efforts by providing systematic, proven methodologies.
 
-When the user wants to edit, review, or improve existing marketing copy. Use this when the user already has copy and wants it improved rather than rewritten from scratch.
+## Core Concept
+Leverage structured methodologies and pre-defined frameworks to generate actionable, context-aware marketing strategies and assets, moving beyond generic advice to tailored, practical solutions.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Edits and polishes existing marketing copy
-- Tightens up wordy or awkward sentences
-- Sharpens messaging and value propositions
-- Provides constructive copy feedback and proofreading
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/SKILL.md)
 
-## Applicability
+- **Context First**: Always checks for an existing `.agents/product-marketing-context.md` file to ensure advice is grounded in the specific product and audience.
+- **Initial Assessment**: Forces the AI to gather necessary context (goals, current state, audience) before making any recommendations.
+- **Structured Frameworks**: Applies specific mental models, templates, or categorical breakdowns to organize the output logically.
 
-Perfect for marketers and founders who have a draft of their landing page or email but need a professional sweep to make it punchy and persuasive.
-
-## Highlights
-
-Focuses on refinement and optimization of existing text rather than starting from a blank page, saving time while maximizing impact.
-
-## Usage
-
-Invoke this skill by pasting your current copy and asking to 'tighten this up', 'make it better', or 'review my copy'.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Introduces the concept of "multiple focused passes" rather than trying to fix everything at once, which is a hallmark of professional editorial workflows.
+- **Potential Limitations**: Users expecting a quick, one-click rewrite might find the systematic, multi-pass approach overly tedious for short snippets of text.
+- **What Makes a Good Skill**: It explicitly forbids changing the core message and emphasizes preserving the author's voice, preventing the AI from hijacking the text with its own stylistic preferences.

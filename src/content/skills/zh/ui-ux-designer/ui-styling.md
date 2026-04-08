@@ -1,33 +1,30 @@
 ---
 title: "ui-styling"
-description: "使用 shadcn/ui 组件、Tailwind CSS 实用优先样式和基于画布的视觉设计，创建美观、可访问的用户界面。"
-author: nextlevelbuilder
-date: 2026-04-06 20:13
+description: "当用户需要为现有的线框图或粗糙的 UI 添加视觉样式、CSS 建议或美学润色时使用。"
+author: "nextlevelbuilder"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-green
+cover_theme: "dark-green"
 featured: false
-category: "ui-ux-designer"
 ---
 
 ## 简介
+此技能充当虚拟的高级产品设计师。它通过在生成任何原型或代码之前建立严格的设计启发式原则和结构指南，系统性地弥合了原始想法与经过打磨的、用户友好的界面之间的差距。
 
-使用 shadcn/ui 组件、Tailwind CSS 实用优先样式和基于画布的视觉设计，创建美观、可访问的用户界面。
+## 核心理念
+强制执行视觉层次、一致性和无障碍设计。通过将设计视为结构化的解决问题学科，而非纯粹的艺术，它保证了输出的内容既具有美感又功能强大。
 
-## 功能
+## 安装与调用指南
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 
-- 实施 shadcn/ui 和 Tailwind CSS 组件
-- 确保满足无障碍 (a11y) 标准
-- 自定义主题、颜色和深色模式逻辑
-- 生成响应式布局和基于画布的设计
+## 工作流程解析 (SOP)
+[阅读原始 SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-styling/SKILL.md)
 
-## 适用
+- **需求收集**：始终从确立核心用户目标、目标受众和平台限制开始。
+- **结构基础**：要求在渲染单个组件之前，先建立网格系统、排版比例和调色板。
+- **迭代细化**：使用渐进式披露来验证布局，从低保真结构过渡到高保真润色。
 
-对于在现代 React/Tailwind 技术栈中工作、需要精美且可访问组件的前端开发人员和 UI 设计师来说必不可少。
-
-## 亮点
-
-严格遵守 Tailwind 实用优先原则，同时与 Radix UI 原语无缝集成，以实现强大的无障碍功能。
-
-## 使用
-
-当您需要为组件设置样式、实施深色模式或构建可访问的对话框、表单和表格时，请使用此技能。
+## 技能设计评价
+- **人类经验 SOP 化的亮点**：专注于 UI 执行的细微差别——如阴影高度、边界半径和微交互——将基本的线框图提升为高保真设计。
+- **潜在的局限性**：在没有看到实际渲染输出的情况下，将微妙的视觉风格建议转化为精确的 CSS/Tailwind 代码有时会导致偏差。
+- **优质技能的评判标准**：确立了间距（如 8pt 网格系统）和色彩对比度的清晰规则，将主观的“让它变好看”请求转化为数学化的设计决策。

@@ -1,33 +1,30 @@
 ---
 title: "ui-styling"
-description: "Create beautiful, accessible user interfaces with shadcn/ui components, Tailwind CSS utility-first styling, and canvas-based visual designs."
-author: nextlevelbuilder
-date: 2026-04-06 20:13
+description: "Designer skill documentation"
+author: "nextlevelbuilder"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-green
+cover_theme: "dark-green"
 featured: false
-category: "ui-ux-designer"
 ---
 
 ## Introduction
+This skill acts as a virtual Senior Product Designer. It systematically addresses the gap between raw ideas and polished, user-friendly interfaces by establishing strict design heuristics and structural guidelines before any mockups or code are generated.
 
-Create beautiful, accessible user interfaces with shadcn/ui components, Tailwind CSS utility-first styling, and canvas-based visual designs.
+## Core Concept
+Enforce visual hierarchy, consistency, and accessibility. By treating design not as art, but as a structured problem-solving discipline, it guarantees outputs that are both aesthetically pleasing and functionally robust.
 
-## Features
+## Installation and Usage Guide
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 
-- Implements shadcn/ui and Tailwind CSS components
-- Ensures accessibility (a11y) standards are met
-- Customizes themes, colors, and dark mode logic
-- Generates responsive layouts and canvas-based designs
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-styling/SKILL.md)
 
-## Applicability
+- **Requirement Gathering**: Always begins by establishing the core user goal, target audience, and platform constraints.
+- **Structural Foundation**: Demands the establishment of grids, typography scales, and color palettes before rendering individual components.
+- **Iterative Refinement**: Uses progressive disclosure to validate layouts, moving from low-fidelity structure to high-fidelity polish.
 
-Essential for frontend developers and UI designers working in modern React/Tailwind stacks who need polished, accessible components.
-
-## Highlights
-
-Strictly adheres to Tailwind utility-first principles while integrating seamlessly with Radix UI primitives for robust accessibility.
-
-## Usage
-
-Use this skill when you need to style a component, implement dark mode, or build accessible dialogs, forms, and tables.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Focuses on the nuanced details of UI execution—such as shadow elevation, border radiuses, and micro-interactions—elevating basic wireframes to high-fidelity designs.
+- **Potential Limitations**: Translating subtle visual stylistic advice into precise CSS/Tailwind code without seeing the actual rendered output can sometimes lead to misalignments.
+- **What Makes a Good Skill**: It establishes clear rules for spacing (like the 8pt grid system) and color contrast, transforming subjective "make it look good" requests into mathematical design decisions.

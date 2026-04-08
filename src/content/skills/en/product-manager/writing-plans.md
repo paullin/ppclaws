@@ -1,33 +1,31 @@
 ---
 title: "writing-plans"
-description: "Use when you have a spec or requirements for a multi-step task, before touching code."
-author: obra
-date: 2026-04-06 20:12
+description: "Use when you have a spec or requirements for a multi-step task, before touching code"
+author: "obra"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-blue
+cover_theme: "dark-blue"
 featured: false
-category: "product-manager"
 ---
 
-## Introduction
+## Introduction and Core Concept
+The `writing-plans` skill acts as the critical bridge between product specifications and actual coding. It addresses the issue of AI agents or junior engineers getting lost in complex, multi-step tasks. By forcing the creation of a highly granular, bite-sized implementation plan, it ensures that the executor knows exactly which files to touch, how to test them, and when to commit, assuming zero prior context.
 
-Use when you have a spec or requirements for a multi-step task, before touching code.
+## Core Concept
+Transform high-level specifications into granular, bite-sized, test-driven implementation plans. It assumes the executor has zero context, ensuring every code change is deliberate, isolated, and verified.
 
-## Features
+## Installation and Usage Guide
+https://github.com/obra/superpowers
 
-- Breaks down high-level specs into actionable steps
-- Creates detailed implementation plans
-- Identifies dependencies and potential roadblocks
-- Ensures logical sequencing of development tasks
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md)
 
-## Applicability
+- **Scope Check**: Before writing any tasks, the AI must verify if the spec covers multiple independent subsystems. If so, it halts and demands breaking them into separate plans, enforcing modularity.
+- **File Structure Mapping**: The AI explicitly maps out which files will be created or modified, locking in architectural decomposition decisions early.
+- **Bite-Sized Task Granularity**: Every single step is broken down into micro-actions (2-5 minutes each): Write failing test -> Run it -> Implement minimal code -> Run test -> Commit.
+- **Mandatory Plan Header**: Forces a specific markdown header that defines the goal, architecture, and tech stack, explicitly instructing the agent on which sub-skills to use next (like `subagent-driven-development`).
 
-Crucial for developers and PMs transitioning from the design/spec phase to the actual coding phase for complex features.
-
-## Highlights
-
-Bridges the gap between 'what to build' and 'how to build it' by enforcing a step-by-step planning phase before execution.
-
-## Usage
-
-Use this right after a PRD or design spec is approved, but before writing any code, to generate a concrete execution plan.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Codifies the Test-Driven Development (TDD) loop into explicit, actionable steps. Assuming the executor has no prior context ensures the generated instructions are comprehensive and self-contained.
+- **Potential Limitations**: Generating a highly granular, multi-step TDD plan is inefficient for minor updates, such as simple text changes or minor styling adjustments.
+- **What Makes a Good Skill**: Provides exact markdown structures and specific terminal commands for the execution phase, reducing ambiguity and increasing the reliability of the AI's output.

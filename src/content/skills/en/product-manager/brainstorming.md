@@ -1,34 +1,34 @@
 ---
 title: "brainstorming"
 description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
-author: obra
-date: 2026-04-06 20:12
+author: "obra"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-blue
+cover_theme: "dark-blue"
 featured: false
-category: "product-manager"
-badge: ["HOT"]
 ---
 
-## Introduction
+## Introduction and Core Concept
+The `brainstorming` skill is designed to act as a mandatory precursor to any creative implementation work. It solves the common pitfall of "unexamined assumptions causing wasted work," especially in seemingly simple projects. The core goal is to force a structured, collaborative dialogue that transforms vague ideas into fully formed designs and specifications before a single line of code is written.
 
-You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
+## Core Concept
+Always design before implementing. By exploring context, asking clarifying questions, and writing a formal specification, this skill prevents wasted effort and ensures alignment between user intent and the final architecture.
 
-## Features
+## Installation and Usage Guide
+https://github.com/obra/superpowers
 
-- Explores project context and user intent
-- Proposes 2-3 different design approaches with trade-offs
-- Generates comprehensive design documents and specs
-- Acts as a mandatory gate before any implementation starts
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md)
 
-## Applicability
+- **Explore project context**: The AI is forced to check existing files, docs, and commits before doing anything else, ensuring the design fits the current architecture.
+- **Offer visual companion**: For UI/UX tasks, it explicitly asks if visual mockups are needed, separating visual and conceptual thinking.
+- **Ask clarifying questions**: Limits the AI to asking one question at a time to prevent overwhelming the user and to deeply understand constraints.
+- **Propose multiple approaches**: Requires presenting 2-3 different solutions with trade-offs, preventing tunnel vision on the first available idea.
+- **Present design and get approval**: Breaks the design into manageable sections and mandates explicit user approval before proceeding.
+- **Write and review spec**: Forces the creation of a formal markdown specification document and an internal "self-review" for placeholders or ambiguities.
+- **Transition to implementation**: Strictly dictates that the terminal state is invoking a planning skill (`writing-plans`), creating a hard gate against premature coding.
 
-Essential for any new feature development, regardless of perceived simplicity, to prevent wasted work due to unexamined assumptions.
-
-## Highlights
-
-Forces a 'design-first' mentality, requiring user approval on a spec before a single line of code is written.
-
-## Usage
-
-Invoke this skill at the very beginning of a task. It will ask clarifying questions, present options, and write a spec document.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Enforces a strict order of operations before implementation. The inclusion of a formal "Spec self-review" step ensures the AI validates its own output for placeholders and ambiguities before requesting user feedback.
+- **Potential Limitations**: The strict "one question at a time" constraint may increase interaction time. Mandating a full markdown specification document can be unnecessary for minor tasks.
+- **What Makes a Good Skill**: It clearly defines anti-patterns (what not to do) and establishes a deterministic state machine for the interaction, effectively restricting premature code generation.

@@ -10,14 +10,14 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   // UPDATE THIS FOR PRODUCTION – This will also be used in the sitemap
-  site: process.env.PRODUCTION_DOMAIN || "http://localhost:4321",
+  site: process.env.PRODUCTION_DOMAIN || "https://ppclaws.com/",
 
   integrations: [
       mdx(),
       sitemap({
           customPages: [
-              process.env.PRODUCTION_DOMAIN || "http://localhost:4321", // home page - priority 1.0
-              (process.env.PRODUCTION_DOMAIN || "http://localhost:4321") +
+              process.env.PRODUCTION_DOMAIN || "https://ppclaws.com/", // home page - priority 1.0
+              (process.env.PRODUCTION_DOMAIN || "https://ppclaws.com/") +
                   "/zh/", // Chinese home - priority 1.0
           ],
           changefreq: "weekly",

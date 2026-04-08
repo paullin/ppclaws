@@ -1,33 +1,31 @@
 ---
 title: "ab-test-setup"
-description: "When the user wants to plan, design, or implement an A/B test or experiment. Use this whenever someone is comparing two approaches and wants to measure which performs better."
-author: coreyhaines31
-date: 2026-04-06 20:12
+description: "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program."
+author: "coreyhaines31"
+date: "2026-04-06 12:00"
 tags: []
-cover_theme: dark-blue
+cover_theme: "dark-blue"
 featured: false
-category: "product-manager"
 ---
 
-## Introduction
+## Introduction and Core Concept
+The `ab-test-setup` skill transforms the AI into an expert growth and experimentation consultant. It prevents the common pitfall of "let's just see what happens" testing by enforcing strict statistical rigor, clear hypothesis structures, and proper sample size calculations before any A/B test is launched.
 
-When the user wants to plan, design, or implement an A/B test or experiment. Use this whenever someone is comparing two approaches and wants to measure which performs better.
+## Core Concept
+Ensure statistical validity and actionable results by enforcing structured hypotheses, single-variable testing, and pre-determined sample sizes before launching any A/B experiment.
 
-## Features
+## Installation and Usage Guide
+https://github.com/coreyhaines31/marketingskills
 
-- Plans and designs A/B test experiments
-- Helps define clear hypotheses and success metrics
-- Determines statistical significance and test duration
-- Assists with variant copy and multivariate testing
+## Workflow Analysis (SOP)
+[Read original SKILL.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-test-setup/SKILL.md)
 
-## Applicability
+- **Context Assessment**: The AI first checks for existing product marketing context (e.g., `.agents/product-marketing-context.md`) to avoid asking redundant questions, then evaluates the test context, current baseline, and technical constraints.
+- **Hypothesis Framing**: Enforces a strict MAD-libs style framework: "Because [data], we believe [change] will cause [outcome] for [audience]." This prevents weak, non-falsifiable ideas.
+- **Statistical Rigor Check**: Forces the user to pre-determine sample sizes based on expected lift (providing a quick-reference chart) to prevent the "peeking and stopping early" anti-pattern.
+- **Metrics Selection**: Categorizes metrics into Primary (business value), Secondary (context), and Guardrail (prevent harm) to ensure holistic measurement.
 
-Ideal for product managers and marketers who need to compare two different versions of a feature, page, or copy to see which performs better.
-
-## Highlights
-
-Provides a structured approach to experimentation, ensuring tests are statistically significant and hypotheses are well-defined before implementation.
-
-## Usage
-
-Invoke this skill when you want to run a split test, ask 'which version is better', or need to calculate how long an experiment should run.
+## Skill Design Evaluation
+- **Strengths of SOP Integration**: Incorporates specific statistical reference charts and a structured hypothesis template. Categorizes metrics into primary, secondary, and guardrail metrics to ensure balanced measurement.
+- **Potential Limitations**: The strict sample size requirements based on standard statistical significance may not be practical for early-stage products with low traffic volumes.
+- **What Makes a Good Skill**: Embeds domain-specific methodologies (like single-variable testing and pre-determined sample sizes) directly into the prompt, preventing fundamentally flawed test designs.
