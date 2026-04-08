@@ -15,20 +15,17 @@ export default defineConfig({
   integrations: [
       mdx(),
       sitemap({
-          customPages: [
-              process.env.PRODUCTION_DOMAIN || "https://ppclaws.com/", // home page - priority 1.0
-              (process.env.PRODUCTION_DOMAIN || "https://ppclaws.com/") +
-                  "/zh/", // Chinese home - priority 1.0
-          ],
           changefreq: "weekly",
           priority: 0.7,
           serialize(item) {
               // Extract the path from the URL
               const url = new URL(item.url);
               const path = url.pathname;
+              const normalizedPath =
+                  path === "/" ? "/" : path.replace(/\/+$/, "");
               
               // Set priority 1.0 for English and Chinese homepages
-              if (path === '/' || path === '/zh/') {
+              if (normalizedPath === "/" || normalizedPath === "/zh") {
                   item.priority = 1.0;
               }
               
