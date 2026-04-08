@@ -58,7 +58,7 @@ export function useTranslations(lang: keyof typeof ui) {
 
 /**
  * Returns path translation function for specific language
- * Translates routes like "about" -> "o-projektu" for Slovenian
+ * Translates routes based on i18n mapping
  */
 export function useTranslatedPath(lang: keyof typeof ui) {
     return function translatePath(path: string, l: string = lang) {
@@ -183,7 +183,7 @@ function getLangCode(lang: string): string {
 
 /**
  * Handles language switching for blog posts using content links mapping
- * Maps between different slugs per language (e.g., security-trends <-> varnostni-trendi)
+ * Maps between different slugs per language
  */
 async function handleBlogPostTranslation(
     currentLang: string,

@@ -1,17 +1,17 @@
 {
-    "name": "astro-i18n-starter",
+    "name": "ppclaws",
     "private": true,
     "version": "1.0.0",
     "type": "module",
-    "description": "Multilingual Astro starter with URL localization and i18n support",
+    "description": "PPClaws - Powerful automation tools for modern developers",
     "author": {
-        "name": "Nik Klemenc",
-        "url": "https://klemenc.si"
+        "name": "PPClaws",
+        "url": "https://github.com/paullin/ppclaws"
     },
-    "homepage": "https://klemenc.si",
+    "homepage": "https://github.com/paullin/ppclaws",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Scorpio3310/astro-i18n-starter"
+        "url": "https://github.com/paullin/ppclaws"
     },
     "license": "MIT",
     "keywords": [
