@@ -89,7 +89,7 @@
     <div class="mt-6 text-center">
       <a 
         href={moreLink} 
-        class="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+        class="text-sm font-medium text-violet-700 dark:text-violet-300 hover:underline inline-flex items-center gap-1"
       >
         {moreText}
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

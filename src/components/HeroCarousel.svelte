@@ -171,16 +171,22 @@
     {#each items as _, index}
       <button 
         type="button"
-        class="banner-dot w-2 h-2 rounded-full transition-colors {currentIndex === index ? 'bg-white' : 'bg-white/50 hover:bg-white'}"
+        class="banner-dot w-11 h-11 inline-flex items-center justify-center rounded-full transition-colors touch-manipulation"
         onclick={(e) => { e.preventDefault(); goTo(index); }}
         aria-label="Go to slide {index + 1}"
-      ></button>
+        aria-current={currentIndex === index ? "true" : undefined}
+      >
+        <span
+          class="w-2.5 h-2.5 rounded-full transition-colors {currentIndex === index ? 'bg-white' : 'bg-white/50 hover:bg-white'}"
+          aria-hidden="true"
+        ></span>
+      </button>
     {/each}
   </div>
 
   <!-- Navigation Arrows -->
   <button 
-    class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20"
+    class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 touch-manipulation"
     onclick={(e) => { e.preventDefault(); prev(); }}
     aria-label="Previous slide"
   >
@@ -189,7 +195,7 @@
     </svg>
   </button>
   <button 
-    class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20"
+    class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 touch-manipulation"
     onclick={(e) => { e.preventDefault(); next(); }}
     aria-label="Next slide"
   >

@@ -21,7 +21,7 @@ const navigationData = [
                 href: "skills/marketing",
             },
             {
-                label: "common:menu.list.more",
+                label: "common:menu.list.all_skills",
                 href: "skills",
             },
         ],
@@ -47,7 +47,7 @@ const navigationData = [
                 href: "example/seo-keyword-mining",
             },
             {
-                label: "common:menu.list.more",
+                label: "common:menu.list.all_examples",
                 href: "example",
             },
         ],
