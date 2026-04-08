@@ -10,28 +10,6 @@
   - openclaw 命令
   - openclaw 常用 命令
 
-- openclaw agent
-  - openclaw subagent
-  - openclaw 多 agent
-  - openclaw ai agent
-  - openclaw agent
-  - openclaw agents
-
-- openclaw use
-  - openclaw hub
-  - openclaw acp
-  - openclaw mcp
-  - openclaw cli
-  - openclaw onboard
-  - openclaw dashboard
-  - openclaw mission control
-  - openclaw memory
-  - openclaw gateway
-  - openclaw codex
-  - openclaw browser
-  - openclaw 操作浏览器
-  - how to use openclaw
-
 - openclaw install & config & update
   - mac mini openclaw
   - openclaw mac mini
@@ -73,6 +51,40 @@
   - openclaw feishu
   - qq openclaw
 
+- openclaw use
+  - openclaw hub
+  - openclaw acp
+  - openclaw mcp
+  - openclaw cli
+  - openclaw onboard
+  - openclaw dashboard
+  - openclaw mission control
+  - openclaw memory
+  - openclaw gateway
+  - openclaw codex
+  - openclaw browser
+  - openclaw 操作浏览器
+  - how to use openclaw
+
+- openclaw skills
+  - skills
+  - skillhub
+  - openclaw skills hub
+  - openclaw skill hub
+  - openclaw skill
+  - openclaw skills
+  - clawhub
+  - openclaw 技能
+  - openclaw 安装 skill
+  - openclaw plugins
+
+- openclaw agent
+  - openclaw subagent
+  - openclaw 多 agent
+  - openclaw ai agent
+  - openclaw agent
+  - openclaw agents
+
 - openclaw alternative
   - workbuddy
   - arkclaw
@@ -96,14 +108,3 @@
   - claude openclaw
   - openclaw alternatives
 
-- openclaw skills
-  - skills
-  - skillhub
-  - openclaw skills hub
-  - openclaw skill hub
-  - openclaw skill
-  - openclaw skills
-  - clawhub
-  - openclaw 技能
-  - openclaw 安装 skill
-  - openclaw plugins
