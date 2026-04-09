@@ -21,7 +21,7 @@
         {
             "id": "pm-skills",
             "title": "Skills for Product Managers",
-            "subtitle": "Build better products, faster.",
+            "subtitle": "Build better products, faster: Includes competitor analysis, requirement management, and PRD writing.",
             "moreLink": "/skills/product-manager",
             "moreText": "Browse More",
             "columns": 4,
@@ -30,7 +30,7 @@
         {
             "id": "ux-skills",
             "title": "Skills for UI/UX Designers",
-            "subtitle": "Craft stunning designs, effortlessly.",
+            "subtitle": "Craft stunning designs, effortlessly: Covering design inspiration, automated slicing, and UI components.",
             "moreLink": "/skills/ui-ux-designer",
             "moreText": "Browse More",
             "columns": 4,
@@ -39,7 +39,7 @@
         {
             "id": "marketing-skills",
             "title": "Skills for Marketers",
-            "subtitle": "Capture attention, drive growth.",
+            "subtitle": "Capture attention, drive growth: Master social media generation, SEO keyword mining, and traffic analysis.",
             "moreLink": "/skills/marketing",
             "moreText": "Browse More",
             "columns": 4,

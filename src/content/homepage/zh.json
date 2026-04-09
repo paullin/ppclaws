@@ -21,7 +21,7 @@
         {
             "id": "pm-skills",
             "title": "产品技能",
-            "subtitle": "加速产品落地。",
+            "subtitle": "加速产品落地：涵盖竞品分析、需求管理、PRD 撰写等实战 Skills。",
             "moreLink": "/zh/skills/product-manager",
             "moreText": "浏览更多",
             "columns": 4,
@@ -30,7 +30,7 @@
         {
             "id": "ux-skills",
             "title": "设计技能",
-            "subtitle": "轻松交付惊艳设计。",
+            "subtitle": "轻松交付惊艳设计：包含设计灵感收集、自动化切图与组件库生成。",
             "moreLink": "/zh/skills/ui-ux-designer",
             "moreText": "浏览更多",
             "columns": 4,
@@ -39,7 +39,7 @@
         {
             "id": "marketing-skills",
             "title": "营销技能",
-            "subtitle": "强势赢取市场增长。",
+            "subtitle": "强势赢取市场增长：精通社媒内容生成、SEO 关键词挖掘与流量分析。",
             "moreLink": "/zh/skills/marketing",
             "moreText": "浏览更多",
             "columns": 4,
