@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>产品经理 Skills - PPClaws</title>
+  <title>产品经理技能 - PPClaws</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -40,56 +40,80 @@
   <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
+        <!-- Logo & Name -->
         <div class="flex items-center shrink-0 cursor-pointer" onclick="window.location.href='../index.html'">
           <img src="../../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
           <span class="font-bold text-xl tracking-tight">PPClaws</span>
         </div>
 
+        <!-- 桌面端菜单 -->
         <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
           <a href="../index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">首页</a>
-          
           <div class="relative group h-full flex items-center">
-            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
-              Skills 精选 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              OpenClaw <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="./skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">产品经理 Skills</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师 Skills</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销 Skills</a>
-                <a href="../skills-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">安装指南</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">使用教程</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Agent 配置</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">平替方案</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">精选技能 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">产品经理技能</a>
+                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师技能</a>
+                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销技能</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">开发者技能</a>
+                <a href="../skills-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">更多</a>
               </div>
             </div>
           </div>
 
           <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Skills 使用 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              精选案例 <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">需求分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">头脑风暴</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">撰写 PRD</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">原型设计</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">AB 测试</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 关键词挖掘</a>
-                <a href="../example-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">更多</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">数据分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 优化</a>
+                <a href="../example-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">更多</a>
               </div>
             </div>
           </div>
 
-          <a href="../index.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">培训</a>
-          <a href="../index.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">收录</a>
+          <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('follow-us').scrollIntoView({behavior: 'smooth'})">
+            加入社区
+          </button>
         </nav>
 
+        <!-- 右侧功能区 -->
         <div class="flex items-center space-x-2 lg:space-x-4">
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="搜索"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="搜索">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
           <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换暗夜模式">
             <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
           </button>
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='skills-for-product-manager.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="切换语言" onclick="window.location.href='skills-for-product-manager.html'">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </button>
           <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
-          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -97,7 +121,7 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 space-y-16">
     <div class="text-center space-y-4">
-      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">产品经理 Skills</h1>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">产品经理技能</h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">专为产品经理量身定制的技能全集，旨在自动化日常琐碎任务、深入分析竞品并高效管理产品需求。</p>
     </div>
 
@@ -139,7 +163,7 @@
             <i data-lucide="palette" class="w-6 h-6"></i>
           </div>
           <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">设计师 Skills</div>
+            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">设计师技能</div>
             <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">设计与灵感工具</div>
           </div>
           <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
@@ -149,7 +173,7 @@
             <i data-lucide="megaphone" class="w-6 h-6"></i>
           </div>
           <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">市场营销 Skills</div>
+            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">市场营销技能</div>
             <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">增长与 SEO 自动化</div>
           </div>
           <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
@@ -159,7 +183,7 @@
             <i data-lucide="code" class="w-6 h-6"></i>
           </div>
           <div class="flex-1">
-            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">开发者 Skills</div>
+            <div class="text-base font-bold group-hover:text-astro-accent transition-colors">开发者技能</div>
             <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">代码与工作流效率</div>
           </div>
           <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 group-hover:text-astro-accent transition-transform group-hover:translate-x-1"></i>
@@ -170,7 +194,7 @@
   </main>
 
   <!-- 页脚 -->
-  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-1 md:col-span-1">
@@ -184,26 +208,23 @@
         </div>
         
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills 技能中心</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">技能</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="./skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors w-max">产品经理 Skills</a>
-            <a href="../skills-cn.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师 Skills</a>
-            <a href="../skills-cn.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销 Skills</a>
-            <a href="../example-cn.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">需求分析</a>
-            <a href="../example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
-            <a href="../example-cn.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">AB 测试</a>
-            <a href="../example-cn.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO 关键词挖掘</a>
+            <a href="./skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors w-max">产品经理技能</a>
+            <a href="../skills-cn.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师技能</a>
+            <a href="../skills-cn.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销技能</a>
+            <a href="../skills-cn.html#dev-skills" class="hover:text-astro-accent transition-colors w-max">开发者技能</a>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">相关资源</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">精选案例</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw 官网</a>
-            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub 社区</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">阿里云</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">腾讯云</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">飞书</a>
+            <a href="../example-cn.html#brainstorming" class="hover:text-astro-accent transition-colors w-max">头脑风暴</a>
+            <a href="../example-cn.html#prd" class="hover:text-astro-accent transition-colors w-max">撰写 PRD</a>
+            <a href="../example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
+            <a href="../example-cn.html#data" class="hover:text-astro-accent transition-colors w-max">数据分析</a>
+            <a href="../example-cn.html#seo" class="hover:text-astro-accent transition-colors w-max">SEO 优化</a>
           </ul>
         </div>
 
@@ -228,9 +249,14 @@
           </div>
         </div>
       </div>
-      
-      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
-        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. 保留所有权利。</p>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          &copy; 2024 PPClaws. All rights reserved.
+        </p>
+        <div class="flex space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <a href="#" class="hover:text-astro-accent transition-colors">隐私政策</a>
+          <a href="#" class="hover:text-astro-accent transition-colors">服务条款</a>
+        </div>
       </div>
     </div>
   </footer>

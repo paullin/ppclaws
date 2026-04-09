@@ -52,6 +52,7 @@
       display: block;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body class="bg-gray-50 dark:bg-astro-dark text-gray-900 dark:text-gray-100 transition-colors duration-200">
 
@@ -68,16 +69,29 @@
         <!-- 桌面端菜单 -->
         <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
           <a href="./index.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">首页</a>
-          
           <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Skills 精选 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              OpenClaw <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="./skills/skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">产品经理 Skills</a>
-                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师 Skills</a>
-                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销 Skills</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">安装指南</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">使用教程</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Agent 配置</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">平替方案</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">精选技能<i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="./skills/skills-for-product-manager-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">产品经理技能</a>
+                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">设计师技能</a>
+                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">市场营销技能</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">开发者技能</a>
                 <a href="./skills-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">更多</a>
               </div>
             </div>
@@ -85,24 +99,23 @@
 
           <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Skills 使用 <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              精选案例 <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">需求分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">头脑风暴</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">撰写 PRD</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">原型设计</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">AB 测试</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 关键词挖掘</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">数据分析</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO 优化</a>
                 <a href="./example-cn.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">更多</a>
               </div>
             </div>
           </div>
 
-          <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('training').scrollIntoView({behavior: 'smooth'})">
-            培训
+          <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('follow-us').scrollIntoView({behavior: 'smooth'})">
+            加入社区
           </button>
-          
-          <a href="#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">收录</a>
         </nav>
 
         <!-- 右侧功能区 -->
@@ -173,7 +186,7 @@
           <h2 class="text-2xl font-bold tracking-tight">精选 Skills</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">提升生产力的必备核心技能包</p>
         </div>
-        <a href="./skills-cn.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="./skills-cn.html" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- 卡片重复4次 -->
@@ -236,7 +249,7 @@
           <h2 class="text-2xl font-bold tracking-tight">产品经理</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">助力产品经理完成竞品分析与需求管理</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -298,7 +311,7 @@
           <h2 class="text-2xl font-bold tracking-tight">UI/UX 设计师</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">提供设计灵感收集与自动化切图能力</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -360,7 +373,7 @@
           <h2 class="text-2xl font-bold tracking-tight">市场营销</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">社媒内容生成与 SEO 关键词分析引擎</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -436,7 +449,7 @@
           <h2 class="text-2xl font-bold tracking-tight">精选案例</h2>
           <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">看看大家都在用 OpenClaw 解决什么问题</p>
         </div>
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览更多 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#" class="text-sm font-medium text-astro-accent hover:underline flex items-center gap-1">浏览全部 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
@@ -492,149 +505,356 @@
     </section>
 
     
-    <!-- 培训区域 -->
-    <section id="training" class="w-full">
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <h2 class="text-2xl font-bold tracking-tight">培训</h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">系统化掌握 OpenClaw，从入门到商业化落地</p>
+        <!-- Survey Section -->
+    <section id="survey" class="w-full">
+      <div class="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card shadow-sm flex flex-col md:flex-row group">
+        <!-- Left Image -->
+        <div class="w-full md:w-5/12 lg:w-1/2 aspect-[4/3] md:aspect-auto relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+          <img src="https://placehold.co/800x800/f3f4f6/6b7280?text=Survey+Image" alt="Survey" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/5 dark:to-black/20"></div>
         </div>
-      </div>
-      <div class="relative w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card shadow-sm flex flex-col md:flex-row">
-        <div class="w-full md:w-1/2 aspect-video md:aspect-auto">
-          <img src="https://placehold.co/800x600/f3f4f6/6b7280?text=OpenClaw+Masterclass" alt="培训课程" class="w-full h-full object-cover">
-        </div>
-        <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-          <span class="px-3 py-1 bg-astro-accent/10 text-astro-accent text-xs font-bold rounded-full w-max mb-4 uppercase tracking-wider">限时特惠</span>
-          <h3 class="text-3xl font-bold mb-4">OpenClaw 全栈大师班</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-            专为想要深入理解和应用 OpenClaw 的开发者与企业设计。课程包含：
-          </p>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>全平台环境搭建与系统安装指南</span>
-            </li>
-            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>进阶参数配置与大模型无缝对接</span>
-            </li>
-            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-              <div class="w-6 h-6 rounded-full bg-green-100 dark:bg-green-500/20 text-green-500 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3 h-3"></i></div>
-              <span>飞书、钉钉、Discord 等全频道接入实战</span>
-            </li>
-          </ul>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button class="px-6 py-3 rounded-lg bg-astro-accent hover:bg-purple-600 text-white font-medium transition-colors flex items-center justify-center gap-2">
-              立刻报名 <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-            <button class="px-6 py-3 rounded-lg border border-gray-200 dark:border-astro-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
-              查看大纲
-            </button>
-          </div>
+        <!-- Right Content -->
+        <div class="w-full md:w-7/12 lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-astro-accent/5 rounded-bl-full -z-10 pointer-events-none"></div>
+          <span class="px-3 py-1 bg-astro-accent/10 text-astro-accent text-xs font-bold rounded-full w-max mb-5 uppercase tracking-wider">Research</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">帮助我们改进</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg max-w-lg">告诉我们您对 OpenClaw 的使用体验，以便我们为您提供更好的内容。</p>
+          <button onclick="document.getElementById('survey-modal').classList.remove('hidden'); document.body.style.overflow='hidden';" class="px-8 py-4 rounded-xl bg-astro-accent hover:bg-purple-600 text-white font-semibold transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2 w-max group/btn">
+            参与问卷 <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover/btn:translate-x-1"></i>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Q&A 常见问题区域 (折叠面板) -->
-    <section class="max-w-3xl mx-auto w-full">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold tracking-tight mb-3">常见问题 (Q&A)</h2>
-        <p class="text-gray-500 dark:text-gray-400">关于培训与 OpenClaw 使用的常见疑惑解答</p>
-      </div>
+    <!-- Survey Modal -->
+    <div id="survey-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+      <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onclick="closeSurveyModal()"></div>
       
-      <div class="space-y-4" id="faq-container">
-        <!-- FAQ 1 -->
-        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
-          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">零基础小白可以报名这个培训班吗？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            完全可以。我们的课程从最基础的环境依赖（如 Node.js, Python）讲起，配备了详细的图文和视频操作指南。即使你没有太多编程经验，跟着教程一步步操作也能顺利完成部署。
+      <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-astro-card rounded-2xl shadow-2xl m-4 border border-gray-200 dark:border-astro-border flex flex-col">
+        
+        <!-- Modal Header & Progress Bar -->
+        <div class="sticky top-0 z-10 bg-white/95 dark:bg-astro-card/95 backdrop-blur-md border-b border-gray-100 dark:border-astro-border">
+          <div class="flex items-center justify-between px-6 sm:px-8 py-5">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">用户调研问卷</h3>
+            <button onclick="closeSurveyModal()" class="p-2 -mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-500 dark:text-gray-400">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <!-- Progress Bar -->
+          <div id="survey-progress-container" class="w-full h-1.5 bg-gray-100 dark:bg-gray-800">
+            <div id="survey-progress-bar" class="h-full bg-astro-accent transition-all duration-500 ease-out" style="width: 25%"></div>
           </div>
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
-          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">部署 OpenClaw 需要准备什么服务器配置？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            基础使用的话，推荐至少 2核 CPU 和 4GB 内存的云服务器（如阿里云轻量应用服务器）。如果你需要运行本地的大型模型，则需要配备具有较强算力的 GPU 服务器。
-          </div>
-        </div>
+        <!-- Modal Body -->
+        <div class="p-6 sm:p-8">
+          <form id="survey-form" onsubmit="handleSurveySubmit(event)">
+            
+            <!-- Step 1 -->
+            <div class="survey-step active" data-step="1">
+              <div class="mb-6">
+                <span class="text-astro-accent font-semibold text-sm tracking-wider uppercase mb-2 block">第 1 步，共 4 步</span>
+                <label class="block font-bold text-gray-900 dark:text-white text-xl sm:text-2xl leading-tight">您对 OpenClaw 的熟悉程度如何？ <span class="text-red-500">*</span></label>
+              </div>
+              <div class="space-y-3">
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="radio" name="familiarity" value="heard" required class="w-5 h-5 text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600" onchange="enableNextBtn(1)">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">刚听说，还没用过</span>
+                </label>
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="radio" name="familiarity" value="basic" class="w-5 h-5 text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600" onchange="enableNextBtn(1)">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">使用过基础功能（如标准 Skills）</span>
+                </label>
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="radio" name="familiarity" value="advanced" class="w-5 h-5 text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600" onchange="enableNextBtn(1)">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">资深用户 / 构建过自定义 Skills</span>
+                </label>
+              </div>
+            </div>
 
-        <!-- FAQ 3 -->
-        <div class="border border-gray-200 dark:border-astro-border rounded-xl bg-white dark:bg-astro-card overflow-hidden">
-          <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-            <span class="font-medium text-lg">频道接入目前支持哪些平台？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transition-transform duration-300 faq-icon"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-400">
-            目前官方与社区已经支持了主流平台，包括国内的微信、飞书、钉钉、企业微信，以及海外的 Discord, Telegram, Slack 和 WhatsApp 等。培训课程中会详细讲解各个平台的鉴权与回调配置方法。
+            <!-- Step 2 -->
+            <div class="survey-step hidden" data-step="2">
+              <div class="mb-6">
+                <span class="text-astro-accent font-semibold text-sm tracking-wider uppercase mb-2 block">第 2 步，共 4 步</span>
+                <label class="block font-bold text-gray-900 dark:text-white text-xl sm:text-2xl leading-tight">您的主要职业角色是？ <span class="text-red-500">*</span></label>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <label class="flex items-center justify-center text-center p-5 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5 dark:has-[:checked]:bg-astro-accent/10">
+                  <input type="radio" name="role" value="pm" required class="sr-only" onchange="enableNextBtn(2)">
+                  <span class="text-lg font-semibold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">产品经理</span>
+                </label>
+                <label class="flex items-center justify-center text-center p-5 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5 dark:has-[:checked]:bg-astro-accent/10">
+                  <input type="radio" name="role" value="designer" class="sr-only" onchange="enableNextBtn(2)">
+                  <span class="text-lg font-semibold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">设计师</span>
+                </label>
+                <label class="flex items-center justify-center text-center p-5 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5 dark:has-[:checked]:bg-astro-accent/10">
+                  <input type="radio" name="role" value="developer" class="sr-only" onchange="enableNextBtn(2)">
+                  <span class="text-lg font-semibold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">开发者</span>
+                </label>
+                <label class="flex items-center justify-center text-center p-5 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5 dark:has-[:checked]:bg-astro-accent/10">
+                  <input type="radio" name="role" value="marketing" class="sr-only" onchange="enableNextBtn(2)">
+                  <span class="text-lg font-semibold text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">营销人员</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="survey-step hidden" data-step="3">
+              <div class="mb-6">
+                <span class="text-astro-accent font-semibold text-sm tracking-wider uppercase mb-2 block">第 3 步，共 4 步</span>
+                <label class="block font-bold text-gray-900 dark:text-white text-xl sm:text-2xl leading-tight">您最期待看到哪方面的内容？（多选）</label>
+              </div>
+              <div class="grid grid-cols-1 gap-3 sm:gap-4">
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="checkbox" name="content_needs" value="setup" class="w-5 h-5 rounded text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">基础安装与配置教程</span>
+                </label>
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="checkbox" name="content_needs" value="agent" class="w-5 h-5 rounded text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">高级 Agent 配置</span>
+                </label>
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="checkbox" name="content_needs" value="industry" class="w-5 h-5 rounded text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">行业专属 Skills 与案例</span>
+                </label>
+                <label class="flex items-center gap-4 p-4 border border-gray-200 dark:border-astro-border rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/80 transition-all hover:border-astro-accent/50 group has-[:checked]:border-astro-accent has-[:checked]:bg-astro-accent/5">
+                  <input type="checkbox" name="content_needs" value="dev" class="w-5 h-5 rounded text-astro-accent focus:ring-astro-accent dark:bg-gray-700 dark:border-gray-600">
+                  <span class="text-base font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">自定义插件开发指南</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="survey-step hidden" data-step="4">
+              <div class="mb-6">
+                <span class="text-astro-accent font-semibold text-sm tracking-wider uppercase mb-2 block">第 4 步，共 4 步</span>
+                <label class="block font-bold text-gray-900 dark:text-white text-xl sm:text-2xl leading-tight">您还有什么其他的建议或痛点想要分享？</label>
+              </div>
+              <textarea name="suggestions" rows="6" placeholder="畅所欲言..." class="w-full p-5 rounded-xl bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all resize-none text-lg text-gray-900 dark:text-white"></textarea>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="mt-10 flex justify-between items-center pt-6 border-t border-gray-100 dark:border-gray-800">
+              <button type="button" id="btn-prev" onclick="prevStep()" class="hidden px-6 py-3 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium transition-colors flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> 上一步
+              </button>
+              <div class="flex-1"></div> <!-- Spacer -->
+              <button type="button" id="btn-next" onclick="nextStep()" disabled class="px-8 py-3 bg-astro-accent hover:bg-purple-600 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-astro-accent disabled:hover:shadow-md flex items-center gap-2">
+                下一步 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <button type="submit" id="btn-submit" class="hidden px-8 py-3 bg-astro-accent hover:bg-purple-600 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+                提交反馈 <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success State -->
+          <div id="survey-success" class="hidden text-center py-12 sm:py-20">
+            <div class="w-24 h-24 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 transform scale-0 animate-[popIn_0.5s_ease-out_forwards]">
+              <i data-lucide="check-circle" class="w-12 h-12"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-3 opacity-0 animate-[fadeInUp_0.5s_ease-out_0.2s_forwards]">感谢您的反馈！</h3>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-md mx-auto opacity-0 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">您的意见对我们非常宝贵。</p>
+            <button onclick="closeSurveyModal()" class="px-8 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-xl transition-colors font-medium opacity-0 animate-[fadeInUp_0.5s_ease-out_0.4s_forwards]">
+              关闭
+            </button>
           </div>
         </div>
       </div>
-      <div class="mt-6 text-center">
-        <a href="#" class="text-sm font-medium text-astro-accent hover:underline inline-flex items-center gap-1">查看更多常见问题解答 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-      </div>
-    </section>
+    </div>
+
+    <style>
+      @keyframes popIn {
+        0% { transform: scale(0); }
+        80% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeInUp 0.3s ease-out forwards;
+      }
+    </style>
+
+    <script>
+      let currentStep = 1;
+      const totalSteps = 4;
+
+      function updateProgress() {
+        const progress = (currentStep / totalSteps) * 100;
+        document.getElementById('survey-progress-bar').style.width = progress + '%';
+      }
+
+      function showStep(step) {
+        document.querySelectorAll('.survey-step').forEach(el => {
+          el.classList.add('hidden');
+          el.classList.remove('animate-fade-in');
+        });
+        const activeStep = document.querySelector(`.survey-step[data-step="${step}"]`);
+        activeStep.classList.remove('hidden');
+        // trigger reflow
+        void activeStep.offsetWidth;
+        activeStep.classList.add('animate-fade-in');
+        
+        document.getElementById('btn-prev').style.display = step > 1 ? 'flex' : 'none';
+        
+        if (step === totalSteps) {
+          document.getElementById('btn-next').style.display = 'none';
+          document.getElementById('btn-submit').style.display = 'flex';
+        } else {
+          document.getElementById('btn-next').style.display = 'flex';
+          document.getElementById('btn-submit').style.display = 'none';
+          
+          // Check if current step is valid to enable Next button
+          const stepInputs = activeStep.querySelectorAll('input[required]');
+          let isValid = true;
+          if (stepInputs.length > 0) {
+            isValid = Array.from(stepInputs).some(input => input.checked);
+          }
+          document.getElementById('btn-next').disabled = !isValid;
+        }
+        
+        updateProgress();
+      }
+
+      function nextStep() {
+        if (currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+
+      function enableNextBtn(step) {
+        if (currentStep === step) {
+          document.getElementById('btn-next').disabled = false;
+        }
+      }
+
+      function closeSurveyModal() {
+        document.getElementById('survey-modal').classList.add('hidden'); 
+        document.body.style.overflow='auto';
+        // Reset after animation
+        setTimeout(() => {
+          document.getElementById('survey-success').classList.add('hidden');
+          document.getElementById('survey-form').classList.remove('hidden');
+          document.getElementById('survey-form').reset();
+          document.getElementById('survey-progress-container').classList.remove('hidden');
+          currentStep = 1;
+          showStep(1);
+        }, 300);
+      }
+
+      function handleSurveySubmit(e) {
+        e.preventDefault();
+        document.getElementById('survey-form').classList.add('hidden');
+        document.getElementById('survey-progress-container').classList.add('hidden');
+        document.getElementById('survey-success').classList.remove('hidden');
+        
+        // Fire Confetti
+        if (typeof confetti === 'function') {
+          const duration = 3 * 1000;
+          const animationEnd = Date.now() + duration;
+          const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+
+          function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+          }
+
+          const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+              return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+          }, 250);
+        }
+      }
+    </script>
 
     <!-- 子区域6：提交收录 (表单) -->
-    <section id="submit" class="max-w-3xl mx-auto border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card rounded-2xl p-6 sm:p-10 shadow-sm">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl font-bold tracking-tight mb-2">提交收录</h2>
-        <p class="text-gray-500 dark:text-gray-400 text-sm">将您的优质技能、案例或文章分享给社区，一经审核即可上架展示。</p>
-      </div>
-      <form action="./confirm.html" method="GET" class="space-y-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-2">
-            <label for="name" class="block text-sm font-medium">资源名称 <span class="text-red-500">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="例如：SEO 批量查询器" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
+    <section id="submit" class="w-full relative overflow-hidden rounded-3xl border border-gray-200 dark:border-astro-border bg-white dark:bg-astro-card shadow-sm">
+      <!-- Decorative Background Elements -->
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50/50 to-white dark:from-astro-card dark:to-astro-dark -z-10"></div>
+      <div class="absolute -top-32 -right-32 w-96 h-96 bg-astro-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="w-full p-8 sm:p-12 lg:p-16">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center justify-center p-3 bg-astro-accent/10 rounded-2xl mb-5 text-astro-accent">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
           </div>
-          <div class="space-y-2">
-            <label for="type" class="block text-sm font-medium">资源类型 <span class="text-red-500">*</span></label>
-            <div class="relative">
-              <select id="type" name="type" required class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors appearance-none cursor-pointer">
-                <option value="" disabled selected hidden>请选择资源类型</option>
-                <option value="skill">技能插件</option>
-                <option value="case">应用案例</option>
-                <option value="article">经验文章</option>
-              </select>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">提交收录</h2>
+          <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">将您的优质技能、案例或文章分享给社区，一经审核即可上架展示。</p>
+        </div>
+
+        <form action="./confirm.html" method="GET" class="space-y-6 max-w-3xl mx-auto bg-white/50 dark:bg-gray-900/20 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-gray-100 dark:border-gray-800">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2.5 group">
+              <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">资源名称 <span class="text-red-500">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="例如：SEO 批量查询器" class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all shadow-sm text-gray-900 dark:text-white">
+            </div>
+            <div class="space-y-2.5 group">
+              <label for="type" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">资源类型 <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <select id="type" name="type" required class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all appearance-none cursor-pointer shadow-sm text-gray-900 dark:text-white">
+                  <option value="" disabled selected hidden>Select resource type</option>
+                  <option value="skill">Skill</option>
+                  <option value="example">Example</option>
+                  <option value="article">Article</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+                  <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="space-y-2">
-          <label for="url" class="block text-sm font-medium">资源链接 <span class="text-red-500">*</span></label>
-          <input type="url" id="url" name="url" required placeholder="https://..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
-        </div>
-        
-        <div class="space-y-2">
-          <label for="description" class="block text-sm font-medium">简要描述 <span class="text-red-500">*</span></label>
-          <textarea id="description" name="description" rows="4" required placeholder="请简要描述您的资源特点与解决的核心痛点..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors resize-none"></textarea>
-        </div>
-        
-        <div class="space-y-2">
-          <label for="contact" class="block text-sm font-medium">联系方式 (选填)</label>
-          <input type="text" id="contact" name="contact" placeholder="邮箱 / Twitter / 微信" class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-1 focus:ring-astro-accent transition-colors">
-        </div>
+          
+          <div class="space-y-2.5 group">
+            <label for="url" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">资源链接 <span class="text-red-500">*</span></label>
+            <input type="url" id="url" name="url" required placeholder="https://..." class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all shadow-sm text-gray-900 dark:text-white">
+          </div>
+          
+          <div class="space-y-2.5 group">
+            <label for="description" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">Short Description <span class="text-red-500">*</span></label>
+            <textarea id="description" name="description" rows="4" required placeholder="Please briefly describe the features of your resource and the core pain points it solves..." class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all resize-none shadow-sm text-gray-900 dark:text-white"></textarea>
+          </div>
+          
+          <div class="space-y-2.5 group">
+            <label for="contact" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">Contact (Optional)</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <input type="text" id="contact" name="contact" placeholder="邮箱 / Twitter / 微信" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-astro-accent focus:ring-4 focus:ring-astro-accent/10 transition-all shadow-sm text-gray-900 dark:text-white">
+            </div>
+          </div>
 
-        <button type="submit" class="w-full py-3 px-4 bg-astro-accent hover:bg-purple-600 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
-          提交审核 <i data-lucide="send" class="w-4 h-4"></i>
-        </button>
-      </form>
+          <div class="pt-4">
+            <button type="submit" class="w-full py-4 px-6 bg-astro-accent hover:bg-purple-600 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex justify-center items-center gap-2 group/btn">
+              提交审核 <i data-lucide="arrow-up-right" class="w-5 h-5 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5"></i>
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-1 md:col-span-1">
@@ -648,26 +868,23 @@
         </div>
         
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">技能库</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">技能</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
             <a href="./skills/skills-for-product-manager-cn.html" class="hover:text-astro-accent transition-colors w-max">产品经理技能</a>
-            <a href="./skills-cn.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计技能</a>
-            <a href="./skills-cn.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">运营技能</a>
-            <a href="./example-cn.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">需求分析</a>
-            <a href="./example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
-            <a href="./example-cn.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">A/B测试</a>
-            <a href="./example-cn.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO挖掘</a>
+            <a href="./skills-cn.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">设计师技能</a>
+            <a href="./skills-cn.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">市场营销技能</a>
+            <a href="./skills-cn.html#dev-skills" class="hover:text-astro-accent transition-colors w-max">开发者技能</a>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">相关资源</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">精选案例</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw 官网</a>
-            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub 社区</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">阿里云</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">腾讯云</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">飞书</a>
+            <a href="./example-cn.html#brainstorming" class="hover:text-astro-accent transition-colors w-max">头脑风暴</a>
+            <a href="./example-cn.html#prd" class="hover:text-astro-accent transition-colors w-max">撰写 PRD</a>
+            <a href="./example-cn.html#prototyping" class="hover:text-astro-accent transition-colors w-max">原型设计</a>
+            <a href="./example-cn.html#data" class="hover:text-astro-accent transition-colors w-max">数据分析</a>
+            <a href="./example-cn.html#seo" class="hover:text-astro-accent transition-colors w-max">SEO 优化</a>
           </ul>
         </div>
 
@@ -692,9 +909,14 @@
           </div>
         </div>
       </div>
-      
-      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
-        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. 保留所有权利。</p>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          &copy; 2024 PPClaws. All rights reserved.
+        </p>
+        <div class="flex space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <a href="#" class="hover:text-astro-accent transition-colors">隐私政策</a>
+          <a href="#" class="hover:text-astro-accent transition-colors">服务条款</a>
+        </div>
       </div>
     </div>
   </footer>
