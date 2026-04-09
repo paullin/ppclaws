@@ -1,18 +1,18 @@
 {
     "title": "PPClaws",
-    "description": "为现代开发者打造的强大自动化工具，全面提升工作效率",
+    "description": "集结全网优质 Agent 技能，打造超级一人公司。",
     "hero": [
         {
             "cssClass": "bg-wave-brainstorming",
-            "title": "使用 Brainstorming 掌控项目规划",
-            "description": "在实施前探索用户意图、需求和设计，为您的下一个核心功能制定结构化的规范文档。",
+            "title": "用 Brainstorming 掌控项目规划",
+            "description": "在动手开发前，理清用户意图、需求与设计，为你的核心功能打造清晰的规范指南。",
             "badge": "HOT",
             "link": "/zh/skills/product-manager/brainstorming"
         },
         {
             "cssClass": "bg-wave-uiux",
-            "title": "使用 UI/UX Pro Max 提升设计质感",
-            "description": "获取跨 10 个技术栈的 50+ 种样式、161 种调色板和 99 条 UX 指南，打造令人惊艳的专业界面。",
+            "title": "用 UI/UX Pro Max 提升设计质感",
+            "description": "一键获取涵盖 10 大技术栈的 50+ 种前沿样式、161 款配色方案与 99 条 UX 最佳实践，轻松打造惊艳界面。",
             "badge": "NEW",
             "link": "/zh/skills/ui-ux-designer/ui-ux-pro-max"
         }
@@ -20,8 +20,8 @@
     "sections": [
         {
             "id": "pm-skills",
-            "title": "产品经理",
-            "subtitle": "助力产品经理完成竞品分析与需求管理",
+            "title": "产品技能",
+            "subtitle": "加速产品落地。",
             "moreLink": "/zh/skills/product-manager",
             "moreText": "浏览更多",
             "columns": 4,
@@ -29,8 +29,8 @@
         },
         {
             "id": "ux-skills",
-            "title": "UI/UX 设计师",
-            "subtitle": "提供设计灵感收集与自动化切图能力",
+            "title": "设计技能",
+            "subtitle": "轻松交付惊艳设计。",
             "moreLink": "/zh/skills/ui-ux-designer",
             "moreText": "浏览更多",
             "columns": 4,
@@ -38,60 +38,23 @@
         },
         {
             "id": "marketing-skills",
-            "title": "市场营销",
-            "subtitle": "社媒内容生成与 SEO 关键词分析引擎",
+            "title": "营销技能",
+            "subtitle": "强势赢取市场增长。",
             "moreLink": "/zh/skills/marketing",
             "moreText": "浏览更多",
             "columns": 4,
             "items": []
         }
     ],
-    "training": {
-        "sectionTitle": "培训",
-        "sectionSubtitle": "系统化掌握 OpenClaw，从入门到商业化落地",
-        "title": "OpenClaw 全栈大师班",
-        "subtitle": "限时特惠",
-        "description": "专为想要深入理解和应用 OpenClaw 的开发者与企业设计。课程包含：",
-        "image": "https://picsum.photos/seed/masterclass/800/600",
-        "features": [
-            "全平台环境搭建与系统安装指南",
-            "进阶参数配置与大模型无缝对接",
-            "飞书、钉钉、Discord 等全频道接入实战"
-        ],
-        "buttonText": "立刻报名",
-        "buttonLink": "#training",
-        "secondaryButtonText": "咨询客服",
-        "secondaryButtonLink": "https://work.weixin.qq.com/..."
-    },
-    "faq": {
-        "title": "常见问题 (Q&A)",
-        "subtitle": "关于培训与 OpenClaw 使用的常见疑惑解答",
-        "items": [
-            {
-                "question": "零基础小白可以报名这个培训班吗？",
-                "answer": "完全可以。我们的课程从最基础的环境依赖（如 Node.js, Python）讲起，配备了详细的图文和视频操作指南。即使你没有太多编程经验，跟着教程一步步操作也能顺利完成部署。"
-            },
-            {
-                "question": "部署 OpenClaw 需要准备什么服务器配置？",
-                "answer": "基础使用的话，推荐至少 2核 CPU 和 4GB 内存的云服务器（如阿里云轻量应用服务器）。如果你需要运行本地的大型模型，则需要配备具有较强算力的 GPU 服务器。"
-            },
-            {
-                "question": "频道接入目前支持哪些平台？",
-                "answer": "目前官方与社区已经支持了主流平台，包括国内的微信、飞书、钉钉、企业微信，以及海外的 Discord, Telegram, Slack 和 WhatsApp 等。培训课程中会详细讲解各个平台的鉴权与回调配置方法。"
-            }
-        ],
-        "moreText": "查看更多常见问题解答",
-        "moreLink": "#"
-    },
     "newsletter": {
-        "title": "订阅我们的最新资讯",
-        "description": "获取最新生产力 Skills，实战经验，免费订阅。",
+        "title": "订阅最新资讯",
+        "description": "第一时间获取高阶技巧、最佳实践与独家教程。",
         "emailPlaceholder": "您的邮箱地址",
         "buttonText": "立即订阅"
     },
     "submission": {
         "title": "提交收录",
-        "description": "将您的优质技能、案例或文章分享给社区，一经审核即可上架展示。",
+        "description": "贡献资源，启发灵感，共同成长。",
         "labels": {
             "name": "资源名称",
             "type": "资源类型",
@@ -104,8 +67,8 @@
             "name": "例如：SEO 批量查询器",
             "type": "请选择资源类型",
             "url": "https://...",
-            "description": "请简要描述您的资源特点与解决的核心痛点...",
-            "contact": "邮箱 / Twitter / 微信"
+            "description": "简要描述您的资源...",
+            "contact": "您的邮箱地址"
         },
         "types": [
             {
@@ -113,32 +76,32 @@
                 "label": "技能插件"
             },
             {
-                "value": "case",
-                "label": "应用案例"
-            },
-            {
                 "value": "article",
-                "label": "经验文章"
+                "label": "案例/教程"
             }
         ]
     },
     "footer": {
-        "slogan": "为现代开发者打造的强大自动化工具",
+        "slogan": "集结全网优质 Agent 技能，打造超级一人公司。",
         "columns": [
             {
-                "title": "Skills 枢纽",
+                "title": "精选 Skills",
                 "links": [
                     {
-                        "text": "PM 技能",
+                        "text": "产品技能",
                         "link": "/zh/skills/product-manager"
                     },
                     {
-                        "text": "UX 技能",
+                        "text": "设计技能",
                         "link": "/zh/skills/ui-ux-designer"
                     },
                     {
                         "text": "营销技能",
                         "link": "/zh/skills/marketing"
+                    },
+                    {
+                        "text": "开发技能",
+                        "link": "/zh/skills/developer"
                     }
                 ]
             },
