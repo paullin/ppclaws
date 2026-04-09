@@ -8,8 +8,7 @@ import HeroCarousel from "@components/HeroCarousel.svelte";
 import SectionHeader from "@components/SectionHeader.astro";
 import SectionGrid from "@components/SectionGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
-import TrainingSection from "@components/TrainingSection.astro";
-import FAQ from "@components/FAQ.svelte";
+import SurveySection from "@components/SurveySection.svelte";
 import Newsletter from "@components/Newsletter.astro";
 import SubmissionForm from "@components/SubmissionForm.svelte";
 
@@ -193,34 +192,15 @@ const dynamicSections = homepageSections.map((section: any) => {
             </section>
         ))}
 
-        {data?.training && (
-            <TrainingSection 
-                sectionTitle={data.training.sectionTitle}
-                sectionSubtitle={data.training.sectionSubtitle}
-                title={data.training.title}
-                subtitle={data.training.subtitle}
-                description={data.training.description}
-                image={data.training.image}
-                features={data.training.features}
-                buttonText={data.training.buttonText}
-                buttonLink={data.training.buttonLink}
-                secondaryButtonText={data.training.secondaryButtonText}
-                secondaryButtonLink={data.training.secondaryButtonLink}
+        <div class="w-full">
+            <SurveySection 
+                client:load 
+                title={lang === 'zh' ? '帮助我们改进' : 'Help Us Improve'}
+                description={lang === 'zh' ? '告诉我们您对 OpenClaw 的使用体验，以便我们为您提供更好的内容。' : 'Tell us about your experience with OpenClaw to help us create better content for you.'}
+                buttonText={lang === 'zh' ? '参与问卷' : 'Take the Survey'}
+                tagText="Research"
             />
-        )}
-
-        {data?.faq && (
-            <div class="w-full">
-                <FAQ 
-                    client:load 
-                    title={data.faq.title} 
-                    subtitle={data.faq.subtitle} 
-                    items={data.faq.items} 
-                    moreText={data.faq.moreText}
-                    moreLink={data.faq.moreLink}
-                />
-            </div>
-        )}
+        </div>
 
         {data?.submission && (
             <div class="w-full">
