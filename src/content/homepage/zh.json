@@ -147,17 +147,17 @@
             {
                 "platform": "微信",
                 "link": "#",
-                "image": "/social/微信.png"
+                "image": "/social/wechat.png"
             },
             {
                 "platform": "即刻",
                 "link": "#",
-                "image": "/social/即刻.png"
+                "image": "/social/jike.png"
             },
             {
                 "platform": "小红书",
                 "link": "#",
-                "image": "/social/小红书.png"
+                "image": "/social/xiaohongshu.png"
             }
         ],
         "copyright": "© 2026 PPClaws. 保留所有权利。"
