@@ -39,8 +39,8 @@ const homeEntry = homepageEntries.find((entry) => entry.id === entryId || entry.
 const data = homeEntry?.data;
 
 const heroItems = data?.hero || [];
-const pageTitle = data?.title || t("main:head.title");
-const pageDescription = data?.description || t("main:head.description");
+const pageTitle = t("main:head.title");
+const pageDescription = t("main:head.description");
 const homepageSections = data?.sections || [];
 const footerData = data?.footer;
 
