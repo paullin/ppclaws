@@ -40,56 +40,81 @@
   <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-astro-dark/80 border-b border-gray-200 dark:border-astro-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
+        <!-- Logo & Name -->
         <div class="flex items-center shrink-0 cursor-pointer" onclick="window.location.href='./index-en.html'">
           <img src="../../src/assets/logo.webp" alt="Logo" class="h-8 w-8 rounded-md mr-3 object-cover">
           <span class="font-bold text-xl tracking-tight">PPClaws</span>
         </div>
 
+                <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center h-full">
           <a href="./index-en.html" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Home</a>
-          
           <div class="relative group h-full flex items-center">
-            <button class="px-3 py-2 text-sm font-medium text-astro-accent flex items-center gap-1">
-              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              OpenClaw <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="./skills/skills-for-product-manager.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for PM</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Designer</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills for Marketing</a>
-                <a href="./skills.html" class="block px-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 font-semibold text-astro-accent">More</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Setup</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Usage</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Agent</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Alternatives</a>
               </div>
             </div>
           </div>
 
           <div class="relative group h-full flex items-center">
             <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
-              Example <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              Skills <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
               <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Requirement Analysis</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">A/B Testing</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO Keyword Mining</a>
-                <a href="./example.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">More</a>
+                <a href="./skills/skills-for-product-manager.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">For Product Manager</a>
+                <a href="#ux-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">For UI/UX Designer</a>
+                <a href="#marketing-skills" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">For Marketing</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">For Developer</a>
+                <a href="./skills.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">All Skills</a>
               </div>
             </div>
           </div>
 
-          <a href="./index-en.html#training" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Training</a>
-          <a href="./index-en.html#submit" class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors">Submit</a>
+          <div class="relative group h-full flex items-center">
+            <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1">
+              Examples <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="absolute left-0 top-full w-48 pt-2 hidden group-hover:block">
+              <div class="rounded-md shadow-lg bg-white dark:bg-astro-card border border-gray-200 dark:border-astro-border py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Brainstorming</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Writing PRD</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Prototyping</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Data Analysis</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">SEO</a>
+                <a href="./example.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-semibold">All Examples</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="px-3 py-2 text-sm font-medium hover:text-astro-accent transition-colors flex items-center gap-1" onclick="document.getElementById('follow-us').scrollIntoView({behavior: 'smooth'})">
+            Community
+          </button>
         </nav>
 
+        <!-- Right Functions -->
         <div class="flex items-center space-x-2 lg:space-x-4">
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search"><i data-lucide="search" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Search">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
           <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Toggle Dark Mode">
             <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
             <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
           </button>
-          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='skills-cn.html'"><i data-lucide="globe" class="w-5 h-5"></i></button>
+          <button class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="Switch Language" onclick="window.location.href='skills-cn.html'">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </button>
           <div class="h-6 w-px bg-gray-300 dark:bg-astro-border mx-2"></div>
-          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="#" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -350,7 +375,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
+    <footer class="w-full border-t border-gray-200 dark:border-astro-border bg-white dark:bg-astro-dark pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-1 md:col-span-1">
@@ -364,26 +389,23 @@
         </div>
         
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills Hub</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Skills</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="./skills/skills-for-product-manager.html" class="hover:text-astro-accent transition-colors w-max">PM Skills</a>
-            <a href="#ux-skills" class="hover:text-astro-accent transition-colors w-max">UX Skills</a>
-            <a href="#marketing-skills" class="hover:text-astro-accent transition-colors w-max">Marketing Skills</a>
-            <a href="./example.html#req-analysis" class="hover:text-astro-accent transition-colors w-max">Req Analysis</a>
-            <a href="./example.html#prototyping" class="hover:text-astro-accent transition-colors w-max">Proto Design</a>
-            <a href="./example.html#ab-testing" class="hover:text-astro-accent transition-colors w-max">A/B Testing</a>
-            <a href="./example.html#seo-mining" class="hover:text-astro-accent transition-colors w-max">SEO Mining</a>
+            <a href="./skills/skills-for-product-manager.html" class="hover:text-astro-accent transition-colors w-max">For Product Manager</a>
+            <a href="./skills.html#ux-skills" class="hover:text-astro-accent transition-colors w-max">For UI/UX Designer</a>
+            <a href="./skills.html#marketing-skills" class="hover:text-astro-accent transition-colors w-max">For Marketing</a>
+            <a href="./skills.html#dev-skills" class="hover:text-astro-accent transition-colors w-max">For Developer</a>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Related Resources</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Examples</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex flex-col">
-            <a href="https://openclaw.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">OpenClaw Site</a>
-            <a href="https://clawhub.com" target="_blank" class="hover:text-astro-accent transition-colors w-max">ClawHub Community</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">Aliyun</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">Tencent Cloud</a>
-            <a href="#" class="hover:text-astro-accent transition-colors w-max">Feishu</a>
+            <a href="./example.html#brainstorming" class="hover:text-astro-accent transition-colors w-max">Brainstorming</a>
+            <a href="./example.html#prd" class="hover:text-astro-accent transition-colors w-max">Writing PRD</a>
+            <a href="./example.html#prototyping" class="hover:text-astro-accent transition-colors w-max">Prototyping</a>
+            <a href="./example.html#data" class="hover:text-astro-accent transition-colors w-max">Data Analysis</a>
+            <a href="./example.html#seo" class="hover:text-astro-accent transition-colors w-max">SEO</a>
           </ul>
         </div>
 
@@ -408,9 +430,14 @@
           </div>
         </div>
       </div>
-      
-      <div class="pt-8 border-t border-gray-200 dark:border-astro-border text-center md:text-left">
-        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 PPClaws. All rights reserved.</p>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          &copy; 2024 PPClaws. All rights reserved.
+        </p>
+        <div class="flex space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <a href="#" class="hover:text-astro-accent transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-astro-accent transition-colors">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
