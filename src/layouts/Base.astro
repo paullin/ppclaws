@@ -89,7 +89,7 @@ const { meta, title, footerData } = Astro.props as Props;
         <link rel="manifest" href="/favicon/site.webmanifest" />
 
         <!-- Basic -->
-        <title>{title === 'PPClaws' ? `${title} | ${meta.description}` : `${title} // PPClaws`}</title>
+        <title>{title.includes('PPClaws') ? title : `${title} // PPClaws`}</title>
         <meta name="description" content={meta.description} />
         {meta.keywords && <meta name="keywords" content={meta.keywords} />}
         <link rel="canonical" href={meta.canonical || Astro.url.href} />

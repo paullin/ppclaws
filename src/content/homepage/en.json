@@ -1,11 +1,9 @@
 {
-    "title": "PPClaws",
-    "description": "Powerful automation tools for modern developers",
     "hero": [
         {
             "cssClass": "bg-wave-brainstorming",
             "title": "Master Project Planning with Brainstorming",
-            "description": "Explore user intent, requirements, and design before implementation. Formulate structured specifications for your next big feature.",
+            "description": "Explore user intent, requirements, and design before implementation.",
             "badge": "HOT",
             "link": "/skills/product-manager/brainstorming"
         },
@@ -20,8 +18,8 @@
     "sections": [
         {
             "id": "pm-skills",
-            "title": "Skills for Product Manager",
-            "subtitle": "Empowering PMs with competitor analysis and requirements management",
+            "title": "Skills for Product Managers",
+            "subtitle": "Build better products, faster: Includes competitor analysis, requirement management, and PRD writing.",
             "moreLink": "/skills/product-manager",
             "moreText": "Browse More",
             "columns": 4,
@@ -29,8 +27,8 @@
         },
         {
             "id": "ux-skills",
-            "title": "Skills for UI/UX Designer",
-            "subtitle": "Providing design inspiration collection and automated slicing",
+            "title": "Skills for UI/UX Designers",
+            "subtitle": "Craft stunning designs, effortlessly: Covering design inspiration, automated slicing, and UI components.",
             "moreLink": "/skills/ui-ux-designer",
             "moreText": "Browse More",
             "columns": 4,
@@ -38,51 +36,14 @@
         },
         {
             "id": "marketing-skills",
-            "title": "Skills for Marketing",
-            "subtitle": "Social media content generation and SEO keyword analysis engine",
+            "title": "Skills for Marketers",
+            "subtitle": "Capture attention, drive growth: Master social media generation, SEO keyword mining, and traffic analysis.",
             "moreLink": "/skills/marketing",
             "moreText": "Browse More",
             "columns": 4,
             "items": []
         }
     ],
-    "training": {
-        "sectionTitle": "Training",
-        "sectionSubtitle": "Master OpenClaw systematically, from basics to commercialization",
-        "title": "OpenClaw Full-Stack Masterclass",
-        "subtitle": "LIMITED OFFER",
-        "description": "Designed for developers and enterprises wanting to deeply understand and apply OpenClaw. Course includes:",
-        "image": "https://picsum.photos/seed/masterclass/800/600",
-        "features": [
-            "Cross-platform environment setup and installation guide",
-            "Advanced parameter configuration and seamless LLM integration",
-            "Lark, DingTalk, Discord full-channel integration practice"
-        ],
-        "buttonText": "Enroll Now",
-        "buttonLink": "#training",
-        "secondaryButtonText": "View Syllabus",
-        "secondaryButtonLink": "#training"
-    },
-    "faq": {
-        "title": "Frequently Asked Questions (Q&A)",
-        "subtitle": "",
-        "items": [
-            {
-                "question": "Can beginners enroll in this training class?",
-                "answer": "Absolutely. Our course starts from the most basic environment dependencies (like Node.js, Python), equipped with detailed text and video guides. Even without much programming experience, you can complete the deployment by following step-by-step."
-            },
-            {
-                "question": "What server configuration is needed to deploy OpenClaw?",
-                "answer": "For basic use, we recommend a cloud server with at least 2-core CPU and 4GB RAM. If you need to run large local models, a GPU server with stronger computing power is required."
-            },
-            {
-                "question": "Which platforms are currently supported for channel integration?",
-                "answer": "Currently, the official and community have supported mainstream platforms, including WeChat, Feishu, DingTalk, Enterprise WeChat, as well as overseas platforms like Discord, Telegram, Slack, and WhatsApp. The training course will explain the authentication and callback configuration methods for each platform in detail."
-            }
-        ],
-        "moreText": "View more frequently asked questions",
-        "moreLink": "#"
-    },
     "newsletter": {
         "title": "Subscribe to Our Newsletter",
         "description": "Get the latest useful Skill updates, best practices, and exclusive tutorials.",
@@ -91,7 +52,7 @@
     },
     "submission": {
         "title": "Submit to us",
-        "description": "Share your high-quality Skills, cases, or articles with the community. Once approved, they will be listed.",
+        "description": "Contribute. Inspire. Grow together.",
         "labels": {
             "name": "Resource Name",
             "type": "Resource Type",
@@ -104,8 +65,8 @@
             "name": "e.g.: Bulk SEO Checker",
             "type": "Select resource type",
             "url": "https://...",
-            "description": "Please briefly describe the features of your resource and the core pain points it solves...",
-            "contact": "Email / Twitter / WeChat"
+            "description": "Briefly describe your resource...",
+            "contact": "Email address"
         },
         "types": [
             {
@@ -113,20 +74,16 @@
                 "label": "Skill"
             },
             {
-                "value": "case",
-                "label": "Case"
-            },
-            {
                 "value": "article",
-                "label": "Article"
+                "label": "Case / Tutorial"
             }
         ]
     },
     "footer": {
-        "slogan": "Powerful automation tools for modern developers",
+        "slogan": "Best OpenClaw Skills, Examples & Agent Tutorials",
         "columns": [
             {
-                "title": "Skills Hub",
+                "title": "Featured Skills",
                 "links": [
                     {
                         "text": "PM Skills",
@@ -139,6 +96,10 @@
                     {
                         "text": "Marketing Skills",
                         "link": "/skills/marketing"
+                    },
+                    {
+                        "text": "Dev Skills",
+                        "link": "/skills/developer"
                     }
                 ]
             },
@@ -157,15 +118,15 @@
                     },
                     {
                         "text": "Aliyun",
-                        "link": "#"
+                        "link": "https://www.alibabacloud.com/"
                     },
                     {
                         "text": "Tencent Cloud",
-                        "link": "#"
+                        "link": "https://www.tencentcloud.com/"
                     },
                     {
-                        "text": "Feishu",
-                        "link": "#"
+                        "text": "Lark",
+                        "link": "https://www.larksuite.com/"
                     }
                 ]
             }
@@ -173,7 +134,7 @@
         "socials": [
             {
                 "platform": "X (Twitter)",
-                "link": "#",
+                "link": "https://x.com/paullin81",
                 "icon": "twitter"
             },
             {
@@ -184,17 +145,17 @@
             {
                 "platform": "WeChat",
                 "link": "#",
-                "image": "/social/微信.png"
+                "image": "/social/wechat.png"
             },
             {
                 "platform": "Jike",
                 "link": "#",
-                "image": "/social/即刻.png"
+                "image": "/social/jike.png"
             },
             {
                 "platform": "Xiaohongshu",
                 "link": "#",
-                "image": "/social/小红书.png"
+                "image": "/social/xiaohongshu.png"
             }
         ],
         "copyright": "© 2026 PPClaws. All rights reserved."

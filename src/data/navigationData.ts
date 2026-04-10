@@ -5,8 +5,30 @@ const navigationData = [
         children: [],
     },
     {
+        label: "common:menu.list.openclaw",
+        href: "#",
+        children: [
+            {
+                label: "common:menu.list.setup",
+                href: "#",
+            },
+            {
+                label: "common:menu.list.usage",
+                href: "#",
+            },
+            {
+                label: "common:menu.list.agent",
+                href: "#",
+            },
+            {
+                label: "common:menu.list.alternatives",
+                href: "#",
+            },
+        ],
+    },
+    {
         label: "common:menu.list.skills",
-        href: "skills",
+        href: "#",
         children: [
             {
                 label: "common:menu.list.pm_skills",
@@ -21,6 +43,10 @@ const navigationData = [
                 href: "skills/marketing",
             },
             {
+                label: "common:menu.list.dev_skills",
+                href: "skills/developer",
+            },
+            {
                 label: "common:menu.list.all_skills",
                 href: "skills",
             },
@@ -28,23 +54,27 @@ const navigationData = [
     },
     {
         label: "common:menu.list.example",
-        href: "example",
+        href: "#",
         children: [
             {
-                label: "common:menu.list.req_analysis",
-                href: "example/requirement-analysis",
+                label: "common:menu.list.brainstorming",
+                href: "#",
+            },
+            {
+                label: "common:menu.list.writing_prd",
+                href: "#",
             },
             {
                 label: "common:menu.list.proto_design",
-                href: "example/prototyping",
+                href: "#",
             },
             {
-                label: "common:menu.list.ab_testing",
-                href: "example/ab-testing",
+                label: "common:menu.list.data_analysis",
+                href: "#",
             },
             {
                 label: "common:menu.list.seo_mining",
-                href: "example/seo-keyword-mining",
+                href: "#",
             },
             {
                 label: "common:menu.list.all_examples",
@@ -53,14 +83,10 @@ const navigationData = [
         ],
     },
     {
-        label: "common:menu.list.training",
-        href: "#training",
+        label: "common:menu.list.community",
+        href: "#footer",
         children: [],
-    },
-    {
-        label: "common:menu.list.submit",
-        href: "#submit",
-        children: [],
+        isButton: true,
     },
 ];
 export default navigationData;
