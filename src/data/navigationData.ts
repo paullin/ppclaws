@@ -5,24 +5,24 @@ const navigationData = [
         children: [],
     },
     {
-        label: "common:menu.list.openclaw",
+        label: "common:menu.list.guides",
         href: "#",
         children: [
             {
-                label: "common:menu.list.setup",
-                href: "#",
+                label: "common:menu.list.openclaw",
+                href: "/guides/openclaw",
             },
             {
-                label: "common:menu.list.usage",
-                href: "#",
+                label: "common:menu.list.hermes_agent",
+                href: "/guides/hermes-agent",
             },
             {
-                label: "common:menu.list.agent",
-                href: "#",
+                label: "common:menu.list.cli",
+                href: "/guides/cli",
             },
             {
-                label: "common:menu.list.alternatives",
-                href: "#",
+                label: "common:menu.list.faq",
+                href: "/guides/faq",
             },
         ],
     },
@@ -53,40 +53,11 @@ const navigationData = [
         ],
     },
     {
-        label: "common:menu.list.example",
-        href: "#",
-        children: [
-            {
-                label: "common:menu.list.brainstorming",
-                href: "#",
-            },
-            {
-                label: "common:menu.list.writing_prd",
-                href: "#",
-            },
-            {
-                label: "common:menu.list.proto_design",
-                href: "#",
-            },
-            {
-                label: "common:menu.list.data_analysis",
-                href: "#",
-            },
-            {
-                label: "common:menu.list.seo_mining",
-                href: "#",
-            },
-            {
-                label: "common:menu.list.all_examples",
-                href: "example",
-            },
-        ],
-    },
-    {
         label: "common:menu.list.community",
-        href: "#footer",
+        href: "common:menu.list.community_link",
         children: [],
         isButton: true,
+        isExternal: true,
     },
 ];
 export default navigationData;

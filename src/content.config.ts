@@ -120,62 +120,10 @@ export const collections = {
             })).optional()
         })
     }),
-    exampleCategory: defineCollection({
-        loader: glob({
-            pattern: "**/*.{json,yaml,yml}",
-            base: "./src/content/exampleCategory",
-            generateId: ({ entry }) => {
-                return entry.replace(/\.(json|yaml|yml)$/, "");
-            },
-        }),
-        schema: z.object({
-            id: z.string().optional(),
-            title: z.string(),
-            description: z.string().optional(),
-            sections: z.array(z.object({
-                id: z.string().optional(),
-                title: z.string(),
-                items: z.array(z.object({
-                    title: z.string(),
-                    description: z.string().optional(),
-                    link: z.string().optional(),
-                    cover_text: z.string().optional(),
-                    cover_theme: z.string().optional(),
-                    badge: z.union([z.string(), z.array(z.string())]).optional(),
-                })).optional()
-            })).optional()
-        })
-    }),
     skills: defineCollection({
         loader: glob({
             pattern: "**/*.{md,mdx}",
             base: "./src/content/skills",
-        }),
-        schema: z.object({
-            title: z.string(),
-            description: z.string().optional(),
-            author: z.string().optional(),
-            date: z.coerce.date().optional(),
-            tags: z.array(z.string()).optional(),
-            category: z.string().optional(),
-            cover_text: z.string().optional(),
-            cover_theme: z.string().optional(),
-            badge: z.union([z.string(), z.array(z.string())]).optional(),
-            featured: z.boolean().default(false).optional(),
-            relatedResources: z.array(z.object({
-                title: z.string(),
-                link: z.string(),
-            })).optional(),
-            recommendedReading: z.array(z.object({
-                title: z.string(),
-                link: z.string(),
-            })).optional(),
-        })
-    }),
-    example: defineCollection({
-        loader: glob({
-            pattern: "**/*.{md,mdx}",
-            base: "./src/content/example",
         }),
         schema: z.object({
             title: z.string(),
